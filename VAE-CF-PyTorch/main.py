@@ -57,3 +57,13 @@ test_data_tr, test_data_te = loader.load_data('test')
 
 N = train_data.shape[0]
 idxlist = list(range(N))
+
+###############################################################################
+# Build the model
+###############################################################################
+
+p_dims = [200, 600, n_items]
+model = models.MultiVAE(p_dims).to(device)
+
+optimizer = optim.Adam(model.parameters(), lr=1e-3, weight_decay=args.wd)
+criterion = models.loss_function
