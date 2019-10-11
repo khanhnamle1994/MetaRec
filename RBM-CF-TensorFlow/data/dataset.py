@@ -2,7 +2,7 @@ import tensorflow as tf
 import os
 
 def _get_training_data(FLAGS):
-    ''' Buildind the input pipeline for training and inference using TFRecords files.
+    ''' Building the input pipeline for training and inference using TFRecords files.
     @return data only for the training
     @return data for the inference
     '''
@@ -26,7 +26,7 @@ def _get_training_data(FLAGS):
     return dataset, dataset2
 
 def _get_test_data(FLAGS):
-    ''' Buildind the input pipeline for test data.'''
+    ''' Building the input pipeline for test data.'''
 
     filenames=[FLAGS.tf_records_test_path+f for f in os.listdir(FLAGS.tf_records_test_path)]
 
@@ -38,7 +38,6 @@ def _get_test_data(FLAGS):
     dataset = dataset.prefetch(buffer_size=1)
 
     return dataset
-
 
 def parse(serialized):
     ''' Parser fot the TFRecords file.'''
