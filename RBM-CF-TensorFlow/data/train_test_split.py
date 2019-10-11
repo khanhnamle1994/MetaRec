@@ -1,8 +1,8 @@
-ROOT_DIR='/Users/khanhnamle/Desktop/CSCI799-Graduate-Independent-Study/Codebase/ml-1mratings.dat'
+ROOT_DIR='/Users/khanhnamle/Desktop/CSCI799-Graduate-Independent-Study/Codebase/ml-1m/ratings.dat'
 
-OUTPUT_DIR_TRAIN='/Users/khanhnamle/Desktop/CSCI799-Graduate-Independent-Study/Codebase/ml-1mtrain.dat'
+OUTPUT_DIR_TRAIN='/Users/khanhnamle/Desktop/CSCI799-Graduate-Independent-Study/Codebase/ml-1m/train.dat'
 
-OUTPUT_DIR_TEST='/Users/khanhnamle/Desktop/CSCI799-Graduate-Independent-Study/Codebase/ml-1mtest.dat'
+OUTPUT_DIR_TEST='/Users/khanhnamle/Desktop/CSCI799-Graduate-Independent-Study/Codebase/ml-1m/test.dat'
 
 NUM_USERS=6040
 NUM_TEST_RATINGS=10
