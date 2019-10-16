@@ -2,214 +2,218 @@ import tensorflow as tf
 import model_helper
 
 class RBM:
-    ''' Implementation of the Restricted Boltzmann Machine for collaborative filtering. The model is based on the paper of Ruslan Salakhutdinov, Andriy Mnih and Geoffrey Hinton: https://www.cs.toronto.edu/~rsalakhu/papers/rbmcf.pdf
-    '''
-    def __init__(self, FLAGS):
-        '''Initialization of the model  '''
-        self.FLAGS=FLAGS
-        self.weight_initializer=model_helper._get_weight_init()
-        self.bias_initializer=model_helper._get_bias_init()
-        self.init_parameter()
+	'''
+	Implementation of the Restricted Boltzmann Machine for collaborative filtering. The model is based on the paper of Ruslan Salakhutdinov, Andriy Mnih and Geoffrey Hinton: https://www.cs.toronto.edu/~rsalakhu/papers/rbmcf.pdf
+	'''
 
-    def init_parameter(self):
-        ''' Initializes the weights and the bias parameters of the neural network.'''
+	def __init__(self, FLAGS):
+		'''Initialization of the model  '''
 
-        with tf.variable_scope('Network_parameter'):
-            self.W=tf.get_variable('Weights', shape=(self.FLAGS.num_v, self.FLAGS.num_h),initializer=self.weight_initializer)
-            self.bh=tf.get_variable('hidden_bias', shape=(self.FLAGS.num_h), initializer=self.bias_initializer)
-            self.bv=tf.get_variable('visible_bias', shape=(self.FLAGS.num_v), initializer=self.bias_initializer)
+		self.FLAGS = FLAGS
+		self.weight_initializer = model_helper._get_weight_init()
+		self.bias_initializer = model_helper._get_bias_init()
+		self.init_parameter()
 
-    def _sample_h(self, v):
-        ''' Uses the visible nodes for calculation of  the probabilities that a hidden neuron is activated.
-        After that Bernouille distribution is used to sample the hidden nodes.
+	def init_parameter(self):
+		'''Initializes the weights and the bias parameters of the neural network.'''
 
-        @param v: visible nodes
-        @return probability that a hidden neuron is activated
-        @return sampled hidden neurons (value 1 or 0 accroding to Bernouille distribution)
-        '''
+		with tf.variable_scope('Network_parameter'):
+			self.W = tf.get_variable('Weights', shape = (self.FLAGS.num_v, self.FLAGS.num_h),initializer = self.weight_initializer)
+			self.bh = tf.get_variable('hidden_bias', shape = (self.FLAGS.num_h), initializer = self.bias_initializer)
+			self.bv = tf.get_variable('visible_bias', shape = (self.FLAGS.num_v), initializer = self.bias_initializer)
 
-        with tf.name_scope('sampling_hidden_units'):
+	def _sample_h(self, v):
+		'''Uses the visible nodes for calculation of  the probabilities that a hidden neuron is activated.
+		After that Bernouille distribution is used to sample the hidden nodes.
 
-            a=tf.nn.bias_add(tf.matmul(v,self.W), self.bh)
-            p_h_v=tf.nn.sigmoid(a)
-            h_=self._bernouille_sampling(p_h_v, shape=[self.FLAGS.batch_size, int(p_h_v.shape[-1])])
+		@param v: visible nodes
+		@return probability that a hidden neuron is activated
+		@return sampled hidden neurons (value 1 or 0 accroding to Bernouille distribution)
+		'''
 
-            return p_h_v, h_
+		with tf.name_scope('sampling_hidden_units'):
 
-    def _sample_v(self, h):
-        ''' Uses the hidden nodes for calculation of  the probabilities that a visible neuron is activated.
-        After that Bernouille distribution is used to sample the visible nodes.
+			a = tf.nn.bias_add(tf.matmul(v,self.W), self.bh)
+			p_h_v = tf.nn.sigmoid(a)
+			h_ = self._bernouille_sampling(p_h_v, shape = [self.FLAGS.batch_size, int(p_h_v.shape[-1])])
 
-        @param h: hidden nodes
-        @return probability that a visible neuron is activated
-        @return sampled visible neurons (value 1 or 0 accroding to Bernouille distribution)
-        '''
+			return p_h_v, h_
 
-        with tf.name_scope('sampling_visible_units'):
-            a=tf.nn.bias_add(tf.matmul(h,tf.transpose(self.W, [1,0])), self.bv)
-            p_v_h=tf.nn.sigmoid(a)
-            v_=self._bernouille_sampling(p_v_h, shape=[self.FLAGS.batch_size, int(p_v_h.shape[-1])])
+	def _sample_v(self, h):
+		'''Uses the hidden nodes for calculation of  the probabilities that a visible neuron is activated.
+		After that Bernouille distribution is used to sample the visible nodes.
 
-            return p_v_h, v_
+		@param h: hidden nodes
+		@return probability that a visible neuron is activated
+		@return sampled visible neurons (value 1 or 0 accroding to Bernouille distribution)
+		'''
 
-    def optimize(self, v):
-        ''' Optimization step. Gibbs sampling, calculating of gradients and doing an update operation.
+		with tf.name_scope('sampling_visible_units'):
 
-        @param v: visible nodes
-        @return update operation
-        @return accuracy
-        '''
+			a = tf.nn.bias_add(tf.matmul(h, tf.transpose(self.W, [1,0])), self.bv)
+			p_v_h = tf.nn.sigmoid(a)
+			v_ = self._bernouille_sampling(p_v_h, shape=[self.FLAGS.batch_size, int(p_v_h.shape[-1])])
 
-        with tf.name_scope('optimization'):
-            v0, vk,ph0, phk, _=self._gibbs_sampling(v)
-            dW,db_h,db_v=self._compute_gradients(v0, vk, ph0, phk)
-            update_op =self._update_parameter(dW,db_h,db_v)
+			return p_v_h, v_
 
-        with tf.name_scope('accuracy'):
-            mask=tf.where(tf.less(v0,0.0),x=tf.zeros_like(v0),y=tf.ones_like(v0))
-            bool_mask=tf.cast(tf.where(tf.less(v0,0.0),x=tf.zeros_like(v0),y=tf.ones_like(v0)), dtype=tf.bool)
-            acc=tf.where(bool_mask,x=tf.abs(tf.subtract(v0,vk)),y=tf.zeros_like(v0))
-            n_values=tf.reduce_sum(mask)
-            acc=tf.subtract(1.0,tf.div(tf.reduce_sum(acc), n_values))
+	def optimize(self, v):
+		'''Optimization step. Gibbs sampling, calculating of gradients and doing an update operation.
 
-        return update_op, acc
+		@param v: visible nodes
+		@return update operation
+		@return accuracy
+		'''
 
-    def inference(self, v):
-         '''Inference step. Training samples are used to activate the hidden neurons which are used for calculation of input neuron values.
-        This new input values are the prediction, for already rated movies as well as not yet rated movies
+		with tf.name_scope('optimization'):
+			v0, vk, ph0, phk, _ = self._gibbs_sampling(v)
+			dW, db_h, db_v = self._compute_gradients(v0, vk, ph0, phk)
+			update_op = self._update_parameter(dW, db_h, db_v)
 
-        @param v: visible nodes
-        @return sampled visible neurons (value 1 or 0 accroding to Bernouille distribution)
-        '''
-        p_h_v=tf.nn.sigmoid(tf.nn.bias_add(tf.matmul(v,self.W), self.bh))
-        h_=self._bernouille_sampling(p_h_v, shape=[1,int(p_h_v.shape[-1])])
+		with tf.name_scope('accuracy'):
 
-        p_v_h=tf.nn.sigmoid(tf.nn.bias_add(tf.matmul(h_,tf.transpose(self.W, [1,0])), self.bv))
-        v_=self._bernouille_sampling(p_v_h, shape=[1,int(p_v_h.shape[-1])])
+			mask = tf.where(tf.less(v0, 0.0), x = tf.zeros_like(v0), y = tf.ones_like(v0))
+			bool_mask = tf.cast(tf.where(tf.less(v0, 0.0), x = tf.zeros_like(v0), y = tf.ones_like(v0)), dtype = tf.bool)
+			acc = tf.where(bool_mask, x = tf.abs(tf.subtract(v0, vk)), y = tf.zeros_like(v0))
+			n_values = tf.reduce_sum(mask)
+			acc = tf.subtract(1.0, tf.div(tf.reduce_sum(acc), n_values))
 
-        return v_
+		return update_op, acc
 
-    def _update_parameter(self,dW,db_h,db_v):
-        ''' Creating TF assign operations. Updated weight and bias values are replacing old parameter values.
+	def inference(self, v):
+		 '''Inference step. Training samples are used to activate the hidden neurons which are used for calculation of input neuron values.
+		This new input values are the prediction, for already rated movies as well as not yet rated movies
 
-        @return assign operations
-        '''
+		@param v: visible nodes
+		@return sampled visible neurons (value 1 or 0 accroding to Bernouille distribution)
+		'''
+		p_h_v = tf.nn.sigmoid(tf.nn.bias_add(tf.matmul(v, self.W), self.bh))
+		h_ = self._bernouille_sampling(p_h_v, shape=[1, int(p_h_v.shape[-1])])
 
-        alpha=self.FLAGS.learning_rate
+		p_v_h = tf.nn.sigmoid(tf.nn.bias_add(tf.matmul(h_, tf.transpose(self.W, [1,0])), self.bv))
+		v_ = self._bernouille_sampling(p_v_h, shape=[1,int(p_v_h.shape[-1])])
 
-        update_op=[tf.assign(self.W, alpha*tf.add(self.W,dW)),
-                   tf.assign(self.bh, alpha*tf.add(self.bh,db_h)),
-                   tf.assign(self.bv, alpha*tf.add(self.bv,db_v))]
+		return v_
 
-        return update_op
+	def _update_parameter(self,dW,db_h,db_v):
+		''' Creating TF assign operations. Updated weight and bias values are replacing old parameter values.
 
-    def _compute_gradients(self,v0, vk, ph0, phk):
-        ''' Computing the gradients of the weights and bias terms with Contrastive Divergence.
+		@return assign operations
+		'''
 
-        @param v0: visible neurons before gibbs sampling
-        @param vk: visible neurons after gibbs sampling
-        @param ph0: probability that hidden neurons are activated before gibbs sampling.
-        @param phk: probability that hidden neurons are activated after gibbs sampling.
+		alpha = self.FLAGS.learning_rate
 
-        @return gradients of the network parameters
+		update_op = [tf.assign(self.W, alpha * tf.add(self.W, dW)),
+				   tf.assign(self.bh, alpha * tf.add(self.bh, db_h)),
+				   tf.assign(self.bv, alpha * tf.add(self.bv, db_v))]
 
-        '''
+		return update_op
 
-        #end condition for the while loop
-        def condition(i, v0, vk, ph0, phk, dW,db_h,db_v):
-            r=tf.less(i,k)
-            return r[0]
+	def _compute_gradients(self,v0, vk, ph0, phk):
+		''' Computing the gradients of the weights and bias terms with Contrastive Divergence.
 
-        #loop body
-        def body(i, v0, vk, ph0, phk, dW,dbh,dbv):
+		@param v0: visible neurons before gibbs sampling
+		@param vk: visible neurons after gibbs sampling
+		@param ph0: probability that hidden neurons are activated before gibbs sampling.
+		@param phk: probability that hidden neurons are activated after gibbs sampling.
 
-            v0_=v0[i]
-            ph0_=ph0[i]
+		@return gradients of the network parameters
+		'''
 
-            vk_=vk[i]
-            phk_=phk[i]
+		#end condition for the while loop
+		def condition(i, v0, vk, ph0, phk, dW,db_h,db_v):
+			r = tf.less(i,k)
+			return r[0]
 
-            #reshaping for making the outer product possible
-            ph0_=tf.reshape(ph0_, [1,self.FLAGS.num_h])
-            v0_=tf.reshape(v0_, [self.FLAGS.num_v,1])
-            phk_=tf.reshape(phk_, [1,self.FLAGS.num_h])
-            vk_=tf.reshape(vk_, [self.FLAGS.num_v,1])
+		#loop body
+		def body(i, v0, vk, ph0, phk, dW,dbh,dbv):
 
-            #calculating the gradiends for weights and biases
-            dw_=tf.subtract(tf.multiply(ph0_, v0_),tf.multiply(phk_, vk_))
-            dbh_=tf.subtract(ph0_,phk_)
-            dbv_=tf.subtract(v0_,vk_)
+			v0_ = v0[i]
+			ph0_ = ph0[i]
 
-            dbh_=tf.reshape(dbh_,[self.FLAGS.num_h])
-            dbv_=tf.reshape(dbv_,[self.FLAGS.num_v])
+			vk_ = vk[i]
+			phk_ = phk[i]
 
-            return [i+1, v0, vk, ph0, phk,tf.add(dW,dw_),tf.add(dbh,dbh_),tf.add(dbv,dbv_)]
+			#reshaping for making the outer product possible
+			ph0_ = tf.reshape(ph0_, [1, self.FLAGS.num_h])
+			v0_ = tf.reshape(v0_, [self.FLAGS.num_v, 1])
+			phk_ = tf.reshape(phk_, [1, self.FLAGS.num_h])
+			vk_ = tf.reshape(vk_, [self.FLAGS.num_v, 1])
 
-        i = 0 # start counter for the while loop
-        k=tf.constant([self.FLAGS.batch_size]) # number for the end condition of the while loop
+			#calculating the gradiends for weights and biases
+			dw_ = tf.subtract(tf.multiply(ph0_, v0_), tf.multiply(phk_, vk_))
+			dbh_ = tf.subtract(ph0_, phk_)
+			dbv_ = tf.subtract(v0_, vk_)
 
-        #init empty placeholders wherer the gradients will be stored
-        dW=tf.zeros((self.FLAGS.num_v, self.FLAGS.num_h))
-        dbh=tf.zeros((self.FLAGS.num_h))
-        dbv=tf.zeros((self.FLAGS.num_v))
+			dbh_ = tf.reshape(dbh_,[self.FLAGS.num_h])
+			dbv_ = tf.reshape(dbv_,[self.FLAGS.num_v])
 
-        #iterate over the batch and compute for each sample a gradient
-        [i, v0, vk, ph0, phk, dW,db_h,db_v]=tf.while_loop(condition, body,[i, v0, vk, ph0, phk, dW,dbh,dbv])
+			return [i + 1, v0, vk, ph0, phk, tf.add(dW, dw_),tf.add(dbh, dbh_), tf.add(dbv, dbv_)]
 
-        #devide the summed gradiends by the batch size
-        dW=tf.div(dW, self.FLAGS.batch_size)
-        dbh=tf.div(dbh, self.FLAGS.batch_size)
-        dbv=tf.div(dbv, self.FLAGS.batch_size)
+		i = 0 # start counter for the while loop
+		k = tf.constant([self.FLAGS.batch_size]) # number for the end condition of the while loop
 
-        return dW,dbh,dbv
+		#init empty placeholders wherer the gradients will be stored
+		dW = tf.zeros((self.FLAGS.num_v, self.FLAGS.num_h))
+		dbh = tf.zeros((self.FLAGS.num_h))
+		dbv = tf.zeros((self.FLAGS.num_v))
 
-    def _gibbs_sampling(self, v):
-        ''' Perfroming the gibbs sampling.
+		#iterate over the batch and compute for each sample a gradient
+		[i, v0, vk, ph0, phk, dW,db_h,db_v] = tf.while_loop(condition, body,[i, v0, vk, ph0, phk, dW,dbh,dbv])
 
-        @param v: visible neurons
-        @return visible neurons before gibbs sampling
-        @return visible neurons before gibbs sampling
-        @return probability that hidden neurons are activated before gibbs sampling.
-        @return probability that hidden neurons are activated after gibbs sampling.
-        '''
+		#devide the summed gradiends by the batch size
+		dW = tf.div(dW, self.FLAGS.batch_size)
+		dbh = tf.div(dbh, self.FLAGS.batch_size)
+		dbv = tf.div(dbv, self.FLAGS.batch_size)
 
-        #end condition for the while loop
-        def condition(i, vk, hk,v):
-            r= tf.less(i,k)
-            return r[0]
+		return dW,dbh,dbv
 
-        #loop body
-        def body(i, vk, hk,v):
+	def _gibbs_sampling(self, v):
+		''' Perfroming the gibbs sampling.
 
-            _,hk=self._sample_h(vk)
-            _,vk=self._sample_v(hk)
+		@param v: visible neurons
+		@return visible neurons before gibbs sampling
+		@return visible neurons before gibbs sampling
+		@return probability that hidden neurons are activated before gibbs sampling.
+		@return probability that hidden neurons are activated after gibbs sampling.
+		'''
 
-            vk=tf.where(tf.less(v,0),v,vk)
+		#end condition for the while loop
+		def condition(i, vk, hk, v):
+			r = tf.less(i,k)
+			return r[0]
 
-            return [i+1, vk, hk,v]
+		#loop body
+		def body(i, vk, hk,v):
 
-        ph0,_=self._sample_h(v)
+			_,hk = self._sample_h(vk)
+			_,vk = self._sample_v(hk)
 
-        vk=v
-        hk=tf.zeros_like(ph0)
+			vk = tf.where(tf.less(v,0),v,vk)
 
-        i = 0 # start counter for the while loop
-        k=tf.constant([self.FLAGS.k]) # number for the end condition of the while loop
+			return [i + 1, vk, hk,v]
 
-        [i, vk,hk,v]=tf.while_loop(condition, body,[i, vk,hk,v])
+		ph0, _ =self._sample_h(v)
 
-        phk,_=self._sample_h(vk)
+		vk = v
+		hk = tf.zeros_like(ph0)
 
-        return v, vk,ph0, phk, i
+		i = 0 # start counter for the while loop
+		k = tf.constant([self.FLAGS.k]) # number for the end condition of the while loop
 
-    def _bernouille_sampling(self,p, shape):
-        '''Samples from the Bernoulli distribution
+		[i, vk, hk, v] = tf.while_loop(condition, body,[i, vk, hk, v])
 
-        @param p: probability
-        @return samples from Bernoulli distribution
+		phk, _ = self._sample_h(vk)
 
-        '''
-        return tf.where(tf.less(p, tf.random_uniform(shape,minval=0.0,maxval=1.0)),
-                        x=tf.zeros_like(p),
-                        y=tf.ones_like(p)
-                        )
+		return v, vk, ph0, phk, i
+
+	def _bernouille_sampling(self,p, shape):
+		'''Samples from the Bernoulli distribution
+
+		@param p: probability
+		@return samples from Bernoulli distribution
+		'''
+		return tf.where(
+						tf.less(p, tf.random_uniform(shape, minval = 0.0, maxval = 1.0)),
+						x = tf.zeros_like(p),
+						y = tf.ones_like(p)
+				)

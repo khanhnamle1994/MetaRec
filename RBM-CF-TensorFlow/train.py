@@ -28,7 +28,7 @@ FLAGS = tf.app.flags.FLAGS
 def main(_):
     '''Building the graph, opening of a session and starting the training od the neural network.'''
 
-    num_batches=int(FLAGS.num_samples/FLAGS.batch_size)
+    num_batches = int(FLAGS.num_samples / FLAGS.batch_size)
 
     with tf.Graph().as_default():
 
