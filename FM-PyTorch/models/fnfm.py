@@ -13,6 +13,7 @@ class FieldAwareNeuralFactorizationMachineModel(torch.nn.Module):
         self.linear = FeaturesLinear(field_dims)
         self.ffm = FieldAwareFactorizationMachine(field_dims, embed_dim)
         self.ffm_output_dim = len(field_dims) * (len(field_dims) - 1) // 2 * embed_dim
+
         self.bn = torch.nn.BatchNorm1d(self.ffm_output_dim)
         self.dropout = torch.nn.Dropout(dropouts[0])
         self.mlp = MultiLayerPerceptron(self.ffm_output_dim, mlp_dims, dropouts[1])

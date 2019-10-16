@@ -10,6 +10,7 @@ class FactorizationSupportedNeuralNetworkModel(torch.nn.Module):
     def __init__(self, field_dims, embed_dim, mlp_dims, dropout):
 
         super().__init__()
+
         self.embedding = FeaturesEmbedding(field_dims, embed_dim)
         self.embed_output_dim = len(field_dims) * embed_dim
         self.mlp = MultiLayerPerceptron(self.embed_output_dim, mlp_dims, dropout)

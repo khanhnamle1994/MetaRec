@@ -12,6 +12,7 @@ class NeuralFactorizationMachineModel(torch.nn.Module):
         super().__init__()
         self.embedding = FeaturesEmbedding(field_dims, embed_dim)
         self.linear = FeaturesLinear(field_dims)
+
         self.fm = torch.nn.Sequential(
             FactorizationMachine(reduce_sum=False),
             torch.nn.BatchNorm1d(embed_dim),
