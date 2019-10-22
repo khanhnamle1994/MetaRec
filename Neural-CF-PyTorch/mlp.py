@@ -1,7 +1,8 @@
 import torch
 from gmf import GMF
 from engine import Engine
-from utils import use_cuda, resume_checkpoint
+#from utils import use_cuda
+from utils import resume_checkpoint
 
 class MLP(torch.nn.Module):
 
@@ -52,8 +53,8 @@ class MLP(torch.nn.Module):
         config = self.config
         gmf_model = GMF(config)
 
-        if config['use_cuda'] is True:
-            gmf_model.cuda()
+        # if config['use_cuda'] is True:
+        #     gmf_model.cuda()
 
         resume_checkpoint(gmf_model, model_dir = config['pretrain_mf'], device_id = config['device_id'])
 
@@ -67,9 +68,9 @@ class MLPEngine(Engine):
     def __init__(self, config):
         self.model = MLP(config)
 
-        if config['use_cuda'] is True:
-            use_cuda(True, config['device_id'])
-            self.model.cuda()
+        # if config['use_cuda'] is True:
+        #     use_cuda(True, config['device_id'])
+        #     self.model.cuda()
 
         super(MLPEngine, self).__init__(config)
         print(self.model)

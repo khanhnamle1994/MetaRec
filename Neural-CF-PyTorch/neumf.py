@@ -2,7 +2,8 @@ import torch
 from gmf import GMF
 from mlp import MLP
 from engine import Engine
-from utils import use_cuda, resume_checkpoint
+#from utils import use_cuda
+from utils import resume_checkpoint
 
 class NeuMF(torch.nn.Module):
 
@@ -60,8 +61,8 @@ class NeuMF(torch.nn.Module):
         config['latent_dim'] = config['latent_dim_mlp']
         mlp_model = MLP(config)
 
-        if config['use_cuda'] is True:
-            mlp_model.cuda()
+        # if config['use_cuda'] is True:
+        #     mlp_model.cuda()
 
         resume_checkpoint(mlp_model, model_dir = config['pretrain_mlp'], device_id = config['device_id'])
 
@@ -74,8 +75,8 @@ class NeuMF(torch.nn.Module):
         config['latent_dim'] = config['latent_dim_mf']
         gmf_model = GMF(config)
 
-        if config['use_cuda'] is True:
-            gmf_model.cuda()
+        # if config['use_cuda'] is True:
+        #     gmf_model.cuda()
 
         resume_checkpoint(gmf_model, model_dir = config['pretrain_mf'], device_id = config['device_id'])
 
@@ -91,9 +92,9 @@ class NeuMFEngine(Engine):
     def __init__(self, config):
         self.model = NeuMF(config)
 
-        if config['use_cuda'] is True:
-            use_cuda(True, config['device_id'])
-            self.model.cuda()
+        # if config['use_cuda'] is True:
+        #     use_cuda(True, config['device_id'])
+        #     self.model.cuda()
 
         super(NeuMFEngine, self).__init__(config)
         print(self.model)

@@ -11,11 +11,11 @@ def resume_checkpoint(model, model_dir, device_id):
     state_dict = torch.load(model_dir, map_location = lambda storage, loc: storage.cuda(device = device_id))  # ensure all storage are on gpu
     model.load_state_dict(state_dict)
 
-# Hyper params
-def use_cuda(enabled, device_id=0):
-    if enabled:
-        assert torch.cuda.is_available(), 'CUDA is not available'
-        torch.cuda.set_device(device_id)
+# # Hyper params
+# def use_cuda(enabled, device_id=0):
+#     if enabled:
+#         assert torch.cuda.is_available(), 'CUDA is not available'
+#         torch.cuda.set_device(device_id)
 
 def use_optimizer(network, params):
     if params['optimizer'] == 'sgd':

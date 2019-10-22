@@ -7,7 +7,7 @@ from data import SampleGenerator
 
 gmf_config = {'alias': 'gmf_factor8neg4-implict',
               'num_epoch': 200,
-              'batch_size': 1024,
+              'batch_size': 256,
               'optimizer': 'adam',
               'adam_lr': 1e-3,
               'num_users': 6040,
@@ -15,8 +15,8 @@ gmf_config = {'alias': 'gmf_factor8neg4-implict',
               'latent_dim': 8,
               'num_negative': 4,
               'l2_regularization': 0, # 0.01
-              'use_cuda': True,
-              'device_id': 0,
+              #'use_cuda': True,
+              #'device_id': 0,
               'model_dir':'checkpoints/{}_Epoch{}_HR{:.4f}_NDCG{:.4f}.model'}
 
 mlp_config = {'alias': 'mlp_factor8neg4_bz256_166432168_pretrain_reg_0.0000001',
@@ -30,15 +30,15 @@ mlp_config = {'alias': 'mlp_factor8neg4_bz256_166432168_pretrain_reg_0.0000001',
               'num_negative': 4,
               'layers': [16,64,32,16,8],  # layers[0] is the concat of latent user vector & latent item vector
               'l2_regularization': 0.0000001,  # MLP model is sensitive to hyper params
-              'use_cuda': True,
-              'device_id': 7,
+              #'use_cuda': True,
+              #'device_id': 7,
               'pretrain': True,
               'pretrain_mf': 'checkpoints/{}'.format('gmf_factor8neg4_Epoch100_HR0.6391_NDCG0.2852.model'),
               'model_dir':'checkpoints/{}_Epoch{}_HR{:.4f}_NDCG{:.4f}.model'}
 
 neumf_config = {'alias': 'pretrain_neumf_factor8neg4',
                 'num_epoch': 200,
-                'batch_size': 1024,
+                'batch_size': 256,
                 'optimizer': 'adam',
                 'adam_lr': 1e-3,
                 'num_users': 6040,
@@ -48,8 +48,8 @@ neumf_config = {'alias': 'pretrain_neumf_factor8neg4',
                 'num_negative': 4,
                 'layers': [16,32,16,8],  # layers[0] is the concat of latent user vector & latent item vector
                 'l2_regularization': 0.01,
-                'use_cuda': True,
-                'device_id': 7,
+                #'use_cuda': True,
+                #'device_id': 7,
                 'pretrain': True,
                 'pretrain_mf': 'checkpoints/{}'.format('gmf_factor8neg4_Epoch100_HR0.6391_NDCG0.2852.model'),
                 'pretrain_mlp': 'checkpoints/{}'.format('mlp_factor8neg4_Epoch100_HR0.5606_NDCG0.2463.model'),
@@ -82,10 +82,10 @@ evaluate_data = sample_generator.evaluate_data
 # Specify the exact model
 # config = gmf_config
 # engine = GMFEngine(config)
-# config = mlp_config
-# engine = MLPEngine(config)
-config = neumf_config
-engine = NeuMFEngine(config)
+config = mlp_config
+engine = MLPEngine(config)
+# config = neumf_config
+# engine = NeuMFEngine(config)
 
 for epoch in range(config['num_epoch']):
 
@@ -94,5 +94,6 @@ for epoch in range(config['num_epoch']):
 
     train_loader = sample_generator.instance_a_train_loader(config['num_negative'], config['batch_size'])
     engine.train_an_epoch(train_loader, epoch_id = epoch)
+
     hit_ratio, ndcg = engine.evaluate(evaluate_data, epoch_id = epoch)
     engine.save(config['alias'], epoch, hit_ratio, ndcg)

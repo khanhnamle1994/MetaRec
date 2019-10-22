@@ -25,8 +25,8 @@ class Engine(object):
 
         assert hasattr(self, 'model'), 'Please specify the exact model !'
 
-        if self.config['use_cuda'] is True:
-            users, items, ratings = users.cuda(), items.cuda(), ratings.cuda()
+        # if self.config['use_cuda'] is True:
+        #     users, items, ratings = users.cuda(), items.cuda(), ratings.cuda()
 
         self.opt.zero_grad()
         ratings_pred = self.model(users, items)
@@ -68,25 +68,25 @@ class Engine(object):
             test_users, test_items = evaluate_data[0], evaluate_data[1]
             negative_users, negative_items = evaluate_data[2], evaluate_data[3]
 
-            if self.config['use_cuda'] is True:
-                test_users = test_users.cuda()
-                test_items = test_items.cuda()
-
-                negative_users = negative_users.cuda()
-                negative_items = negative_items.cuda()
+            # if self.config['use_cuda'] is True:
+            #     test_users = test_users.cuda()
+            #     test_items = test_items.cuda()
+            #
+            #     negative_users = negative_users.cuda()
+            #     negative_items = negative_items.cuda()
 
             test_scores = self.model(test_users, test_items)
             negative_scores = self.model(negative_users, negative_items)
 
-            if self.config['use_cuda'] is True:
-
-                test_users = test_users.cpu()
-                test_items = test_items.cpu()
-                test_scores = test_scores.cpu()
-
-                negative_users = negative_users.cpu()
-                negative_items = negative_items.cpu()
-                negative_scores = negative_scores.cpu()
+            # if self.config['use_cuda'] is True:
+            #
+            #     test_users = test_users.cpu()
+            #     test_items = test_items.cpu()
+            #     test_scores = test_scores.cpu()
+            #
+            #     negative_users = negative_users.cpu()
+            #     negative_items = negative_items.cpu()
+            #     negative_scores = negative_scores.cpu()
 
             self._metron.subjects = [test_users.data.view(-1).tolist(),
                                  test_items.data.view(-1).tolist(),
