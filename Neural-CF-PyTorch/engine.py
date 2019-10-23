@@ -100,7 +100,7 @@ class Engine(object):
         self._writer.add_scalar('performance/HR', hit_ratio, epoch_id)
         self._writer.add_scalar('performance/NDCG', ndcg, epoch_id)
 
-        print('[Evluating Epoch {}] HR = {:.4f}, NDCG = {:.4f}'.format(epoch_id, hit_ratio, ndcg))
+        print('[Evaluating Epoch {}] HR = {:.4f}, NDCG = {:.4f}'.format(epoch_id, hit_ratio, ndcg))
 
         return hit_ratio, ndcg
 
