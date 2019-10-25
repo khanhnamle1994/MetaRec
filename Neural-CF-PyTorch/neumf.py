@@ -64,7 +64,8 @@ class NeuMF(torch.nn.Module):
         # if config['use_cuda'] is True:
         #     mlp_model.cuda()
 
-        resume_checkpoint(mlp_model, model_dir = config['pretrain_mlp'], device_id = config['device_id'])
+        # resume_checkpoint(mlp_model, model_dir = config['pretrain_mlp'], device_id = config['device_id'])
+        resume_checkpoint(mlp_model, model_dir = config['pretrain_mlp'])
 
         self.embedding_user_mlp.weight.data = mlp_model.embedding_user.weight.data
         self.embedding_item_mlp.weight.data = mlp_model.embedding_item.weight.data
@@ -78,7 +79,8 @@ class NeuMF(torch.nn.Module):
         # if config['use_cuda'] is True:
         #     gmf_model.cuda()
 
-        resume_checkpoint(gmf_model, model_dir = config['pretrain_mf'], device_id = config['device_id'])
+        # resume_checkpoint(gmf_model, model_dir = config['pretrain_mf'], device_id = config['device_id'])
+        resume_checkpoint(gmf_model, model_dir = config['pretrain_mf'])
 
         self.embedding_user_mf.weight.data = gmf_model.embedding_user.weight.data
         self.embedding_item_mf.weight.data = gmf_model.embedding_item.weight.data
