@@ -1,4 +1,7 @@
 import torch
+from engine import Engine
+#from utils import use_cuda
+from utils import resume_checkpoint
 
 class RBM:
 	'''
