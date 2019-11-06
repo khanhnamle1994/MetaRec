@@ -3,9 +3,15 @@ import numpy as np
 from rbm import RBMEngine
 from data import SampleGenerator
 
-rbm_config = {
-
-            }
+rbm_config = {'alias': 'rbm_model',
+            'num_epoch': 200,
+            'batch_size': 512,
+            'optimizer': 'adam',
+            'adam_lr': 1e-3,
+            'num_users': 6040,
+            'num_items': 3706,
+            'l2_regularization': 1e-4,
+            'model_dir':'checkpoints/{}_Epoch{}_HR{:.4f}_NDCG{:.4f}.model'}
 
 # Load Data
 ml1m_dir = '/Users/khanhnamle/Desktop/CSCI799-Graduate-Independent-Study/Codebase/ml-1m/ratings.dat'

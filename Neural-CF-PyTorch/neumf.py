@@ -89,7 +89,7 @@ class NeuMF(torch.nn.Module):
         self.affine_output.bias.data = 0.5 * (mlp_model.affine_output.bias.data + gmf_model.affine_output.bias.data)
 
 class NeuMFEngine(Engine):
-    """Engine for training & evaluating GMF model"""
+    """Engine for training & evaluating NMF model"""
 
     def __init__(self, config):
         self.model = NeuMF(config)

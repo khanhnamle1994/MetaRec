@@ -8,16 +8,21 @@ class RBM:
 	Implementation of the Restricted Boltzmann Machine for collaborative filtering. The model is based on the paper of Ruslan Salakhutdinov, Andriy Mnih and Geoffrey Hinton: https://www.cs.toronto.edu/~rsalakhu/papers/rbmcf.pdf
 	'''
 
-	def __init__(self, num_visible, num_hidden, k, learning_rate=1e-3, momentum_coefficient=0.5, weight_decay=1e-4, use_cuda=True):
+	def __init__(self, num_visible, num_hidden, k, momentum_coefficient=0.5, config):
 		'''Initialization of the model  '''
+		super(RBM, self).__init__()
 
-		self.num_visible = num_visible
-        self.num_hidden = num_hidden
-        self.k = k
-        self.learning_rate = learning_rate
+		self.config = config
+		self.num_users = config['num_users']
+        self.num_items = config['num_items']
+
+		self.num_visible = config['num_visible']
+        self.num_hidden = config['num_hidden']
+        self.k = config['k']
+
         self.momentum_coefficient = momentum_coefficient
-        self.weight_decay = weight_decay
-        self.use_cuda = use_cuda
+
+        # self.use_cuda = use_cuda
 
 		self.weights = torch.randn(num_visible, num_hidden) * 0.1
         self.visible_bias = torch.ones(num_visible) * 0.5
@@ -27,14 +32,14 @@ class RBM:
         self.visible_bias_momentum = torch.zeros(num_visible)
         self.hidden_bias_momentum = torch.zeros(num_hidden)
 
-		if self.use_cuda:
-            self.weights = self.weights.cuda()
-            self.visible_bias = self.visible_bias.cuda()
-            self.hidden_bias = self.hidden_bias.cuda()
-
-            self.weights_momentum = self.weights_momentum.cuda()
-            self.visible_bias_momentum = self.visible_bias_momentum.cuda()
-            self.hidden_bias_momentum = self.hidden_bias_momentum.cuda()
+		# if self.use_cuda:
+        #     self.weights = self.weights.cuda()
+        #     self.visible_bias = self.visible_bias.cuda()
+        #     self.hidden_bias = self.hidden_bias.cuda()
+		#
+        #     self.weights_momentum = self.weights_momentum.cuda()
+        #     self.visible_bias_momentum = self.visible_bias_momentum.cuda()
+        #     self.hidden_bias_momentum = self.hidden_bias_momentum.cuda()
 
 	def sample_hidden(self, visible_probabilities):
 		'''Uses the visible nodes for calculation of the probabilities that a hidden neuron is activated.'''
@@ -107,10 +112,14 @@ class RBM:
 
         return random_probabilities
 
-# Define loss function
-def loss_function(recon_x, x, mu, logvar, anneal=1.0):
-    # BCE = F.binary_cross_entropy(recon_x, x)
-    BCE = -torch.mean(torch.sum(F.log_softmax(recon_x, 1) * x, -1))
-    KLD = -0.5 * torch.mean(torch.sum(1 + logvar - mu.pow(2) - logvar.exp(), dim=1))
+class RBMEngine(Engine):
+    """Engine for training & evaluating RBM model"""
 
-    return BCE + anneal * KLD
+	def __init__(self, config):
+        self.model = RBM(config)
+
+        # if config['use_cuda'] is True:
+        #     use_cuda(True, config['device_id'])
+        #     self.model.cuda()
+
+        super(RBMEngine, self).__init__(config)
