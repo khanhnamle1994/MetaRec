@@ -4,13 +4,15 @@ from rbm import RBMEngine
 from data import SampleGenerator
 
 rbm_config = {'alias': 'rbm_model',
-            'num_epoch': 200,
-            'batch_size': 512,
+            'num_epoch': 100,
+            'batch_size': 64,
             'optimizer': 'adam',
             'adam_lr': 1e-3,
             'num_users': 6040,
             'num_items': 3706,
             'l2_regularization': 1e-4,
+            'use_cuda': True,
+            'device_id': 0,
             'model_dir':'checkpoints/{}_Epoch{}_HR{:.4f}_NDCG{:.4f}.model'}
 
 # Load Data

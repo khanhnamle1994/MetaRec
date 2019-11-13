@@ -1,6 +1,6 @@
 import torch
 from engine import Engine
-#from utils import use_cuda
+from utils import use_cuda
 from utils import resume_checkpoint
 
 class RBM:
@@ -21,7 +21,7 @@ class RBM:
 		self.k = config['k']
 		self.momentum_coefficient = config['momentum_coefficient']
 
-		# self.use_cuda = use_cuda
+		self.use_cuda = use_cuda
 
 		self.weights = torch.randn(num_visible, num_hidden) * 0.1
 		self.visible_bias = torch.ones(num_visible) * 0.5
@@ -106,19 +106,20 @@ class RBM:
 		'''Generate random probabilities'''
 		random_probabilities = torch.rand(num)
 
-        # if self.use_cuda:
-        #     random_probabilities = random_probabilities.cuda()
+		if self.use_cuda:
+			random_probabilities = random_probabilities.cuda()
 
-        return random_probabilities
+		return random_probabilities
 
 class RBMEngine(Engine):
     """Engine for training & evaluating RBM model"""
 
 	def __init__(self, config):
-        self.model = RBM(config)
+		self.model = RBM(config)
 
-        # if config['use_cuda'] is True:
-        #     use_cuda(True, config['device_id'])
-        #     self.model.cuda()
+		if config['use_cuda'] is True:
+			use_cuda(True, config['device_id'])
+			self.model.cuda()
 
-        super(RBMEngine, self).__init__(config)
+		super(RBMEngine, self).__init__(config)
+		print(self.model)
