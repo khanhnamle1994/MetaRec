@@ -44,5 +44,45 @@ c_vector = 1e-6
 
 # Setup logging
 log_dir = 'runs/simple_mf_01_' + str(datetime.now()).replace(' ', '_')
-print(log_dir)
 writer = SummaryWriter(log_dir=log_dir)
+
+# Instantiate the MF class object
+model = MF(n_user, n_item, writer=writer, k=k, c_vector=c_vector)
+optimizer = torch.optim.Adam(model.parameters(), lr=lr)
+
+# Create a supervised trainer
+trainer = create_supervised_trainer(model, optimizer, model.loss)
+# Use Mean Squared Error as accuracy metric
+metrics = {'accuracy': MeanSquaredError()}
+# Create a supervised evaluator
+evaluat = create_supervised_evaluator(model, metrics=metrics)
+
+train_loader = Loader(train_x, train_y, batchsize=1024)
+test_loader = Loader(test_x, test_y, batchsize=1024)
+
+def log_training_loss(engine, log_interval=500):
+    '''
+    Function to log the training loss
+    '''
+    model.itr = engine.state.iteration
+    if model.itr % log_interval == 0:
+        fmt = "Epoch[{}] Iteration[{}/{}] Loss: {:.2f}"
+        msg = fmt.format(engine.state.epoch, engine.state.iteration, len(train_loader), engine.state.output)
+        print(msg)
+
+trainer.add_event_handler(event_name=Events.ITERATION_COMPLETED, handler=log_training_loss)
+
+def log_validation_results(engine):
+    '''
+    Function to log the validation results
+    '''
+    # When triggered, run the validation set
+    evaluat.run(test_loader)
+    avg_accuracy = evaluat.state.metrics['accuracy']
+    print("Epoch[{}] Validation MSE: {:.2f} ".format(engine.state.epoch, avg_accuracy))
+    writer.add_scalar("validation/avg_accuracy", avg_accuracy, engine.state.epoch)
+
+trainer.add_event_handler(event_name=Events.EPOCH_COMPLETED, handler=log_validation_results)
+
+# Run the model
+trainer.run(train_loader, max_epochs=15)
