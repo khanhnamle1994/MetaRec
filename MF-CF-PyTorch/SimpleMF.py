@@ -13,6 +13,7 @@ class MF(nn.Module):
         Function to initialize the MF class
         '''
         super(MF, self).__init__()
+
         # This will hold the logging
         self.writer = writer
 
@@ -30,7 +31,7 @@ class MF(nn.Module):
         '''This is the most important function in this script'''
         # These are the user indices, and correspond to "u" variable
         user_id = train_x[:, 0]
-        # Item indices, correspond to the "i" variable
+        # These are the item indices, correspond to the "i" variable
         item_id = train_x[:, 1]
 
         # vector user = p_u

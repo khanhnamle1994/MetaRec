@@ -4,7 +4,6 @@ import numpy as np
 import pandas as pd
 import requests
 from zipfile import ZipFile
-from SimpleMF import *
 
 # Import PyTorch Ignite
 from ignite.engine import Events, create_supervised_trainer, create_supervised_evaluator
@@ -17,6 +16,9 @@ from tensorboardX import SummaryWriter
 # Import Utility Functions
 from loader import Loader
 from datetime import datetime
+
+# Import the Model Scripts
+from SimpleMF import *
 
 # Load preprocessed data
 path = '/Users/khanhnamle/Desktop/CSCI799-Graduate-Independent-Study/Codebase/ml-1m/'
