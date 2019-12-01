@@ -17,8 +17,8 @@ from tensorboardX import SummaryWriter
 from loader import Loader
 from datetime import datetime
 
-# Import the Model Scripts
-from SimpleMFBiases import *
+# Import the Model Script
+from MFBiases import *
 
 # Load preprocessed data
 path = '/Users/khanhnamle/Desktop/CSCI799-Graduate-Independent-Study/Codebase/ml-1m/'
@@ -68,10 +68,10 @@ def log_training_loss(engine, log_interval=500):
     '''
     Function to log the training loss
     '''
-    epoch = engine.state.epoch
-    itr = engine.state.iteration
+    epoch = engine.state.epoch # Keep track of epochs
+    itr = engine.state.iteration # Keep track of iterations
     fmt = "Epoch[{}] Iteration[{}/{}] Loss: {:.2f}"
-    msg = fmt.format(epoch, itr, len(train_loader), engine.state.output)
+    msg = fmt.format(epoch, itr, len(train_loader), engine.state.output) # Keep track of outputs
     model.itr = itr
     if itr % log_interval == 0:
         print(msg)
@@ -84,12 +84,12 @@ def log_validation_results(engine):
     '''
     # When triggered, run the validation set
     evaluat.run(test_loader)
-    metrics = evaluat.state.metrics
+    metrics = evaluat.state.metrics # Keep track of metrics
     avg_accuracy = metrics['accuracy']
     print("Epoch[{}] Validation MSE: {:.2f} ".format(engine.state.epoch, avg_accuracy))
     writer.add_scalar("validation/avg_accuracy", avg_accuracy, engine.state.epoch)
 
 trainer.add_event_handler(event_name=Events.EPOCH_COMPLETED, handler=log_validation_results)
 
-# Run the model
+# Run the model for 30 epochs
 trainer.run(train_loader, max_epochs=30)
