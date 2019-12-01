@@ -42,7 +42,7 @@ n_occu = int(fh['n_occu'])
 lr = 1e-2
 # Number of dimensions per user, item
 k = 10
-# New parameter for regularizing bias
+# New parameter for regularizing bias and side features
 c_bias = 1e-6
 c_vector = 1e-6
 
