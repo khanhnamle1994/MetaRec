@@ -7,7 +7,7 @@ class MF(nn.Module):
     # Iteration counter
     itr = 0
 
-    def __init__(self, n_feat, k=18, c_feat=1.0, c_bias=1.0, writer=None):
+    def __init__(self, n_feat, k=10, c_feat=1.0, c_bias=1.0, writer=None):
         '''
         Function to initialize the MF class
         '''
