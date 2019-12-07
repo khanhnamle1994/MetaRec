@@ -10,13 +10,15 @@ class Loader():
         self.y = y
         self.batchsize = batchsize
         self.batches = range(0, len(self.y), batchsize)
-        if do_shuffle:
+        self.do_shuffle = do_shuffle
+        if self.do_shuffle:
             # Every epoch re-shuffle the dataset
             self.x, self.y = shuffle(self.x, self.y)
 
     def __iter__(self):
         # Reset & return a new iterator
-        self.x, self.y = shuffle(self.x, self.y, random_state=0)
+        if self.do_shuffle:
+            self.x, self.y = shuffle(self.x, self.y, random_state=0)
         self.current = 0
         return self
 
