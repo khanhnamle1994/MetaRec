@@ -57,7 +57,7 @@ neumf_config = {'alias': 'neumf_factor8neg4_pretrain',
                 }
 
 # Load Data
-ml1m_dir = '/Users/khanhnamle/Desktop/CSCI799-Graduate-Independent-Study/Codebase/ml-1m/ratings.dat'
+ml1m_dir = '../ml-1m/ratings.dat'
 ml1m_rating = pd.read_csv(ml1m_dir, sep = '::', header = None, names = ['uid', 'mid', 'rating', 'timestamp'],  engine = 'python')
 
 # Reindex
