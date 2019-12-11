@@ -12,7 +12,7 @@ This is my PyTorch implementation of the paper [Neural Collaborative Filtering](
 * [gmf.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Neural-CF-PyTorch/gmf.py): This is the model script that defines the General Matrix Factorization model.
 * [mlp.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Neural-CF-PyTorch/mlp.py): This is the model script that defines the Multi-Layer Perceptron model.
 * [neumf.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Neural-CF-PyTorch/neumf.py): This is the model script that defines the Neural Matrix Factorization model.
-* [train.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Neural-CF-PyTorch/train.py): This is the main training script. You can simply run '''python train.py''' to execute it.
+* [train.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Neural-CF-PyTorch/train.py): This is the main training script. You can simply run `python train.py` to execute it.
 
 <img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Neural-CF-PyTorch/pics/Fig3.png" width="500">
 
