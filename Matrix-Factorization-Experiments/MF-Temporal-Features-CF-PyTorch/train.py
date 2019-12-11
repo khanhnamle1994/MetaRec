@@ -1,6 +1,9 @@
 # Import Python Libraries
+import os.path
 import numpy as np
 import pandas as pd
+import requests
+from zipfile import ZipFile
 
 # Import PyTorch Ignite
 from ignite.engine import Events, create_supervised_trainer, create_supervised_evaluator
@@ -15,10 +18,10 @@ from loader import Loader
 from datetime import datetime
 
 # Import the Model Script
-from FM import *
+from MFTemporalFeat import *
 
 # Load preprocessed data
-path = '/Users/khanhnamle/Desktop/CSCI799-Graduate-Independent-Study/Codebase/ml-1m/'
+path = '../../ml-1m/'
 fh = np.load(path + 'dataset.npz')
 
 # We have a bunch of feature columns and last column is the y-target
@@ -35,29 +38,24 @@ n_user = int(fh['n_user'])
 n_item = int(fh['n_item'])
 n_occu = int(fh['n_occu'])
 n_rank = int(fh['n_ranks'])
-# Add them up to get number of features
-n_feat = n_user + n_item + n_occu + n_rank
-
-train_x[:, 1] += n_user
-train_x[:, 2] += n_user + n_item
-train_x[:, 3] += n_user + n_item + n_occu
-test_x[:, 1] += n_user
-test_x[:, 2] += n_user + n_item
-test_x[:, 3] += n_user + n_item + n_occu
 
 # Hyperparameters
-lr = 1e-2 # learning rate
-k = 10 # number of dimensions per user and item
-# New parameter for regularizing bias and features
+lr = 1e-2
+# Number of dimensions per user, item, and time
+k = 10
+kt = 2
+# New parameter for regularizing bias, side features, and temporal features
 c_bias = 1e-6
-c_feat = 1e-6
+c_vector = 1e-6
+c_temp = 1e-6
+c_ut = 1e-6
 
 # Setup logging
-log_dir = 'runs/simple_mf_06_fm_' + str(datetime.now()).replace(' ', '_')
+log_dir = 'runs/simple_mf_04_temporal_features_' + str(datetime.now()).replace(' ', '_')
 writer = SummaryWriter(log_dir=log_dir)
 
 # Instantiate the model class object
-model = MF(n_feat, k=k, c_bias=c_bias, c_feat=c_feat, writer=writer)
+model = MF(n_user, n_item, n_occu, n_rank, writer=writer, k=k, kt=kt, c_bias=c_bias, c_vector=c_vector, c_ut=c_ut, c_temp=c_temp)
 optimizer = torch.optim.Adam(model.parameters(), lr=lr)
 
 # Create a supervised trainer
@@ -89,7 +87,8 @@ def log_validation_results(engine):
     '''
     Function to log the validation results
     '''
-    evaluat.run(test_loader) # When triggered, run the validation set
+    # When triggered, run the validation set
+    evaluat.run(test_loader)
     metrics = evaluat.state.metrics # Keep track of metrics
     avg_accuracy = metrics['accuracy']
     print("Epoch[{}] Validation MSE: {:.2f} ".format(engine.state.epoch, avg_accuracy))

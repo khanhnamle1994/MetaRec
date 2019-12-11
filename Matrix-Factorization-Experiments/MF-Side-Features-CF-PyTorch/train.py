@@ -1,6 +1,9 @@
 # Import Python Libraries
+import os.path
 import numpy as np
 import pandas as pd
+import requests
+from zipfile import ZipFile
 
 # Import PyTorch Ignite
 from ignite.engine import Events, create_supervised_trainer, create_supervised_evaluator
@@ -15,10 +18,10 @@ from loader import Loader
 from datetime import datetime
 
 # Import the Model Script
-from MFMixTaste import *
+from MFSideFeat import *
 
 # Load preprocessed data
-path = '/Users/khanhnamle/Desktop/CSCI799-Graduate-Independent-Study/Codebase/ml-1m/'
+path = '../../ml-1m/'
 fh = np.load(path + 'dataset.npz')
 
 # We have a bunch of feature columns and last column is the y-target
@@ -30,23 +33,25 @@ train_y = fh['train_y']
 test_x = fh['test_x'].astype(np.int64)
 test_y = fh['test_y']
 
-# Number of users and number of items
+# Number of users, number of items and number of occupations
 n_user = int(fh['n_user'])
 n_item = int(fh['n_item'])
+n_occu = int(fh['n_occu'])
 
 # Hyperparameters
 lr = 1e-2
-k = 16
-c = 4
+# Number of dimensions per user, item
+k = 10
+# New parameter for regularizing bias and side features
 c_bias = 1e-6
 c_vector = 1e-6
 
 # Setup logging
-log_dir = 'runs/simple_mf_07_mot_' + str(datetime.now()).replace(' ', '_')
+log_dir = 'runs/simple_mf_03_side_features_' + str(datetime.now()).replace(' ', '_')
 writer = SummaryWriter(log_dir=log_dir)
 
 # Instantiate the model class object
-model = MF(n_user, n_item,  k=k, c=c, c_bias=c_bias, c_vector=c_vector, writer=writer)
+model = MF(n_user, n_item, n_occu, writer=writer, k=k, c_bias=c_bias, c_vector=c_vector)
 optimizer = torch.optim.Adam(model.parameters(), lr=lr)
 
 # Create a supervised trainer
@@ -64,10 +69,10 @@ def log_training_loss(engine, log_interval=500):
     '''
     Function to log the training loss
     '''
-    epoch = engine.state.epoch
-    itr = engine.state.iteration
+    epoch = engine.state.epoch # Keep track of epochs
+    itr = engine.state.iteration # Keep track of iterations
     fmt = "Epoch[{}] Iteration[{}/{}] Loss: {:.2f}"
-    msg = fmt.format(epoch, itr, len(train_loader), engine.state.output)
+    msg = fmt.format(epoch, itr, len(train_loader), engine.state.output) # Keep track of outputs
     model.itr = itr
     if itr % log_interval == 0:
         print(msg)
@@ -78,13 +83,14 @@ def log_validation_results(engine):
     '''
     Function to log the validation results
     '''
+    # When triggered, run the validation set
     evaluat.run(test_loader)
-    metrics = evaluat.state.metrics
+    metrics = evaluat.state.metrics # Keep track of metrics
     avg_accuracy = metrics['accuracy']
     print("Epoch[{}] Validation MSE: {:.2f} ".format(engine.state.epoch, avg_accuracy))
     writer.add_scalar("validation/avg_accuracy", avg_accuracy, engine.state.epoch)
 
 trainer.add_event_handler(event_name=Events.EPOCH_COMPLETED, handler=log_validation_results)
 
-# Run the model for 50 epochs
-trainer.run(train_loader, max_epochs=50)
+# Run the model for 40 epochs
+trainer.run(train_loader, max_epochs=40)

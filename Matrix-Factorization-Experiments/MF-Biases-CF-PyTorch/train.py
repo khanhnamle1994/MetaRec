@@ -18,10 +18,10 @@ from loader import Loader
 from datetime import datetime
 
 # Import the Model Script
-from MFTemporalFeat import *
+from MFBiases import *
 
 # Load preprocessed data
-path = '/Users/khanhnamle/Desktop/CSCI799-Graduate-Independent-Study/Codebase/ml-1m/'
+path = '../../ml-1m/'
 fh = np.load(path + 'dataset.npz')
 
 # We have a bunch of feature columns and last column is the y-target
@@ -33,29 +33,24 @@ train_y = fh['train_y']
 test_x = fh['test_x'].astype(np.int64)
 test_y = fh['test_y']
 
-# Number of users, number of items, number of occupations, and number of ranks
+# Number of users and number of items
 n_user = int(fh['n_user'])
 n_item = int(fh['n_item'])
-n_occu = int(fh['n_occu'])
-n_rank = int(fh['n_ranks'])
 
 # Hyperparameters
 lr = 1e-2
-# Number of dimensions per user, item, and time
+# Number of dimensions per user, item
 k = 10
-kt = 2
-# New parameter for regularizing bias, side features, and temporal features
+# New parameter for regularizing bias
 c_bias = 1e-6
 c_vector = 1e-6
-c_temp = 1e-6
-c_ut = 1e-6
 
 # Setup logging
-log_dir = 'runs/simple_mf_04_temporal_features_' + str(datetime.now()).replace(' ', '_')
+log_dir = 'runs/simple_mf_02_bias_' + str(datetime.now()).replace(' ', '_')
 writer = SummaryWriter(log_dir=log_dir)
 
 # Instantiate the model class object
-model = MF(n_user, n_item, n_occu, n_rank, writer=writer, k=k, kt=kt, c_bias=c_bias, c_vector=c_vector, c_ut=c_ut, c_temp=c_temp)
+model = MF(n_user, n_item, writer=writer, k=k, c_bias=c_bias, c_vector=c_vector)
 optimizer = torch.optim.Adam(model.parameters(), lr=lr)
 
 # Create a supervised trainer
@@ -96,5 +91,5 @@ def log_validation_results(engine):
 
 trainer.add_event_handler(event_name=Events.EPOCH_COMPLETED, handler=log_validation_results)
 
-# Run the model for 50 epochs
-trainer.run(train_loader, max_epochs=50)
+# Run the model for 30 epochs
+trainer.run(train_loader, max_epochs=30)
