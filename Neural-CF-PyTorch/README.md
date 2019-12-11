@@ -7,7 +7,7 @@ This is my PyTorch implementation of the paper [Neural Collaborative Filtering](
 ## Scripts
 * [data.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Neural-CF-PyTorch/data.py): This is the data processing script.
 * [engine.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Neural-CF-PyTorch/engine.py): This is the meta engine script for training and evaluating the models.
-* metrics.py: This is the metric script that defines the Hit Ratio metric and Normalized Discounted Cumulative Gain metric.
+* [metrics.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Neural-CF-PyTorch/metrics.py): This is the metric script that defines the Hit Ratio metric and Normalized Discounted Cumulative Gain metric.
 * [utils.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Neural-CF-PyTorch/utils.py): This is the utility script that define some handy functions for PyTorch model training.
 * [gmf.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Neural-CF-PyTorch/gmf.py): This is the model script that defines the General Matrix Factorization model.
 * [mlp.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Neural-CF-PyTorch/mlp.py): This is the model script that defines the Multi-Layer Perceptron model.

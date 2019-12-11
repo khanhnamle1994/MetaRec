@@ -5,7 +5,7 @@ from rbm import RBM
 from sklearn.model_selection import train_test_split
 
 # Path directory
-path = '/Users/khanhnamle/Desktop/CSCI799-Graduate-Independent-Study/Codebase/ml-1m'
+path = '../ml-1m'
 
 # Load datasets from MovieLens1M
 movies = pd.read_csv(path + '/movies.dat', sep='::', header=None, engine='python', encoding='latin-1')
