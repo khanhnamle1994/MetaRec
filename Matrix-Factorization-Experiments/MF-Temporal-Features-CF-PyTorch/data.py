@@ -4,7 +4,7 @@ import pandas as pd
 import requests
 from zipfile import ZipFile
 
-path = '/Users/khanhnamle/Desktop/CSCI799-Graduate-Independent-Study/Codebase/ml-1m/'
+path = '../../ml-1m/'
 
 # Create users dataframe
 users = pd.read_csv(path + "users.dat", delimiter='::', engine='python', names=['user', 'gender', 'age', 'occupation', 'zipcode'])

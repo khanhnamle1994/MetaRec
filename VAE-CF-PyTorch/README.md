@@ -32,4 +32,13 @@ The full results are stored in [this folder](https://github.com/khanhnamle1994/t
 
 <img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/VAE-CF-PyTorch/pics/result.png" width="500">
 
+## Run Tensorboard in the background.
+While I am using PyTorch instead of Tensorflow directly, the logging and visualization library Tensorboard is an amazing asset to track the progress of our models. It's implemented as a small local web server that constructs visualizations from log files, so start by kicking it off in the background:
+
+```
+tensorboard --logdir runs
+```
+
+Visit the Tensorboard dashboard by going to [http://localhost:6006](http://localhost:6006)
+
 <img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/VAE-CF-PyTorch/pics/result-experiment.png" width="700">

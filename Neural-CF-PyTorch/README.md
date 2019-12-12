@@ -36,4 +36,13 @@ The full results are stored in [this folder](https://github.com/khanhnamle1994/t
 * Multi-Layer Perceptron: Loss = 3171, Hit Ratio = 0.500, NDCG = 0.275
 * Neural Matrix Factorization: Loss = 2431, Hit Ratio = 0.730, NDCG = 0.447
 
+## Run Tensorboard in the background.
+While I am using PyTorch instead of Tensorflow directly, the logging and visualization library Tensorboard is an amazing asset to track the progress of our models. It's implemented as a small local web server that constructs visualizations from log files, so start by kicking it off in the background:
+
+```
+tensorboard --logdir runs
+```
+
+Visit the Tensorboard dashboard by going to [http://localhost:6006](http://localhost:6006)
+
 <img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Neural-CF-PyTorch/pics/result-experiment.png" width="700">
