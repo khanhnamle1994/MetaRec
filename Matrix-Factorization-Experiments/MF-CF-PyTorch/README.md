@@ -33,4 +33,7 @@ tensorboard --logdir runs
 
 Visit the Tensorboard dashboard by going to [http://localhost:6006](http://localhost:6006)
 
-![mse-loss](https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/MF-CF-PyTorch/loss_mse.png) ![valid-accuracy](https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/MF-CF-PyTorch/valid_accuracy.png)
+<p float="left">
+  <img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/MF-CF-PyTorch/loss_mse.png" width="500" />
+  <img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/MF-CF-PyTorch/valid_accuracy.png" width="500" />
+</p>
