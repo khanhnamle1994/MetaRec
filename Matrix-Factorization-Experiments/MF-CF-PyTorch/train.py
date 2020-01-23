@@ -1,9 +1,6 @@
-# Import Python Libraries
-import os.path
+# Import NumPy and PyTorch
 import numpy as np
-import pandas as pd
-import requests
-from zipfile import ZipFile
+import torch
 
 # Import PyTorch Ignite
 from ignite.engine import Events, create_supervised_trainer, create_supervised_evaluator
@@ -22,69 +19,77 @@ from MF import *
 
 # Load preprocessed data
 path = '../../ml-1m/'
-fh = np.load(path + 'dataset.npz')
+full_data = np.load(path + 'dataset.npz')
 
 # We have a bunch of feature columns and last column is the y-target
-# Note pytorch is finicky about need int64 types
-train_x = fh['train_x'].astype(np.int64)
-train_y = fh['train_y']
+# Note that Pytorch is finicky about need int64 types
+train_x = full_data['train_x'].astype(np.int64)
+train_y = full_data['train_y']
 
-# We've already split into train & test
-test_x = fh['test_x'].astype(np.int64)
-test_y = fh['test_y']
+# We've already split the data into train & test set
+test_x = full_data['test_x'].astype(np.int64)
+test_y = full_data['test_y']
 
-# Number of users and number of items
-n_user = int(fh['n_user'])
-n_item = int(fh['n_item'])
+# Extract the number of users and number of items
+n_user = int(full_data['n_user'])
+n_item = int(full_data['n_item'])
 
-# Hyperparameters
-lr = 1e-2
-# Number of dimensions per user, item
-k = 10
-# regularization constant
-c_vector = 1e-6
+# Define the Hyper-parameters
+lr = 1e-2  # Learning Rate
+k = 10  # Number of dimensions per user, item
+c_vector = 1e-6  # regularization constant
 
-# Setup logging
+# Setup TensorBoard logging
 log_dir = 'runs/simple_mf_01_' + str(datetime.now()).replace(' ', '_')
 writer = SummaryWriter(log_dir=log_dir)
 
 # Instantiate the MF class object
 model = MF(n_user, n_item, writer=writer, k=k, c_vector=c_vector)
+
+# Use Adam optimizer
 optimizer = torch.optim.Adam(model.parameters(), lr=lr)
 
 # Create a supervised trainer
 trainer = create_supervised_trainer(model, optimizer, model.loss)
+
 # Use Mean Squared Error as accuracy metric
 metrics = {'accuracy': MeanSquaredError()}
+
 # Create a supervised evaluator
-evaluat = create_supervised_evaluator(model, metrics=metrics)
+evaluator = create_supervised_evaluator(model, metrics=metrics)
 
 train_loader = Loader(train_x, train_y, batchsize=1024)
 test_loader = Loader(test_x, test_y, batchsize=1024)
 
+
 def log_training_loss(engine, log_interval=500):
-    '''
+    """
     Function to log the training loss
-    '''
-    model.itr = engine.state.iteration # Keep track of iterations
+    """
+    model.itr = engine.state.iteration  # Keep track of iterations
     if model.itr % log_interval == 0:
         fmt = "Epoch[{}] Iteration[{}/{}] Loss: {:.2f}"
-        msg = fmt.format(engine.state.epoch, engine.state.iteration, len(train_loader), engine.state.output) # Keep track of epochs and outputs
+        # Keep track of epochs and outputs
+        msg = fmt.format(engine.state.epoch, engine.state.iteration, len(train_loader), engine.state.output)
         print(msg)
+
 
 trainer.add_event_handler(event_name=Events.ITERATION_COMPLETED, handler=log_training_loss)
 
+
 def log_validation_results(engine):
-    '''
+    """
     Function to log the validation results
-    '''
+    """
     # When triggered, run the validation set
-    evaluat.run(test_loader)
-    avg_accuracy = evaluat.state.metrics['accuracy'] # Keep track of metrics
+    evaluator.run(test_loader)
+    # Keep track of accuracy metrics
+    avg_accuracy = evaluator.state.metrics['accuracy']
     print("Epoch[{}] Validation MSE: {:.2f} ".format(engine.state.epoch, avg_accuracy))
     writer.add_scalar("validation/avg_accuracy", avg_accuracy, engine.state.epoch)
 
+
 trainer.add_event_handler(event_name=Events.EPOCH_COMPLETED, handler=log_validation_results)
 
-# Run the model for 15 epochs
-trainer.run(train_loader, max_epochs=15)
+# Run the model for 50 epochs
+trainer.run(train_loader, max_epochs=50)

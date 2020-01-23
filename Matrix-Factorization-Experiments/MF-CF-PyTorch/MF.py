@@ -3,21 +3,26 @@ import torch
 from torch import nn
 import torch.nn.functional as F
 
+
 # Define the MF Model
 class MF(nn.Module):
     # Iteration counter
     itr = 0
 
     def __init__(self, n_user, n_item, k=18, c_vector=1.0, writer=None):
-        '''
-        Function to initialize the MF class
-        '''
+        """
+        :param n_user: User column
+        :param n_item: Item column
+        :param k: Dimensions constant
+        :param c_vector: Regularization constant
+        :param writer: Log results via TensorBoard
+        """
         super(MF, self).__init__()
 
         # This will hold the logging
         self.writer = writer
 
-        # These are simple hyperparameters
+        # These are the hyper-parameters
         self.k = k
         self.n_user = n_user
         self.n_item = n_item
@@ -28,7 +33,7 @@ class MF(nn.Module):
         self.item = nn.Embedding(n_item, k)
 
     def __call__(self, train_x):
-        '''This is the most important function in this script'''
+        """This is the most important function in this script"""
         # These are the user indices, and correspond to "u" variable
         user_id = train_x[:, 0]
         # These are the item indices, correspond to the "i" variable
@@ -44,14 +49,14 @@ class MF(nn.Module):
         return ui_interaction
 
     def loss(self, prediction, target):
-        '''
+        """
         Function to calculate the loss metric
-        '''
-        # MSE error between target = R_ui and prediction = p_u * q_i
+        """
+        # Calculate the Mean Squared Error between target = R_ui and prediction = p_u * q_i
         loss_mse = F.mse_loss(prediction, target.squeeze())
 
-        # Compute L2 reularization over user (P) and item (Q) matrices
-        prior_user =  l2_regularize(self.user.weight) * self.c_vector
+        # Compute L2 regularization over user (P) and item (Q) matrices
+        prior_user = l2_regularize(self.user.weight) * self.c_vector
         prior_item = l2_regularize(self.item.weight) * self.c_vector
 
         # Add up the MSE loss + user & item regularization
@@ -63,9 +68,10 @@ class MF(nn.Module):
                 self.writer.add_scalar(name, var, self.itr)
         return total
 
+
 def l2_regularize(array):
-    '''
+    """
     Function to do L2 regularization
-    '''
+    """
     loss = torch.sum(array ** 2.0)
     return loss
