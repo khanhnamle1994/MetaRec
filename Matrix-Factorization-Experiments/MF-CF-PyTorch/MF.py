@@ -9,7 +9,7 @@ class MF(nn.Module):
     # Iteration counter
     itr = 0
 
-    def __init__(self, n_user, n_item, k=18, c_vector=1.0, writer=None):
+    def __init__(self, n_user, n_item, k=10, c_vector=1.0, writer=None):
         """
         :param n_user: User column
         :param n_item: Item column
@@ -28,7 +28,7 @@ class MF(nn.Module):
         self.n_item = n_item
         self.c_vector = c_vector
 
-        # These are learned and fit by PyTorch
+        # The embedding matrices for user and item are learned and fit by PyTorch
         self.user = nn.Embedding(n_user, k)
         self.item = nn.Embedding(n_item, k)
 
@@ -39,12 +39,12 @@ class MF(nn.Module):
         # These are the item indices, correspond to the "i" variable
         item_id = train_x[:, 1]
 
-        # vector user = p_u
+        # Initialize a vector user = p_u using the user indices
         vector_user = self.user(user_id)
-        # vector item = q_i
+        # Initialize a vector item = q_i using the item indices
         vector_item = self.item(item_id)
 
-        # this is a dot product & a user-item interaction: p_u * q_i
+        # The user-item interaction: p_u * q_i is a dot product between the 2 vectors above
         ui_interaction = torch.sum(vector_user * vector_item, dim=1)
         return ui_interaction
 

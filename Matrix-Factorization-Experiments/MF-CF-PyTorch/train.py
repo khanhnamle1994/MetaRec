@@ -58,6 +58,7 @@ metrics = {'accuracy': MeanSquaredError()}
 # Create a supervised evaluator
 evaluator = create_supervised_evaluator(model, metrics=metrics)
 
+# Load the train and test data
 train_loader = Loader(train_x, train_y, batchsize=1024)
 test_loader = Loader(test_x, test_y, batchsize=1024)
 
