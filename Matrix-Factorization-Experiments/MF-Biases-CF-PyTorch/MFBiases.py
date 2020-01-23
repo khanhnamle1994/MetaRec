@@ -69,7 +69,7 @@ class MF(nn.Module):
         """
         Function to calculate the loss metric
         """
-        # Calculate the Mean Squared Error between target = R_ui and prediction = p_u * q_i
+        # Calculate the Mean Squared Error between target and prediction
         loss_mse = F.mse_loss(prediction, target.squeeze())
 
         # Compute L2 regularization over the biases for user and the biases for item matrices
