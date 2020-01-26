@@ -57,7 +57,7 @@ class MF(nn.Module):
         # Initialize a vector item = q_i using the item indices
         vector_item = self.item(item_id)
 
-        # The user-item interaction: p_u * q_i is a dot product between the 2 vectors above
+        # The user-item interaction: p_u * q_i is a dot product between the user vector and the item vector
         ui_interaction = torch.sum(vector_user * vector_item, dim=1)
 
         # Pull out biases
@@ -69,11 +69,11 @@ class MF(nn.Module):
         occu_id = train_x[:, 3]
         # Initialize a vector occupation = r_o using the occupation indices
         vector_occu = self.occu(occu_id)
-        # The occupation-item interaction: p_u * r_o is a dot product between the 2 vectors above
-        oi_interaction = torch.sum(vector_user * vector_occu, dim=1)
+        # The user-occupation interaction: p_u * r_o is a dot product between the user vector and the occupation vector
+        uo_interaction = torch.sum(vector_user * vector_occu, dim=1)
 
-        # Add the bias, the user-item interaction, and the occupation-item interaction to obtain the final prediction
-        prediction = ui_interaction + oi_interaction + biases
+        # Add the bias, the user-item interaction, and the user-occupation interaction to obtain the final prediction
+        prediction = ui_interaction + uo_interaction + biases
         return prediction
 
     def loss(self, prediction, target):
