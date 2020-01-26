@@ -13,8 +13,8 @@ TensorboardX
 ```
 
 ## Scripts
-* [MF.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/MF-CF-PyTorch/MF.py): This is the model script that defines the Matrix Factorization model.
-* [train.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/MF-CF-PyTorch/train.py): This is the main training script. You can simply run `python train.py` to execute it.
+* [MF.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/Vanilla-MF/MF.py): This is the model script that defines the Matrix Factorization model.
+* [train.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/Vanilla-MF/train.py): This is the main training script. You can simply run `python train.py` to execute it.
 
 ## Results
 The full results are stored in [this folder](https://github.com/khanhnamle1994/transfer-rec/tree/master/Matrix-Factorization-Experiments/Vanilla-MF/results). After training the model for 50 epochs, I got the training loss MSE = 0.7068 and validation average accuracy = 0.8174 with training time = 8m 22s.
@@ -35,4 +35,4 @@ Here is the Mean Squared Error Loss for this model:
 
 Here is the Accuracy on the Test set for this model:
 
-<img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/Vanilla-MF/valid_avg_accuracy.svg" width="750" />
+<img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/Vanilla-MF/validation_avg_accuracy.svg" width="750" />
