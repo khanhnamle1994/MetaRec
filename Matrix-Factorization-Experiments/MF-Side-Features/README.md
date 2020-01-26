@@ -30,8 +30,8 @@ Visit the Tensorboard dashboard by going to [http://localhost:6006](http://local
 
 Here is the Mean Squared Error Loss for this model:
 
-<img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/MF-Side-Features-CF-PyTorch/loss_mse.png" width="500" />
+<img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/MF-Side-Features/loss_mse.svg" width="750" />
 
 Here is the Accuracy on the Test set for this model:
 
-<img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/MF-Side-Features-CF-PyTorch/valid_accuracy.png" width="500" />
+<img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/MF-Side-Features/valid_avg_accuracy.svg" width="750" />
