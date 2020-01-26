@@ -34,4 +34,4 @@ Here is the Mean Squared Error Loss for this model:
 
 Here is the Accuracy on the Test set for this model:
 
-<img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/MF-Temporal-Features/valid_avg_accuracy.svg" width="750" />
+<img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/MF-Temporal-Features/validation_avg_accuracy.svg" width="750" />
