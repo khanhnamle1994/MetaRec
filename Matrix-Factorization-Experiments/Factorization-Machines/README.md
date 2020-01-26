@@ -17,7 +17,7 @@ TensorboardX
 * [train.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/Factorization-Machines/train.py): This is the main training script. You can simply run `python train.py` to execute it.
 
 ## Results
-The full results are stored in [this folder](https://github.com/khanhnamle1994/transfer-rec/tree/master/Matrix-Factorization-Experiments/Factorization-Machines/results). After training the model for 50 epochs, I got the training loss MSE = 0.7338 and validation accuracy = 0.8208 with training time = 3m 17s.
+The full results are stored in [this folder](https://github.com/khanhnamle1994/transfer-rec/tree/master/Matrix-Factorization-Experiments/Factorization-Machines/results). After training the model for 50 epochs, I got the training loss MSE = 0.7338 and validation accuracy = 0.8208 with training time = 3m 11s.
 
 ## Run Tensorboard in the background.
 While I am using PyTorch instead of Tensorflow directly, the logging and visualization library Tensorboard is an amazing asset to track the progress of our models. It's implemented as a small local web server that constructs visualizations from log files, so start by kicking it off in the background:
