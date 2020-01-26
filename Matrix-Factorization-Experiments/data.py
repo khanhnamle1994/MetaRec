@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 # Set the directory path to MovieLens 1M dataset
-path = '../../ml-1m/'
+path = '../ml-1m/'
 
 '''
 Create a Pandas Data Frame for the "Users" csv file
