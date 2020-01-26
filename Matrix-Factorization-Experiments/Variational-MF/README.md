@@ -1,6 +1,6 @@
 # Variational Matrix Factorization for Collaborative Filtering
 
-This is my PyTorch implementation of a Variational Matrix Factorization model for Collaborative Filtering. The code is inspired by [Chris Moody's tutorial on Deep Recommendations in PyTorch](https://docs.google.com/presentation/d/1gv7osHoSX8CHf0uzKSqOlxmmAvPPdmstL0nrZHWiHQM/edit#slide=id.p). This model is a great way to dip into explore & exploit problems.
+This is my PyTorch implementation of a Variational Matrix Factorization model for Collaborative Filtering. This model is a great way to dip into explore & exploit problems.
 
 ## Requirements
 ```
@@ -12,12 +12,7 @@ Sklearn
 TensorboardX
 ```
 
-## Dataset
-You can download the MovieLens-1M dataset from [this folder](https://github.com/khanhnamle1994/transfer-rec/tree/master/ml-1m).
-
 ## Scripts
-* [data.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/Variational-MF-CF-PyTorch/data.py): This is the script that pre-processes the dataset.
-* [loader.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/Variational-MF-CF-PyTorch/loader.py): This is the script that loads the dataset.
 * [VMF.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/Variational-MF-CF-PyTorch/VMF.py): This is the model script that defines the Variational Matrix Factorization.
 * [train.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/Variational-MF-CF-PyTorch/train.py): This is the main training script. You can simply run `python train.py` to execute it.
 
