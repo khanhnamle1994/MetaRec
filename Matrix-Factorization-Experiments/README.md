@@ -22,10 +22,9 @@ Sklearn
 TensorboardX
 ```
 
-## Processing and Loading Data
-You can download the MovieLens-1M dataset from [this folder](https://github.com/khanhnamle1994/transfer-rec/tree/master/ml-1m).
-* [data.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/data.py): This is the script that pre-processes the data.
-* [loader.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/loader.py): This is the script that loads the data.
+## Download and Process Data
+* You can download the MovieLens-1M dataset from [this folder](https://github.com/khanhnamle1994/transfer-rec/tree/master/ml-1m).
+* [data.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/data.py) is the script that pre-processes the data.
 
 ## Training Models
 
@@ -75,12 +74,16 @@ python Variational-MF/train.py
 
 Here are the results for all these models after 50 epochs of training:
 
-|         Model         | Training Loss | Test Accuracy | Training Time |
+|         Model         | Training Loss |   Test Loss   | Training Time |
 |:---------------------:|:-------------:|:-------------:|:-------------:|
-|       Vanilla MF      |     0.7068    |     0.8174    |     8m22s     |
-|       MF Biases       |     0.6623    |     0.788     |     12m32s    |
-|    MF Side Features   |     0.7248    |     0.7893    |     13m51s    |
-|  MF Temporal Features |     0.7464    |     0.7954    |     21m23s    |
-| Factorization Machine |     0.7338    |     0.8208    |     3m11s     |
-|  MF Mixture of Tastes |     0.6638    |     0.7871    |     14m35s    |
-|     Variational MF    |     0.6929    |     0.8305    |     17m42s    |
+|       Vanilla MF      |     0.6947    |     0.8174    |     6m5s      |
+|       MF Biases       |     0.6789    |     0.7895    |     11m38s    |
+|    MF Side Features   |     0.6602    |     0.7843    |     13m34s    |
+|  MF Temporal Features |     0.7088    |     0.7939    |     18m51s    |
+| Factorization Machine |     0.6542    |     0.8225    |     3m40s     |
+|  MF Mixture of Tastes |     0.6366    |     0.7878    |     13m44s    |
+|     Variational MF    |     0.6206    |     0.8385    |     16m51s    |
+
+* Variational MF has the lowest training loss
+* MF with Side Features has the lowest test loss
+* Factorization Machines has the lowest training time

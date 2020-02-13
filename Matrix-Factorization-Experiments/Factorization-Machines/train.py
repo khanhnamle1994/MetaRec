@@ -65,8 +65,8 @@ optimizer = torch.optim.Adam(model.parameters(), lr=lr)
 # Create a supervised trainer
 trainer = create_supervised_trainer(model, optimizer, model.loss)
 
-# Use Mean Squared Error as accuracy metric
-metrics = {'accuracy': MeanSquaredError()}
+# Use Mean Squared Error as evaluation metric
+metrics = {'evaluation': MeanSquaredError()}
 
 # Create a supervised evaluator
 evaluator = create_supervised_evaluator(model, metrics=metrics)
@@ -93,14 +93,14 @@ trainer.add_event_handler(event_name=Events.ITERATION_COMPLETED, handler=log_tra
 
 def log_validation_results(engine):
     """
-    Function to log the validation results
+    Function to log the validation loss
     """
     # When triggered, run the validation set
     evaluator.run(test_loader)
-    # Keep track of accuracy metrics
-    avg_accuracy = evaluator.state.metrics['accuracy']
-    print("Epoch[{}] Validation MSE: {:.2f} ".format(engine.state.epoch, avg_accuracy))
-    writer.add_scalar("validation/avg_accuracy", avg_accuracy, engine.state.epoch)
+    # Keep track of the evaluation metrics
+    avg_loss = evaluator.state.metrics['evaluation']
+    print("Epoch[{}] Validation MSE: {:.2f} ".format(engine.state.epoch, avg_loss))
+    writer.add_scalar("validation/avg_loss", avg_loss, engine.state.epoch)
 
 
 trainer.add_event_handler(event_name=Events.EPOCH_COMPLETED, handler=log_validation_results)
