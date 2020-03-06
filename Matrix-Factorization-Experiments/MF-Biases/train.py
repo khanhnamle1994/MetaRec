@@ -95,3 +95,6 @@ trainer.add_event_handler(event_name=Events.EPOCH_COMPLETED, handler=log_validat
 
 # Run the model for 50 epochs
 trainer.run(train_loader, max_epochs=50)
+
+# Save the model to a separate folder
+torch.save(model.state_dict(), '../models/mf_biases.pth')
