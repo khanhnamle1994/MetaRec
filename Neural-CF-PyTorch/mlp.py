@@ -1,8 +1,9 @@
 import torch
 from gmf import GMF
 from engine import Engine
-#from utils import use_cuda
+# from utils import use_cuda
 from utils import resume_checkpoint
+
 
 class MLP(torch.nn.Module):
 
@@ -14,16 +15,16 @@ class MLP(torch.nn.Module):
         self.num_items = config['num_items']
         self.latent_dim = config['latent_dim']
 
-        self.embedding_user = torch.nn.Embedding(num_embeddings = self.num_users, embedding_dim = self.latent_dim)
+        self.embedding_user = torch.nn.Embedding(num_embeddings=self.num_users, embedding_dim=self.latent_dim)
 
-        self.embedding_item = torch.nn.Embedding(num_embeddings = self.num_items, embedding_dim = self.latent_dim)
+        self.embedding_item = torch.nn.Embedding(num_embeddings=self.num_items, embedding_dim=self.latent_dim)
 
         self.fc_layers = torch.nn.ModuleList()
 
         for idx, (in_size, out_size) in enumerate(zip(config['layers'][:-1], config['layers'][1:])):
             self.fc_layers.append(torch.nn.Linear(in_size, out_size))
 
-        self.affine_output = torch.nn.Linear(in_features = config['layers'][-1], out_features = 1)
+        self.affine_output = torch.nn.Linear(in_features=config['layers'][-1], out_features=1)
 
         self.logistic = torch.nn.Sigmoid()
 
@@ -31,7 +32,7 @@ class MLP(torch.nn.Module):
 
         user_embedding = self.embedding_user(user_indices)
         item_embedding = self.embedding_item(item_indices)
-        vector = torch.cat([user_embedding, item_embedding], dim = -1)  # the concat latent vector
+        vector = torch.cat([user_embedding, item_embedding], dim=-1)  # the concat latent vector
 
         for idx, _ in enumerate(range(len(self.fc_layers))):
             vector = self.fc_layers[idx](vector)
@@ -57,11 +58,12 @@ class MLP(torch.nn.Module):
         #     gmf_model.cuda()
 
         # resume_checkpoint(gmf_model, model_dir = config['pretrain_mf'], device_id = config['device_id'])
-        resume_checkpoint(gmf_model, model_dir = config['pretrain_mf'])
+        resume_checkpoint(gmf_model, model_dir=config['pretrain_mf'])
 
         self.embedding_user.weight.data = gmf_model.embedding_user.weight.data
 
         self.embedding_item.weight.data = gmf_model.embedding_item.weight.data
+
 
 class MLPEngine(Engine):
     """Engine for training & evaluating GMF model"""

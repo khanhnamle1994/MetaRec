@@ -2,8 +2,9 @@ import torch
 from gmf import GMF
 from mlp import MLP
 from engine import Engine
-#from utils import use_cuda
+# from utils import use_cuda
 from utils import resume_checkpoint
+
 
 class NeuMF(torch.nn.Module):
 
@@ -16,18 +17,18 @@ class NeuMF(torch.nn.Module):
         self.latent_dim_mf = config['latent_dim_mf']
         self.latent_dim_mlp = config['latent_dim_mlp']
 
-        self.embedding_user_mlp = torch.nn.Embedding(num_embeddings = self.num_users, embedding_dim = self.latent_dim_mlp)
-        self.embedding_item_mlp = torch.nn.Embedding(num_embeddings = self.num_items, embedding_dim = self.latent_dim_mlp)
+        self.embedding_user_mlp = torch.nn.Embedding(num_embeddings=self.num_users, embedding_dim=self.latent_dim_mlp)
+        self.embedding_item_mlp = torch.nn.Embedding(num_embeddings=self.num_items, embedding_dim=self.latent_dim_mlp)
 
-        self.embedding_user_mf = torch.nn.Embedding(num_embeddings = self.num_users, embedding_dim = self.latent_dim_mf)
-        self.embedding_item_mf = torch.nn.Embedding(num_embeddings = self.num_items, embedding_dim = self.latent_dim_mf)
+        self.embedding_user_mf = torch.nn.Embedding(num_embeddings=self.num_users, embedding_dim=self.latent_dim_mf)
+        self.embedding_item_mf = torch.nn.Embedding(num_embeddings=self.num_items, embedding_dim=self.latent_dim_mf)
 
         self.fc_layers = torch.nn.ModuleList()
 
         for idx, (in_size, out_size) in enumerate(zip(config['layers'][:-1], config['layers'][1:])):
             self.fc_layers.append(torch.nn.Linear(in_size, out_size))
 
-        self.affine_output = torch.nn.Linear(in_features = config['layers'][-1] + config['latent_dim_mf'], out_features = 1)
+        self.affine_output = torch.nn.Linear(in_features=config['layers'][-1] + config['latent_dim_mf'], out_features=1)
         self.logistic = torch.nn.Sigmoid()
 
     def forward(self, user_indices, item_indices):
@@ -38,14 +39,14 @@ class NeuMF(torch.nn.Module):
         user_embedding_mf = self.embedding_user_mf(user_indices)
         item_embedding_mf = self.embedding_item_mf(item_indices)
 
-        mlp_vector = torch.cat([user_embedding_mlp, item_embedding_mlp], dim = -1)  # the concat latent vector
+        mlp_vector = torch.cat([user_embedding_mlp, item_embedding_mlp], dim=-1)  # the concat latent vector
         mf_vector = torch.mul(user_embedding_mf, item_embedding_mf)
 
         for idx, _ in enumerate(range(len(self.fc_layers))):
             mlp_vector = self.fc_layers[idx](mlp_vector)
             mlp_vector = torch.nn.ReLU()(mlp_vector)
 
-        vector = torch.cat([mlp_vector, mf_vector], dim = -1)
+        vector = torch.cat([mlp_vector, mf_vector], dim=-1)
         logits = self.affine_output(vector)
         rating = self.logistic(logits)
 
@@ -65,7 +66,7 @@ class NeuMF(torch.nn.Module):
         #     mlp_model.cuda()
 
         # resume_checkpoint(mlp_model, model_dir = config['pretrain_mlp'], device_id = config['device_id'])
-        resume_checkpoint(mlp_model, model_dir = config['pretrain_mlp'])
+        resume_checkpoint(mlp_model, model_dir=config['pretrain_mlp'])
 
         self.embedding_user_mlp.weight.data = mlp_model.embedding_user.weight.data
         self.embedding_item_mlp.weight.data = mlp_model.embedding_item.weight.data
@@ -80,13 +81,15 @@ class NeuMF(torch.nn.Module):
         #     gmf_model.cuda()
 
         # resume_checkpoint(gmf_model, model_dir = config['pretrain_mf'], device_id = config['device_id'])
-        resume_checkpoint(gmf_model, model_dir = config['pretrain_mf'])
+        resume_checkpoint(gmf_model, model_dir=config['pretrain_mf'])
 
         self.embedding_user_mf.weight.data = gmf_model.embedding_user.weight.data
         self.embedding_item_mf.weight.data = gmf_model.embedding_item.weight.data
 
-        self.affine_output.weight.data = 0.5 * torch.cat([mlp_model.affine_output.weight.data, gmf_model.affine_output.weight.data], dim = -1)
+        self.affine_output.weight.data = 0.5 * torch.cat(
+            [mlp_model.affine_output.weight.data, gmf_model.affine_output.weight.data], dim=-1)
         self.affine_output.bias.data = 0.5 * (mlp_model.affine_output.bias.data + gmf_model.affine_output.bias.data)
+
 
 class NeuMFEngine(Engine):
     """Engine for training & evaluating NMF model"""
