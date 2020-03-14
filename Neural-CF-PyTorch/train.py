@@ -82,10 +82,10 @@ evaluate_data = sample_generator.evaluate_data
 # Specify the exact model
 # config = gmf_config
 # engine = GMFEngine(config)
-config = mlp_config
-engine = MLPEngine(config)
-# config = neumf_config
-# engine = NeuMFEngine(config)
+# config = mlp_config
+# engine = MLPEngine(config)
+config = neumf_config
+engine = NeuMFEngine(config)
 
 for epoch in range(config['num_epoch']):
     print('Epoch {} starts !'.format(epoch))
