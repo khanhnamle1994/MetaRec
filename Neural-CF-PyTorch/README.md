@@ -31,10 +31,10 @@ You can download the MovieLens-1M dataset from [this folder](https://github.com/
 <img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Neural-CF-PyTorch/pics/Table1.png" width="500">
 
 ## Results
-The full results are stored in [this folder](https://github.com/khanhnamle1994/transfer-rec/tree/master/Neural-CF-PyTorch/results). All models are trained for 199 steps. Here are the results after the last iteration:
-* General Matrix Factorization: Loss = 5186, Hit Ratio = 0.631, NDCG = 0.366
-* Multi-Layer Perceptron: Loss = 3171, Hit Ratio = 0.500, NDCG = 0.275
-* Neural Matrix Factorization: Loss = 2431, Hit Ratio = 0.730, NDCG = 0.447
+The full results are stored in [this folder](https://github.com/khanhnamle1994/transfer-rec/tree/master/Neural-CF-PyTorch/results). All models are trained for 50 epochs. Here are the results after the last iteration:
+* General Matrix Factorization: Hit Ratio = 0.6397, NDCG = 0.3669
+* Multi-Layer Perceptron: Hit Ratio = 0.6550, NDCG = 0.3796
+* Neural Matrix Factorization: Hit Ratio = 0.6594, NDCG = 0.3919
 
 ## Run Tensorboard in the background.
 While I am using PyTorch instead of Tensorflow directly, the logging and visualization library Tensorboard is an amazing asset to track the progress of our models. It's implemented as a small local web server that constructs visualizations from log files, so start by kicking it off in the background:
@@ -45,4 +45,10 @@ tensorboard --logdir runs
 
 Visit the Tensorboard dashboard by going to [http://localhost:6006](http://localhost:6006)
 
-<img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Neural-CF-PyTorch/pics/result-experiment.png" width="700">
+Here are the Hit Ratio @ 10 performances:
+
+<img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Neural-CF-PyTorch/pics/performance_HR.svg" width="1000">
+
+Here are the Normalized Discounted Cumulative Gain @ 10 performances:
+
+<img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Neural-CF-PyTorch/pics/performance_NDCG.svg" width="1000">
