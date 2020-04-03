@@ -1,0 +1,1 @@
+Namespace(base_lr=0.001, batch_size=128, decay_epoch_step=50, display_step=1, grad_clip=False, hidden_neuron=500, lambda_value=1, optimizer_method='Adam', random_seed=1000, train_epoch=100)
