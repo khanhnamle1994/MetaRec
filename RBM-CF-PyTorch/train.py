@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 # Path directory
 path = '../ml-1m'
 
-# Load datasets from MovieLens1M
+# Load dataset from MovieLens1M
 movies = pd.read_csv(path + '/movies.dat', sep='::', header=None, engine='python', encoding='latin-1')
 users = pd.read_csv(path + '/users.dat', sep='::', header=None, engine='python', encoding='latin-1')
 ratings = pd.read_csv(path + '/ratings.dat', sep='::', header=None, engine='python', encoding='latin-1')

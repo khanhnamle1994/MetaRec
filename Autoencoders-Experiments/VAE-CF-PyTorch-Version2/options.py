@@ -27,7 +27,7 @@ parser.add_argument('--dataset_code', type=str, default='ml-1m', choices=DATASET
 parser.add_argument('--min_rating', type=int, default=4, help='Only keep ratings greater than equal to this value')
 parser.add_argument('--min_uc', type=int, default=5, help='Only keep users with more than min_uc ratings')
 parser.add_argument('--min_sc', type=int, default=0, help='Only keep items with more than min_sc ratings')
-parser.add_argument('--split', type=str, default='leave_one_out', help='How to split the datasets')
+parser.add_argument('--split', type=str, default='leave_one_out', help='How to split the dataset')
 parser.add_argument('--dataset_split_seed', type=int, default=98765)
 parser.add_argument('--eval_set_size', type=int, default=500,
                     help='Size of val and test set. 500 for ML-1m and 10000 for ML-20m recommended')
