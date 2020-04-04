@@ -1,8 +1,8 @@
 import tensorflow as tf
 
-from .model import NNMF
+from model import NNMF
 import dataset
-from .config import *
+from config import *
 
 
 def _get_batch(train_data, batch_size):
@@ -15,6 +15,8 @@ def _train(model, sess, saver, train_data, valid_data, batch_size):
     prev_valid_rmse = float("Inf")
     early_stop_iters = 0
     for i in range(MAX_ITER):
+        print("Epoch: {}".format(i))
+
         # Run SGD
         batch = train_data.sample(batch_size) if batch_size else train_data
         model.train_iteration(batch)
@@ -24,7 +26,8 @@ def _train(model, sess, saver, train_data, valid_data, batch_size):
         train_rmse = model.eval_rmse(batch)
         valid_loss = model.eval_loss(valid_data)
         valid_rmse = model.eval_rmse(valid_data)
-        print("{:3f} {:3f}, {:3f} {:3f}".format(train_loss, train_rmse, valid_loss, valid_rmse))
+        print("Train Loss: {:3f}, Train RMSE: {:3f}, Valid Loss: {:3f}, Valid RMSE: {:3f}".format(
+            train_loss, train_rmse, valid_loss, valid_rmse))
 
         if EARLY_STOP:
             early_stop_iters += 1
@@ -33,7 +36,7 @@ def _train(model, sess, saver, train_data, valid_data, batch_size):
                 early_stop_iters = 0
                 saver.save(sess, model.model_file_path)
             elif early_stop_iters >= EARLY_STOP_MAX_ITER:
-                print("Early stopping ({} vs. {})...".format(
+                print("Early stopping (Previous Valid RMSE: {} vs. Current Valid RMSE: {})...".format(
                     prev_valid_rmse, valid_rmse))
                 break
         else:
@@ -43,7 +46,7 @@ def _train(model, sess, saver, train_data, valid_data, batch_size):
 def _test(model, valid_data, test_data):
     valid_rmse = model.eval_rmse(valid_data)
     test_rmse = model.eval_rmse(test_data)
-    print("Final valid RMSE: {}, test RMSE: {}".format(valid_rmse, test_rmse))
+    print("Final Valid RMSE: {} and Final Test RMSE: {}".format(valid_rmse, test_rmse))
     return valid_rmse, test_rmse
 
 

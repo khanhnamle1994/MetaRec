@@ -4,7 +4,7 @@ import math
 
 import tensorflow as tf
 
-from .dataset import get_N_and_M
+from dataset import get_N_and_M
 
 
 def _init_model_file_path(kind):
@@ -147,25 +147,25 @@ class NNMF(object):
             final_activation=final_activation)
 
         # self.r = _r
-        self.r = tf.squeeze(_r, squeeze_dims=[1])
+        self.r = tf.compat.v1.squeeze(_r, squeeze_dims=[1])
 
     def _init_ops(self):
         # Loss
-        self.reconstruction_loss = tf.reduce_sum(
+        self.reconstruction_loss = tf.compat.v1.reduce_sum(
             tf.square(tf.subtract(self.r_target, self.r)),
             reduction_indices=[0])
         self.regularizer_loss = tf.add_n([
-            tf.reduce_sum(tf.square(self.U_prime)),
-            tf.reduce_sum(tf.square(self.U)),
-            tf.reduce_sum(tf.square(self.V)),
-            tf.reduce_sum(tf.square(self.V_prime)),
+            tf.compat.v1.reduce_sum(tf.square(self.U_prime)),
+            tf.compat.v1.reduce_sum(tf.square(self.U)),
+            tf.compat.v1.reduce_sum(tf.square(self.V)),
+            tf.compat.v1.reduce_sum(tf.square(self.V_prime)),
         ])
         self.loss = self.reconstruction_loss + (
             self.lambda_value * self.regularizer_loss)
 
         # Optimizer
-        self.optimizer = tf.compat.v1.train.RMSPropOptimizer(self.learning_rate)
-        # self.optimizer = tf.compat.v1.train.AdamOptimizer(1e-3)
+        # self.optimizer = tf.compat.v1.train.RMSPropOptimizer(self.learning_rate)
+        self.optimizer = tf.compat.v1.train.AdamOptimizer(self.learning_rate)
 
         # Optimize the MLP weights
         f_train_step = self.optimizer.minimize(
