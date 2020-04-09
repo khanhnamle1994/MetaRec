@@ -3,6 +3,7 @@ import torch.nn.functional as F
 import torch
 import numpy as np
 
+
 class MultiVAE(nn.Module):
     """
     Container module for Multi-VAE.
@@ -24,9 +25,9 @@ class MultiVAE(nn.Module):
         # Last dimension of q- network is for mean and variance
         temp_q_dims = self.q_dims[:-1] + [self.q_dims[-1] * 2]
         self.q_layers = nn.ModuleList([nn.Linear(d_in, d_out) for
-            d_in, d_out in zip(temp_q_dims[:-1], temp_q_dims[1:])])
+                                       d_in, d_out in zip(temp_q_dims[:-1], temp_q_dims[1:])])
         self.p_layers = nn.ModuleList([nn.Linear(d_in, d_out) for
-            d_in, d_out in zip(self.p_dims[:-1], self.p_dims[1:])])
+                                       d_in, d_out in zip(self.p_dims[:-1], self.p_dims[1:])])
 
         self.drop = nn.Dropout(dropout)
         self.init_weights()
@@ -71,7 +72,7 @@ class MultiVAE(nn.Module):
             size = layer.weight.size()
             fan_out = size[0]
             fan_in = size[1]
-            std = np.sqrt(2.0/(fan_in + fan_out))
+            std = np.sqrt(2.0 / (fan_in + fan_out))
             layer.weight.data.normal_(0.0, std)
 
             # Normal Initialization for Biases
@@ -82,11 +83,12 @@ class MultiVAE(nn.Module):
             size = layer.weight.size()
             fan_out = size[0]
             fan_in = size[1]
-            std = np.sqrt(2.0/(fan_in + fan_out))
+            std = np.sqrt(2.0 / (fan_in + fan_out))
             layer.weight.data.normal_(0.0, std)
 
             # Normal Initialization for Biases
             layer.bias.data.normal_(0.0, 0.001)
+
 
 # Define loss function
 def loss_function(recon_x, x, mu, logvar, anneal=1.0):

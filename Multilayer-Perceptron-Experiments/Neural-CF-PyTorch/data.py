@@ -16,15 +16,17 @@ class UserItemRatingDataset(Dataset):
         args:
             target_tensor: torch.Tensor, the corresponding rating for <user, item> pair
         """
-
+        # Initialize the tensors for user, item, and target (rating) data instances
         self.user_tensor = user_tensor
         self.item_tensor = item_tensor
         self.target_tensor = target_tensor
 
     def __getitem__(self, index):
+        # Return the indices for user, item, and target tensors
         return self.user_tensor[index], self.item_tensor[index], self.target_tensor[index]
 
     def __len__(self):
+        # Return the size of the user tensor
         return self.user_tensor.size(0)
 
 
@@ -36,23 +38,27 @@ class SampleGenerator(object):
         args:
             ratings: pd.DataFrame, which contains 4 columns = ['userId', 'itemId', 'rating', 'timestamp']
         """
-
+        # Make sure that the columns of 'ratings' include 'userId', 'itemId', and 'rating'
         assert 'userId' in ratings.columns
         assert 'itemId' in ratings.columns
         assert 'rating' in ratings.columns
 
+        # Initialize ratings data
         self.ratings = ratings
 
-        # explicit feedback using _normalize and implicit feedback using _binarize
+        # Preprocess explicit feedback using _normalize and
         # self.preprocess_ratings = self._normalize(ratings)
+        # Preprocess implicit feedback using _binarize
         self.preprocess_ratings = self._binarize(ratings)
 
-        # Get unique user and item instances
+        # Get the unique user and item IDs
         self.user_pool = set(self.ratings['userId'].unique())
         self.item_pool = set(self.ratings['itemId'].unique())
 
-        # create negative item samples for NCF learning
+        # Create negative item samples for NCF learning
         self.negatives = self._sample_negative(ratings)
+
+        # Perform leave one out train/test split on the ratings data
         self.train_ratings, self.test_ratings = self._split_loo(self.preprocess_ratings)
 
     def _normalize(self, ratings):

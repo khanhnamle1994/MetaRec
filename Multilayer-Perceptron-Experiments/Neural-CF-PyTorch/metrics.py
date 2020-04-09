@@ -3,6 +3,7 @@ import pandas as pd
 
 
 class MetronAtK(object):
+    """Object-Oriented class to calculate metrics for Top-K list"""
 
     def __init__(self, top_k):
         self._top_k = top_k
@@ -29,13 +30,15 @@ class MetronAtK(object):
 
         assert isinstance(subjects, list)
 
+        # Get test data
         test_users, test_items, test_scores = subjects[0], subjects[1], subjects[2]
+        # Get negative data
         neg_users, neg_items, neg_scores = subjects[3], subjects[4], subjects[5]
 
-        # the golden set
+        # the golden set with only test data
         test = pd.DataFrame({'user': test_users, 'test_item': test_items, 'test_score': test_scores})
 
-        # the full set
+        # the full set of test and negative data
         full = pd.DataFrame(
             {'user': neg_users + test_users, 'item': neg_items + test_items, 'score': neg_scores + test_scores})
         full = pd.merge(full, test, on=['user'], how='left')
@@ -47,7 +50,7 @@ class MetronAtK(object):
         self._subjects = full
 
     def cal_hit_ratio(self):
-        """Hit Ratio @ top_K"""
+        """Function to calculate Hit Ratio @ top_K"""
 
         full, top_k = self._subjects, self._top_k
 
@@ -58,7 +61,7 @@ class MetronAtK(object):
         return len(test_in_top_k) * 1.0 / full['user'].nunique()
 
     def cal_ndcg(self):
-        """Normalized Discounted Cumulative Gain @ top_K"""
+        """Function to calculate Normalized Discounted Cumulative Gain @ top_K"""
 
         full, top_k = self._subjects, self._top_k
 
