@@ -4,18 +4,18 @@ import random
 if __name__ == '__main__':
 
     for i in range(1000):
-        # Test only dropout
+        # Choice of hyper-parameters
         hyper_params = {
-            # 'lambda_value': random.random() * 100,
-            'lambda_value': 70.29,
-            # 'hidden_layer_number': random.randint(3, 7),
-            'hidden_layer_number': 4,
-            # 'K': random.randint(10, 100),
-            'K': 39,
-            # 'D_prime': random.randint(50, 100),
-            'D_prime': 66,
+            'lambda_value': random.random() * 100,
+            # 'lambda_value': 70.29,
+            'hidden_layer_number': random.randint(3, 7),
+            # 'hidden_layer_number': 4,
+            'K': random.randint(10, 100),
+            # 'K': 39,
+            'D_prime': random.randint(50, 100),
+            # 'D_prime': 66,
             'hidden_unit_number': 50,
-            # 'dropout_rate': random.random() * 0.5,
+            'dropout_rate': random.random() * 0.5,
             'learning_rate': 1e-3,
         }
 
