@@ -25,9 +25,9 @@ The full results are stored in [this folder](https://github.com/khanhnamle1994/t
 - Batch Size = 128
 - Decay the Learning Rate for each 50 epochs
 - Number of Hidden Neurons = 500 (within the Autoencoder)
-- L2 Regularizer Value = 1
+- L2 Regularizer (Lambda) Value = 1
 - Optimizer Method = Adam
 - Random Seed = 1000
 - Number of Training Epochs = 100
 
-After training the model for 100 epochs, I got the test loss RMSE = 0.9102.
+After training the model for 100 epochs, I got the **test loss RMSE = 0.9102**.

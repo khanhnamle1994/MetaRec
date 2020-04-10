@@ -61,11 +61,11 @@ def _build_mlp(layer, training=False, hidden_unit_number=50, hidden_layer_number
 
         if i < len(unit_numbers) - 1:
             # Use batch normalization and sigmoid activation for each layer
-            layer = tf.layers.batch_normalization(layer, training=training)
+            layer = tf.compat.v1.layers.batch_normalization(layer, training=training)
             layer = activation(layer)
             # Use dropout for each layer
             if dropout_rate > 0:
-                layer = tf.layers.dropout(layer, rate=dropout_rate, training=training)
+                layer = tf.compat.v1.layers.dropout(layer, rate=dropout_rate, training=training)
         else:
             # Only use sigmoid activation for the last layer
             if final_activation:
