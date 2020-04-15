@@ -12,6 +12,8 @@ Here are the 7 different models:
 * [Matrix Factorization with Mixture of Tastes](https://github.com/khanhnamle1994/transfer-rec/tree/master/Matrix-Factorization-Experiments/MF-Mixture-Tastes)
 * [Variational Matrix Factorization](https://github.com/khanhnamle1994/transfer-rec/tree/master/Matrix-Factorization-Experiments/Variational-MF)
 
+An accompanied Medium blog post has been written up and can be viewed here: [The 7 Variants of Matrix Factorization For Collaborative Filtering](https://towardsdatascience.com/recsys-series-part-4-the-7-variants-of-matrix-factorization-for-collaborative-filtering-368754e4fab5)
+
 ## Requirements
 ```
 PyTorch 1.3 & Python 3.6

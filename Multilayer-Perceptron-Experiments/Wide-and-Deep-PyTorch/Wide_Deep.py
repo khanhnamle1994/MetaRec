@@ -5,7 +5,7 @@ from layer import FeaturesLinear, FeaturesEmbedding, MultiLayerPerceptron
 
 class WideAndDeepModel(torch.nn.Module):
     """
-    A pytorch implementation of wide and deep learning.
+    A Pytorch implementation of wide and deep learning.
 
     Reference:
         HT Cheng, et al. Wide & Deep Learning for Recommender Systems, 2016.

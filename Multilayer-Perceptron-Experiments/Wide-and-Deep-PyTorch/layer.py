@@ -1,9 +1,11 @@
 import numpy as np
 import torch
-import torch.nn.functional as F
 
 
 class FeaturesLinear(torch.nn.Module):
+    """
+    Class to perform a linear transformation on the features
+    """
 
     def __init__(self, field_dims, output_dim=1):
         super().__init__()
@@ -20,6 +22,9 @@ class FeaturesLinear(torch.nn.Module):
 
 
 class FeaturesEmbedding(torch.nn.Module):
+    """
+    Class to get feature embeddings
+    """
 
     def __init__(self, field_dims, embed_dim):
         super().__init__()
@@ -36,6 +41,9 @@ class FeaturesEmbedding(torch.nn.Module):
 
 
 class MultiLayerPerceptron(torch.nn.Module):
+    """
+    Class to instantiate a Multilayer Perceptron model
+    """
 
     def __init__(self, input_dim, embed_dims, dropout, output_layer=True):
         super().__init__()

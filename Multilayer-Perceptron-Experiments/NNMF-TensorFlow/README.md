@@ -12,6 +12,7 @@ Pandas
 ```
 
 ## Scripts
+* [dataset](https://github.com/khanhnamle1994/transfer-rec/tree/master/Multilayer-Perceptron-Experiments/NNMF-TensorFlow/dataset): This is the folder with scripts to download and pre-process the [MovieLens1M](https://github.com/khanhnamle1994/transfer-rec/tree/master/ml-1m) data.
 * [core.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Multilayer-Perceptron-Experiments/NNMF-TensorFlow/core.py): This is the core engine script that defines the training, evaluating, and testing functions.
 * [model.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Multilayer-Perceptron-Experiments/NNMF-TensorFlow/model.py): This is the model script that defines the NNMF model.
 * [run.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Multilayer-Perceptron-Experiments/NNMF-TensorFlow/run.py): This is the main execution script. You can simply run `python run.py` to execute it.
