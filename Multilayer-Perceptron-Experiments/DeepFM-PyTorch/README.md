@@ -25,7 +25,7 @@ Pandas
 You can download the MovieLens-1M dataset from [this folder](https://github.com/khanhnamle1994/transfer-rec/tree/master/ml-1m).
 
 ## Results
-I tuned the hyper-parameters of the model according to the paper:
+Here are the model hyper-parameters chosen:
 - Number of Dense Embedding Dimensions used in the Deep Component = 16
 - Number of Hidden Layers used in the Deep Component = 16
 - Activation Function = Sigmoid
