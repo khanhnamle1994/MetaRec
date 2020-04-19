@@ -2,7 +2,8 @@
 
 This is my PyTorch implementation of the paper [Variational Autoencoders for Collaborative Filtering](https://arxiv.org/abs/1802.05814) by Dawen Liang, Rahul G. Krishnan, Matthew D. Hoffman, and Tony Jebara (2018). 
 In particular, I trained a Denoising Autoencoder and a Variational Autoencoder with multinomial likelihood (described in the paper) on the public Movielens-1M and Movielens-20M datasets. 
-Every data preprocessing step and code follows exactly from the [authors' Repo](https://github.com/dawenl/vae_cf). This is an extension from the [Version 1](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/VAE-CF-PyTorch-Version1) repo, where I only worked with the Movielens-20M dataset.
+Every data preprocessing step and code follows exactly from the [authors' Repo](https://github.com/dawenl/vae_cf).
+This is an extension from the [Version 1](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/VAE-CF-PyTorch-Version1) repo, where I only worked with the Movielens-20M dataset.
 
 ## Requirements
 

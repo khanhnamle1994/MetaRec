@@ -3,6 +3,7 @@
 This is my PyTorch implementation of the paper [Neural Factorization Machines For Sparse Predictive Analytics](https://arxiv.org/pdf/1708.05027.pdf) by Xiangnan He and Tat-Seng Chua (2017).
 This approach is very similar to Huifeng Guo et. al's "[Deep Factorization Machine](https://github.com/khanhnamle1994/transfer-rec/tree/master/Multilayer-Perceptron-Experiments/DeepFM-PyTorch)".
 More specifically, the model seamlessly combines the linearity of Factorization Machine in modeling second-order feature interactions and the non-linearity of neural network in modeling higher-order feature interactions.
+There is also a [TensorFlow implementation](https://github.com/hexiangnan/neural_factorization_machine) from the authors themselves.
 
 <img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Multilayer-Perceptron-Experiments/Neural-FM-PyTorch/pics/Figure2.png" width="850">
 

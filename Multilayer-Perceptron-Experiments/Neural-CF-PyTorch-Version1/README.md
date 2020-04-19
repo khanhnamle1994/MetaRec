@@ -1,4 +1,4 @@
-# Neural Collaborative Filtering
+# Neural Collaborative Filtering (Version 1)
 
 This is my PyTorch implementation of the paper [Neural Collaborative Filtering](http://dl.acm.org/citation.cfm?id=3052569) by Xiangnan He, Lizi Liao, Hanwang Zhang, Liqiang Nie, Xia Hu and Tat-Seng Chua (2017).
 There are 3 collaborative filtering models implemented: Generalized Matrix Factorization (GMF), Multi-Layer Perceptron (MLP), and Neural Matrix Factorization (NeuMF).
