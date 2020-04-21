@@ -30,9 +30,9 @@ Here are the model hyper-parameters chosen:
 - Number of Hidden Layers used in the Deep Component = 16
 - Activation Function = Sigmoid
 - Learning Rate = 0.001
-- Batch Size = 2048
+- Batch Size = 512
 - Weight Decay = 0.000001
 - Optimizer Method = Adam
 - Dropout Rate = 0.5
 
-After being trained for 100 epochs, the model achieves **validation AUC = 0.804** and **test AUC = 0.802**.
+After being trained for 100 epochs, the model achieves **validation AUC = 0.7918** and **test AUC = 0.7915** with **runtime = 1h 10m 50s**.

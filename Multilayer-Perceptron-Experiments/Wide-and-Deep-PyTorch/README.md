@@ -36,4 +36,4 @@ Here are the model hyper-parameters chosen:
 - Optimizer Method = Adam
 - Dropout Rate = 0.5
 
-After being trained for 100 epochs, the model achieves **validation AUC = 0.7918** and **test AUC = 0.7915** with **runtime = 1h 10m 50s**
+After being trained for 100 epochs, the model achieves **validation AUC = 0.7995** and **test AUC = 0.7991** with **runtime = 1h 12m 15s**

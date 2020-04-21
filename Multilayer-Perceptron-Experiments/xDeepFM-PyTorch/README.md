@@ -34,9 +34,9 @@ Here are the model hyper-parameters chosen:
 - Compressed Interaction network with size (16, 16)
 - Activation Function = Sigmoid
 - Learning Rate = 0.001
-- Batch Size = 2048
+- Batch Size = 512
 - Weight Decay = 0.000001
 - Optimizer Method = Adam
 - Dropout Rate = 0.5
 
-After being trained for 100 epochs, the model achieves **validation AUC = 0.745** and **test AUC = 0.746**.
+After being trained for 100 epochs, the model achieves **validation AUC = 0.7408** and **test AUC = 0.7429** with **runtime = 2h 15m 17s**.
