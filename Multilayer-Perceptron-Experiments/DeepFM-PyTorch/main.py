@@ -6,6 +6,10 @@ from torch.utils.data import DataLoader
 from data import MovieLens1MDataset
 from DeepFM import DeepFactorizationMachineModel
 
+import wandb
+
+wandb.init(project="multi_layer_perceptron_collaborative_filtering")
+
 
 def get_dataset(name, path):
     """
@@ -61,6 +65,8 @@ def train(model, optimizer, data_loader, criterion, device, log_interval=1000):
         if (i + 1) % log_interval == 0:
             print('    - loss:', total_loss / log_interval)
             total_loss = 0
+
+        wandb.log({"Total Loss": total_loss})
 
 
 def test(model, data_loader, device):
@@ -123,21 +129,27 @@ def main(dataset_name, dataset_path, model_name, epoch, learning_rate,
     # Use Adam optimizer
     optimizer = torch.optim.Adam(params=model.parameters(), lr=learning_rate, weight_decay=weight_decay)
 
+    # Log metrics with Weights and Biases
+    wandb.watch(model, log="all")
+
     # Loop through pre-defined number of epochs
     for epoch_i in range(epoch):
         # Perform training on the train set
         train(model, optimizer, train_data_loader, criterion, device)
         # Perform evaluation on the validation set
-        auc = test(model, valid_data_loader, device)
+        valid_auc = test(model, valid_data_loader, device)
         # Log the epochs and AUC on the validation set
-        print('epoch:', epoch_i, 'validation: auc:', auc)
+        print('epoch:', epoch_i, 'validation: auc:', valid_auc)
+        wandb.log({"Validation AUC": valid_auc})
 
     # Perform evaluation on the test set
-    auc = test(model, test_data_loader, device)
+    test_auc = test(model, test_data_loader, device)
     # Log the final AUC on the test set
-    print('test auc:', auc)
+    print('test auc:', test_auc)
+    wandb.log({"Test AUC": test_auc})
+
     # Save the model checkpoint
-    torch.save(model, f'{save_dir}/{model_name}.pt')
+    torch.save(model.state_dict(), f'{save_dir}/{model_name}.pt')
 
 
 if __name__ == '__main__':
@@ -149,7 +161,7 @@ if __name__ == '__main__':
     parser.add_argument('--model_name', default='dfm')
     parser.add_argument('--epoch', type=int, default=100)
     parser.add_argument('--learning_rate', type=float, default=0.001)
-    parser.add_argument('--batch_size', type=int, default=2048)
+    parser.add_argument('--batch_size', type=int, default=512)
     parser.add_argument('--weight_decay', type=float, default=1e-6)
     parser.add_argument('--device', default='cpu')
     parser.add_argument('--save_dir', default='chkpt')

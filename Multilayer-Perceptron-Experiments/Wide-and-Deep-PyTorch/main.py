@@ -6,9 +6,10 @@ from torch.utils.data import DataLoader
 from data import MovieLens1MDataset
 from Wide_Deep import WideAndDeepModel
 
-# Initialize Weights and Biases
 import wandb
+
 wandb.init(project="multi_layer_perceptron_collaborative_filtering")
+
 
 def get_dataset(name, path):
     """

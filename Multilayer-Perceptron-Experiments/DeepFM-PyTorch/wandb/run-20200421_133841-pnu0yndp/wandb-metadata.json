@@ -1,0 +1,24 @@
+{
+    "root": "/Users/khanhnamle/Desktop/Master-Thesis/Codebase",
+    "program": "main.py",
+    "git": {
+        "remote": "https://github.com/khanhnamle1994/transfer-rec.git",
+        "commit": "28b785f76f5eb8a9d8b2fe36adc3ac604803a055"
+    },
+    "email": "le_j6@denison.edu",
+    "codePath": "Multilayer-Perceptron-Experiments/DeepFM-PyTorch/main.py",
+    "startedAt": "2020-04-21T13:38:42.256483",
+    "host": "jamess-mbp.wireless.rit.edu",
+    "username": "khanhnamle",
+    "executable": "/Library/Frameworks/Python.framework/Versions/3.6/bin/python3",
+    "os": "Darwin-18.7.0-x86_64-i386-64bit",
+    "python": "3.6.4",
+    "cpu_count": 4,
+    "args": [],
+    "state": "finished",
+    "jobType": null,
+    "mode": "run",
+    "project": "multi_layer_perceptron_collaborative_filtering",
+    "heartbeatAt": "2020-04-21T14:49:31.473264",
+    "exitcode": 0
+}
