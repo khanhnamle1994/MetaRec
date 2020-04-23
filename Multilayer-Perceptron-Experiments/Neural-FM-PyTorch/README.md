@@ -37,3 +37,4 @@ Here are the model hyper-parameters chosen:
 - Dropout Rate = 0.2
 
 After being trained for 100 epochs, the model achieves **validation AUC = 0.7560** and **test AUC = 0.7589** with **runtime = 1h 36m 0s**.
+The results can be viewed at [this Weights & Biases link](https://app.wandb.ai/khanhnamle1994/multi_layer_perceptron_collaborative_filtering/runs/5tsd38zl).
