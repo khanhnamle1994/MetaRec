@@ -62,4 +62,7 @@ Here are the results for all these models after 100 epochs of training:
 * Wide and Deep model has the best test AUC and validation AUC
 * Neural Collaborative Filtering has the lowest runtime
 
+The results are captured in [Weights and Biases](https://app.wandb.ai/khanhnamle1994/multi_layer_perceptron_collaborative_filtering) - which is an awesome experiment management platform in the sense that it has a really great user experience.
+Its dashboard has the flexibility and scalability to provide a massive amount of visualization for your model’s predictions.
+
 ![validationAUC](MLP-Models-ValidAUC.png)

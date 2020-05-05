@@ -3,10 +3,12 @@ import pandas as pd
 from scipy import sparse
 import numpy as np
 
+
 class DataLoader():
-    '''
+    """
     Load Movielens-20m dataset
-    '''
+    """
+
     def __init__(self, path):
         self.pro_dir = os.path.join(path, 'pro_sg')
         assert os.path.exists(self.pro_dir), "Preprocessed files does not exist. Run data.py"
@@ -39,7 +41,7 @@ class DataLoader():
 
         rows, cols = tp['uid'], tp['sid']
         data = sparse.csr_matrix((np.ones_like(rows),
-                                 (rows, cols)), dtype='float64',
+                                  (rows, cols)), dtype='float64',
                                  shape=(n_users, self.n_items))
         return data
 
@@ -57,10 +59,13 @@ class DataLoader():
         rows_te, cols_te = tp_te['uid'] - start_idx, tp_te['sid']
 
         data_tr = sparse.csr_matrix((np.ones_like(rows_tr),
-                                    (rows_tr, cols_tr)), dtype='float64', shape=(end_idx - start_idx + 1, self.n_items))
+                                     (rows_tr, cols_tr)), dtype='float64',
+                                    shape=(end_idx - start_idx + 1, self.n_items))
         data_te = sparse.csr_matrix((np.ones_like(rows_te),
-                                    (rows_te, cols_te)), dtype='float64', shape=(end_idx - start_idx + 1, self.n_items))
+                                     (rows_te, cols_te)), dtype='float64',
+                                    shape=(end_idx - start_idx + 1, self.n_items))
         return data_tr, data_te
+
 
 # Item counting procedure
 def get_count(tp, id):
@@ -68,9 +73,9 @@ def get_count(tp, id):
     count = playcount_groupby_id.size()
     return count
 
+
 # Triplet filtering procedure
 def filter_triplets(tp, min_uc=5, min_sc=0):
-
     # only keep the triplets for items which were cliked on by at least min_sc users
     if min_sc > 0:
         itemcount = get_count(tp, 'movieId')
@@ -85,9 +90,9 @@ def filter_triplets(tp, min_uc=5, min_sc=0):
     usercount, itemcount = get_count(tp, 'userId'), get_count(tp, 'movieId')
     return tp, usercount, itemcount
 
+
 # Train/test splitting procedure
 def split_train_test_proportion(data, test_prop=0.2):
-
     # group the data by userId
     data_grouped_by_user = data.groupby('userId')
     # generate empty list to store train and test data
@@ -114,10 +119,12 @@ def split_train_test_proportion(data, test_prop=0.2):
 
     return data_tr, data_te
 
+
 def numerize(tp, profile2id, show2id):
     uid = tp['userId'].apply(lambda x: profile2id[x])
     sid = tp['movieId'].apply(lambda x: show2id[x])
     return pd.DataFrame(data={'uid': uid, 'sid': sid}, columns=['uid', 'sid'])
+
 
 if __name__ == '__main__':
 

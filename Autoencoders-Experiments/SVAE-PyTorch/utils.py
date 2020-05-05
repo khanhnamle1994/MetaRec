@@ -1,11 +1,7 @@
-import torch
 import os
 import json
 import pickle
 import matplotlib.pyplot as plt
-
-LongTensor = torch.LongTensor
-FloatTensor = torch.FloatTensor
 
 
 def save_obj(obj, name):
