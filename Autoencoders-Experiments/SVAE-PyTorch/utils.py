@@ -87,7 +87,7 @@ def plot_len_vs_ndcg(len_to_ndcg_at_100_map):
     plt.title("SVAE_ML1M")
     if not os.path.isdir("saved_plots/"):
         os.mkdir("saved_plots/")
-    plt.savefig("saved_plots/seq_len_vs_ndcg_" + "SVAE_ML1M" + ".pdf")
+    plt.savefig("saved_plots/seq_len_vs_ndcg_" + "SVAE_ML1M" + ".png")
     plt.legend(loc='best', ncol=2)
 
     plt.show()

@@ -2,13 +2,12 @@ import time
 from utils import file_write
 
 
-def train(model, criterion, reader, train_reader, optimizer, epoch, hyper_params):
+def train(model, criterion, reader, optimizer, epoch, hyper_params):
     """
     Function to train the model
     :param model: The model choice
     :param criterion: The loss function choice
     :param reader: The Data Reader class
-    :param train_reader: The Data Reader class for training set
     :param optimizer: The optimizer choice
     :param epoch: The given epoch
     :param hyper_params: The hyper-parameter dictionary
@@ -19,7 +18,7 @@ def train(model, criterion, reader, train_reader, optimizer, epoch, hyper_params
     total_loss = 0
     start_time = time.time()
     batch = 0
-    batch_limit = int(train_reader.num_b)
+    batch_limit = int(reader.num_b)
     total_anneal_steps = 200000
     anneal = 0.0
     update_count = 0.0

@@ -68,7 +68,6 @@ def split_train_test_proportion(data, test_prop=0.2):
 
         if i % 1000 == 0:
             print("%d users sampled" % i)
-            sys.stdout.flush()
 
     # Concatenate train lists into train data frame
     data_tr = pd.concat(tr_list)

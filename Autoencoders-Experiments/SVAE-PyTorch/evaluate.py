@@ -11,6 +11,7 @@ def evaluate(model, criterion, reader, hyper_params, is_train_set):
     :param is_train_set: Boolean value to check training setting
     :return: NDCG, Precision, and Recall metrics
     """
+    # Step into evaluation mode
     model.eval()
 
     metrics = {}

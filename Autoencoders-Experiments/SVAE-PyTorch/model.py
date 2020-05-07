@@ -114,6 +114,7 @@ class VAELoss(torch.nn.Module):
             decoder_output.view(dec_shape[0] * dec_shape[1], -1)
         ) / (float(self.hyper_params['batch_size']) * num_ones)
 
-        final = (anneal * kld) + (likelihood)
+        # Calculate the final VAE loss
+        final = (anneal * kld) + likelihood
 
         return final
