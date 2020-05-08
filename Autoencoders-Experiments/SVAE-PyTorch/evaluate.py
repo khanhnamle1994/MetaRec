@@ -1,4 +1,5 @@
 import torch
+import numpy as np
 
 
 def evaluate(model, criterion, reader, hyper_params, is_train_set):
@@ -14,8 +15,7 @@ def evaluate(model, criterion, reader, hyper_params, is_train_set):
     # Step into evaluation mode
     model.eval()
 
-    metrics = {}
-    metrics['loss'] = 0.0
+    metrics = {'loss': 0.0}
     Ks = [10, 100]
     for k in Ks:
         metrics['NDCG@' + str(k)] = 0.0
@@ -35,7 +35,7 @@ def evaluate(model, criterion, reader, hyper_params, is_train_set):
 
         decoder_output, z_mean, z_log_sigma = model(x)
 
-        metrics['loss'] += criterion(decoder_output, z_mean, z_log_sigma, y_s, 0.2).data[0]
+        metrics['loss'] += criterion(decoder_output, z_mean, z_log_sigma, y_s, 0.2).data
 
         # Making the logits of previous items in the sequence to be "- infinity"
         decoder_output = decoder_output.data
@@ -61,7 +61,8 @@ def evaluate(model, criterion, reader, hyper_params, is_train_set):
                     if now_at <= k:
                         best += 1.0 / float(np.log2(now_at + 1))
 
-                    if movie not in rec_list: continue
+                    if movie not in rec_list:
+                        continue
                     hits += 1.0
                     dcg += 1.0 / float(np.log2(float(rec_list.index(movie) + 2)))
 
@@ -72,7 +73,8 @@ def evaluate(model, criterion, reader, hyper_params, is_train_set):
                 # Only for plotting the graph (seq length vs. NDCG@100)
                 if k == 100:
                     seq_len = int(len(actual_movies_watched)) + int(x[batch_num].shape[0]) + 1
-                    if seq_len not in len_to_ndcg_at_100_map: len_to_ndcg_at_100_map[seq_len] = []
+                    if seq_len not in len_to_ndcg_at_100_map:
+                        len_to_ndcg_at_100_map[seq_len] = []
                     len_to_ndcg_at_100_map[seq_len].append(float(dcg) / float(best))
 
             total_users += 1.0

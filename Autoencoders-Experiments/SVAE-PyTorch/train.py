@@ -56,7 +56,7 @@ def train(model, criterion, reader, optimizer, epoch, hyper_params):
             if div <= 0:
                 div = 1
 
-            cur_loss = (total_loss[0] / div)
+            cur_loss = (total_loss / div)
             elapsed = time.time() - start_time
 
             ss = '| epoch {:3d} | {:5d}/{:5d} batches | ms/batch {:5.2f} | loss {:5.4f}'.format(

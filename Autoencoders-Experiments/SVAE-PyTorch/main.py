@@ -18,17 +18,17 @@ hyper_params = {
     'log_file': '',  # Log file
     'history_split_test': [0.8, 0.2],  # Part of test history to train on : Part of test history to test
     'learning_rate': 0.01,  # Choice of learning rate (required only if optimizer is AdaGrad)
-    'optimizer': 'adam',  # Choice of optimizer
-    'weight_decay': float(5e-3),  # Choice of weight decay
-    'epochs': 50,  # Number of epochs
+    'optimizer': 'adam',  # Choice of optimizer defaulted to Adam
+    'weight_decay': float(5e-3),  # Choice of weight decay defaulted to 0.005
+    'epochs': 30,  # Number of epochs
     'batch_size': 1,  # Needs to be 1, because we don't pack multiple sequences in the same batch
-    'item_embed_size': 256,
-    'rnn_size': 200,
-    'hidden_size': 150,
-    'latent_size': 64,
+    'item_embed_size': 256,  # Item embedding layer of size 256
+    'rnn_size': 200,  # Recurrent layer realized as a GRU with 200 cells
+    'hidden_size': 150,  # Encoding layer of size 150
+    'latent_size': 64,  # Number of latent factors set to 64
     'loss_type': 'next_k',  # [predict_next, same, prefix, postfix, exp_decay, next_k]
-    'next_k': 4,
-    'number_users_to_keep': 1000000000,
+    'next_k': 4,  # Size for the number of items forward in time to predict on
+    'number_users_to_keep': 1000000000,  # Number of held-out users for evaluation purpose
     'batch_log_interval': 1000,
     'train_cp_users': 200,
     'exploding_clip': 0.25,
