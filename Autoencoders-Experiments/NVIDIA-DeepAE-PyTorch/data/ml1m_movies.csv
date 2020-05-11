@@ -1,0 +1,3884 @@
+	movie_emb_id	title	genre
+0	0	Toy Story (1995)	Animation|Children's|Comedy
+1	1	Jumanji (1995)	Adventure|Children's|Fantasy
+2	2	Grumpier Old Men (1995)	Comedy|Romance
+3	3	Waiting to Exhale (1995)	Comedy|Drama
+4	4	Father of the Bride Part II (1995)	Comedy
+5	5	Heat (1995)	Action|Crime|Thriller
+6	6	Sabrina (1995)	Comedy|Romance
+7	7	Tom and Huck (1995)	Adventure|Children's
+8	8	Sudden Death (1995)	Action
+9	9	GoldenEye (1995)	Action|Adventure|Thriller
+10	10	American President, The (1995)	Comedy|Drama|Romance
+11	11	Dracula: Dead and Loving It (1995)	Comedy|Horror
+12	12	Balto (1995)	Animation|Children's
+13	13	Nixon (1995)	Drama
+14	14	Cutthroat Island (1995)	Action|Adventure|Romance
+15	15	Casino (1995)	Drama|Thriller
+16	16	Sense and Sensibility (1995)	Drama|Romance
+17	17	Four Rooms (1995)	Thriller
+18	18	Ace Ventura: When Nature Calls (1995)	Comedy
+19	19	Money Train (1995)	Action
+20	20	Get Shorty (1995)	Action|Comedy|Drama
+21	21	Copycat (1995)	Crime|Drama|Thriller
+22	22	Assassins (1995)	Thriller
+23	23	Powder (1995)	Drama|Sci-Fi
+24	24	Leaving Las Vegas (1995)	Drama|Romance
+25	25	Othello (1995)	Drama
+26	26	Now and Then (1995)	Drama
+27	27	Persuasion (1995)	Romance
+28	28	City of Lost Children, The (1995)	Adventure|Sci-Fi
+29	29	Shanghai Triad (Yao a yao yao dao waipo qiao) (1995)	Drama
+30	30	Dangerous Minds (1995)	Drama
+31	31	Twelve Monkeys (1995)	Drama|Sci-Fi
+32	32	Wings of Courage (1995)	Adventure|Romance
+33	33	Babe (1995)	Children's|Comedy|Drama
+34	34	Carrington (1995)	Drama|Romance
+35	35	Dead Man Walking (1995)	Drama
+36	36	Across the Sea of Time (1995)	Documentary
+37	37	It Takes Two (1995)	Comedy
+38	38	Clueless (1995)	Comedy|Romance
+39	39	Cry, the Beloved Country (1995)	Drama
+40	40	Richard III (1995)	Drama|War
+41	41	Dead Presidents (1995)	Action|Crime|Drama
+42	42	Restoration (1995)	Drama
+43	43	Mortal Kombat (1995)	Action|Adventure
+44	44	To Die For (1995)	Comedy|Drama
+45	45	How to Make an American Quilt (1995)	Drama|Romance
+46	46	Seven (Se7en) (1995)	Crime|Thriller
+47	47	Pocahontas (1995)	Animation|Children's|Musical|Romance
+48	48	When Night Is Falling (1995)	Drama|Romance
+49	49	Usual Suspects, The (1995)	Crime|Thriller
+50	50	Guardian Angel (1994)	Action|Drama|Thriller
+51	51	Mighty Aphrodite (1995)	Comedy
+52	52	Lamerica (1994)	Drama
+53	53	Big Green, The (1995)	Children's|Comedy
+54	54	Georgia (1995)	Drama
+55	55	Kids of the Round Table (1995)	Adventure|Children's|Fantasy
+56	56	Home for the Holidays (1995)	Drama
+57	57	Postino, Il (The Postman) (1994)	Drama|Romance
+58	58	Confessional, The (Le Confessionnal) (1995)	Drama|Mystery
+59	59	Indian in the Cupboard, The (1995)	Adventure|Children's|Fantasy
+60	60	Eye for an Eye (1996)	Drama|Thriller
+61	61	Mr. Holland's Opus (1995)	Drama
+62	62	Don't Be a Menace to South Central While Drinking Your Juice in the Hood (1996)	Comedy
+63	63	Two if by Sea (1996)	Comedy|Romance
+64	64	Bio-Dome (1996)	Comedy
+65	65	Lawnmower Man 2: Beyond Cyberspace (1996)	Sci-Fi|Thriller
+66	66	Two Bits (1995)	Drama
+67	67	French Twist (Gazon maudit) (1995)	Comedy|Romance
+68	68	Friday (1995)	Comedy
+69	69	From Dusk Till Dawn (1996)	Action|Comedy|Crime|Horror|Thriller
+70	70	Fair Game (1995)	Action
+71	71	Kicking and Screaming (1995)	Comedy|Drama
+72	72	Misérables, Les (1995)	Drama|Musical
+73	73	Bed of Roses (1996)	Drama|Romance
+74	74	Big Bully (1996)	Comedy|Drama
+75	75	Screamers (1995)	Sci-Fi|Thriller
+76	76	Nico Icon (1995)	Documentary
+77	77	Crossing Guard, The (1995)	Drama
+78	78	Juror, The (1996)	Drama|Thriller
+79	79	White Balloon, The (Badkonake Sefid ) (1995)	Drama
+80	80	Things to Do in Denver when You're Dead (1995)	Crime|Drama|Romance
+81	81	Antonia's Line (Antonia) (1995)	Drama
+82	82	Once Upon a Time... When We Were Colored (1995)	Drama
+83	83	Last Summer in the Hamptons (1995)	Comedy|Drama
+84	84	Angels and Insects (1995)	Drama|Romance
+85	85	White Squall (1996)	Adventure|Drama
+86	86	Dunston Checks In (1996)	Children's|Comedy
+87	87	Black Sheep (1996)	Comedy
+88	88	Nick of Time (1995)	Action|Thriller
+89	89	Journey of August King, The (1995)	Drama
+90	91	Mary Reilly (1996)	Drama|Thriller
+91	92	Vampire in Brooklyn (1995)	Comedy|Romance
+92	93	Beautiful Girls (1996)	Drama
+93	94	Broken Arrow (1996)	Action|Thriller
+94	95	In the Bleak Midwinter (1995)	Comedy
+95	96	Hate (Haine, La) (1995)	Drama
+96	97	Shopping (1994)	Action|Thriller
+97	98	Heidi Fleiss: Hollywood Madam (1995)	Documentary
+98	99	City Hall (1996)	Drama|Thriller
+99	100	Bottle Rocket (1996)	Comedy
+100	101	Mr. Wrong (1996)	Comedy
+101	102	Unforgettable (1996)	Thriller
+102	103	Happy Gilmore (1996)	Comedy
+103	104	Bridges of Madison County, The (1995)	Drama|Romance
+104	105	Nobody Loves Me (Keiner liebt mich) (1994)	Comedy|Drama
+105	106	Muppet Treasure Island (1996)	Adventure|Children's|Comedy|Musical
+106	107	Catwalk (1995)	Documentary
+107	108	Headless Body in Topless Bar (1995)	Comedy
+108	109	Braveheart (1995)	Action|Drama|War
+109	110	Taxi Driver (1976)	Drama|Thriller
+110	111	Rumble in the Bronx (1995)	Action|Adventure|Crime
+111	112	Before and After (1996)	Drama|Mystery
+112	113	Margaret's Museum (1995)	Drama
+113	114	Happiness Is in the Field (1995)	Comedy
+114	115	Anne Frank Remembered (1995)	Documentary
+115	116	Young Poisoner's Handbook, The (1995)	Crime
+116	117	If Lucy Fell (1996)	Comedy|Romance
+117	118	Steal Big, Steal Little (1995)	Comedy
+118	119	Race the Sun (1996)	Drama
+119	120	Boys of St. Vincent, The (1993)	Drama
+120	121	Boomerang (1992)	Comedy|Romance
+121	122	Chungking Express (1994)	Drama|Mystery|Romance
+122	123	Star Maker, The (Uomo delle stelle, L') (1995)	Drama
+123	124	Flirting With Disaster (1996)	Comedy
+124	125	NeverEnding Story III, The (1994)	Adventure|Children's|Fantasy
+125	126	Silence of the Palace, The (Saimt el Qusur) (1994)	Drama
+126	127	Jupiter's Wife (1994)	Documentary
+127	128	Pie in the Sky (1995)	Comedy|Romance
+128	129	Angela (1995)	Drama
+129	130	Frankie Starlight (1995)	Drama|Romance
+130	131	Jade (1995)	Thriller
+131	132	Nueba Yol (1995)	Comedy|Drama
+132	133	Sonic Outlaws (1995)	Documentary
+133	134	Down Periscope (1996)	Comedy
+134	135	From the Journals of Jean Seberg (1995)	Documentary
+135	136	Man of the Year (1995)	Documentary
+136	137	Neon Bible, The (1995)	Drama
+137	138	Target (1995)	Action|Drama
+138	139	Up Close and Personal (1996)	Drama|Romance
+139	140	Birdcage, The (1996)	Comedy
+140	141	Shadows (Cienie) (1988)	Drama
+141	142	Gospa (1995)	Drama
+142	143	Brothers McMullen, The (1995)	Comedy
+143	144	Bad Boys (1995)	Action
+144	145	Amazing Panda Adventure, The (1995)	Adventure|Children's
+145	146	Basketball Diaries, The (1995)	Drama
+146	147	Awfully Big Adventure, An (1995)	Drama
+147	148	Amateur (1994)	Crime|Drama|Thriller
+148	149	Apollo 13 (1995)	Drama
+149	150	Rob Roy (1995)	Drama|Romance|War
+150	151	Addiction, The (1995)	Horror
+151	152	Batman Forever (1995)	Action|Adventure|Comedy|Crime
+152	153	Belle de jour (1967)	Drama
+153	154	Beyond Rangoon (1995)	Drama|War
+154	155	Blue in the Face (1995)	Comedy
+155	156	Canadian Bacon (1994)	Comedy|War
+156	157	Casper (1995)	Adventure|Children's
+157	158	Clockers (1995)	Drama
+158	159	Congo (1995)	Action|Adventure|Mystery|Sci-Fi
+159	160	Crimson Tide (1995)	Drama|Thriller|War
+160	161	Crumb (1994)	Documentary
+161	162	Desperado (1995)	Action|Romance|Thriller
+162	163	Devil in a Blue Dress (1995)	Crime|Film-Noir|Mystery|Thriller
+163	164	Die Hard: With a Vengeance (1995)	Action|Thriller
+164	165	Doom Generation, The (1995)	Comedy|Drama
+165	166	Feast of July (1995)	Drama
+166	167	First Knight (1995)	Action|Adventure|Drama|Romance
+167	168	Free Willy 2: The Adventure Home (1995)	Adventure|Children's|Drama
+168	169	Hackers (1995)	Action|Crime|Thriller
+169	170	Jeffrey (1995)	Comedy
+170	171	Johnny Mnemonic (1995)	Action|Sci-Fi|Thriller
+171	172	Judge Dredd (1995)	Action|Adventure|Sci-Fi
+172	173	Jury Duty (1995)	Comedy
+173	174	Kids (1995)	Drama
+174	175	Living in Oblivion (1995)	Comedy
+175	176	Lord of Illusions (1995)	Horror
+176	177	Love & Human Remains (1993)	Comedy
+177	178	Mad Love (1995)	Drama|Romance
+178	179	Mallrats (1995)	Comedy
+179	180	Mighty Morphin Power Rangers: The Movie (1995)	Action|Children's
+180	181	Moonlight and Valentino (1995)	Drama|Romance
+181	182	Mute Witness (1994)	Thriller
+182	183	Nadja (1994)	Drama
+183	184	Net, The (1995)	Sci-Fi|Thriller
+184	185	Nine Months (1995)	Comedy
+185	186	Party Girl (1995)	Comedy
+186	187	Prophecy, The (1995)	Horror
+187	188	Reckless (1995)	Comedy
+188	189	Safe (1995)	Thriller
+189	190	Scarlet Letter, The (1995)	Drama
+190	191	Show, The (1995)	Documentary
+191	192	Showgirls (1995)	Drama
+192	193	Smoke (1995)	Drama
+193	194	Something to Talk About (1995)	Comedy|Drama|Romance
+194	195	Species (1995)	Horror|Sci-Fi
+195	196	Stars Fell on Henrietta, The (1995)	Drama
+196	197	Strange Days (1995)	Action|Crime|Sci-Fi
+197	198	Umbrellas of Cherbourg, The (Parapluies de Cherbourg, Les) (1964)	Drama|Musical
+198	199	Tie That Binds, The (1995)	Thriller
+199	200	Three Wishes (1995)	Drama
+200	201	Total Eclipse (1995)	Drama|Romance
+201	202	To Wong Foo, Thanks for Everything! Julie Newmar (1995)	Comedy
+202	203	Under Siege 2: Dark Territory (1995)	Action
+203	204	Unstrung Heroes (1995)	Comedy|Drama
+204	205	Unzipped (1995)	Documentary
+205	206	Walk in the Clouds, A (1995)	Drama|Romance
+206	207	Waterworld (1995)	Action|Adventure
+207	208	White Man's Burden (1995)	Drama
+208	209	Wild Bill (1995)	Western
+209	210	Browning Version, The (1994)	Drama
+210	211	Bushwhacked (1995)	Comedy
+211	212	Burnt By the Sun (Utomlyonnye solntsem) (1994)	Drama
+212	213	Before the Rain (Pred dozhdot) (1994)	Drama
+213	214	Before Sunrise (1995)	Drama|Romance
+214	215	Billy Madison (1995)	Comedy
+215	216	Babysitter, The (1995)	Drama|Thriller
+216	217	Boys on the Side (1995)	Comedy|Drama
+217	218	Cure, The (1995)	Drama
+218	219	Castle Freak (1995)	Horror
+219	221	Circle of Friends (1995)	Drama|Romance
+220	222	Clerks (1994)	Comedy
+221	223	Don Juan DeMarco (1995)	Comedy|Drama|Romance
+222	224	Disclosure (1994)	Drama|Thriller
+223	225	Dream Man (1995)	Thriller
+224	226	Drop Zone (1994)	Action
+225	227	Destiny Turns on the Radio (1995)	Comedy
+226	228	Death and the Maiden (1994)	Drama|Thriller
+227	229	Dolores Claiborne (1994)	Drama|Thriller
+228	230	Dumb & Dumber (1994)	Comedy
+229	231	Eat Drink Man Woman (1994)	Comedy|Drama
+230	232	Exotica (1994)	Drama
+231	233	Exit to Eden (1994)	Comedy
+232	234	Ed Wood (1994)	Comedy|Drama
+233	235	French Kiss (1995)	Comedy|Romance
+234	236	Forget Paris (1995)	Comedy|Romance
+235	237	Far From Home: The Adventures of Yellow Dog (1995)	Adventure|Children's
+236	238	Goofy Movie, A (1995)	Animation|Children's|Comedy|Romance
+237	239	Hideaway (1995)	Thriller
+238	240	Fluke (1995)	Children's|Drama
+239	241	Farinelli: il castrato (1994)	Drama|Musical
+240	242	Gordy (1995)	Comedy
+241	243	Gumby: The Movie (1995)	Animation|Children's
+242	244	Glass Shield, The (1994)	Crime|Drama
+243	245	Hoop Dreams (1994)	Documentary
+244	246	Heavenly Creatures (1994)	Drama|Fantasy|Romance|Thriller
+245	247	Houseguest (1994)	Comedy
+246	248	Immortal Beloved (1994)	Drama|Romance
+247	249	Heavyweights (1994)	Children's|Comedy
+248	250	Hunted, The (1995)	Action
+249	251	I.Q. (1994)	Comedy|Romance
+250	252	Interview with the Vampire (1994)	Drama|Horror
+251	253	Jefferson in Paris (1995)	Drama
+252	254	Jerky Boys, The (1994)	Comedy
+253	255	Junior (1994)	Comedy|Sci-Fi
+254	256	Just Cause (1995)	Mystery|Thriller
+255	257	Kid in King Arthur's Court, A (1995)	Adventure|Children's|Comedy|Fantasy|Romance
+256	258	Kiss of Death (1995)	Crime|Drama|Thriller
+257	259	Star Wars: Episode IV - A New Hope (1977)	Action|Adventure|Fantasy|Sci-Fi
+258	260	Little Women (1994)	Drama
+259	261	Little Princess, A (1995)	Children's|Drama
+260	262	Ladybird Ladybird (1994)	Drama
+261	263	Enfer, L' (1994)	Drama
+262	264	Like Water for Chocolate (Como agua para chocolate) (1992)	Drama|Romance
+263	265	Legends of the Fall (1994)	Drama|Romance|War|Western
+264	266	Major Payne (1994)	Comedy
+265	267	Little Odessa (1994)	Drama
+266	268	My Crazy Life (Mi vida loca) (1993)	Drama
+267	269	Love Affair (1994)	Drama|Romance
+268	270	Losing Isaiah (1995)	Drama
+269	271	Madness of King George, The (1994)	Drama
+270	272	Mary Shelley's Frankenstein (1994)	Drama|Horror
+271	273	Man of the House (1995)	Comedy
+272	274	Mixed Nuts (1994)	Comedy
+273	275	Milk Money (1994)	Comedy|Romance
+274	276	Miracle on 34th Street (1994)	Drama
+275	277	Miami Rhapsody (1995)	Comedy
+276	278	My Family (1995)	Drama
+277	279	Murder in the First (1995)	Drama|Thriller
+278	280	Nobody's Fool (1994)	Drama
+279	281	Nell (1994)	Drama
+280	282	New Jersey Drive (1995)	Crime|Drama
+281	283	New York Cop (1996)	Action|Crime
+282	284	Beyond Bedlam (1993)	Drama|Horror
+283	285	Nemesis 2: Nebula (1995)	Action|Sci-Fi|Thriller
+284	286	Nina Takes a Lover (1994)	Comedy|Romance
+285	287	Natural Born Killers (1994)	Action|Thriller
+286	288	Only You (1994)	Comedy|Romance
+287	289	Once Were Warriors (1994)	Crime|Drama
+288	290	Poison Ivy II (1995)	Thriller
+289	291	Outbreak (1995)	Action|Drama|Thriller
+290	292	Professional, The (a.k.a. Leon: The Professional) (1994)	Crime|Drama|Romance|Thriller
+291	293	Perez Family, The (1995)	Comedy|Romance
+292	294	Pyromaniac's Love Story, A (1995)	Comedy|Romance
+293	295	Pulp Fiction (1994)	Crime|Drama
+294	296	Panther (1995)	Drama
+295	297	Pushing Hands (1992)	Comedy
+296	298	Priest (1994)	Drama
+297	299	Quiz Show (1994)	Drama
+298	300	Picture Bride (1995)	Drama|Romance
+299	301	Queen Margot (La Reine Margot) (1994)	Drama|Romance
+300	302	Quick and the Dead, The (1995)	Action|Adventure|Western
+301	303	Roommates (1995)	Comedy|Drama
+302	304	Ready to Wear (Pret-A-Porter) (1994)	Comedy
+303	305	Three Colors: Red (1994)	Drama
+304	306	Three Colors: Blue (1993)	Drama
+305	307	Three Colors: White (1994)	Drama
+306	308	Red Firecracker, Green Firecracker (1994)	Drama
+307	309	Rent-a-Kid (1995)	Comedy
+308	310	Relative Fear (1994)	Horror|Thriller
+309	311	Stuart Saves His Family (1995)	Comedy
+310	312	Swan Princess, The (1994)	Animation|Children's
+311	313	Secret of Roan Inish, The (1994)	Drama
+312	314	Specialist, The (1994)	Action
+313	315	Stargate (1994)	Action|Adventure|Sci-Fi
+314	316	Santa Clause, The (1994)	Children's|Comedy|Fantasy
+315	317	Shawshank Redemption, The (1994)	Drama
+316	318	Shallow Grave (1994)	Thriller
+317	319	Suture (1993)	Film-Noir|Thriller
+318	320	Strawberry and Chocolate (Fresa y chocolate) (1993)	Drama
+319	321	Swimming with Sharks (1995)	Comedy|Drama
+320	323	Sum of Us, The (1994)	Comedy
+321	324	National Lampoon's Senior Trip (1995)	Comedy
+322	325	To Live (Huozhe) (1994)	Drama
+323	326	Tank Girl (1995)	Action|Comedy|Musical|Sci-Fi
+324	327	Tales From the Crypt Presents: Demon Knight (1995)	Horror
+325	328	Star Trek: Generations (1994)	Action|Adventure|Sci-Fi
+326	329	Tales from the Hood (1995)	Comedy|Horror
+327	330	Tom & Viv (1994)	Drama
+328	331	Village of the Damned (1995)	Horror|Sci-Fi
+329	332	Tommy Boy (1995)	Comedy
+330	333	Vanya on 42nd Street (1994)	Drama
+331	334	Underneath, The (1995)	Mystery|Thriller
+332	335	Walking Dead, The (1995)	Drama|War
+333	336	What's Eating Gilbert Grape (1993)	Drama
+334	337	Virtuosity (1995)	Sci-Fi|Thriller
+335	338	While You Were Sleeping (1995)	Comedy|Romance
+336	339	War, The (1994)	Adventure|Drama
+337	340	Double Happiness (1994)	Drama
+338	341	Muriel's Wedding (1994)	Comedy|Romance
+339	342	Baby-Sitters Club, The (1995)	Children's
+340	343	Ace Ventura: Pet Detective (1994)	Comedy
+341	344	Adventures of Priscilla, Queen of the Desert, The (1994)	Comedy|Drama
+342	345	Backbeat (1993)	Drama|Musical
+343	346	Bitter Moon (1992)	Drama
+344	347	Bullets Over Broadway (1994)	Comedy
+345	348	Clear and Present Danger (1994)	Action|Adventure|Thriller
+346	349	Client, The (1994)	Drama|Mystery|Thriller
+347	350	Corrina, Corrina (1994)	Comedy|Drama|Romance
+348	351	Crooklyn (1994)	Comedy
+349	352	Crow, The (1994)	Action|Romance|Thriller
+350	353	Cobb (1994)	Drama
+351	354	Flintstones, The (1994)	Children's|Comedy
+352	355	Forrest Gump (1994)	Comedy|Romance|War
+353	356	Four Weddings and a Funeral (1994)	Comedy|Romance
+354	357	Higher Learning (1995)	Drama
+355	358	I Like It Like That (1994)	Comedy|Drama|Romance
+356	359	I Love Trouble (1994)	Action|Comedy
+357	360	It Could Happen to You (1994)	Drama|Romance
+358	361	Jungle Book, The (1994)	Adventure|Children's|Romance
+359	362	Wonderful, Horrible Life of Leni Riefenstahl, The (Die Macht der Bilder) (1993)	Documentary
+360	363	Lion King, The (1994)	Animation|Children's|Musical
+361	364	Little Buddha (1993)	Drama
+362	365	Wes Craven's New Nightmare (1994)	Horror
+363	366	Mask, The (1994)	Comedy|Crime|Fantasy
+364	367	Maverick (1994)	Action|Comedy|Western
+365	368	Mrs. Parker and the Vicious Circle (1994)	Drama
+366	369	Naked Gun 33 1/3: The Final Insult (1994)	Comedy
+367	370	Paper, The (1994)	Comedy|Drama
+368	371	Reality Bites (1994)	Comedy|Drama
+369	372	Red Rock West (1992)	Thriller
+370	373	Richie Rich (1994)	Children's|Comedy
+371	374	Safe Passage (1994)	Drama
+372	375	River Wild, The (1994)	Action|Thriller
+373	376	Speed (1994)	Action|Romance|Thriller
+374	377	Speechless (1994)	Comedy|Romance
+375	378	Timecop (1994)	Action|Sci-Fi
+376	379	True Lies (1994)	Action|Adventure|Comedy|Romance
+377	380	When a Man Loves a Woman (1994)	Drama
+378	381	Wolf (1994)	Drama|Horror
+379	382	Wyatt Earp (1994)	Western
+380	383	Bad Company (1995)	Action
+381	384	Man of No Importance, A (1994)	Drama
+382	385	S.F.W. (1994)	Drama
+383	386	Low Down Dirty Shame, A (1994)	Action|Comedy
+384	387	Boys Life (1995)	Drama
+385	388	Colonel Chabert, Le (1994)	Drama|Romance|War
+386	389	Faster Pussycat! Kill! Kill! (1965)	Action|Comedy|Drama
+387	390	Jason's Lyric (1994)	Crime|Drama
+388	391	Secret Adventures of Tom Thumb, The (1993)	Adventure|Children's
+389	392	Street Fighter (1994)	Action
+390	393	Coldblooded (1995)	Action
+391	394	Desert Winds (1995)	Drama
+392	395	Fall Time (1995)	Drama
+393	396	Fear, The (1995)	Horror
+394	397	Frank and Ollie (1995)	Documentary
+395	398	Girl in the Cadillac (1995)	Drama
+396	399	Homage (1995)	Drama
+397	400	Mirage (1995)	Action|Thriller
+398	401	Open Season (1996)	Comedy
+399	402	Two Crimes (1995)	Comedy|Crime|Drama
+400	403	Brother Minister: The Assassination of Malcolm X (1994)	Documentary
+401	404	Highlander III: The Sorcerer (1994)	Action|Sci-Fi
+402	405	Federal Hill (1994)	Drama
+403	406	In the Mouth of Madness (1995)	Horror|Thriller
+404	407	8 Seconds (1994)	Drama
+405	408	Above the Rim (1994)	Drama
+406	409	Addams Family Values (1993)	Comedy
+407	410	You So Crazy (1994)	Comedy
+408	411	Age of Innocence, The (1993)	Drama
+409	412	Airheads (1994)	Comedy
+410	413	Air Up There, The (1994)	Comedy
+411	414	Another Stakeout (1993)	Comedy|Thriller
+412	415	Bad Girls (1994)	Western
+413	416	Barcelona (1994)	Comedy|Romance
+414	417	Being Human (1993)	Drama
+415	418	Beverly Hillbillies, The (1993)	Comedy
+416	419	Beverly Hills Cop III (1994)	Action|Comedy
+417	420	Black Beauty (1994)	Adventure|Children's
+418	421	Blink (1994)	Thriller
+419	422	Blown Away (1994)	Action|Thriller
+420	423	Blue Chips (1994)	Drama
+421	424	Blue Sky (1994)	Drama|Romance
+422	425	Body Snatchers (1993)	Horror|Sci-Fi|Thriller
+423	426	Boxing Helena (1993)	Mystery|Romance|Thriller
+424	427	Bronx Tale, A (1993)	Drama
+425	428	Cabin Boy (1994)	Comedy
+426	429	Calendar Girl (1993)	Drama
+427	430	Carlito's Way (1993)	Crime|Drama
+428	431	City Slickers II: The Legend of Curly's Gold (1994)	Comedy|Western
+429	432	Clean Slate (1994)	Comedy
+430	433	Cliffhanger (1993)	Action|Adventure|Crime
+431	434	Coneheads (1993)	Comedy|Sci-Fi
+432	435	Color of Night (1994)	Drama|Thriller
+433	436	Cops and Robbersons (1994)	Comedy
+434	437	Cowboy Way, The (1994)	Action|Comedy
+435	438	Dangerous Game (1993)	Drama
+436	439	Dave (1993)	Comedy|Romance
+437	440	Dazed and Confused (1993)	Comedy
+438	441	Demolition Man (1993)	Action|Sci-Fi
+439	442	Endless Summer 2, The (1994)	Documentary
+440	443	Even Cowgirls Get the Blues (1993)	Comedy|Romance
+441	444	Fatal Instinct (1993)	Comedy
+442	445	Farewell My Concubine (1993)	Drama|Romance
+443	446	Favor, The (1994)	Comedy|Romance
+444	447	Fearless (1993)	Drama
+445	448	Fear of a Black Hat (1993)	Comedy
+446	449	With Honors (1994)	Comedy|Drama
+447	450	Flesh and Bone (1993)	Drama|Mystery|Romance
+448	451	Widows' Peak (1994)	Drama
+449	452	For Love or Money (1993)	Comedy
+450	453	Firm, The (1993)	Drama|Thriller
+451	454	Free Willy (1993)	Adventure|Children's|Drama
+452	455	Fresh (1994)	Drama
+453	456	Fugitive, The (1993)	Action|Thriller
+454	457	Geronimo: An American Legend (1993)	Drama|Western
+455	458	Getaway, The (1994)	Action
+456	459	Getting Even with Dad (1994)	Comedy
+457	460	Go Fish (1994)	Drama|Romance
+458	461	Good Man in Africa, A (1994)	Action|Adventure
+459	462	Guilty as Sin (1993)	Crime|Drama|Thriller
+460	463	Hard Target (1993)	Action|Adventure|Crime|Thriller
+461	464	Heaven & Earth (1993)	Action|Drama|War
+462	465	Hot Shots! Part Deux (1993)	Action|Comedy|War
+463	466	Live Nude Girls (1995)	Comedy
+464	467	Englishman Who Went Up a Hill, But Came Down a Mountain, The (1995)	Comedy|Romance
+465	468	House of the Spirits, The (1993)	Drama|Romance
+466	469	House Party 3 (1994)	Comedy
+467	470	Hudsucker Proxy, The (1994)	Comedy|Romance
+468	471	I'll Do Anything (1994)	Comedy|Drama
+469	472	In the Army Now (1994)	Comedy|War
+470	473	In the Line of Fire (1993)	Action|Thriller
+471	474	In the Name of the Father (1993)	Drama
+472	475	Inkwell, The (1994)	Comedy|Drama
+473	476	What's Love Got to Do with It? (1993)	Drama
+474	477	Jimmy Hollywood (1994)	Comedy
+475	478	Judgment Night (1993)	Action
+476	479	Jurassic Park (1993)	Action|Adventure|Sci-Fi
+477	480	Kalifornia (1993)	Drama|Thriller
+478	481	Killing Zoe (1994)	Thriller
+479	482	King of the Hill (1993)	Drama
+480	483	Lassie (1994)	Adventure|Children's
+481	484	Last Action Hero (1993)	Action|Comedy
+482	485	Life with Mikey (1993)	Comedy
+483	486	Lightning Jack (1994)	Comedy|Western
+484	487	M. Butterfly (1993)	Drama
+485	488	Made in America (1993)	Comedy
+486	489	Malice (1993)	Thriller
+487	490	Man Without a Face, The (1993)	Drama
+488	491	Manhattan Murder Mystery (1993)	Comedy|Mystery
+489	492	Menace II Society (1993)	Action|Crime|Drama
+490	493	Executive Decision (1996)	Action|Thriller
+491	494	In the Realm of the Senses (Ai no corrida) (1976)	Drama
+492	495	What Happened Was... (1994)	Comedy|Drama|Romance
+493	496	Much Ado About Nothing (1993)	Comedy|Romance
+494	497	Mr. Jones (1993)	Drama|Romance
+495	498	Mr. Wonderful (1993)	Comedy|Romance
+496	499	Mrs. Doubtfire (1993)	Comedy
+497	500	Naked (1993)	Drama
+498	501	Next Karate Kid, The (1994)	Action|Children's
+499	502	New Age, The (1994)	Drama
+500	503	No Escape (1994)	Action|Sci-Fi
+501	504	North (1994)	Comedy
+502	505	Orlando (1993)	Drama
+503	506	Perfect World, A (1993)	Action|Drama
+504	507	Philadelphia (1993)	Drama
+505	508	Piano, The (1993)	Drama|Romance
+506	509	Poetic Justice (1993)	Drama
+507	510	Program, The (1993)	Action|Drama
+508	511	Robert A. Heinlein's The Puppet Masters (1994)	Horror|Sci-Fi
+509	512	Radioland Murders (1994)	Comedy|Mystery|Romance
+510	513	Ref, The (1994)	Comedy
+511	514	Remains of the Day, The (1993)	Drama
+512	515	Renaissance Man (1994)	Comedy|Drama|War
+513	516	Rising Sun (1993)	Action|Drama|Mystery
+514	517	Road to Wellville, The (1994)	Comedy
+515	518	Robocop 3 (1993)	Sci-Fi|Thriller
+516	519	Robin Hood: Men in Tights (1993)	Comedy
+517	520	Romeo Is Bleeding (1993)	Crime|Thriller
+518	521	Romper Stomper (1992)	Action|Drama
+519	522	Ruby in Paradise (1993)	Drama
+520	523	Rudy (1993)	Drama
+521	524	Saint of Fort Washington, The (1993)	Drama
+522	525	Savage Nights (Nuits fauves, Les) (1992)	Drama
+523	526	Schindler's List (1993)	Drama|War
+524	527	Scout, The (1994)	Drama
+525	528	Searching for Bobby Fischer (1993)	Drama
+526	529	Second Best (1994)	Drama
+527	530	Secret Garden, The (1993)	Children's|Drama
+528	531	Serial Mom (1994)	Comedy|Crime|Horror
+529	532	Shadow, The (1994)	Action
+530	533	Shadowlands (1993)	Drama|Romance
+531	534	Short Cuts (1993)	Drama
+532	535	Simple Twist of Fate, A (1994)	Drama
+533	536	Sirens (1994)	Comedy|Drama
+534	537	Six Degrees of Separation (1993)	Drama
+535	538	Sleepless in Seattle (1993)	Comedy|Romance
+536	539	Sliver (1993)	Thriller
+537	540	Blade Runner (1982)	Film-Noir|Sci-Fi
+538	541	Son in Law (1993)	Comedy
+539	542	So I Married an Axe Murderer (1993)	Comedy|Romance|Thriller
+540	543	Striking Distance (1993)	Action
+541	544	Harlem (1993)	Drama
+542	545	Super Mario Bros. (1993)	Action|Adventure|Children's|Sci-Fi
+543	546	Surviving the Game (1994)	Action|Adventure|Thriller
+544	547	Terminal Velocity (1994)	Action
+545	548	Thirty-Two Short Films About Glenn Gould (1993)	Documentary
+546	549	Threesome (1994)	Comedy|Romance
+547	550	Nightmare Before Christmas, The (1993)	Children's|Comedy|Musical
+548	551	Three Musketeers, The (1993)	Action|Adventure|Comedy
+549	552	Tombstone (1993)	Western
+550	553	Trial by Jury (1994)	Thriller
+551	554	True Romance (1993)	Action|Crime|Romance
+552	555	War Room, The (1993)	Documentary
+553	556	Mamma Roma (1962)	Drama
+554	557	Pagemaster, The (1994)	Action|Adventure|Animation|Children's|Fantasy
+555	558	Paris, France (1993)	Comedy
+556	559	Beans of Egypt, Maine, The (1994)	Drama
+557	560	Killer (Bulletproof Heart) (1994)	Thriller
+558	561	Welcome to the Dollhouse (1995)	Comedy|Drama
+559	562	Germinal (1993)	Drama
+560	563	Chasers (1994)	Comedy
+561	564	Cronos (1992)	Horror
+562	565	Naked in New York (1994)	Comedy|Romance
+563	566	Kika (1993)	Drama
+564	567	Bhaji on the Beach (1993)	Comedy|Drama
+565	568	Little Big League (1994)	Children's|Comedy
+566	569	Slingshot, The (Kådisbellan ) (1993)	Comedy|Drama
+567	570	Wedding Gift, The (1994)	Drama
+568	571	Foreign Student (1994)	Drama
+569	572	Ciao, Professore! (Io speriamo che me la cavo ) (1993)	Drama
+570	573	Spanking the Monkey (1994)	Comedy|Drama
+571	574	Little Rascals, The (1994)	Children's|Comedy
+572	575	Fausto (1993)	Comedy
+573	576	Andre (1994)	Adventure|Children's
+574	577	Hour of the Pig, The (1993)	Drama|Mystery
+575	578	Scorta, La (1993)	Thriller
+576	579	Princess Caraboo (1994)	Drama
+577	580	Celluloid Closet, The (1995)	Documentary
+578	581	Metisse (Café au Lait) (1993)	Comedy
+579	582	Dear Diary (Caro Diario) (1994)	Comedy|Drama
+580	583	I Don't Want to Talk About It (De eso no se habla) (1993)	Drama
+581	584	Brady Bunch Movie, The (1995)	Comedy
+582	585	Home Alone (1990)	Children's|Comedy
+583	586	Ghost (1990)	Comedy|Romance|Thriller
+584	587	Aladdin (1992)	Animation|Children's|Comedy|Musical
+585	588	Terminator 2: Judgment Day (1991)	Action|Sci-Fi|Thriller
+586	589	Dances with Wolves (1990)	Adventure|Drama|Western
+587	590	Tough and Deadly (1995)	Action|Drama|Thriller
+588	591	Batman (1989)	Action|Adventure|Crime|Drama
+589	592	Silence of the Lambs, The (1991)	Drama|Thriller
+590	593	Snow White and the Seven Dwarfs (1937)	Animation|Children's|Musical
+591	594	Beauty and the Beast (1991)	Animation|Children's|Musical
+592	595	Pinocchio (1940)	Animation|Children's
+593	596	Pretty Woman (1990)	Comedy|Romance
+594	597	Window to Paris (1994)	Comedy
+595	598	Wild Bunch, The (1969)	Western
+596	599	Love and a .45 (1994)	Thriller
+597	600	Wooden Man's Bride, The (Wu Kui) (1994)	Drama
+598	601	Great Day in Harlem, A (1994)	Documentary
+599	602	Bye Bye, Love (1995)	Comedy
+600	603	Criminals (1996)	Documentary
+601	604	One Fine Day (1996)	Drama|Romance
+602	605	Candyman: Farewell to the Flesh (1995)	Horror
+603	606	Century (1993)	Drama
+604	607	Fargo (1996)	Crime|Drama|Thriller
+605	608	Homeward Bound II: Lost in San Francisco (1996)	Adventure|Children's
+606	609	Heavy Metal (1981)	Action|Adventure|Animation|Horror|Sci-Fi
+607	610	Hellraiser: Bloodline (1996)	Action|Horror|Sci-Fi
+608	611	Pallbearer, The (1996)	Comedy
+609	612	Jane Eyre (1996)	Drama|Romance
+610	613	Loaded (1994)	Drama|Thriller
+611	614	Bread and Chocolate (Pane e cioccolata) (1973)	Drama
+612	615	Aristocats, The (1970)	Animation|Children's
+613	616	Flower of My Secret, The (La Flor de Mi Secreto) (1995)	Drama
+614	617	Two Much (1996)	Comedy|Romance
+615	618	Ed (1996)	Comedy
+616	619	Scream of Stone (Schrei aus Stein) (1991)	Drama
+617	620	My Favorite Season (1993)	Drama
+618	622	Modern Affair, A (1995)	Romance
+619	623	Condition Red (1995)	Action|Drama|Thriller
+620	624	Asfour Stah (1990)	Drama
+621	625	Thin Line Between Love and Hate, A (1996)	Comedy
+622	626	Last Supper, The (1995)	Drama|Thriller
+623	627	Primal Fear (1996)	Drama|Thriller
+624	628	Rude (1995)	Drama
+625	629	Carried Away (1996)	Drama|Romance
+626	630	All Dogs Go to Heaven 2 (1996)	Animation|Children's|Musical
+627	631	Land and Freedom (Tierra y libertad) (1995)	War
+628	632	Denise Calls Up (1995)	Comedy
+629	633	Theodore Rex (1995)	Comedy
+630	634	Family Thing, A (1996)	Comedy|Drama
+631	635	Frisk (1995)	Drama
+632	636	Sgt. Bilko (1996)	Comedy
+633	637	Jack and Sarah (1995)	Romance
+634	638	Girl 6 (1996)	Comedy
+635	639	Diabolique (1996)	Drama|Thriller
+636	640	Little Indian, Big City (Un indien dans la ville) (1994)	Comedy
+637	641	Roula (1995)	Drama
+638	642	Peanuts - Die Bank zahlt alles (1996)	Comedy
+639	643	Happy Weekend (1996)	Comedy
+640	644	Nelly & Monsieur Arnaud (1995)	Drama
+641	646	Courage Under Fire (1996)	Drama|War
+642	647	Mission: Impossible (1996)	Action|Adventure|Mystery
+643	648	Cold Fever (Á köldum klaka) (1994)	Comedy|Drama
+644	649	Moll Flanders (1996)	Drama
+645	650	Superweib, Das (1996)	Comedy
+646	651	301, 302 (1995)	Mystery
+647	652	Dragonheart (1996)	Action|Adventure|Fantasy
+648	653	Und keiner weint mir nach (1996)	Drama|Romance
+649	654	Mutters Courage (1995)	Comedy
+650	655	Eddie (1996)	Comedy
+651	656	Yankee Zulu (1994)	Comedy|Drama
+652	657	Billy's Holiday (1995)	Drama
+653	658	Purple Noon (1960)	Crime|Thriller
+654	659	August (1996)	Drama
+655	660	James and the Giant Peach (1996)	Animation|Children's|Musical
+656	661	Fear (1996)	Thriller
+657	662	Kids in the Hall: Brain Candy (1996)	Comedy
+658	663	Faithful (1996)	Comedy
+659	664	Underground (1995)	War
+660	665	All Things Fair (1996)	Drama
+661	666	Bloodsport 2 (1995)	Action
+662	667	Pather Panchali (1955)	Drama
+663	668	Aparajito (1956)	Drama
+664	669	World of Apu, The (Apur Sansar) (1959)	Drama
+665	670	Mystery Science Theater 3000: The Movie (1996)	Comedy|Sci-Fi
+666	671	Tarantella (1995)	Drama
+667	672	Space Jam (1996)	Adventure|Animation|Children's|Comedy|Fantasy
+668	673	Barbarella (1968)	Adventure|Sci-Fi
+669	674	Hostile Intentions (1994)	Action|Drama|Thriller
+670	675	They Bite (1996)	Drama
+671	677	Some Folks Call It a Sling Blade (1993)	Drama|Thriller
+672	678	Run of the Country, The (1995)	Drama
+673	679	Alphaville (1965)	Sci-Fi
+674	680	Clean Slate (Coup de Torchon) (1981)	Crime
+675	681	Tigrero: A Film That Was Never Made (1994)	Documentary|Drama
+676	682	Eye of Vichy, The (Oeil de Vichy, L') (1993)	Documentary
+677	683	Windows (1980)	Drama
+678	684	It's My Party (1995)	Drama
+679	686	Country Life (1994)	Drama|Romance
+680	687	Operation Dumbo Drop (1995)	Action|Adventure|Comedy|War
+681	689	Promise, The (Versprechen, Das) (1994)	Romance
+682	690	Mrs. Winterbourne (1996)	Comedy|Romance
+683	691	Solo (1996)	Action|Sci-Fi|Thriller
+684	692	Under the Domin Tree (Etz Hadomim Tafus) (1994)	Drama
+685	693	Substitute, The (1996)	Action
+686	694	True Crime (1995)	Mystery|Thriller
+687	695	Butterfly Kiss (1995)	Thriller
+688	696	Feeling Minnesota (1996)	Drama|Romance
+689	697	Delta of Venus (1994)	Drama
+690	698	To Cross the Rubicon (1991)	Drama
+691	699	Angus (1995)	Comedy
+692	700	Daens (1992)	Drama
+693	701	Faces (1968)	Drama
+694	702	Boys (1996)	Drama
+695	703	Quest, The (1996)	Action|Adventure
+696	704	Cosi (1996)	Comedy
+697	705	Sunset Park (1996)	Drama
+698	706	Mulholland Falls (1996)	Crime|Film-Noir|Thriller
+699	707	Truth About Cats & Dogs, The (1996)	Comedy|Romance
+700	708	Oliver & Company (1988)	Animation|Children's
+701	709	Celtic Pride (1996)	Comedy
+702	710	Flipper (1996)	Adventure|Children's
+703	711	Captives (1994)	Drama
+704	712	Of Love and Shadows (1994)	Drama
+705	713	Dead Man (1995)	Western
+706	714	Horseman on the Roof, The (Hussard sur le toit, Le) (1995)	Drama
+707	715	Switchblade Sisters (1975)	Crime
+708	716	Mouth to Mouth (Boca a boca) (1995)	Comedy
+709	717	Visitors, The (Les Visiteurs) (1993)	Comedy|Sci-Fi
+710	718	Multiplicity (1996)	Comedy
+711	719	Wallace & Gromit: The Best of Aardman Animation (1996)	Animation
+712	720	Halfmoon (Paul Bowles - Halbmond) (1995)	Drama
+713	721	Haunted World of Edward D. Wood Jr., The (1995)	Documentary
+714	722	Two Friends (1986)	Drama
+715	723	Craft, The (1996)	Drama|Horror
+716	724	Great White Hype, The (1996)	Comedy
+717	725	Last Dance (1996)	Drama
+718	726	War Stories (1995)	Documentary
+719	727	Cold Comfort Farm (1995)	Comedy
+720	728	Institute Benjamenta, or This Dream People Call Human Life (1995)	Drama
+721	729	Low Life, The (1994)	Drama
+722	730	Heaven's Prisoners (1996)	Mystery|Thriller
+723	731	Original Gangstas (1996)	Crime
+724	732	Rock, The (1996)	Action|Adventure|Thriller
+725	733	Getting Away With Murder (1996)	Comedy
+726	734	Cemetery Man (Dellamorte Dellamore) (1994)	Comedy|Horror
+727	735	Twister (1996)	Action|Adventure|Romance|Thriller
+728	736	Barb Wire (1996)	Action|Sci-Fi
+729	737	Garcu, Le (1995)	Drama
+730	738	Honigmond (1996)	Comedy
+731	740	Ghost in the Shell (Kokaku kidotai) (1995)	Animation|Sci-Fi
+732	741	Thinner (1996)	Horror|Thriller
+733	742	Spy Hard (1996)	Comedy
+734	743	Brothers in Trouble (1995)	Drama
+735	744	Close Shave, A (1995)	Animation|Comedy|Thriller
+736	745	Force of Evil (1948)	Film-Noir
+737	746	Stupids, The (1996)	Comedy
+738	747	Arrival, The (1996)	Action|Sci-Fi|Thriller
+739	748	Man from Down Under, The (1943)	Drama
+740	749	Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1963)	Sci-Fi|War
+741	750	Careful (1992)	Comedy
+742	751	Vermont Is For Lovers (1992)	Comedy|Romance
+743	752	Month by the Lake, A (1995)	Comedy|Drama
+744	753	Gold Diggers: The Secret of Bear Mountain (1995)	Adventure|Children's
+745	754	Kim (1950)	Children's|Drama
+746	755	Carmen Miranda: Bananas Is My Business (1994)	Documentary
+747	756	Ashes of Time (1994)	Drama
+748	757	Jar, The (Khomreh) (1992)	Drama
+749	758	Maya Lin: A Strong Clear Vision (1994)	Documentary
+750	759	Stalingrad (1993)	War
+751	760	Phantom, The (1996)	Adventure
+752	761	Striptease (1996)	Comedy|Crime
+753	762	Last of the High Kings, The (a.k.a. Summer Fling) (1996)	Drama
+754	763	Heavy (1995)	Drama|Romance
+755	764	Jack (1996)	Comedy|Drama
+756	765	I Shot Andy Warhol (1996)	Drama
+757	766	Grass Harp, The (1995)	Drama
+758	767	Someone Else's America (1995)	Drama
+759	768	Marlene Dietrich: Shadow and Light (1996)	Documentary
+760	769	Costa Brava (1946)	Drama
+761	770	Vie est belle, La (Life is Rosey) (1987)	Comedy|Drama
+762	771	Quartier Mozart (1992)	Comedy
+763	772	Touki Bouki (Journey of the Hyena) (1973)	Drama
+764	773	Wend Kuuni (God's Gift) (1982)	Drama
+765	774	Spirits of the Dead (Tre Passi nel Delirio) (1968)	Horror
+766	775	Babyfever (1994)	Comedy|Drama
+767	776	Pharaoh's Army (1995)	War
+768	777	Trainspotting (1996)	Drama
+769	778	'Til There Was You (1997)	Drama|Romance
+770	779	Independence Day (ID4) (1996)	Action|Sci-Fi|War
+771	780	Stealing Beauty (1996)	Drama
+772	781	Fan, The (1996)	Thriller
+773	782	Hunchback of Notre Dame, The (1996)	Animation|Children's|Musical
+774	783	Cable Guy, The (1996)	Comedy
+775	784	Kingpin (1996)	Comedy
+776	785	Eraser (1996)	Action|Thriller
+777	786	Gate of Heavenly Peace, The (1995)	Documentary
+778	787	Nutty Professor, The (1996)	Comedy|Fantasy|Romance|Sci-Fi
+779	788	I, Worst of All (Yo, la peor de todas) (1990)	Drama
+780	789	An Unforgettable Summer (1994)	Drama
+781	790	Last Klezmer: Leopold Kozlowski, His Life and Music, The (1995)	Documentary
+782	791	Hungarian Fairy Tale, A (1987)	Fantasy
+783	792	My Life and Times With Antonin Artaud (En compagnie d'Antonin Artaud) (1993)	Drama
+784	793	Midnight Dancers (Sibak) (1994)	Comedy|Drama
+785	794	Somebody to Love (1994)	Drama
+786	795	Very Natural Thing, A (1974)	Drama
+787	796	Old Lady Who Walked in the Sea, The (Vieille qui marchait dans la mer, La) (1991)	Comedy
+788	797	Daylight (1996)	Action|Adventure|Thriller
+789	798	Frighteners, The (1996)	Comedy|Horror
+790	799	Lone Star (1996)	Drama|Mystery
+791	800	Harriet the Spy (1996)	Children's|Comedy
+792	801	Phenomenon (1996)	Drama|Romance
+793	802	Walking and Talking (1996)	Romance
+794	803	She's the One (1996)	Comedy|Romance
+795	804	Time to Kill, A (1996)	Drama
+796	805	American Buffalo (1996)	Drama
+797	806	Rendezvous in Paris (Rendez-vous de Paris, Les) (1995)	Comedy|Romance
+798	807	Alaska (1996)	Adventure|Children's
+799	808	Fled (1996)	Action|Adventure
+800	809	Kazaam (1996)	Children's|Comedy|Fantasy
+801	810	Bewegte Mann, Der (1994)	Comedy
+802	811	Magic Hunter (1994)	Drama
+803	812	Larger Than Life (1996)	Comedy
+804	813	Boy Called Hate, A (1995)	Drama
+805	814	Power 98 (1995)	Action|Mystery|Thriller
+806	815	Two Deaths (1995)	Drama
+807	817	Very Brady Sequel, A (1996)	Comedy
+808	818	Stefano Quantestorie (1993)	Comedy|Drama
+809	819	Death in the Garden (Mort en ce jardin, La) (1956)	Drama
+810	820	Crude Oasis, The (1995)	Romance
+811	821	Hedd Wyn (1992)	Drama
+812	822	Collectionneuse, La (1967)	Drama
+813	823	Kaspar Hauser (1993)	Drama
+814	824	Echte Kerle (1996)	Comedy|Romance
+815	825	Diebinnen (1995)	Drama
+816	826	Convent, The (Convento, O) (1995)	Drama
+817	827	Adventures of Pinocchio, The (1996)	Adventure|Children's
+818	828	Joe's Apartment (1996)	Comedy|Musical
+819	829	First Wives Club, The (1996)	Comedy
+820	830	Stonewall (1995)	Drama
+821	831	Ransom (1996)	Drama|Thriller
+822	832	High School High (1996)	Comedy
+823	833	Phat Beach (1996)	Comedy
+824	834	Foxfire (1996)	Drama
+825	835	Chain Reaction (1996)	Action|Adventure|Thriller
+826	836	Matilda (1996)	Children's|Comedy
+827	837	Emma (1996)	Comedy|Drama|Romance
+828	838	Crow: City of Angels, The (1996)	Action|Thriller
+829	839	House Arrest (1996)	Comedy
+830	840	Eyes Without a Face (1959)	Horror
+831	841	Tales from the Crypt Presents: Bordello of Blood (1996)	Horror
+832	842	Lotto Land (1995)	Drama
+833	843	Story of Xinghua, The (1993)	Drama
+834	844	Day the Sun Turned Cold, The (Tianguo niezi) (1994)	Drama
+835	845	Flirt (1995)	Drama
+836	846	Big Squeeze, The (1996)	Comedy|Drama
+837	847	Spitfire Grill, The (1996)	Drama
+838	848	Escape from L.A. (1996)	Action|Adventure|Sci-Fi|Thriller
+839	849	Cyclo (1995)	Crime|Drama
+840	850	Basquiat (1996)	Drama
+841	851	Tin Cup (1996)	Comedy|Romance
+842	852	Dingo (1992)	Drama
+843	853	Ballad of Narayama, The (Narayama Bushiko) (1958)	Drama
+844	854	Every Other Weekend (1990)	Drama
+845	855	Mille bolle blu (1993)	Comedy
+846	856	Crows and Sparrows (1949)	Drama
+847	857	Godfather, The (1972)	Action|Crime|Drama
+848	858	Hippie Revolution, The (1996)	Documentary
+849	859	Maybe, Maybe Not (Bewegte Mann, Der) (1994)	Comedy
+850	860	Supercop (1992)	Action|Thriller
+851	861	Manny & Lo (1996)	Drama
+852	862	Celestial Clockwork (1994)	Comedy
+853	863	Wife, The (1995)	Comedy|Drama
+854	864	Small Faces (1995)	Drama
+855	865	Bound (1996)	Crime|Drama|Romance|Thriller
+856	866	Carpool (1996)	Comedy|Crime
+857	867	Death in Brunswick (1991)	Comedy
+858	868	Kansas City (1996)	Crime
+859	869	Gone Fishin' (1997)	Comedy
+860	870	Lover's Knot (1996)	Comedy
+861	871	Aiqing wansui (1994)	Drama
+862	872	Shadow of Angels (Schatten der Engel) (1976)	Drama
+863	873	Killer: A Journal of Murder (1995)	Crime|Drama
+864	874	Nothing to Lose (1994)	Drama
+865	875	Police Story 4: Project S (Chao ji ji hua) (1993)	Action
+866	876	Girls Town (1996)	Drama
+867	877	Bye-Bye (1995)	Drama
+868	878	Relic, The (1997)	Horror
+869	879	Island of Dr. Moreau, The (1996)	Sci-Fi|Thriller
+870	880	First Kid (1996)	Children's|Comedy
+871	881	Trigger Effect, The (1996)	Drama|Thriller
+872	883	Sweet Nothing (1995)	Drama
+873	884	Bogus (1996)	Children's|Drama|Fantasy
+874	885	Bulletproof (1996)	Action
+875	886	Talk of Angels (1998)	Drama
+876	887	Land Before Time III: The Time of the Great Giving (1995)	Animation|Children's
+877	888	1-900 (1994)	Romance
+878	889	Baton Rouge (1988)	Thriller
+879	890	Halloween: The Curse of Michael Myers (1995)	Horror|Thriller
+880	891	Twelfth Night (1996)	Comedy|Drama|Romance
+881	892	Mother Night (1996)	Drama
+882	893	Liebelei (1933)	Romance
+883	894	Venice/Venice (1992)	Drama
+884	895	Wild Reeds (1994)	Drama
+885	896	For Whom the Bell Tolls (1943)	Adventure|War
+886	897	Philadelphia Story, The (1940)	Comedy|Romance
+887	898	Singin' in the Rain (1952)	Musical|Romance
+888	899	American in Paris, An (1951)	Musical|Romance
+889	900	Funny Face (1957)	Comedy|Musical
+890	901	Breakfast at Tiffany's (1961)	Drama|Romance
+891	902	Vertigo (1958)	Mystery|Thriller
+892	903	Rear Window (1954)	Mystery|Thriller
+893	904	It Happened One Night (1934)	Comedy
+894	905	Gaslight (1944)	Mystery|Thriller
+895	906	Gay Divorcee, The (1934)	Comedy|Musical|Romance
+896	907	North by Northwest (1959)	Drama|Thriller
+897	908	Apartment, The (1960)	Comedy|Drama
+898	909	Some Like It Hot (1959)	Comedy|Crime
+899	910	Charade (1963)	Comedy|Mystery|Romance|Thriller
+900	911	Casablanca (1942)	Drama|Romance|War
+901	912	Maltese Falcon, The (1941)	Film-Noir|Mystery
+902	913	My Fair Lady (1964)	Musical|Romance
+903	914	Sabrina (1954)	Comedy|Romance
+904	915	Roman Holiday (1953)	Comedy|Romance
+905	916	Little Princess, The (1939)	Children's|Drama
+906	917	Meet Me in St. Louis (1944)	Musical
+907	918	Wizard of Oz, The (1939)	Adventure|Children's|Drama|Musical
+908	919	Gone with the Wind (1939)	Drama|Romance|War
+909	920	My Favorite Year (1982)	Comedy
+910	921	Sunset Blvd. (a.k.a. Sunset Boulevard) (1950)	Film-Noir
+911	922	Citizen Kane (1941)	Drama
+912	923	2001: A Space Odyssey (1968)	Drama|Mystery|Sci-Fi|Thriller
+913	924	Golden Earrings (1947)	Adventure|Romance
+914	925	All About Eve (1950)	Drama
+915	926	Women, The (1939)	Comedy
+916	927	Rebecca (1940)	Romance|Thriller
+917	928	Foreign Correspondent (1940)	Thriller
+918	929	Notorious (1946)	Film-Noir|Romance|Thriller
+919	930	Spellbound (1945)	Mystery|Romance|Thriller
+920	931	Affair to Remember, An (1957)	Romance
+921	932	To Catch a Thief (1955)	Comedy|Romance|Thriller
+922	933	Father of the Bride (1950)	Comedy
+923	934	Band Wagon, The (1953)	Comedy|Musical
+924	935	Ninotchka (1939)	Comedy|Romance
+925	936	Love in the Afternoon (1957)	Comedy|Romance
+926	937	Gigi (1958)	Musical
+927	938	Reluctant Debutante, The (1958)	Comedy|Drama
+928	939	Adventures of Robin Hood, The (1938)	Action|Adventure
+929	940	Mark of Zorro, The (1940)	Adventure
+930	941	Laura (1944)	Crime|Film-Noir|Mystery
+931	942	Ghost and Mrs. Muir, The (1947)	Drama|Romance
+932	943	Lost Horizon (1937)	Drama
+933	944	Top Hat (1935)	Comedy|Musical|Romance
+934	945	To Be or Not to Be (1942)	Comedy|Drama|War
+935	946	My Man Godfrey (1936)	Comedy
+936	947	Giant (1956)	Drama
+937	948	East of Eden (1955)	Drama
+938	949	Thin Man, The (1934)	Mystery
+939	950	His Girl Friday (1940)	Comedy
+940	951	Around the World in 80 Days (1956)	Adventure|Comedy
+941	952	It's a Wonderful Life (1946)	Drama
+942	953	Mr. Smith Goes to Washington (1939)	Drama
+943	954	Bringing Up Baby (1938)	Comedy
+944	955	Penny Serenade (1941)	Drama|Romance
+945	956	Scarlet Letter, The (1926)	Drama
+946	957	Lady of Burlesque (1943)	Comedy|Mystery
+947	958	Of Human Bondage (1934)	Drama
+948	959	Angel on My Shoulder (1946)	Crime|Drama
+949	960	Little Lord Fauntleroy (1936)	Drama
+950	961	They Made Me a Criminal (1939)	Crime|Drama
+951	962	Inspector General, The (1949)	Musical
+952	963	Angel and the Badman (1947)	Western
+953	964	39 Steps, The (1935)	Thriller
+954	965	Walk in the Sun, A (1945)	Drama
+955	966	Outlaw, The (1943)	Western
+956	967	Night of the Living Dead (1968)	Horror|Sci-Fi
+957	968	African Queen, The (1951)	Action|Adventure|Romance|War
+958	969	Beat the Devil (1954)	Comedy|Drama
+959	970	Cat on a Hot Tin Roof (1958)	Drama
+960	971	Last Time I Saw Paris, The (1954)	Drama
+961	972	Meet John Doe (1941)	Drama
+962	973	Algiers (1938)	Drama|Romance
+963	974	Something to Sing About (1937)	Comedy|Musical
+964	975	Farewell to Arms, A (1932)	Romance|War
+965	976	Moonlight Murder (1936)	Mystery
+966	977	Blue Angel, The (Blaue Engel, Der) (1930)	Drama
+967	978	Nothing Personal (1995)	Drama|War
+968	979	In the Line of Duty 2 (1987)	Action
+969	980	Dangerous Ground (1997)	Drama
+970	981	Picnic (1955)	Drama
+971	982	Madagascar Skin (1995)	Romance
+972	983	Pompatus of Love, The (1996)	Comedy|Drama
+973	984	Small Wonders (1996)	Documentary
+974	985	Fly Away Home (1996)	Adventure|Children's
+975	986	Bliss (1997)	Drama|Romance
+976	987	Grace of My Heart (1996)	Comedy|Drama
+977	988	Schlafes Bruder (Brother of Sleep) (1995)	Drama
+978	989	Maximum Risk (1996)	Action|Adventure|Thriller
+979	990	Michael Collins (1996)	Drama|War
+980	991	Rich Man's Wife, The (1996)	Thriller
+981	992	Infinity (1996)	Drama
+982	993	Big Night (1996)	Drama
+983	995	Last Man Standing (1996)	Action|Drama|Western
+984	996	Caught (1996)	Drama|Thriller
+985	997	Set It Off (1996)	Action|Crime
+986	998	2 Days in the Valley (1996)	Crime
+987	999	Curdled (1996)	Crime
+988	1000	Associate, The (L'Associe)(1982)	Comedy
+989	1001	Ed's Next Move (1996)	Comedy
+990	1002	Extreme Measures (1996)	Drama|Thriller
+991	1003	Glimmer Man, The (1996)	Action|Thriller
+992	1004	D3: The Mighty Ducks (1996)	Children's|Comedy
+993	1005	Chamber, The (1996)	Drama
+994	1006	Apple Dumpling Gang, The (1975)	Children's|Comedy|Western
+995	1007	Davy Crockett, King of the Wild Frontier (1955)	Western
+996	1008	Escape to Witch Mountain (1975)	Adventure|Children's|Fantasy
+997	1009	Love Bug, The (1969)	Children's|Comedy
+998	1010	Herbie Rides Again (1974)	Adventure|Children's|Comedy
+999	1011	Old Yeller (1957)	Children's|Drama
+1000	1012	Parent Trap, The (1961)	Children's|Drama
+1001	1013	Pollyanna (1960)	Children's|Comedy|Drama
+1002	1014	Homeward Bound: The Incredible Journey (1993)	Adventure|Children's
+1003	1015	Shaggy Dog, The (1959)	Children's|Comedy
+1004	1016	Swiss Family Robinson (1960)	Adventure|Children's
+1005	1017	That Darn Cat! (1965)	Children's|Comedy|Mystery
+1006	1018	20,000 Leagues Under the Sea (1954)	Adventure|Children's|Fantasy|Sci-Fi
+1007	1019	Cool Runnings (1993)	Comedy
+1008	1020	Angels in the Outfield (1994)	Children's|Comedy
+1009	1021	Cinderella (1950)	Animation|Children's|Musical
+1010	1022	Winnie the Pooh and the Blustery Day (1968)	Animation|Children's
+1011	1023	Three Caballeros, The (1945)	Animation|Children's|Musical
+1012	1024	Sword in the Stone, The (1963)	Animation|Children's
+1013	1025	So Dear to My Heart (1949)	Children's|Drama
+1014	1026	Robin Hood: Prince of Thieves (1991)	Drama
+1015	1027	Mary Poppins (1964)	Children's|Comedy|Musical
+1016	1028	Dumbo (1941)	Animation|Children's|Musical
+1017	1029	Pete's Dragon (1977)	Adventure|Animation|Children's|Musical
+1018	1030	Bedknobs and Broomsticks (1971)	Adventure|Children's|Musical
+1019	1031	Alice in Wonderland (1951)	Animation|Children's|Musical
+1020	1032	Fox and the Hound, The (1981)	Animation|Children's
+1021	1033	Freeway (1996)	Crime
+1022	1034	Sound of Music, The (1965)	Musical
+1023	1035	Die Hard (1988)	Action|Thriller
+1024	1036	Lawnmower Man, The (1992)	Action|Sci-Fi|Thriller
+1025	1037	Unhook the Stars (1996)	Drama
+1026	1038	Synthetic Pleasures (1995)	Documentary
+1027	1039	Secret Agent, The (1996)	Drama
+1028	1040	Secrets & Lies (1996)	Drama
+1029	1041	That Thing You Do! (1996)	Comedy
+1030	1042	To Gillian on Her 37th Birthday (1996)	Drama|Romance
+1031	1043	Surviving Picasso (1996)	Drama
+1032	1044	Love Is All There Is (1996)	Comedy|Drama
+1033	1045	Beautiful Thing (1996)	Drama|Romance
+1034	1046	Long Kiss Goodnight, The (1996)	Action|Thriller
+1035	1048	Ghost and the Darkness, The (1996)	Action|Adventure
+1036	1049	Looking for Richard (1996)	Documentary|Drama
+1037	1050	Trees Lounge (1996)	Drama
+1038	1051	Proprietor, The (1996)	Drama
+1039	1052	Normal Life (1996)	Crime|Drama
+1040	1053	Get on the Bus (1996)	Drama
+1041	1054	Shadow Conspiracy (1997)	Thriller
+1042	1055	Jude (1996)	Drama
+1043	1056	Everyone Says I Love You (1996)	Comedy|Musical|Romance
+1044	1057	Bitter Sugar (Azucar Amargo) (1996)	Drama
+1045	1058	William Shakespeare's Romeo and Juliet (1996)	Drama|Romance
+1046	1059	Swingers (1996)	Comedy|Drama
+1047	1060	Sleepers (1996)	Crime|Drama
+1048	1061	Sunchaser, The (1996)	Drama
+1049	1062	Johns (1996)	Drama
+1050	1063	Aladdin and the King of Thieves (1996)	Animation|Children's|Comedy
+1051	1064	Woman in Question, The (1950)	Mystery
+1052	1065	Shall We Dance? (1937)	Comedy|Musical|Romance
+1053	1066	Damsel in Distress, A (1937)	Comedy|Musical|Romance
+1054	1067	Crossfire (1947)	Crime|Film-Noir
+1055	1068	Murder, My Sweet (1944)	Film-Noir|Thriller
+1056	1069	Macao (1952)	Adventure
+1057	1070	For the Moment (1994)	Romance|War
+1058	1072	Willy Wonka and the Chocolate Factory (1971)	Adventure|Children's|Comedy|Fantasy
+1059	1074	Sexual Life of the Belgians, The (1994)	Comedy
+1060	1075	Innocents, The (1961)	Thriller
+1061	1076	Sleeper (1973)	Comedy|Sci-Fi
+1062	1077	Bananas (1971)	Comedy|War
+1063	1078	Fish Called Wanda, A (1988)	Comedy
+1064	1079	Monty Python's Life of Brian (1979)	Comedy
+1065	1080	Victor/Victoria (1982)	Comedy|Musical
+1066	1081	Candidate, The (1972)	Drama
+1067	1082	Great Race, The (1965)	Comedy|Musical
+1068	1083	Bonnie and Clyde (1967)	Crime|Drama
+1069	1084	Old Man and the Sea, The (1958)	Adventure|Drama
+1070	1085	Dial M for Murder (1954)	Mystery|Thriller
+1071	1086	Madame Butterfly (1995)	Musical
+1072	1087	Dirty Dancing (1987)	Musical|Romance
+1073	1088	Reservoir Dogs (1992)	Crime|Thriller
+1074	1089	Platoon (1986)	Drama|War
+1075	1090	Weekend at Bernie's (1989)	Comedy
+1076	1091	Basic Instinct (1992)	Mystery|Thriller
+1077	1092	Doors, The (1991)	Drama|Musical
+1078	1093	Crying Game, The (1992)	Drama|Romance|War
+1079	1094	Glengarry Glen Ross (1992)	Drama
+1080	1095	Sophie's Choice (1982)	Drama
+1081	1096	E.T. the Extra-Terrestrial (1982)	Children's|Drama|Fantasy|Sci-Fi
+1082	1097	Search for One-eye Jimmy, The (1996)	Comedy
+1083	1098	Christmas Carol, A (1938)	Drama
+1084	1099	Days of Thunder (1990)	Action|Romance
+1085	1100	Top Gun (1986)	Action|Romance
+1086	1101	American Strays (1996)	Action
+1087	1102	Rebel Without a Cause (1955)	Drama
+1088	1103	Streetcar Named Desire, A (1951)	Drama
+1089	1104	Children of the Corn IV: The Gathering (1996)	Horror
+1090	1105	Leopard Son, The (1996)	Documentary
+1091	1106	Loser (1991)	Comedy
+1092	1107	Prerokbe Ognja (1995)	Documentary
+1093	1108	Charm's Incidents (1996)	Drama
+1094	1109	Bird of Prey (1996)	Action
+1095	1110	Microcosmos (Microcosmos: Le peuple de l'herbe) (1996)	Documentary
+1096	1111	Palookaville (1996)	Action|Drama
+1097	1112	Associate, The (1996)	Comedy
+1098	1113	Funeral, The (1996)	Drama
+1099	1114	Sleepover (1995)	Comedy|Drama
+1100	1115	Single Girl, A (La Fille Seule) (1995)	Drama
+1101	1116	Eighth Day, The (Le Huitième jour ) (1996)	Drama
+1102	1117	Tashunga (1995)	Adventure|Western
+1103	1118	Drunks (1997)	Drama
+1104	1119	People vs. Larry Flynt, The (1996)	Drama
+1105	1120	Glory Daze (1996)	Drama
+1106	1121	Plutonium Circus (1995)	Documentary
+1107	1122	Perfect Candidate, A (1996)	Documentary
+1108	1123	On Golden Pond (1981)	Drama
+1109	1124	Return of the Pink Panther, The (1974)	Comedy
+1110	1125	Drop Dead Fred (1991)	Comedy|Fantasy
+1111	1126	Abyss, The (1989)	Action|Adventure|Sci-Fi|Thriller
+1112	1127	Fog, The (1980)	Horror
+1113	1128	Escape from New York (1981)	Action|Adventure|Sci-Fi|Thriller
+1114	1129	Howling, The (1980)	Horror
+1115	1130	Jean de Florette (1986)	Drama
+1116	1131	Manon of the Spring (Manon des sources) (1986)	Drama
+1117	1132	Talking About Sex (1994)	Comedy|Drama
+1118	1133	Johnny 100 Pesos (1993)	Action|Drama
+1119	1134	Private Benjamin (1980)	Comedy
+1120	1135	Monty Python and the Holy Grail (1974)	Comedy
+1121	1136	Hustler White (1996)	Romance
+1122	1137	Dadetown (1995)	Documentary
+1123	1138	Everything Relative (1996)	Drama
+1124	1139	Entertaining Angels: The Dorothy Day Story (1996)	Drama
+1125	1140	Hoogste tijd (1995)	Drama
+1126	1141	Get Over It (1996)	Drama
+1127	1142	Three Lives and Only One Death (1996)	Comedy
+1128	1143	Line King: Al Hirschfeld, The (1996)	Documentary
+1129	1144	Snowriders (1996)	Documentary
+1130	1145	Curtis's Charm (1995)	Comedy|Drama
+1131	1146	When We Were Kings (1996)	Documentary
+1132	1147	Wrong Trousers, The (1993)	Animation|Comedy
+1133	1148	JLG/JLG - autoportrait de décembre (1994)	Documentary|Drama
+1134	1149	Return of Martin Guerre, The (Retour de Martin Guerre, Le) (1982)	Drama
+1135	1150	Faust (1994)	Animation|Comedy|Thriller
+1136	1151	He Walked by Night (1948)	Crime|Film-Noir|Thriller
+1137	1152	Raw Deal (1948)	Film-Noir
+1138	1153	T-Men (1947)	Film-Noir
+1139	1154	Invitation, The (Zaproszenie) (1986)	Drama
+1140	1155	Children Are Watching us, The (Bambini ci guardano, I) (1942)	Drama
+1141	1156	Symphonie pastorale, La (1946)	Drama
+1142	1157	Here Comes Cookie (1935)	Comedy
+1143	1158	Love in Bloom (1935)	Romance
+1144	1159	Six of a Kind (1934)	Comedy
+1145	1160	Tin Drum, The (Blechtrommel, Die) (1979)	Drama
+1146	1161	Ruling Class, The (1972)	Comedy
+1147	1162	Mina Tannenbaum (1994)	Drama
+1148	1163	Two or Three Things I Know About Her (1966)	Drama
+1149	1164	Bloody Child, The (1996)	Drama|Thriller
+1150	1165	Farmer & Chase (1995)	Comedy
+1151	1166	Dear God (1996)	Comedy
+1152	1167	Bad Moon (1996)	Horror
+1153	1168	American Dream (1990)	Documentary
+1154	1169	Best of the Best 3: No Turning Back (1995)	Action
+1155	1170	Bob Roberts (1992)	Comedy
+1156	1171	Cinema Paradiso (1988)	Comedy|Drama|Romance
+1157	1172	Cook the Thief His Wife & Her Lover, The (1989)	Drama
+1158	1173	Grosse Fatigue (1994)	Comedy
+1159	1174	Delicatessen (1991)	Comedy|Sci-Fi
+1160	1175	Double Life of Veronique, The (La Double Vie de Véronique) (1991)	Drama
+1161	1176	Enchanted April (1991)	Drama
+1162	1177	Paths of Glory (1957)	Drama|War
+1163	1178	Grifters, The (1990)	Crime|Drama|Film-Noir
+1164	1179	Hear My Song (1991)	Comedy
+1165	1180	Shooter, The (1995)	Action
+1166	1182	English Patient, The (1996)	Drama|Romance|War
+1167	1183	Mediterraneo (1991)	Comedy|War
+1168	1184	My Left Foot (1989)	Drama
+1169	1185	Sex, Lies, and Videotape (1989)	Drama
+1170	1186	Passion Fish (1992)	Drama
+1171	1187	Strictly Ballroom (1992)	Comedy|Romance
+1172	1188	Thin Blue Line, The (1988)	Documentary
+1173	1189	Tie Me Up! Tie Me Down! (1990)	Drama
+1174	1190	Madonna: Truth or Dare (1991)	Documentary
+1175	1191	Paris Is Burning (1990)	Documentary
+1176	1192	One Flew Over the Cuckoo's Nest (1975)	Drama
+1177	1193	Up in Smoke (1978)	Comedy
+1178	1195	Star Wars: Episode V - The Empire Strikes Back (1980)	Action|Adventure|Drama|Sci-Fi|War
+1179	1196	Princess Bride, The (1987)	Action|Adventure|Comedy|Romance
+1180	1197	Raiders of the Lost Ark (1981)	Action|Adventure
+1181	1198	Brazil (1985)	Sci-Fi
+1182	1199	Aliens (1986)	Action|Sci-Fi|Thriller|War
+1183	1200	Good, The Bad and The Ugly, The (1966)	Action|Western
+1184	1201	Withnail and I (1987)	Comedy
+1185	1202	12 Angry Men (1957)	Drama
+1186	1203	Lawrence of Arabia (1962)	Adventure|War
+1187	1204	Transformers: The Movie, The (1986)	Action|Animation|Children's|Sci-Fi|Thriller|War
+1188	1205	Clockwork Orange, A (1971)	Sci-Fi
+1189	1206	To Kill a Mockingbird (1962)	Drama
+1190	1207	Apocalypse Now (1979)	Drama|War
+1191	1208	Once Upon a Time in the West (1969)	Western
+1192	1209	Star Wars: Episode VI - Return of the Jedi (1983)	Action|Adventure|Romance|Sci-Fi|War
+1193	1210	Wings of Desire (Der Himmel über Berlin) (1987)	Comedy|Drama|Romance
+1194	1211	Third Man, The (1949)	Mystery|Thriller
+1195	1212	GoodFellas (1990)	Crime|Drama
+1196	1213	Alien (1979)	Action|Horror|Sci-Fi|Thriller
+1197	1214	Army of Darkness (1993)	Action|Adventure|Comedy|Horror|Sci-Fi
+1198	1215	Big Blue, The (Le Grand Bleu) (1988)	Adventure|Romance
+1199	1216	Ran (1985)	Drama|War
+1200	1217	Killer, The (Die xue shuang xiong) (1989)	Action|Thriller
+1201	1218	Psycho (1960)	Horror|Thriller
+1202	1219	Blues Brothers, The (1980)	Action|Comedy|Musical
+1203	1220	Godfather: Part II, The (1974)	Action|Crime|Drama
+1204	1221	Full Metal Jacket (1987)	Action|Drama|War
+1205	1222	Grand Day Out, A (1992)	Animation|Comedy
+1206	1223	Henry V (1989)	Drama|War
+1207	1224	Amadeus (1984)	Drama
+1208	1225	Quiet Man, The (1952)	Comedy|Romance
+1209	1226	Once Upon a Time in America (1984)	Crime|Drama|Thriller
+1210	1227	Raging Bull (1980)	Drama
+1211	1229	Annie Hall (1977)	Comedy|Romance
+1212	1230	Right Stuff, The (1983)	Drama
+1213	1231	Stalker (1979)	Mystery|Sci-Fi
+1214	1232	Boat, The (Das Boot) (1981)	Action|Drama|War
+1215	1233	Sting, The (1973)	Comedy|Crime
+1216	1234	Harold and Maude (1971)	Comedy
+1217	1235	Trust (1990)	Comedy|Drama
+1218	1236	Seventh Seal, The (Sjunde inseglet, Det) (1957)	Drama
+1219	1237	Local Hero (1983)	Comedy
+1220	1239	Terminator, The (1984)	Action|Sci-Fi|Thriller
+1221	1240	Braindead (1992)	Comedy|Horror
+1222	1241	Glory (1989)	Action|Drama|War
+1223	1242	Rosencrantz and Guildenstern Are Dead (1990)	Comedy|Drama
+1224	1243	Manhattan (1979)	Comedy|Drama|Romance
+1225	1244	Miller's Crossing (1990)	Drama
+1226	1245	Dead Poets Society (1989)	Drama
+1227	1246	Graduate, The (1967)	Drama|Romance
+1228	1247	Touch of Evil (1958)	Crime|Film-Noir|Thriller
+1229	1248	Nikita (La Femme Nikita) (1990)	Thriller
+1230	1249	Bridge on the River Kwai, The (1957)	Drama|War
+1231	1250	8 1/2 (1963)	Drama
+1232	1251	Chinatown (1974)	Film-Noir|Mystery|Thriller
+1233	1252	Day the Earth Stood Still, The (1951)	Drama|Sci-Fi
+1234	1253	Treasure of the Sierra Madre, The (1948)	Adventure
+1235	1254	Bad Taste (1987)	Comedy|Horror
+1236	1255	Duck Soup (1933)	Comedy|War
+1237	1256	Better Off Dead... (1985)	Comedy
+1238	1257	Shining, The (1980)	Horror
+1239	1258	Stand by Me (1986)	Adventure|Comedy|Drama
+1240	1259	M (1931)	Crime|Film-Noir|Thriller
+1241	1260	Evil Dead II (Dead By Dawn) (1987)	Action|Adventure|Comedy|Horror
+1242	1261	Great Escape, The (1963)	Adventure|War
+1243	1262	Deer Hunter, The (1978)	Drama|War
+1244	1263	Diva (1981)	Action|Drama|Mystery|Romance|Thriller
+1245	1264	Groundhog Day (1993)	Comedy|Romance
+1246	1265	Unforgiven (1992)	Western
+1247	1266	Manchurian Candidate, The (1962)	Film-Noir|Thriller
+1248	1267	Pump Up the Volume (1990)	Drama
+1249	1268	Arsenic and Old Lace (1944)	Comedy|Mystery|Thriller
+1250	1269	Back to the Future (1985)	Comedy|Sci-Fi
+1251	1270	Fried Green Tomatoes (1991)	Drama
+1252	1271	Patton (1970)	Drama|War
+1253	1272	Down by Law (1986)	Comedy|Drama
+1254	1273	Akira (1988)	Adventure|Animation|Sci-Fi|Thriller
+1255	1274	Highlander (1986)	Action|Adventure
+1256	1275	Cool Hand Luke (1967)	Comedy|Drama
+1257	1276	Cyrano de Bergerac (1990)	Action|Drama|Romance
+1258	1277	Young Frankenstein (1974)	Comedy|Horror
+1259	1278	Night on Earth (1991)	Comedy|Drama
+1260	1279	Raise the Red Lantern (1991)	Drama
+1261	1280	Great Dictator, The (1940)	Comedy
+1262	1281	Fantasia (1940)	Animation|Children's|Musical
+1263	1282	High Noon (1952)	Western
+1264	1283	Big Sleep, The (1946)	Film-Noir|Mystery
+1265	1284	Heathers (1989)	Comedy
+1266	1285	Somewhere in Time (1980)	Drama|Romance
+1267	1286	Ben-Hur (1959)	Action|Adventure|Drama
+1268	1287	This Is Spinal Tap (1984)	Comedy|Drama|Musical
+1269	1288	Koyaanisqatsi (1983)	Documentary|War
+1270	1289	Some Kind of Wonderful (1987)	Drama|Romance
+1271	1290	Indiana Jones and the Last Crusade (1989)	Action|Adventure
+1272	1291	Being There (1979)	Comedy
+1273	1292	Gandhi (1982)	Drama
+1274	1293	M*A*S*H (1970)	Comedy|War
+1275	1294	Unbearable Lightness of Being, The (1988)	Drama
+1276	1295	Room with a View, A (1986)	Drama|Romance
+1277	1296	Real Genius (1985)	Comedy
+1278	1297	Pink Floyd - The Wall (1982)	Drama|Musical|War
+1279	1298	Killing Fields, The (1984)	Drama|War
+1280	1299	My Life as a Dog (Mitt liv som hund) (1985)	Drama
+1281	1300	Forbidden Planet (1956)	Sci-Fi
+1282	1301	Field of Dreams (1989)	Drama
+1283	1302	Man Who Would Be King, The (1975)	Adventure
+1284	1303	Butch Cassidy and the Sundance Kid (1969)	Action|Comedy|Western
+1285	1304	Paris, Texas (1984)	Drama
+1286	1305	Until the End of the World (Bis ans Ende der Welt) (1991)	Drama|Sci-Fi
+1287	1306	When Harry Met Sally... (1989)	Comedy|Romance
+1288	1307	I Shot a Man in Vegas (1995)	Comedy
+1289	1308	Parallel Sons (1995)	Drama|Romance
+1290	1309	Hype! (1996)	Documentary
+1291	1310	Santa with Muscles (1996)	Comedy
+1292	1311	Female Perversions (1996)	Drama
+1293	1312	Mad Dog Time (1996)	Crime
+1294	1313	Breathing Room (1996)	Romance
+1295	1314	Paris Was a Woman (1995)	Documentary
+1296	1315	Anna (1996)	Drama
+1297	1316	I'm Not Rappaport (1996)	Comedy
+1298	1317	Blue Juice (1995)	Comedy|Drama
+1299	1318	Kids of Survival (1993)	Documentary
+1300	1319	Alien³ (1992)	Action|Horror|Sci-Fi|Thriller
+1301	1320	American Werewolf in London, An (1981)	Horror
+1302	1321	Amityville 1992: It's About Time (1992)	Horror
+1303	1322	Amityville 3-D (1983)	Horror
+1304	1323	Amityville: Dollhouse (1996)	Horror
+1305	1324	Amityville: A New Generation (1993)	Horror
+1306	1325	Amityville II: The Possession (1982)	Horror
+1307	1326	Amityville Horror, The (1979)	Horror
+1308	1327	Amityville Curse, The (1990)	Horror
+1309	1328	Blood For Dracula (Andy Warhol's Dracula) (1974)	Horror
+1310	1329	April Fool's Day (1986)	Comedy|Horror
+1311	1330	Audrey Rose (1977)	Horror
+1312	1331	Believers, The (1987)	Horror|Thriller
+1313	1332	Birds, The (1963)	Horror
+1314	1333	Blob, The (1958)	Horror|Sci-Fi
+1315	1334	Blood Beach (1981)	Action|Horror
+1316	1335	Body Parts (1991)	Horror
+1317	1336	Body Snatcher, The (1945)	Horror
+1318	1338	Bram Stoker's Dracula (1992)	Horror|Romance
+1319	1339	Bride of Frankenstein (1935)	Horror
+1320	1340	Burnt Offerings (1976)	Horror
+1321	1341	Candyman (1992)	Horror
+1322	1342	Cape Fear (1991)	Thriller
+1323	1343	Cape Fear (1962)	Film-Noir|Thriller
+1324	1344	Carrie (1976)	Horror
+1325	1345	Cat People (1982)	Horror
+1326	1346	Nightmare on Elm Street, A (1984)	Horror
+1327	1347	Nosferatu (Nosferatu, eine Symphonie des Grauens) (1922)	Horror
+1328	1348	Nosferatu a Venezia (1986)	Horror
+1329	1349	Omen, The (1976)	Horror
+1330	1350	Blood & Wine (1997)	Drama
+1331	1351	Albino Alligator (1996)	Crime|Thriller
+1332	1352	Mirror Has Two Faces, The (1996)	Comedy|Romance
+1333	1353	Breaking the Waves (1996)	Drama
+1334	1354	Nightwatch (1997)	Horror|Thriller
+1335	1355	Star Trek: First Contact (1996)	Action|Adventure|Sci-Fi
+1336	1356	Shine (1996)	Drama|Romance
+1337	1357	Sling Blade (1996)	Drama|Thriller
+1338	1358	Jingle All the Way (1996)	Adventure|Children's|Comedy
+1339	1359	Identification of a Woman (Identificazione di una donna) (1982)	Drama
+1340	1360	Paradise Lost: The Child Murders at Robin Hood Hills (1996)	Documentary
+1341	1361	Garden of Finzi-Contini, The (Giardino dei Finzi-Contini, Il) (1970)	Drama
+1342	1362	Preacher's Wife, The (1996)	Drama
+1343	1363	Zero Kelvin (Kjærlighetens kjøtere) (1995)	Action
+1344	1364	Ridicule (1996)	Drama
+1345	1365	Crucible, The (1996)	Drama
+1346	1366	101 Dalmatians (1996)	Children's|Comedy
+1347	1367	Forbidden Christ, The (Cristo proibito, Il) (1950)	Drama
+1348	1368	I Can't Sleep (J'ai pas sommeil) (1994)	Drama|Thriller
+1349	1369	Die Hard 2 (1990)	Action|Thriller
+1350	1370	Star Trek: The Motion Picture (1979)	Action|Adventure|Sci-Fi
+1351	1371	Star Trek VI: The Undiscovered Country (1991)	Action|Adventure|Sci-Fi
+1352	1372	Star Trek V: The Final Frontier (1989)	Action|Adventure|Sci-Fi
+1353	1373	Star Trek: The Wrath of Khan (1982)	Action|Adventure|Sci-Fi
+1354	1374	Star Trek III: The Search for Spock (1984)	Action|Adventure|Sci-Fi
+1355	1375	Star Trek IV: The Voyage Home (1986)	Action|Adventure|Sci-Fi
+1356	1376	Batman Returns (1992)	Action|Adventure|Comedy|Crime
+1357	1377	Young Guns (1988)	Action|Comedy|Western
+1358	1378	Young Guns II (1990)	Action|Comedy|Western
+1359	1379	Grease (1978)	Comedy|Musical|Romance
+1360	1380	Grease 2 (1982)	Comedy|Musical|Romance
+1361	1381	Marked for Death (1990)	Action|Drama
+1362	1382	Adrenalin: Fear the Rush (1996)	Action|Sci-Fi
+1363	1383	Substance of Fire, The (1996)	Drama
+1364	1384	Under Siege (1992)	Action
+1365	1385	Terror in a Texas Town (1958)	Western
+1366	1386	Jaws (1975)	Action|Horror
+1367	1387	Jaws 2 (1978)	Action|Horror
+1368	1388	Jaws 3-D (1983)	Action|Horror
+1369	1389	My Fellow Americans (1996)	Comedy
+1370	1390	Mars Attacks! (1996)	Action|Comedy|Sci-Fi|War
+1371	1391	Citizen Ruth (1996)	Comedy|Drama
+1372	1392	Jerry Maguire (1996)	Drama|Romance
+1373	1393	Raising Arizona (1987)	Comedy
+1374	1394	Tin Men (1987)	Comedy|Drama
+1375	1395	Sneakers (1992)	Crime|Drama|Sci-Fi
+1376	1396	Bastard Out of Carolina (1996)	Drama
+1377	1397	In Love and War (1996)	Romance|War
+1378	1398	Marvin's Room (1996)	Drama
+1379	1399	Somebody is Waiting (1996)	Drama
+1380	1400	Ghosts of Mississippi (1996)	Drama
+1381	1403	Night Falls on Manhattan (1997)	Crime|Drama
+1382	1404	Beavis and Butt-head Do America (1996)	Animation|Comedy
+1383	1405	Cérémonie, La (1995)	Drama
+1384	1406	Scream (1996)	Horror|Thriller
+1385	1407	Last of the Mohicans, The (1992)	Action|Romance|War
+1386	1408	Michael (1996)	Comedy|Romance
+1387	1409	Evening Star, The (1996)	Comedy|Drama
+1388	1410	Hamlet (1996)	Drama
+1389	1411	Some Mother's Son (1996)	Drama
+1390	1412	Whole Wide World, The (1996)	Drama
+1391	1413	Mother (1996)	Comedy
+1392	1414	Thieves (Voleurs, Les) (1996)	Crime|Drama|Romance
+1393	1415	Evita (1996)	Drama|Musical
+1394	1416	Portrait of a Lady, The (1996)	Drama
+1395	1418	Walkabout (1971)	Drama
+1396	1419	Message to Love: The Isle of Wight Festival (1996)	Documentary
+1397	1420	Grateful Dead (1995)	Documentary
+1398	1421	Murder at 1600 (1997)	Mystery|Thriller
+1399	1422	Hearts and Minds (1996)	Drama
+1400	1423	Inside (1996)	Action
+1401	1424	Fierce Creatures (1997)	Comedy
+1402	1425	Zeus and Roxanne (1997)	Children's
+1403	1426	Turbulence (1997)	Thriller
+1404	1427	Angel Baby (1995)	Drama
+1405	1428	Jackie Chan's First Strike (1996)	Action
+1406	1429	Underworld (1997)	Thriller
+1407	1430	Beverly Hills Ninja (1997)	Action|Comedy
+1408	1431	Metro (1997)	Action
+1409	1432	Machine, The (1994)	Comedy|Horror
+1410	1433	Stranger, The (1994)	Action
+1411	1435	Falling in Love Again (1980)	Comedy
+1412	1436	Cement Garden, The (1993)	Drama
+1413	1437	Dante's Peak (1997)	Action|Thriller
+1414	1438	Meet Wally Sparks (1997)	Comedy
+1415	1439	Amos & Andrew (1993)	Comedy
+1416	1440	Benny & Joon (1993)	Comedy|Romance
+1417	1441	Prefontaine (1997)	Drama
+1418	1442	Tickle in the Heart, A (1996)	Documentary
+1419	1443	Guantanamera (1994)	Comedy
+1420	1444	McHale's Navy (1997)	Comedy|War
+1421	1445	Kolya (1996)	Comedy
+1422	1446	Gridlock'd (1997)	Crime
+1423	1447	Fire on the Mountain (1996)	Documentary
+1424	1448	Waiting for Guffman (1996)	Comedy
+1425	1449	Prisoner of the Mountains (Kavkazsky Plennik) (1996)	War
+1426	1452	Beautician and the Beast, The (1997)	Comedy|Romance
+1427	1453	SubUrbia (1997)	Comedy
+1428	1454	Hotel de Love (1996)	Comedy|Romance
+1429	1455	Pest, The (1997)	Comedy
+1430	1456	Fools Rush In (1997)	Comedy|Romance
+1431	1457	Touch (1997)	Romance
+1432	1458	Absolute Power (1997)	Mystery|Thriller
+1433	1459	That Darn Cat! (1997)	Children's|Comedy|Mystery
+1434	1460	Vegas Vacation (1997)	Comedy
+1435	1461	Unforgotten: Twenty-Five Years After Willowbrook (1996)	Documentary
+1436	1462	That Old Feeling (1997)	Comedy|Romance
+1437	1463	Lost Highway (1997)	Mystery
+1438	1464	Rosewood (1997)	Drama
+1439	1465	Donnie Brasco (1997)	Crime|Drama
+1440	1466	Salut cousin! (1996)	Comedy|Drama
+1441	1467	Booty Call (1997)	Comedy|Romance
+1442	1469	Rhyme & Reason (1997)	Documentary
+1443	1470	Boys Life 2 (1997)	Drama
+1444	1471	City of Industry (1997)	Crime|Thriller
+1445	1472	Best Men (1997)	Action|Comedy|Crime|Drama
+1446	1473	Jungle2Jungle (a.k.a. Jungle 2 Jungle) (1997)	Children's|Comedy
+1447	1474	Kama Sutra: A Tale of Love (1996)	Romance
+1448	1475	Private Parts (1997)	Comedy|Drama
+1449	1476	Love Jones (1997)	Romance
+1450	1478	Saint, The (1997)	Action|Romance|Thriller
+1451	1479	Smilla's Sense of Snow (1997)	Action|Drama|Thriller
+1452	1481	Van, The (1996)	Comedy|Drama
+1453	1482	Crash (1996)	Drama|Thriller
+1454	1483	Daytrippers, The (1996)	Mystery
+1455	1484	Liar Liar (1997)	Comedy
+1456	1485	Quiet Room, The (1996)	Drama
+1457	1486	Selena (1997)	Drama|Musical
+1458	1487	Devil's Own, The (1997)	Action|Drama|Thriller|War
+1459	1488	Cats Don't Dance (1997)	Animation|Children's|Musical
+1460	1489	B*A*P*S (1997)	Comedy
+1461	1492	Love and Other Catastrophes (1996)	Romance
+1462	1493	Sixth Man, The (1997)	Comedy
+1463	1494	Turbo: A Power Rangers Movie (1997)	Action|Adventure|Children's
+1464	1495	Anna Karenina (1997)	Drama|Romance
+1465	1496	Double Team (1997)	Action
+1466	1497	Inventing the Abbotts (1997)	Drama|Romance
+1467	1498	Anaconda (1997)	Action|Adventure|Thriller
+1468	1499	Grosse Pointe Blank (1997)	Comedy|Crime
+1469	1500	Keys to Tulsa (1997)	Crime
+1470	1501	Kissed (1996)	Romance
+1471	1502	8 Heads in a Duffel Bag (1997)	Comedy
+1472	1503	Hollow Reed (1996)	Drama
+1473	1506	Paradise Road (1997)	Drama|War
+1474	1507	Traveller (1997)	Drama
+1475	1508	All Over Me (1997)	Drama
+1476	1509	Brother's Kiss, A (1997)	Drama
+1477	1510	A Chef in Love (1996)	Comedy
+1478	1512	Romy and Michele's High School Reunion (1997)	Comedy
+1479	1513	Temptress Moon (Feng Yue) (1996)	Romance
+1480	1514	Volcano (1997)	Drama|Thriller
+1481	1515	Children of the Revolution (1996)	Comedy
+1482	1516	Austin Powers: International Man of Mystery (1997)	Comedy
+1483	1517	Breakdown (1997)	Action|Thriller
+1484	1518	Broken English (1996)	Drama
+1485	1519	Commandments (1997)	Romance
+1486	1521	Ripe (1996)	Drama
+1487	1522	Truth or Consequences, N.M. (1997)	Action|Crime|Romance
+1488	1523	Turning, The (1992)	Drama
+1489	1524	Warriors of Virtue (1997)	Action|Adventure|Children's|Fantasy
+1490	1525	Fathers' Day (1997)	Comedy
+1491	1526	Fifth Element, The (1997)	Action|Sci-Fi
+1492	1527	Intimate Relations (1996)	Comedy
+1493	1528	Nowhere (1997)	Drama
+1494	1530	Losing Chase (1996)	Drama
+1495	1531	Sprung (1997)	Comedy
+1496	1532	Promise, The (La Promesse) (1996)	Drama
+1497	1533	Bonheur, Le (1965)	Drama
+1498	1534	Love! Valour! Compassion! (1997)	Drama|Romance
+1499	1536	Shall We Dance? (Shall We Dansu?) (1996)	Comedy
+1500	1537	Second Jungle Book: Mowgli & Baloo, The (1997)	Adventure|Children's
+1501	1538	Twin Town (1997)	Comedy|Crime
+1502	1540	Addicted to Love (1997)	Comedy|Romance
+1503	1541	Brassed Off (1996)	Comedy|Drama|Romance
+1504	1542	Designated Mourner, The (1997)	Drama
+1505	1543	Lost World: Jurassic Park, The (1997)	Action|Adventure|Sci-Fi|Thriller
+1506	1544	Ponette (1996)	Drama
+1507	1545	Schizopolis (1996)	Comedy
+1508	1546	Shiloh (1997)	Children's|Drama
+1509	1547	War at Home, The (1996)	Drama
+1510	1548	Rough Magic (1995)	Drama|Romance
+1511	1549	Trial and Error (1997)	Comedy|Romance
+1512	1550	Buddy (1997)	Adventure|Children's|Drama
+1513	1551	Con Air (1997)	Action|Adventure|Thriller
+1514	1552	Late Bloomers (1996)	Comedy
+1515	1553	Pillow Book, The (1995)	Drama|Romance
+1516	1554	To Have, or Not (1995)	Drama
+1517	1555	Speed 2: Cruise Control (1997)	Action|Romance|Thriller
+1518	1556	Squeeze (1996)	Drama
+1519	1557	Sudden Manhattan (1996)	Comedy
+1520	1558	Next Step, The (1995)	Drama
+1521	1560	Wedding Bell Blues (1996)	Comedy
+1522	1561	Batman & Robin (1997)	Action|Adventure|Crime
+1523	1562	Dream With the Fishes (1997)	Drama
+1524	1563	Roseanna's Grave (For Roseanna) (1997)	Comedy|Romance
+1525	1564	Head Above Water (1996)	Comedy|Thriller
+1526	1565	Hercules (1997)	Adventure|Animation|Children's|Comedy|Musical
+1527	1566	Last Time I Committed Suicide, The (1997)	Drama
+1528	1567	MURDER and murder (1996)	Crime|Drama|Mystery
+1529	1568	My Best Friend's Wedding (1997)	Comedy|Romance
+1530	1569	Tetsuo II: Body Hammer (1992)	Sci-Fi
+1531	1570	When the Cats Away (Chacun cherche son chat) (1996)	Comedy|Romance
+1532	1571	Contempt (Le Mépris) (1963)	Drama
+1533	1572	Face/Off (1997)	Action|Sci-Fi|Thriller
+1534	1573	Fall (1997)	Romance
+1535	1574	Gabbeh (1996)	Drama
+1536	1576	Mondo (1996)	Drama
+1537	1577	Innocent Sleep, The (1995)	Crime
+1538	1578	For Ever Mozart (1996)	Drama
+1539	1579	Men in Black (1997)	Action|Adventure|Comedy|Sci-Fi
+1540	1580	Out to Sea (1997)	Comedy
+1541	1581	Wild America (1997)	Adventure|Children's
+1542	1582	Simple Wish, A (1997)	Children's|Fantasy
+1543	1583	Contact (1997)	Drama|Sci-Fi
+1544	1584	Love Serenade (1996)	Comedy
+1545	1585	G.I. Jane (1997)	Action|Drama|War
+1546	1586	Conan the Barbarian (1982)	Action|Adventure
+1547	1587	George of the Jungle (1997)	Children's|Comedy
+1548	1588	Cop Land (1997)	Crime|Drama|Mystery
+1549	1589	Event Horizon (1997)	Action|Mystery|Sci-Fi|Thriller
+1550	1590	Spawn (1997)	Action|Adventure|Sci-Fi|Thriller
+1551	1591	Air Bud (1997)	Children's|Comedy
+1552	1592	Picture Perfect (1997)	Comedy|Romance
+1553	1593	In the Company of Men (1997)	Drama
+1554	1594	Free Willy 3: The Rescue (1997)	Adventure|Children's|Drama
+1555	1595	Career Girls (1997)	Drama
+1556	1596	Conspiracy Theory (1997)	Action|Mystery|Romance|Thriller
+1557	1597	Desperate Measures (1998)	Crime|Drama|Thriller
+1558	1598	Steel (1997)	Action
+1559	1599	She's So Lovely (1997)	Drama|Romance
+1560	1600	Hoodlum (1997)	Crime|Drama|Film-Noir
+1561	1601	Leave It to Beaver (1997)	Comedy
+1562	1602	Mimic (1997)	Sci-Fi|Thriller
+1563	1603	Money Talks (1997)	Action|Comedy
+1564	1604	Excess Baggage (1997)	Adventure|Romance
+1565	1605	Kull the Conqueror (1997)	Action|Adventure
+1566	1607	Air Force One (1997)	Action|Thriller
+1567	1608	187 (1997)	Drama
+1568	1609	Hunt for Red October, The (1990)	Action|Thriller
+1569	1610	My Own Private Idaho (1991)	Drama
+1570	1611	Kiss Me, Guido (1997)	Comedy
+1571	1612	Star Maps (1997)	Drama
+1572	1613	In & Out (1997)	Comedy
+1573	1614	Edge, The (1997)	Adventure|Thriller
+1574	1615	Peacemaker, The (1997)	Action|Thriller|War
+1575	1616	L.A. Confidential (1997)	Crime|Film-Noir|Mystery|Thriller
+1576	1618	Seven Years in Tibet (1997)	Drama|War
+1577	1619	Kiss the Girls (1997)	Crime|Drama|Thriller
+1578	1620	Soul Food (1997)	Drama
+1579	1621	Kicked in the Head (1997)	Comedy|Drama
+1580	1622	Wishmaster (1997)	Horror
+1581	1623	Thousand Acres, A (1997)	Drama
+1582	1624	Game, The (1997)	Mystery|Thriller
+1583	1625	Fire Down Below (1997)	Action|Drama|Thriller
+1584	1626	U Turn (1997)	Action|Crime|Mystery
+1585	1627	Locusts, The (1997)	Drama
+1586	1628	MatchMaker, The (1997)	Comedy|Romance
+1587	1629	Lay of the Land, The (1997)	Comedy|Drama
+1588	1630	Assignment, The (1997)	Thriller
+1589	1631	Smile Like Yours, A (1997)	Comedy|Romance
+1590	1632	Ulee's Gold (1997)	Drama
+1591	1634	Ice Storm, The (1997)	Drama
+1592	1635	Stag (1997)	Action|Thriller
+1593	1638	Chasing Amy (1997)	Drama|Romance
+1594	1639	How to Be a Player (1997)	Comedy
+1595	1640	Full Monty, The (1997)	Comedy
+1596	1641	Indian Summer (a.k.a. Alive & Kicking) (1996)	Comedy|Drama
+1597	1642	Mrs. Brown (Her Majesty, Mrs. Brown) (1997)	Drama|Romance
+1598	1643	I Know What You Did Last Summer (1997)	Horror|Mystery|Thriller
+1599	1644	Devil's Advocate, The (1997)	Crime|Horror|Mystery|Thriller
+1600	1645	Rocket Man (1997)	Comedy
+1601	1646	Playing God (1997)	Crime|Thriller
+1602	1647	House of Yes, The (1997)	Comedy|Drama|Thriller
+1603	1648	Fast, Cheap & Out of Control (1997)	Documentary
+1604	1649	Washington Square (1997)	Drama
+1605	1650	Telling Lies in America (1997)	Drama
+1606	1651	Year of the Horse (1997)	Documentary
+1607	1652	Gattaca (1997)	Drama|Sci-Fi|Thriller
+1608	1653	FairyTale: A True Story (1997)	Children's|Drama|Fantasy
+1609	1654	Phantoms (1998)	Horror
+1610	1655	Swept from the Sea (1997)	Romance
+1611	1656	Wonderland (1997)	Documentary
+1612	1657	Life Less Ordinary, A (1997)	Romance|Thriller
+1613	1658	Hurricane Streets (1998)	Drama
+1614	1659	Eve's Bayou (1997)	Drama
+1615	1660	Switchback (1997)	Thriller
+1616	1661	Gang Related (1997)	Crime
+1617	1662	Stripes (1981)	Comedy
+1618	1663	Nénette et Boni (1996)	Drama
+1619	1664	Bean (1997)	Comedy
+1620	1665	Hugo Pool (1997)	Romance
+1621	1666	Mad City (1997)	Action|Drama
+1622	1667	One Night Stand (1997)	Drama
+1623	1668	Tango Lesson, The (1997)	Romance
+1624	1669	Welcome To Sarajevo (1997)	Drama|War
+1625	1670	Deceiver (1997)	Crime
+1626	1671	Rainmaker, The (1997)	Drama
+1627	1672	Boogie Nights (1997)	Drama
+1628	1673	Witness (1985)	Drama|Romance|Thriller
+1629	1674	Incognito (1997)	Crime|Thriller
+1630	1675	Starship Troopers (1997)	Action|Adventure|Sci-Fi|War
+1631	1676	Critical Care (1997)	Comedy
+1632	1677	Joy Luck Club, The (1993)	Drama
+1633	1678	Chairman of the Board (1998)	Comedy
+1634	1679	Sliding Doors (1998)	Drama|Romance
+1635	1680	Mortal Kombat: Annihilation (1997)	Action|Adventure
+1636	1681	Truman Show, The (1998)	Drama
+1637	1682	Wings of the Dove, The (1997)	Drama|Romance|Thriller
+1638	1683	Mrs. Dalloway (1997)	Romance
+1639	1684	I Love You, I Love You Not (1996)	Romance
+1640	1685	Red Corner (1997)	Crime|Thriller
+1641	1686	Jackal, The (1997)	Action|Thriller
+1642	1687	Anastasia (1997)	Animation|Children's|Musical
+1643	1688	Man Who Knew Too Little, The (1997)	Comedy|Mystery
+1644	1689	Alien: Resurrection (1997)	Action|Horror|Sci-Fi
+1645	1691	Alien Escape (1995)	Horror|Sci-Fi
+1646	1692	Amistad (1997)	Drama
+1647	1693	Apostle, The (1997)	Drama
+1648	1694	Artemisia (1997)	Drama
+1649	1695	Bent (1997)	Drama|War
+1650	1696	Big Bang Theory, The (1994)	Crime
+1651	1697	Boys, Les (1997)	Comedy
+1652	1698	Butcher Boy, The (1998)	Drama
+1653	1700	Deconstructing Harry (1997)	Comedy|Drama
+1654	1701	Flubber (1997)	Children's|Comedy|Fantasy
+1655	1702	For Richer or Poorer (1997)	Comedy
+1656	1703	Good Will Hunting (1997)	Drama
+1657	1704	Guy (1996)	Drama
+1658	1705	Harlem River Drive (1996)	Drama
+1659	1706	Home Alone 3 (1997)	Children's|Comedy
+1660	1707	Ill Gotten Gains (1997)	Drama
+1661	1708	Legal Deceit (1997)	Thriller
+1662	1709	Man of Her Dreams (1996)	Drama
+1663	1710	Midnight in the Garden of Good and Evil (1997)	Comedy|Crime|Drama|Mystery
+1664	1712	Mouse Hunt (1997)	Children's|Comedy
+1665	1713	Never Met Picasso (1996)	Romance
+1666	1714	Office Killer (1997)	Thriller
+1667	1715	Other Voices, Other Rooms (1997)	Drama
+1668	1716	Scream 2 (1997)	Horror|Thriller
+1669	1717	Stranger in the House (1997)	Thriller
+1670	1718	Sweet Hereafter, The (1997)	Drama
+1671	1719	Time Tracers (1995)	Action|Adventure|Sci-Fi
+1672	1720	Titanic (1997)	Drama|Romance
+1673	1721	Tomorrow Never Dies (1997)	Action|Romance|Thriller
+1674	1722	Twisted (1996)	Comedy|Drama
+1675	1723	Full Speed (1996)	Drama
+1676	1724	Education of Little Tree, The (1997)	Drama
+1677	1725	Postman, The (1997)	Drama
+1678	1726	Horse Whisperer, The (1998)	Drama
+1679	1727	Winter Guest, The (1997)	Drama
+1680	1728	Jackie Brown (1997)	Crime|Drama
+1681	1729	Kundun (1997)	Drama
+1682	1730	Mr. Magoo (1997)	Comedy
+1683	1731	Big Lebowski, The (1998)	Comedy|Crime|Mystery|Thriller
+1684	1732	Afterglow (1997)	Drama|Romance
+1685	1733	My Life in Pink (Ma vie en rose) (1997)	Comedy|Drama
+1686	1734	Great Expectations (1998)	Drama|Romance
+1687	1737	Vermin (1998)	Comedy
+1688	1738	3 Ninjas: High Noon On Mega Mountain (1998)	Action|Children's
+1689	1739	Men of Means (1998)	Action|Drama
+1690	1740	Midaq Alley (Callejón de los milagros, El) (1995)	Drama
+1691	1741	Caught Up (1998)	Crime
+1692	1742	Arguing the World (1996)	Documentary
+1693	1743	Firestorm (1998)	Action|Adventure|Thriller
+1694	1745	Senseless (1998)	Comedy
+1695	1746	Wag the Dog (1997)	Comedy|Drama
+1696	1747	Dark City (1998)	Film-Noir|Sci-Fi|Thriller
+1697	1748	Leading Man, The (1996)	Romance
+1698	1749	Star Kid (1997)	Adventure|Children's|Fantasy|Sci-Fi
+1699	1751	Hard Rain (1998)	Action|Thriller
+1700	1752	Half Baked (1998)	Comedy
+1701	1753	Fallen (1998)	Action|Mystery|Thriller
+1702	1754	Shooting Fish (1997)	Romance
+1703	1755	Prophecy II, The (1998)	Horror
+1704	1756	Duoluo tianshi (1995)	Drama
+1705	1757	Dangerous Beauty (1998)	Drama
+1706	1758	Four Days in September (1997)	Drama
+1707	1759	Spice World (1997)	Comedy|Musical
+1708	1761	Deep Rising (1998)	Action|Horror|Sci-Fi
+1709	1763	Tainted (1998)	Comedy|Thriller
+1710	1764	Letter From Death Row, A (1998)	Crime|Drama
+1711	1766	Music From Another Room (1998)	Drama|Romance
+1712	1767	Mat' i syn (1997)	Drama
+1713	1768	Replacement Killers, The (1998)	Action|Thriller
+1714	1769	B. Monkey (1998)	Romance|Thriller
+1715	1770	Night Flier (1997)	Horror
+1716	1771	Blues Brothers 2000 (1998)	Action|Comedy|Musical
+1717	1772	Tokyo Fist (1995)	Action|Drama
+1718	1773	Mass Transit (1998)	Comedy|Drama
+1719	1775	Ride (1998)	Drama
+1720	1776	Wedding Singer, The (1998)	Comedy|Romance
+1721	1778	Sphere (1998)	Adventure|Sci-Fi|Thriller
+1722	1779	Ayn Rand: A Sense of Life (1997)	Documentary
+1723	1780	Further Gesture, A (1996)	Drama
+1724	1781	Little City (1998)	Comedy|Romance
+1725	1782	Palmetto (1998)	Film-Noir|Mystery|Thriller
+1726	1783	As Good As It Gets (1997)	Comedy|Drama
+1727	1784	King of New York (1990)	Action|Crime
+1728	1786	Paralyzing Fear: The Story of Polio in America, A (1998)	Documentary
+1729	1787	Men With Guns (1997)	Action|Drama
+1730	1788	Sadness of Sex, The (1995)	Drama
+1731	1790	Twilight (1998)	Crime|Drama
+1732	1791	U.S. Marshalls (1998)	Action|Thriller
+1733	1792	Welcome to Woop-Woop (1997)	Comedy
+1734	1793	Love and Death on Long Island (1997)	Comedy|Drama
+1735	1794	Callejón de los milagros, El (1995)	Drama
+1736	1795	In God's Hands (1998)	Action|Drama
+1737	1796	Everest (1998)	Documentary
+1738	1797	Hush (1998)	Thriller
+1739	1798	Suicide Kings (1997)	Crime|Drama
+1740	1800	Man in the Iron Mask, The (1998)	Action|Drama|Romance
+1741	1803	Newton Boys, The (1998)	Crime|Drama
+1742	1804	Wild Things (1998)	Crime|Drama|Mystery|Thriller
+1743	1805	Paulie (1998)	Adventure|Children's|Comedy
+1744	1806	Cool Dry Place, A (1998)	Drama
+1745	1808	Hana-bi (1997)	Comedy|Crime|Drama
+1746	1809	Primary Colors (1998)	Drama
+1747	1810	Niagara, Niagara (1997)	Drama
+1748	1811	Wide Awake (1998)	Children's|Comedy|Drama
+1749	1813	Price Above Rubies, A (1998)	Drama
+1750	1814	Eden (1997)	Drama
+1751	1815	Two Girls and a Guy (1997)	Comedy|Drama
+1752	1816	No Looking Back (1998)	Comedy|Drama|Romance
+1753	1818	Storefront Hitchcock (1997)	Drama
+1754	1819	Proposition, The (1998)	Drama
+1755	1820	Object of My Affection, The (1998)	Comedy|Romance
+1756	1821	Meet the Deedles (1998)	Children's|Comedy
+1757	1823	Homegrown (1998)	Comedy|Thriller
+1758	1824	Player's Club, The (1998)	Action|Drama
+1759	1825	Barney's Great Adventure (1998)	Adventure|Children's
+1760	1826	Big One, The (1997)	Comedy|Documentary
+1761	1828	Chinese Box (1997)	Drama|Romance
+1762	1829	Follow the Bitch (1998)	Comedy
+1763	1830	Lost in Space (1998)	Action|Sci-Fi|Thriller
+1764	1831	Heaven's Burning (1997)	Action|Drama
+1765	1832	Mercury Rising (1998)	Action|Drama|Thriller
+1766	1833	Spanish Prisoner, The (1997)	Drama|Thriller
+1767	1834	City of Angels (1998)	Romance
+1768	1835	Last Days of Disco, The (1998)	Drama
+1769	1836	Odd Couple II, The (1998)	Comedy
+1770	1838	My Giant (1998)	Comedy
+1771	1839	He Got Game (1998)	Drama
+1772	1840	Gingerbread Man, The (1998)	Drama|Thriller
+1773	1841	Illtown (1996)	Crime|Drama
+1774	1842	Slappy and the Stinkers (1998)	Children's|Comedy
+1775	1843	Live Flesh (1997)	Drama
+1776	1844	Zero Effect (1998)	Comedy|Thriller
+1777	1845	Nil By Mouth (1997)	Drama
+1778	1846	Ratchet (1996)	Drama|Thriller
+1779	1847	Borrowers, The (1997)	Adventure|Children's|Comedy|Fantasy
+1780	1848	Prince Valiant (1997)	Adventure
+1781	1849	I Love You, Don't Touch Me! (1998)	Drama|Romance
+1782	1850	Leather Jacket Love Story (1997)	Drama|Romance
+1783	1851	Love Walked In (1998)	Drama|Thriller
+1784	1852	Alan Smithee Film: Burn Hollywood Burn, An (1997)	Comedy
+1785	1853	Kissing a Fool (1998)	Comedy|Romance
+1786	1854	Krippendorf's Tribe (1998)	Comedy
+1787	1855	Kurt & Courtney (1998)	Documentary|Musical
+1788	1856	Real Blonde, The (1997)	Comedy
+1789	1857	Mr. Nice Guy (1997)	Action|Comedy
+1790	1858	Taste of Cherry (1997)	Drama
+1791	1859	Character (Karakter) (1997)	Drama
+1792	1860	Junk Mail (1997)	Comedy|Thriller
+1793	1861	Species II (1998)	Horror|Sci-Fi
+1794	1862	Major League: Back to the Minors (1998)	Comedy
+1795	1863	Sour Grapes (1998)	Comedy
+1796	1864	Wild Man Blues (1998)	Documentary
+1797	1865	Big Hit, The (1998)	Action|Comedy
+1798	1866	Tarzan and the Lost City (1998)	Action|Adventure
+1799	1867	Truce, The (1996)	Drama|War
+1800	1868	Black Dog (1998)	Action|Thriller
+1801	1869	Dancer, Texas Pop. 81 (1998)	Comedy|Drama
+1802	1870	Friend of the Deceased, A (1997)	Comedy|Drama
+1803	1871	Go Now (1995)	Drama
+1804	1872	Misérables, Les (1998)	Drama
+1805	1873	Still Breathing (1997)	Comedy|Romance
+1806	1874	Clockwatchers (1997)	Comedy
+1807	1875	Deep Impact (1998)	Action|Drama|Sci-Fi|Thriller
+1808	1876	Little Men (1998)	Drama
+1809	1877	Woo (1998)	Comedy|Romance
+1810	1878	Hanging Garden, The (1997)	Drama
+1811	1879	Lawn Dogs (1997)	Drama
+1812	1880	Quest for Camelot (1998)	Adventure|Animation|Children's|Fantasy
+1813	1881	Godzilla (1998)	Action|Sci-Fi
+1814	1882	Bulworth (1998)	Comedy
+1815	1883	Fear and Loathing in Las Vegas (1998)	Comedy|Drama
+1816	1884	Opposite of Sex, The (1998)	Comedy|Drama
+1817	1885	I Got the Hook Up (1998)	Comedy
+1818	1886	Almost Heroes (1998)	Adventure|Comedy
+1819	1887	Hope Floats (1998)	Comedy|Drama|Romance
+1820	1888	Insomnia (1997)	Thriller
+1821	1889	Little Boy Blue (1997)	Drama
+1822	1890	Ugly, The (1997)	Horror|Thriller
+1823	1891	Perfect Murder, A (1998)	Mystery|Thriller
+1824	1892	Beyond Silence (1996)	Drama
+1825	1893	Six Days Seven Nights (1998)	Adventure|Comedy|Romance
+1826	1894	Can't Hardly Wait (1998)	Comedy|Drama|Romance
+1827	1895	Cousin Bette (1998)	Comedy
+1828	1896	High Art (1998)	Drama|Romance
+1829	1897	Land Girls, The (1998)	Drama|War
+1830	1898	Passion in the Desert (1998)	Adventure|Drama
+1831	1899	Children of Heaven, The (Bacheha-Ye Aseman) (1997)	Drama
+1832	1900	Dear Jesse (1997)	Documentary
+1833	1901	Dream for an Insomniac (1996)	Drama|Romance
+1834	1902	Hav Plenty (1997)	Comedy
+1835	1903	Henry Fool (1997)	Comedy|Drama
+1836	1904	Marie Baie Des Anges (1997)	Drama
+1837	1905	Mr. Jealousy (1997)	Comedy|Romance
+1838	1906	Mulan (1998)	Animation|Children's
+1839	1907	Resurrection Man (1998)	Drama|Thriller
+1840	1908	X-Files: Fight the Future, The (1998)	Mystery|Sci-Fi|Thriller
+1841	1909	I Went Down (1997)	Action|Comedy|Crime
+1842	1910	Doctor Dolittle (1998)	Comedy
+1843	1911	Out of Sight (1998)	Action|Crime|Romance
+1844	1912	Picnic at Hanging Rock (1975)	Drama|Mystery
+1845	1913	Smoke Signals (1998)	Comedy|Drama
+1846	1914	Voyage to the Beginning of the World (1997)	Drama
+1847	1915	Buffalo 66 (1998)	Action|Comedy|Drama
+1848	1916	Armageddon (1998)	Action|Adventure|Sci-Fi|Thriller
+1849	1917	Lethal Weapon 4 (1998)	Action|Comedy|Crime|Drama
+1850	1918	Madeline (1998)	Children's|Comedy
+1851	1919	Small Soldiers (1998)	Animation|Children's|Fantasy|War
+1852	1920	Pi (1998)	Sci-Fi|Thriller
+1853	1921	Whatever (1998)	Drama
+1854	1922	There's Something About Mary (1998)	Comedy
+1855	1923	Plan 9 from Outer Space (1958)	Horror|Sci-Fi
+1856	1924	Wings (1927)	Drama|Romance|War
+1857	1925	Broadway Melody, The (1929)	Musical
+1858	1926	All Quiet on the Western Front (1930)	War
+1859	1927	Cimarron (1931)	Western
+1860	1928	Grand Hotel (1932)	Drama
+1861	1929	Cavalcade (1933)	Drama
+1862	1930	Mutiny on the Bounty (1935)	Adventure
+1863	1931	Great Ziegfeld, The (1936)	Musical
+1864	1932	Life of Émile Zola, The (1937)	Drama
+1865	1933	You Can't Take It With You (1938)	Comedy
+1866	1934	How Green Was My Valley (1941)	Drama
+1867	1935	Mrs. Miniver (1942)	Drama|War
+1868	1936	Going My Way (1944)	Comedy
+1869	1937	Lost Weekend, The (1945)	Drama
+1870	1938	Best Years of Our Lives, The (1946)	Drama|War
+1871	1939	Gentleman's Agreement (1947)	Drama
+1872	1940	Hamlet (1948)	Drama
+1873	1941	All the King's Men (1949)	Drama
+1874	1942	Greatest Show on Earth, The (1952)	Drama
+1875	1943	From Here to Eternity (1953)	Drama|Romance|War
+1876	1944	On the Waterfront (1954)	Crime|Drama
+1877	1945	Marty (1955)	Drama|Romance
+1878	1946	West Side Story (1961)	Musical|Romance
+1879	1947	Tom Jones (1963)	Comedy
+1880	1948	Man for All Seasons, A (1966)	Drama
+1881	1949	In the Heat of the Night (1967)	Drama|Mystery
+1882	1950	Oliver! (1968)	Musical
+1883	1951	Midnight Cowboy (1969)	Drama
+1884	1952	French Connection, The (1971)	Action|Crime|Drama|Thriller
+1885	1953	Rocky (1976)	Action|Drama
+1886	1954	Kramer Vs. Kramer (1979)	Drama
+1887	1955	Ordinary People (1980)	Drama
+1888	1956	Chariots of Fire (1981)	Drama
+1889	1957	Terms of Endearment (1983)	Comedy|Drama
+1890	1958	Out of Africa (1985)	Drama|Romance
+1891	1959	Last Emperor, The (1987)	Drama|War
+1892	1960	Rain Man (1988)	Drama
+1893	1961	Driving Miss Daisy (1989)	Drama
+1894	1962	Take the Money and Run (1969)	Comedy
+1895	1963	Klute (1971)	Drama|Mystery
+1896	1964	Repo Man (1984)	Comedy|Sci-Fi
+1897	1965	Metropolitan (1990)	Comedy
+1898	1966	Labyrinth (1986)	Adventure|Children's|Fantasy
+1899	1967	Breakfast Club, The (1985)	Comedy|Drama
+1900	1968	Nightmare on Elm Street Part 2: Freddy's Revenge, A (1985)	Horror
+1901	1969	Nightmare on Elm Street 3: Dream Warriors, A (1987)	Horror
+1902	1970	Nightmare on Elm Street 4: The Dream Master, A (1988)	Horror
+1903	1971	Nightmare on Elm Street 5: The Dream Child, A (1989)	Horror
+1904	1972	Freddy's Dead: The Final Nightmare (1991)	Horror
+1905	1973	Friday the 13th (1980)	Horror
+1906	1974	Friday the 13th Part 2 (1981)	Horror
+1907	1975	Friday the 13th Part 3: 3D (1982)	Horror
+1908	1976	Friday the 13th: The Final Chapter (1984)	Horror
+1909	1977	Friday the 13th Part V: A New Beginning (1985)	Horror
+1910	1978	Friday the 13th Part VI: Jason Lives (1986)	Horror
+1911	1979	Friday the 13th Part VII: The New Blood (1988)	Horror
+1912	1980	Friday the 13th Part VIII: Jason Takes Manhattan (1989)	Horror
+1913	1981	Halloween (1978)	Horror
+1914	1982	Halloween II (1981)	Horror
+1915	1983	Halloween III: Season of the Witch (1983)	Horror
+1916	1984	Halloween 4: The Return of Michael Myers (1988)	Horror
+1917	1985	Halloween 5: The Revenge of Michael Myers (1989)	Horror
+1918	1986	Prom Night (1980)	Horror
+1919	1987	Hello Mary Lou: Prom Night II (1987)	Horror
+1920	1988	Prom Night III: The Last Kiss (1989)	Horror
+1921	1989	Prom Night IV: Deliver Us From Evil (1992)	Horror
+1922	1990	Child's Play (1988)	Horror
+1923	1991	Child's Play 2 (1990)	Horror
+1924	1992	Child's Play 3 (1992)	Horror
+1925	1993	Poltergeist (1982)	Horror|Thriller
+1926	1994	Poltergeist II: The Other Side (1986)	Horror|Thriller
+1927	1995	Poltergeist III (1988)	Horror|Thriller
+1928	1996	Exorcist, The (1973)	Horror
+1929	1997	Exorcist II: The Heretic (1977)	Horror
+1930	1998	Exorcist III, The (1990)	Horror
+1931	1999	Lethal Weapon (1987)	Action|Comedy|Crime|Drama
+1932	2000	Lethal Weapon 2 (1989)	Action|Comedy|Crime|Drama
+1933	2001	Lethal Weapon 3 (1992)	Action|Comedy|Crime|Drama
+1934	2002	Gremlins (1984)	Comedy|Horror
+1935	2003	Gremlins 2: The New Batch (1990)	Comedy|Horror
+1936	2004	Goonies, The (1985)	Adventure|Children's|Fantasy
+1937	2005	Mask of Zorro, The (1998)	Action|Adventure|Romance
+1938	2006	Polish Wedding (1998)	Comedy
+1939	2007	This World, Then the Fireworks (1996)	Crime|Drama|Film-Noir
+1940	2008	Soylent Green (1973)	Sci-Fi|Thriller
+1941	2009	Metropolis (1926)	Sci-Fi
+1942	2010	Back to the Future Part II (1989)	Comedy|Sci-Fi
+1943	2011	Back to the Future Part III (1990)	Comedy|Sci-Fi|Western
+1944	2012	Poseidon Adventure, The (1972)	Action|Adventure
+1945	2013	Freaky Friday (1977)	Children's|Comedy
+1946	2014	Absent Minded Professor, The (1961)	Children's|Comedy|Fantasy
+1947	2015	Apple Dumpling Gang Rides Again, The (1979)	Children's|Comedy|Western
+1948	2016	Babes in Toyland (1961)	Children's|Fantasy|Musical
+1949	2017	Bambi (1942)	Animation|Children's
+1950	2018	Seven Samurai (The Magnificent Seven) (Shichinin no samurai) (1954)	Action|Drama
+1951	2019	Dangerous Liaisons (1988)	Drama|Romance
+1952	2020	Dune (1984)	Fantasy|Sci-Fi
+1953	2021	Last Temptation of Christ, The (1988)	Drama
+1954	2022	Godfather: Part III, The (1990)	Action|Crime|Drama
+1955	2023	Rapture, The (1991)	Drama|Mystery
+1956	2024	Lolita (1997)	Drama|Romance
+1957	2025	Disturbing Behavior (1998)	Horror|Thriller
+1958	2026	Mafia! (1998)	Comedy|Crime
+1959	2027	Saving Private Ryan (1998)	Action|Drama|War
+1960	2028	Billy's Hollywood Screen Kiss (1997)	Comedy|Romance
+1961	2029	East Palace West Palace (Dong gong xi gong) (1997)	Drama
+1962	2030	$1,000,000 Duck (1971)	Children's|Comedy
+1963	2031	Barefoot Executive, The (1971)	Children's|Comedy
+1964	2032	Black Cauldron, The (1985)	Animation|Children's
+1965	2033	Black Hole, The (1979)	Sci-Fi
+1966	2034	Blackbeard's Ghost (1968)	Children's|Comedy
+1967	2035	Blank Check (1994)	Children's|Comedy
+1968	2036	Candleshoe (1977)	Adventure|Children's|Comedy
+1969	2037	Cat from Outer Space, The (1978)	Children's|Comedy|Sci-Fi
+1970	2038	Cheetah (1989)	Adventure|Children's
+1971	2039	Computer Wore Tennis Shoes, The (1970)	Children's|Comedy
+1972	2040	Condorman (1981)	Action|Adventure|Children's|Comedy
+1973	2041	D2: The Mighty Ducks (1994)	Children's|Comedy
+1974	2042	Darby O'Gill and the Little People (1959)	Adventure|Children's|Fantasy
+1975	2043	Devil and Max Devlin, The (1981)	Comedy
+1976	2044	Far Off Place, A (1993)	Adventure|Children's|Drama|Romance
+1977	2045	Flight of the Navigator (1986)	Adventure|Children's|Sci-Fi
+1978	2046	Gnome-Mobile, The (1967)	Children's
+1979	2047	Great Mouse Detective, The (1986)	Animation|Children's
+1980	2048	Happiest Millionaire, The (1967)	Comedy|Musical
+1981	2049	Herbie Goes Bananas (1980)	Adventure|Children's|Comedy
+1982	2050	Herbie Goes to Monte Carlo (1977)	Adventure|Children's|Comedy
+1983	2051	Hocus Pocus (1993)	Children's|Comedy
+1984	2052	Honey, I Blew Up the Kid (1992)	Children's|Comedy|Sci-Fi
+1985	2053	Honey, I Shrunk the Kids (1989)	Adventure|Children's|Comedy|Fantasy|Sci-Fi
+1986	2054	Hot Lead and Cold Feet (1978)	Comedy|Western
+1987	2055	In Search of the Castaways (1962)	Adventure|Children's
+1988	2056	Incredible Journey, The (1963)	Adventure|Children's
+1989	2057	Negotiator, The (1998)	Action|Thriller
+1990	2058	Parent Trap, The (1998)	Children's|Drama
+1991	2059	BASEketball (1998)	Comedy
+1992	2060	Full Tilt Boogie (1997)	Documentary
+1993	2061	Governess, The (1998)	Drama|Romance
+1994	2062	Seventh Heaven (Le Septième ciel) (1997)	Drama|Romance
+1995	2063	Roger & Me (1989)	Comedy|Documentary
+1996	2064	Purple Rose of Cairo, The (1985)	Comedy|Drama|Romance
+1997	2065	Out of the Past (1947)	Film-Noir
+1998	2066	Doctor Zhivago (1965)	Drama|Romance|War
+1999	2067	Fanny and Alexander (1982)	Drama
+2000	2068	Trip to Bountiful, The (1985)	Drama
+2001	2069	Tender Mercies (1983)	Drama
+2002	2070	And the Band Played On (1993)	Drama
+2003	2071	'burbs, The (1989)	Comedy
+2004	2072	Fandango (1985)	Comedy
+2005	2073	Night Porter, The (Il Portiere di notte) (1974)	Drama
+2006	2074	Mephisto (1981)	Drama|War
+2007	2075	Blue Velvet (1986)	Drama|Mystery
+2008	2076	Journey of Natty Gann, The (1985)	Adventure|Children's
+2009	2077	Jungle Book, The (1967)	Animation|Children's|Comedy|Musical
+2010	2078	Kidnapped (1960)	Children's|Drama
+2011	2079	Lady and the Tramp (1955)	Animation|Children's|Comedy|Musical|Romance
+2012	2080	Little Mermaid, The (1989)	Animation|Children's|Comedy|Musical|Romance
+2013	2081	Mighty Ducks, The (1992)	Children's|Comedy
+2014	2082	Muppet Christmas Carol, The (1992)	Children's|Musical
+2015	2083	Newsies (1992)	Children's|Musical
+2016	2084	101 Dalmatians (1961)	Animation|Children's
+2017	2085	One Magic Christmas (1985)	Drama|Fantasy
+2018	2086	Peter Pan (1953)	Animation|Children's|Fantasy|Musical
+2019	2087	Popeye (1980)	Adventure|Comedy|Musical
+2020	2088	Rescuers Down Under, The (1990)	Animation|Children's
+2021	2089	Rescuers, The (1977)	Animation|Children's
+2022	2090	Return from Witch Mountain (1978)	Children's|Sci-Fi
+2023	2091	Return of Jafar, The (1993)	Animation|Children's|Musical
+2024	2092	Return to Oz (1985)	Adventure|Children's|Fantasy|Sci-Fi
+2025	2093	Rocketeer, The (1991)	Action|Adventure|Sci-Fi
+2026	2094	Shaggy D.A., The (1976)	Children's|Comedy
+2027	2095	Sleeping Beauty (1959)	Animation|Children's|Musical
+2028	2096	Something Wicked This Way Comes (1983)	Children's|Horror
+2029	2097	Son of Flubber (1963)	Children's|Comedy
+2030	2098	Song of the South (1946)	Adventure|Animation|Children's|Musical
+2031	2099	Splash (1984)	Comedy|Fantasy|Romance
+2032	2100	Squanto: A Warrior's Tale (1994)	Adventure|Drama
+2033	2101	Steamboat Willie (1940)	Animation|Children's|Comedy|Musical
+2034	2102	Tall Tale (1994)	Adventure|Children's
+2035	2103	Tex (1982)	Drama
+2036	2104	Tron (1982)	Action|Adventure|Fantasy|Sci-Fi
+2037	2105	Swing Kids (1993)	Drama|War
+2038	2106	Halloween: H20 (1998)	Horror|Thriller
+2039	2107	L.A. Story (1991)	Comedy|Romance
+2040	2108	Jerk, The (1979)	Comedy
+2041	2109	Dead Men Don't Wear Plaid (1982)	Comedy|Crime|Thriller
+2042	2110	Man with Two Brains, The (1983)	Comedy
+2043	2111	Grand Canyon (1991)	Crime|Drama
+2044	2112	Graveyard Shift (1990)	Horror|Thriller
+2045	2113	Outsiders, The (1983)	Drama
+2046	2114	Indiana Jones and the Temple of Doom (1984)	Action|Adventure
+2047	2115	Lord of the Rings, The (1978)	Adventure|Animation|Children's|Sci-Fi
+2048	2116	Nineteen Eighty-Four (1984)	Drama|Sci-Fi
+2049	2117	Dead Zone, The (1983)	Horror|Thriller
+2050	2118	Maximum Overdrive (1986)	Horror
+2051	2119	Needful Things (1993)	Drama|Horror
+2052	2120	Cujo (1983)	Horror|Thriller
+2053	2121	Children of the Corn (1984)	Horror|Thriller
+2054	2122	All Dogs Go to Heaven (1989)	Animation|Children's
+2055	2123	Addams Family, The (1991)	Comedy
+2056	2124	Ever After: A Cinderella Story (1998)	Drama|Romance
+2057	2125	Snake Eyes (1998)	Action|Crime|Mystery|Thriller
+2058	2126	First Love, Last Rites (1997)	Drama|Romance
+2059	2127	Safe Men (1998)	Comedy
+2060	2128	Saltmen of Tibet, The (1997)	Documentary
+2061	2129	Atlantic City (1980)	Crime|Drama|Romance
+2062	2130	Autumn Sonata (Höstsonaten ) (1978)	Drama
+2063	2131	Who's Afraid of Virginia Woolf? (1966)	Drama
+2064	2132	Adventures in Babysitting (1987)	Adventure|Comedy
+2065	2133	Weird Science (1985)	Comedy
+2066	2134	Doctor Dolittle (1967)	Adventure|Musical
+2067	2135	Nutty Professor, The (1963)	Comedy
+2068	2136	Charlotte's Web (1973)	Animation|Children's
+2069	2137	Watership Down (1978)	Animation|Children's|Drama|Fantasy
+2070	2138	Secret of NIMH, The (1982)	Animation|Children's
+2071	2139	Dark Crystal, The (1982)	Children's|Fantasy|Sci-Fi
+2072	2140	American Tail, An (1986)	Animation|Children's|Comedy
+2073	2141	American Tail: Fievel Goes West, An (1991)	Animation|Children's|Comedy
+2074	2142	Legend (1985)	Adventure|Fantasy|Romance
+2075	2143	Sixteen Candles (1984)	Comedy
+2076	2144	Pretty in Pink (1986)	Comedy|Drama|Romance
+2077	2145	St. Elmo's Fire (1985)	Drama|Romance
+2078	2146	Clan of the Cave Bear, The (1986)	Drama
+2079	2147	House (1986)	Comedy|Horror
+2080	2148	House II: The Second Story (1987)	Comedy|Horror
+2081	2149	Gods Must Be Crazy, The (1980)	Comedy
+2082	2150	Gods Must Be Crazy II, The (1989)	Comedy
+2083	2151	Air Bud: Golden Receiver (1998)	Children's|Comedy
+2084	2152	Avengers, The (1998)	Action|Adventure
+2085	2153	How Stella Got Her Groove Back (1998)	Drama|Romance
+2086	2154	Slums of Beverly Hills, The (1998)	Comedy
+2087	2155	Best Man, The (Il Testimone dello sposo) (1997)	Comedy|Drama
+2088	2156	Chambermaid on the Titanic, The (1998)	Romance
+2089	2157	Henry: Portrait of a Serial Killer, Part 2 (1996)	Crime|Horror
+2090	2158	Henry: Portrait of a Serial Killer (1990)	Crime|Horror
+2091	2159	Rosemary's Baby (1968)	Horror|Thriller
+2092	2160	NeverEnding Story, The (1984)	Adventure|Children's|Fantasy
+2093	2161	NeverEnding Story II: The Next Chapter, The (1990)	Adventure|Children's|Fantasy
+2094	2162	Attack of the Killer Tomatoes! (1980)	Comedy|Horror
+2095	2163	Surf Nazis Must Die (1987)	Drama
+2096	2164	Your Friends and Neighbors (1998)	Drama
+2097	2165	Return to Paradise (1998)	Drama|Romance
+2098	2166	Blade (1998)	Action|Adventure|Horror
+2099	2167	Dance with Me (1998)	Drama|Romance
+2100	2168	Dead Man on Campus (1998)	Comedy
+2101	2169	Wrongfully Accused (1998)	Action|Comedy
+2102	2170	Next Stop, Wonderland (1998)	Comedy|Drama|Romance
+2103	2171	Strike! (a.k.a. All I Wanna Do, The Hairy Bird) (1998)	Comedy
+2104	2172	Navigator: A Mediaeval Odyssey, The (1988)	Adventure|Fantasy|Sci-Fi
+2105	2173	Beetlejuice (1988)	Comedy|Fantasy
+2106	2174	Déjà Vu (1997)	Drama|Romance
+2107	2175	Rope (1948)	Thriller
+2108	2176	Family Plot (1976)	Comedy|Thriller
+2109	2177	Frenzy (1972)	Thriller
+2110	2178	Topaz (1969)	Thriller
+2111	2179	Torn Curtain (1966)	Thriller
+2112	2180	Marnie (1964)	Thriller
+2113	2181	Wrong Man, The (1956)	Drama|Film-Noir|Thriller
+2114	2182	Man Who Knew Too Much, The (1956)	Thriller
+2115	2183	Trouble with Harry, The (1955)	Mystery|Thriller
+2116	2184	I Confess (1953)	Thriller
+2117	2185	Strangers on a Train (1951)	Film-Noir|Thriller
+2118	2186	Stage Fright (1950)	Mystery|Thriller
+2119	2187	54 (1998)	Drama
+2120	2188	I Married A Strange Person (1997)	Animation
+2121	2189	Why Do Fools Fall In Love? (1998)	Drama
+2122	2190	Merry War, A (1997)	Comedy
+2123	2191	See the Sea (Regarde la mer) (1997)	Drama
+2124	2192	Willow (1988)	Action|Adventure|Fantasy
+2125	2193	Untouchables, The (1987)	Action|Crime|Drama
+2126	2194	Dirty Work (1998)	Comedy
+2127	2195	Knock Off (1998)	Action
+2128	2196	Firelight (1997)	Drama
+2129	2197	Modulations (1998)	Documentary
+2130	2198	Phoenix (1998)	Crime|Drama
+2131	2199	Under Capricorn (1949)	Drama
+2132	2200	Paradine Case, The (1947)	Drama
+2133	2201	Lifeboat (1944)	Drama|Thriller|War
+2134	2202	Shadow of a Doubt (1943)	Film-Noir|Thriller
+2135	2203	Saboteur (1942)	Thriller
+2136	2204	Mr. & Mrs. Smith (1941)	Comedy
+2137	2205	Suspicion (1941)	Mystery|Thriller
+2138	2206	Jamaica Inn (1939)	Drama
+2139	2207	Lady Vanishes, The (1938)	Comedy|Mystery|Romance|Thriller
+2140	2208	Young and Innocent (1937)	Crime|Thriller
+2141	2209	Sabotage (1936)	Thriller
+2142	2210	Secret Agent (1936)	Thriller
+2143	2211	Man Who Knew Too Much, The (1934)	Thriller
+2144	2212	Waltzes from Vienna (1933)	Comedy|Musical
+2145	2213	Number Seventeen (1932)	Thriller
+2146	2214	Rich and Strange (1932)	Comedy|Romance
+2147	2215	Skin Game, The (1931)	Drama
+2148	2216	Elstree Calling (1930)	Comedy|Musical
+2149	2217	Juno and Paycock (1930)	Drama
+2150	2218	Murder! (1930)	Mystery|Thriller
+2151	2219	Manxman, The (1929)	Drama
+2152	2220	Blackmail (1929)	Thriller
+2153	2221	Champagne (1928)	Comedy
+2154	2222	Farmer's Wife, The (1928)	Comedy
+2155	2223	Downhill (1927)	Drama
+2156	2224	Easy Virtue (1927)	Drama
+2157	2225	Ring, The (1927)	Drama
+2158	2226	Lodger, The (1926)	Thriller
+2159	2227	Mountain Eagle, The (1926)	Drama
+2160	2228	Pleasure Garden, The (1925)	Drama
+2161	2229	Always Tell Your Wife (1923)	Comedy
+2162	2230	Rounders (1998)	Crime|Drama
+2163	2231	Cube (1997)	Sci-Fi|Thriller
+2164	2232	Digging to China (1998)	Drama
+2165	2233	Let's Talk About Sex (1998)	Drama
+2166	2234	One Man's Hero (1999)	Drama|War
+2167	2235	Simon Birch (1998)	Drama
+2168	2236	Without Limits (1998)	Drama
+2169	2237	Seven Beauties (Pasqualino Settebellezze) (1976)	Comedy|Drama
+2170	2238	Swept Away (Travolti da un insolito destino nell'azzurro mare d'Agosto) (1975)	Comedy|Drama
+2171	2239	My Bodyguard (1980)	Drama
+2172	2240	Class (1983)	Comedy
+2173	2241	Grandview, U.S.A. (1984)	Drama
+2174	2242	Broadcast News (1987)	Comedy|Drama|Romance
+2175	2243	Allnighter, The (1987)	Comedy|Romance
+2176	2244	Working Girl (1988)	Comedy|Drama
+2177	2245	Stars and Bars (1988)	Comedy
+2178	2246	Married to the Mob (1988)	Comedy
+2179	2247	Say Anything... (1989)	Comedy|Drama|Romance
+2180	2248	My Blue Heaven (1990)	Comedy
+2181	2249	Men Don't Leave (1990)	Drama
+2182	2250	Cabinet of Dr. Ramirez, The (1991)	Comedy
+2183	2251	Hero (1992)	Comedy|Drama
+2184	2252	Toys (1992)	Action|Comedy|Fantasy
+2185	2253	Choices (1981)	Drama
+2186	2254	Young Doctors in Love (1982)	Comedy
+2187	2255	Parasite (1982)	Horror|Sci-Fi
+2188	2256	No Small Affair (1984)	Comedy|Romance
+2189	2257	Master Ninja I (1984)	Action
+2190	2258	Blame It on Rio (1984)	Comedy|Romance
+2191	2259	Wisdom (1986)	Action|Crime
+2192	2260	One Crazy Summer (1986)	Comedy
+2193	2261	About Last Night... (1986)	Comedy|Drama|Romance
+2194	2262	Seventh Sign, The (1988)	Thriller
+2195	2263	We're No Angels (1989)	Drama
+2196	2264	Nothing But Trouble (1991)	Adventure|Comedy
+2197	2265	Butcher's Wife, The (1991)	Comedy|Romance
+2198	2266	Mortal Thoughts (1991)	Mystery|Thriller
+2199	2267	Few Good Men, A (1992)	Crime|Drama
+2200	2268	Indecent Proposal (1993)	Drama
+2201	2269	Century of Cinema, A (1994)	Documentary
+2202	2270	Permanent Midnight (1998)	Drama
+2203	2271	One True Thing (1998)	Drama
+2204	2272	Rush Hour (1998)	Action|Thriller
+2205	2273	Lilian's Story (1995)	Drama
+2206	2274	Six-String Samurai (1998)	Action|Adventure|Sci-Fi
+2207	2275	Soldier's Daughter Never Cries, A (1998)	Drama
+2208	2276	Somewhere in the City (1997)	Drama
+2209	2277	Ronin (1998)	Action|Crime|Thriller
+2210	2278	Urban Legend (1998)	Horror|Thriller
+2211	2279	Clay Pigeons (1998)	Crime
+2212	2280	Monument Ave. (1998)	Crime
+2213	2281	Pecker (1998)	Comedy|Drama
+2214	2282	Sheltering Sky, The (1990)	Drama
+2215	2283	Bandit Queen (1994)	Drama
+2216	2284	If.... (1968)	Drama
+2217	2285	Fiendish Plot of Dr. Fu Manchu, The (1980)	Comedy
+2218	2286	Them! (1954)	Sci-Fi|Thriller|War
+2219	2287	Thing, The (1982)	Action|Horror|Sci-Fi|Thriller
+2220	2288	Player, The (1992)	Comedy|Drama
+2221	2289	Stardust Memories (1980)	Comedy|Drama
+2222	2290	Edward Scissorhands (1990)	Drama|Romance
+2223	2291	Overnight Delivery (1996)	Romance
+2224	2292	Shadrach (1998)	Drama
+2225	2293	Antz (1998)	Animation|Children's
+2226	2294	Impostors, The (1998)	Comedy
+2227	2295	Night at the Roxbury, A (1998)	Comedy
+2228	2296	What Dreams May Come (1998)	Drama|Romance
+2229	2297	Strangeland (1998)	Thriller
+2230	2298	Battle of the Sexes, The (1959)	Comedy
+2231	2299	Producers, The (1968)	Comedy|Musical
+2232	2300	History of the World: Part I (1981)	Comedy
+2233	2301	My Cousin Vinny (1992)	Comedy
+2234	2302	Nashville (1975)	Drama|Musical
+2235	2303	Love Is the Devil (1998)	Drama
+2236	2304	Slam (1998)	Drama
+2237	2305	Holy Man (1998)	Comedy
+2238	2306	One Tough Cop (1998)	Action|Drama
+2239	2307	Detroit 9000 (1973)	Action|Crime
+2240	2308	Inheritors, The (Die Siebtelbauern) (1998)	Drama
+2241	2309	Mighty, The (1998)	Drama
+2242	2310	2010 (1984)	Mystery|Sci-Fi
+2243	2311	Children of a Lesser God (1986)	Drama
+2244	2312	Elephant Man, The (1980)	Drama
+2245	2313	Beloved (1998)	Drama
+2246	2314	Bride of Chucky (1998)	Horror|Thriller
+2247	2315	Practical Magic (1998)	Drama|Romance
+2248	2316	Alarmist, The (1997)	Comedy
+2249	2317	Happiness (1998)	Comedy
+2250	2318	Reach the Rock (1997)	Comedy
+2251	2319	Apt Pupil (1998)	Drama|Thriller
+2252	2320	Pleasantville (1998)	Comedy
+2253	2321	Soldier (1998)	Action|Adventure|Sci-Fi|Thriller|War
+2254	2322	Cruise, The (1998)	Documentary
+2255	2323	Life Is Beautiful (La Vita è bella) (1997)	Comedy|Drama
+2256	2324	Orgazmo (1997)	Comedy
+2257	2325	Shattered Image (1998)	Drama|Thriller
+2258	2326	Tales from the Darkside: The Movie (1990)	Horror
+2259	2327	Vampires (1998)	Horror
+2260	2328	American History X (1998)	Drama
+2261	2329	Hands on a Hard Body (1996)	Documentary
+2262	2330	Living Out Loud (1998)	Comedy|Romance
+2263	2331	Belly (1998)	Crime|Drama
+2264	2332	Gods and Monsters (1998)	Drama
+2265	2333	Siege, The (1998)	Action|Thriller
+2266	2334	Waterboy, The (1998)	Comedy
+2267	2335	Elizabeth (1998)	Drama
+2268	2336	Velvet Goldmine (1998)	Drama
+2269	2337	I Still Know What You Did Last Summer (1998)	Horror|Mystery|Thriller
+2270	2338	I'll Be Home For Christmas (1998)	Comedy|Romance
+2271	2339	Meet Joe Black (1998)	Romance
+2272	2340	Dancing at Lughnasa (1998)	Drama
+2273	2341	Hard Core Logo (1996)	Comedy
+2274	2342	Naked Man, The (1998)	Drama
+2275	2343	Runaway Train (1985)	Action|Adventure|Drama|Thriller
+2276	2344	Desert Bloom (1986)	Drama
+2277	2345	Stepford Wives, The (1975)	Sci-Fi|Thriller
+2278	2346	Pope of Greenwich Village, The (1984)	Action
+2279	2347	Sid and Nancy (1986)	Drama
+2280	2348	Mona Lisa (1986)	Comedy|Thriller
+2281	2349	Heart Condition (1990)	Comedy
+2282	2350	Nights of Cabiria (Le Notti di Cabiria) (1957)	Drama
+2283	2351	Big Chill, The (1983)	Comedy|Drama
+2284	2352	Enemy of the State (1998)	Action|Thriller
+2285	2353	Rugrats Movie, The (1998)	Animation|Children's|Comedy
+2286	2354	Bug's Life, A (1998)	Animation|Children's|Comedy
+2287	2355	Celebrity (1998)	Comedy
+2288	2356	Central Station (Central do Brasil) (1998)	Drama
+2289	2357	Savior (1998)	Drama
+2290	2358	Waking Ned Devine (1998)	Comedy
+2291	2359	Celebration, The (Festen) (1998)	Drama
+2292	2360	Pink Flamingos (1972)	Comedy
+2293	2361	Glen or Glenda (1953)	Drama
+2294	2362	Godzilla (Gojira) (1954)	Action|Sci-Fi
+2295	2363	Godzilla (Gojira) (1984)	Action|Sci-Fi
+2296	2364	King Kong vs. Godzilla (Kingukongu tai Gojira) (1962)	Action|Sci-Fi
+2297	2365	King Kong (1933)	Action|Adventure|Horror
+2298	2366	King Kong (1976)	Action|Adventure|Horror
+2299	2367	King Kong Lives (1986)	Action|Adventure|Horror
+2300	2368	Desperately Seeking Susan (1985)	Comedy|Romance
+2301	2369	Emerald Forest, The (1985)	Action|Adventure|Drama
+2302	2370	Fletch (1985)	Comedy
+2303	2371	Fletch Lives (1989)	Comedy
+2304	2372	Red Sonja (1985)	Action|Adventure
+2305	2373	Gung Ho (1986)	Comedy|Drama
+2306	2374	Money Pit, The (1986)	Comedy
+2307	2375	View to a Kill, A (1985)	Action
+2308	2376	Lifeforce (1985)	Horror|Sci-Fi
+2309	2377	Police Academy (1984)	Comedy
+2310	2378	Police Academy 2: Their First Assignment (1985)	Comedy
+2311	2379	Police Academy 3: Back in Training (1986)	Comedy
+2312	2380	Police Academy 4: Citizens on Patrol (1987)	Comedy
+2313	2381	Police Academy 5: Assignment: Miami Beach (1988)	Comedy
+2314	2382	Police Academy 6: City Under Siege (1989)	Comedy
+2315	2383	Babe: Pig in the City (1998)	Children's|Comedy
+2316	2384	Home Fries (1998)	Comedy|Romance
+2317	2385	Jerry Springer: Ringmaster (1998)	Drama
+2318	2386	Very Bad Things (1998)	Comedy|Crime
+2319	2387	Steam: The Turkish Bath (Hamam) (1997)	Drama|Romance
+2320	2388	Psycho (1998)	Crime|Horror|Thriller
+2321	2389	Little Voice (1998)	Comedy
+2322	2390	Simple Plan, A (1998)	Crime|Thriller
+2323	2391	Jack Frost (1998)	Comedy|Drama
+2324	2392	Star Trek: Insurrection (1998)	Action|Sci-Fi
+2325	2393	Prince of Egypt, The (1998)	Animation|Musical
+2326	2394	Rushmore (1998)	Comedy
+2327	2395	Shakespeare in Love (1998)	Comedy|Romance
+2328	2396	Mass Appeal (1984)	Drama
+2329	2397	Miracle on 34th Street (1947)	Drama
+2330	2398	Santa Claus: The Movie (1985)	Adventure|Children's|Fantasy
+2331	2399	Prancer (1989)	Children's|Drama
+2332	2400	Pale Rider (1985)	Western
+2333	2401	Rambo: First Blood Part II (1985)	Action|War
+2334	2402	First Blood (1982)	Action
+2335	2403	Rambo III (1988)	Action|War
+2336	2404	Jewel of the Nile, The (1985)	Action|Adventure|Comedy|Romance
+2337	2405	Romancing the Stone (1984)	Action|Adventure|Comedy|Romance
+2338	2406	Cocoon (1985)	Comedy|Sci-Fi
+2339	2407	Cocoon: The Return (1988)	Comedy|Sci-Fi
+2340	2408	Rocky II (1979)	Action|Drama
+2341	2409	Rocky III (1982)	Action|Drama
+2342	2410	Rocky IV (1985)	Action|Drama
+2343	2411	Rocky V (1990)	Action|Drama
+2344	2412	Clue (1985)	Comedy|Mystery
+2345	2413	Young Sherlock Holmes (1985)	Action|Adventure|Mystery
+2346	2414	Violets Are Blue... (1986)	Drama|Romance
+2347	2415	Back to School (1986)	Comedy
+2348	2416	Heartburn (1986)	Comedy|Drama
+2349	2417	Nothing in Common (1986)	Comedy
+2350	2418	Extremities (1986)	Drama|Thriller
+2351	2419	Karate Kid, The (1984)	Drama
+2352	2420	Karate Kid, Part II, The (1986)	Action|Adventure|Drama
+2353	2421	Karate Kid III, The (1989)	Action|Adventure|Drama
+2354	2422	Christmas Vacation (1989)	Comedy
+2355	2423	You've Got Mail (1998)	Comedy|Romance
+2356	2424	General, The (1998)	Crime
+2357	2425	Theory of Flight, The (1998)	Comedy|Drama|Romance
+2358	2426	Thin Red Line, The (1998)	Action|Drama|War
+2359	2427	Faculty, The (1998)	Horror|Sci-Fi
+2360	2428	Mighty Joe Young (1998)	Adventure|Children's|Drama
+2361	2429	Mighty Joe Young (1949)	Adventure|Children's|Drama
+2362	2430	Patch Adams (1998)	Comedy|Drama
+2363	2431	Stepmom (1998)	Drama
+2364	2432	Civil Action, A (1998)	Drama
+2365	2433	Down in the Delta (1998)	Drama
+2366	2434	Hurlyburly (1998)	Drama
+2367	2435	Tea with Mussolini (1999)	Comedy
+2368	2436	Wilde (1997)	Drama
+2369	2437	Outside Ozona (1998)	Drama|Thriller
+2370	2438	Affliction (1997)	Drama
+2371	2439	Another Day in Paradise (1998)	Drama
+2372	2440	Hi-Lo Country, The (1998)	Drama|Western
+2373	2441	Hilary and Jackie (1998)	Drama
+2374	2442	Playing by Heart (1998)	Drama|Romance
+2375	2443	24 7: Twenty Four Seven (1997)	Comedy|Drama
+2376	2444	At First Sight (1999)	Drama
+2377	2445	In Dreams (1999)	Thriller
+2378	2446	Varsity Blues (1999)	Comedy|Drama
+2379	2447	Virus (1999)	Horror|Sci-Fi
+2380	2448	Garbage Pail Kids Movie, The (1987)	Adventure|Children's
+2381	2449	Howard the Duck (1986)	Adventure|Children's|Sci-Fi
+2382	2450	Gate, The (1987)	Horror
+2383	2451	Gate II: Trespassers, The (1990)	Horror
+2384	2452	Boy Who Could Fly, The (1986)	Drama|Fantasy
+2385	2453	Fly, The (1958)	Horror|Sci-Fi
+2386	2454	Fly, The (1986)	Horror|Sci-Fi
+2387	2455	Fly II, The (1989)	Horror|Sci-Fi
+2388	2456	Running Scared (1986)	Action|Comedy
+2389	2457	Armed and Dangerous (1986)	Comedy|Crime
+2390	2458	Texas Chainsaw Massacre, The (1974)	Horror
+2391	2459	Texas Chainsaw Massacre 2, The (1986)	Horror
+2392	2460	Leatherface: Texas Chainsaw Massacre III (1990)	Horror
+2393	2461	Return of the Texas Chainsaw Massacre, The (1994)	Horror
+2394	2462	Ruthless People (1986)	Comedy
+2395	2463	Trick or Treat (1986)	Horror
+2396	2464	Deadly Friend (1986)	Horror
+2397	2465	Belizaire the Cajun (1986)	Drama
+2398	2466	Name of the Rose, The (1986)	Mystery
+2399	2467	Jumpin' Jack Flash (1986)	Action|Comedy|Romance|Thriller
+2400	2468	Peggy Sue Got Married (1986)	Comedy|Romance
+2401	2469	Crocodile Dundee (1986)	Adventure|Comedy
+2402	2470	Crocodile Dundee II (1988)	Adventure|Comedy
+2403	2471	Tough Guys (1986)	Comedy
+2404	2472	Soul Man (1986)	Comedy
+2405	2473	Color of Money, The (1986)	Drama
+2406	2474	52 Pick-Up (1986)	Action|Mystery|Thriller
+2407	2475	Heartbreak Ridge (1986)	Action|War
+2408	2476	Firewalker (1986)	Adventure
+2409	2477	Three Amigos! (1986)	Comedy|Western
+2410	2478	Gloria (1999)	Drama|Thriller
+2411	2479	Dry Cleaning (Nettoyage à sec) (1997)	Drama
+2412	2480	My Name Is Joe (1998)	Drama|Romance
+2413	2481	Still Crazy (1998)	Comedy|Romance
+2414	2482	Day of the Beast, The (El Día de la bestia) (1995)	Comedy|Horror|Thriller
+2415	2483	Tinseltown (1998)	Comedy
+2416	2484	She's All That (1999)	Comedy|Romance
+2417	2485	24-hour Woman (1998)	Drama
+2418	2486	Blood, Guts, Bullets and Octane (1998)	Action|Comedy
+2419	2487	Peeping Tom (1960)	Drama|Horror|Thriller
+2420	2488	Spanish Fly (1998)	Drama
+2421	2489	Payback (1999)	Action|Thriller
+2422	2490	Simply Irresistible (1999)	Comedy|Romance
+2423	2491	20 Dates (1998)	Comedy
+2424	2492	Harmonists, The (1997)	Drama
+2425	2493	Last Days, The (1998)	Documentary
+2426	2494	Fantastic Planet, The (La Planète sauvage) (1973)	Animation|Sci-Fi
+2427	2495	Blast from the Past (1999)	Comedy|Romance
+2428	2496	Message in a Bottle (1999)	Romance
+2429	2497	My Favorite Martian (1999)	Comedy|Sci-Fi
+2430	2498	God Said 'Ha!' (1998)	Comedy
+2431	2499	Jawbreaker (1999)	Comedy
+2432	2500	October Sky (1999)	Drama
+2433	2501	Office Space (1999)	Comedy|Romance
+2434	2502	Apple, The (Sib) (1998)	Drama
+2435	2503	200 Cigarettes (1999)	Comedy|Drama
+2436	2504	8MM (1999)	Thriller
+2437	2505	Other Sister, The (1999)	Comedy|Drama|Romance
+2438	2506	Breakfast of Champions (1999)	Comedy
+2439	2507	Breaks, The (1999)	Drama
+2440	2508	Eight Days a Week (1997)	Comedy
+2441	2509	Just the Ticket (1999)	Comedy|Romance
+2442	2510	Long Goodbye, The (1973)	Crime
+2443	2511	Ballad of Narayama, The (Narayama Bushiko) (1982)	Drama
+2444	2512	Pet Sematary (1989)	Horror
+2445	2513	Pet Sematary II (1992)	Horror
+2446	2514	Children of the Corn II: The Final Sacrifice (1993)	Horror
+2447	2515	Children of the Corn III (1994)	Horror
+2448	2516	Christine (1983)	Horror
+2449	2517	Night Shift (1982)	Comedy
+2450	2518	House on Haunted Hill (1958)	Horror
+2451	2519	Airport (1970)	Drama
+2452	2520	Airport 1975 (1974)	Drama
+2453	2521	Airport '77 (1977)	Drama
+2454	2522	Rollercoaster (1977)	Drama|Thriller
+2455	2523	Towering Inferno, The (1974)	Action|Drama
+2456	2524	Alligator (1980)	Action|Horror|Sci-Fi
+2457	2525	Meteor (1979)	Sci-Fi
+2458	2526	Westworld (1973)	Action|Sci-Fi|Thriller|Western
+2459	2527	Logan's Run (1976)	Action|Adventure|Sci-Fi
+2460	2528	Planet of the Apes (1968)	Action|Sci-Fi
+2461	2529	Beneath the Planet of the Apes (1970)	Action|Sci-Fi
+2462	2530	Battle for the Planet of the Apes (1973)	Action|Sci-Fi
+2463	2531	Conquest of the Planet of the Apes (1972)	Action|Sci-Fi
+2464	2532	Escape from the Planet of the Apes (1971)	Action|Sci-Fi
+2465	2533	Avalanche (1978)	Action
+2466	2534	Earthquake (1974)	Action
+2467	2535	Concorde: Airport '79, The (1979)	Drama
+2468	2536	Beyond the Poseidon Adventure (1979)	Adventure
+2469	2537	Dancemaker (1998)	Documentary
+2470	2538	Analyze This (1999)	Comedy
+2471	2539	Corruptor, The (1999)	Action|Crime|Drama|Thriller
+2472	2540	Cruel Intentions (1999)	Drama
+2473	2541	Lock, Stock & Two Smoking Barrels (1998)	Comedy|Crime|Thriller
+2474	2542	Six Ways to Sunday (1997)	Comedy
+2475	2543	School of Flesh, The (L' École de la chair) (1998)	Drama
+2476	2544	Relax... It's Just Sex (1998)	Comedy
+2477	2545	Deep End of the Ocean, The (1999)	Drama
+2478	2546	Harvest (1998)	Drama
+2479	2547	Rage: Carrie 2, The (1999)	Horror
+2480	2548	Wing Commander (1999)	Action|Sci-Fi
+2481	2549	Haunting, The (1963)	Horror|Thriller
+2482	2550	Dead Ringers (1988)	Drama|Thriller
+2483	2551	My Boyfriend's Back (1993)	Comedy
+2484	2552	Village of the Damned (1960)	Horror|Sci-Fi|Thriller
+2485	2553	Children of the Damned (1963)	Horror|Sci-Fi|Thriller
+2486	2554	Baby Geniuses (1999)	Comedy
+2487	2555	Telling You (1998)	Comedy|Drama|Romance
+2488	2556	I Stand Alone (Seul contre tous) (1998)	Drama
+2489	2557	Forces of Nature (1999)	Comedy|Romance
+2490	2558	King and I, The (1999)	Animation|Children's
+2491	2559	Ravenous (1999)	Drama|Horror
+2492	2560	True Crime (1999)	Crime|Thriller
+2493	2561	Bandits (1997)	Drama
+2494	2562	Beauty (1998)	Drama
+2495	2563	Empty Mirror, The (1999)	Drama
+2496	2564	King and I, The (1956)	Musical
+2497	2565	Doug's 1st Movie (1999)	Animation|Children's
+2498	2566	EDtv (1999)	Comedy
+2499	2567	Mod Squad, The (1999)	Action|Crime
+2500	2568	Among Giants (1998)	Drama|Romance
+2501	2569	Walk on the Moon, A (1999)	Drama|Romance
+2502	2570	Matrix, The (1999)	Action|Sci-Fi|Thriller
+2503	2571	10 Things I Hate About You (1999)	Comedy|Romance
+2504	2572	Tango (1998)	Drama
+2505	2573	Out-of-Towners, The (1999)	Comedy
+2506	2574	Dreamlife of Angels, The (La Vie rêvée des anges) (1998)	Drama
+2507	2575	Love, etc. (1996)	Drama
+2508	2576	Metroland (1997)	Comedy|Drama
+2509	2577	Sticky Fingers of Time, The (1997)	Sci-Fi
+2510	2578	Following (1998)	Drama
+2511	2579	Go (1999)	Crime
+2512	2580	Never Been Kissed (1999)	Comedy|Romance
+2513	2581	Twin Dragons (Shuang long hui) (1992)	Action|Comedy
+2514	2582	Cookie's Fortune (1999)	Mystery
+2515	2583	Foolish (1999)	Comedy
+2516	2584	Lovers of the Arctic Circle, The (Los Amantes del Círculo Polar) (1998)	Drama|Romance
+2517	2585	Goodbye, Lover (1999)	Comedy|Crime|Thriller
+2518	2586	Life (1999)	Comedy
+2519	2587	Clubland (1998)	Drama
+2520	2588	Friends & Lovers (1999)	Comedy|Drama|Romance
+2521	2589	Hideous Kinky (1998)	Drama
+2522	2590	Jeanne and the Perfect Guy (Jeanne et le garçon formidable) (1998)	Comedy|Romance
+2523	2591	Joyriders, The (1999)	Drama
+2524	2592	Monster, The (Il Mostro) (1994)	Comedy
+2525	2593	Open Your Eyes (Abre los ojos) (1997)	Drama|Romance|Sci-Fi
+2526	2594	Photographer (Fotoamator) (1998)	Documentary
+2527	2595	SLC Punk! (1998)	Comedy|Drama
+2528	2596	Lost & Found (1999)	Comedy|Romance
+2529	2597	Pushing Tin (1999)	Comedy
+2530	2598	Election (1999)	Comedy
+2531	2599	eXistenZ (1999)	Action|Sci-Fi|Thriller
+2532	2600	Little Bit of Soul, A (1998)	Comedy
+2533	2601	Mighty Peking Man (Hsing hsing wang) (1977)	Adventure|Sci-Fi
+2534	2602	Nô (1998)	Drama
+2535	2603	Let it Come Down: The Life of Paul Bowles (1998)	Documentary
+2536	2604	Entrapment (1999)	Crime|Thriller
+2537	2605	Idle Hands (1999)	Comedy|Horror
+2538	2606	Get Real (1998)	Drama
+2539	2607	Heaven (1998)	Thriller
+2540	2608	King of Masks, The (Bian Lian) (1996)	Drama
+2541	2609	Three Seasons (1999)	Drama
+2542	2610	Winslow Boy, The (1998)	Drama
+2543	2611	Mildred Pierce (1945)	Drama
+2544	2612	Night of the Comet (1984)	Action|Horror|Sci-Fi
+2545	2613	Chopping Mall (a.k.a. Killbots) (1986)	Action|Horror|Sci-Fi
+2546	2614	My Science Project (1985)	Adventure|Sci-Fi
+2547	2615	Dick Tracy (1990)	Action|Crime
+2548	2616	Mummy, The (1999)	Action|Adventure|Horror|Thriller
+2549	2617	Castle, The (1997)	Comedy
+2550	2618	Mascara (1999)	Drama
+2551	2619	This Is My Father (1998)	Drama|Romance
+2552	2620	Xiu Xiu: The Sent-Down Girl (Tian yu) (1998)	Drama|Romance
+2553	2621	Midsummer Night's Dream, A (1999)	Comedy|Fantasy
+2554	2622	Trippin' (1999)	Comedy
+2555	2623	After Life (1998)	Drama
+2556	2624	Black Mask (Hak hap) (1996)	Action
+2557	2625	Edge of Seventeen (1998)	Comedy|Drama|Romance
+2558	2626	Endurance (1998)	Documentary|Drama
+2559	2627	Star Wars: Episode I - The Phantom Menace (1999)	Action|Adventure|Fantasy|Sci-Fi
+2560	2628	Love Letter, The (1999)	Comedy|Romance
+2561	2629	Besieged (L' Assedio) (1998)	Drama
+2562	2630	Frogs for Snakes (1998)	Comedy|Film-Noir|Thriller
+2563	2631	Saragossa Manuscript, The (Rekopis znaleziony w Saragossie) (1965)	Drama
+2564	2632	Mummy, The (1932)	Horror|Romance
+2565	2633	Mummy, The (1959)	Horror
+2566	2634	Mummy's Curse, The (1944)	Horror
+2567	2635	Mummy's Ghost, The (1944)	Horror
+2568	2636	Mummy's Hand, The (1940)	Horror
+2569	2637	Mummy's Tomb, The (1942)	Horror
+2570	2638	Mommie Dearest (1981)	Drama
+2571	2639	Superman (1978)	Action|Adventure|Sci-Fi
+2572	2640	Superman II (1980)	Action|Adventure|Sci-Fi
+2573	2641	Superman III (1983)	Action|Adventure|Sci-Fi
+2574	2642	Superman IV: The Quest for Peace (1987)	Action|Adventure|Sci-Fi
+2575	2643	Dracula (1931)	Horror
+2576	2644	Dracula (1958)	Horror
+2577	2645	House of Dracula (1945)	Horror
+2578	2646	House of Frankenstein (1944)	Horror
+2579	2647	Frankenstein (1931)	Horror
+2580	2648	Son of Frankenstein (1939)	Horror
+2581	2649	Ghost of Frankenstein, The (1942)	Horror
+2582	2650	Frankenstein Meets the Wolf Man (1943)	Horror
+2583	2651	Curse of Frankenstein, The (1957)	Horror
+2584	2652	Son of Dracula (1943)	Horror
+2585	2653	Wolf Man, The (1941)	Horror
+2586	2654	Howling II: Your Sister Is a Werewolf (1985)	Horror
+2587	2655	Tarantula (1955)	Horror|Sci-Fi
+2588	2656	Rocky Horror Picture Show, The (1975)	Comedy|Horror|Musical|Sci-Fi
+2589	2657	Flying Saucer, The (1950)	Sci-Fi
+2590	2658	It Came from Hollywood (1982)	Comedy|Documentary
+2591	2659	Thing From Another World, The (1951)	Sci-Fi
+2592	2660	It Came from Outer Space (1953)	Sci-Fi
+2593	2661	War of the Worlds, The (1953)	Action|Sci-Fi|War
+2594	2662	It Came from Beneath the Sea (1955)	Sci-Fi
+2595	2663	Invasion of the Body Snatchers (1956)	Horror|Sci-Fi
+2596	2664	Earth Vs. the Flying Saucers (1956)	Sci-Fi
+2597	2665	It Conquered the World (1956)	Sci-Fi
+2598	2666	Mole People, The (1956)	Sci-Fi
+2599	2667	Swamp Thing (1982)	Horror|Sci-Fi
+2600	2668	Pork Chop Hill (1959)	War
+2601	2669	Run Silent, Run Deep (1958)	War
+2602	2670	Notting Hill (1999)	Comedy|Romance
+2603	2671	Thirteenth Floor, The (1999)	Drama|Sci-Fi|Thriller
+2604	2672	Eternity and a Day (Mia eoniotita ke mia mera ) (1998)	Drama
+2605	2673	Loss of Sexual Innocence, The (1999)	Drama
+2606	2674	Twice Upon a Yesterday (1998)	Comedy|Drama|Romance
+2607	2675	Instinct (1999)	Drama|Thriller
+2608	2676	Buena Vista Social Club (1999)	Documentary
+2609	2677	Desert Blue (1999)	Drama
+2610	2678	Finding North (1999)	Drama|Romance
+2611	2679	Floating (1997)	Drama
+2612	2680	Free Enterprise (1998)	Comedy|Romance|Sci-Fi
+2613	2681	Limbo (1999)	Drama
+2614	2682	Austin Powers: The Spy Who Shagged Me (1999)	Comedy
+2615	2683	Taxman (1999)	Comedy|Drama
+2616	2684	Red Dwarf, The (Le Nain rouge) (1998)	Comedy|Drama
+2617	2685	Red Violin, The (Le Violon rouge) (1998)	Drama|Mystery
+2618	2686	Tarzan (1999)	Animation|Children's
+2619	2687	General's Daughter, The (1999)	Drama|Thriller
+2620	2688	Get Bruce (1999)	Documentary
+2621	2689	Ideal Husband, An (1999)	Comedy
+2622	2690	Legend of 1900, The (Leggenda del pianista sull'oceano) (1998)	Drama
+2623	2691	Run Lola Run (Lola rennt) (1998)	Action|Crime|Romance
+2624	2692	Trekkies (1997)	Documentary
+2625	2693	Big Daddy (1999)	Comedy
+2626	2694	Boys, The (1997)	Drama
+2627	2695	Dinner Game, The (Le Dîner de cons) (1998)	Comedy
+2628	2696	My Son the Fanatic (1998)	Comedy|Drama|Romance
+2629	2697	Zone 39 (1997)	Sci-Fi
+2630	2698	Arachnophobia (1990)	Action|Comedy|Sci-Fi|Thriller
+2631	2699	South Park: Bigger, Longer and Uncut (1999)	Animation|Comedy
+2632	2700	Wild Wild West (1999)	Action|Sci-Fi|Western
+2633	2701	Summer of Sam (1999)	Drama
+2634	2702	Broken Vessels (1998)	Drama
+2635	2703	Lovers on the Bridge, The (Les Amants du Pont-Neuf) (1991)	Drama|Romance
+2636	2704	Late August, Early September (Fin août, début septembre) (1998)	Drama
+2637	2705	American Pie (1999)	Comedy
+2638	2706	Arlington Road (1999)	Thriller
+2639	2707	Autumn Tale, An (Conte d'automne) (1998)	Romance
+2640	2708	Muppets From Space (1999)	Children's|Comedy
+2641	2709	Blair Witch Project, The (1999)	Horror
+2642	2710	My Life So Far (1999)	Drama
+2643	2711	Eyes Wide Shut (1999)	Drama
+2644	2712	Lake Placid (1999)	Horror|Thriller
+2645	2713	Wood, The (1999)	Drama
+2646	2714	Velocity of Gary, The (1998)	Comedy|Romance
+2647	2715	Ghostbusters (1984)	Comedy|Horror
+2648	2716	Ghostbusters II (1989)	Comedy|Horror
+2649	2717	Drop Dead Gorgeous (1999)	Comedy
+2650	2718	Haunting, The (1999)	Horror|Thriller
+2651	2719	Inspector Gadget (1999)	Action|Adventure|Children's|Comedy
+2652	2720	Trick (1999)	Romance
+2653	2721	Deep Blue Sea (1999)	Action|Sci-Fi|Thriller
+2654	2722	Mystery Men (1999)	Action|Adventure|Comedy
+2655	2723	Runaway Bride (1999)	Comedy|Romance
+2656	2724	Twin Falls Idaho (1999)	Drama
+2657	2725	Killing, The (1956)	Crime|Film-Noir
+2658	2726	Killer's Kiss (1955)	Film-Noir
+2659	2727	Spartacus (1960)	Drama
+2660	2728	Lolita (1962)	Drama
+2661	2729	Barry Lyndon (1975)	Drama
+2662	2730	400 Blows, The (Les Quatre cents coups) (1959)	Drama
+2663	2731	Jules and Jim (Jules et Jim) (1961)	Drama
+2664	2732	Vibes (1988)	Adventure|Comedy
+2665	2733	Mosquito Coast, The (1986)	Drama
+2666	2734	Golden Child, The (1986)	Action|Adventure|Comedy
+2667	2735	Brighton Beach Memoirs (1986)	Comedy
+2668	2736	Assassination (1987)	Action
+2669	2737	Crimes of the Heart (1986)	Comedy|Drama
+2670	2738	Color Purple, The (1985)	Drama
+2671	2739	Kindred, The (1986)	Horror
+2672	2740	No Mercy (1986)	Action|Thriller
+2673	2741	Ménage (Tenue de soirée) (1986)	Comedy|Drama
+2674	2742	Native Son (1986)	Drama
+2675	2743	Otello (1986)	Drama
+2676	2744	Mission, The (1986)	Drama
+2677	2745	Little Shop of Horrors (1986)	Comedy|Horror|Musical
+2678	2746	Little Shop of Horrors, The (1960)	Comedy|Horror
+2679	2747	Allan Quartermain and the Lost City of Gold (1987)	Action|Adventure
+2680	2748	Morning After, The (1986)	Drama|Mystery
+2681	2749	Radio Days (1987)	Comedy|Drama
+2682	2750	From the Hip (1987)	Comedy
+2683	2751	Outrageous Fortune (1987)	Comedy|Mystery
+2684	2752	Bedroom Window, The (1987)	Thriller
+2685	2753	Deadtime Stories (1987)	Horror
+2686	2754	Light of Day (1987)	Drama
+2687	2755	Wanted: Dead or Alive (1987)	Action
+2688	2756	Frances (1982)	Drama
+2689	2757	Plenty (1985)	Drama
+2690	2758	Dick (1999)	Comedy
+2691	2759	Gambler, The (A Játékos) (1997)	Drama
+2692	2760	Iron Giant, The (1999)	Animation|Children's
+2693	2761	Sixth Sense, The (1999)	Thriller
+2694	2762	Thomas Crown Affair, The (1999)	Action|Thriller
+2695	2763	Thomas Crown Affair, The (1968)	Crime|Drama|Thriller
+2696	2764	Acid House, The (1998)	Comedy|Drama
+2697	2765	Adventures of Sebastian Cole, The (1998)	Comedy|Drama
+2698	2766	Illuminata (1998)	Comedy
+2699	2767	Stiff Upper Lips (1998)	Comedy
+2700	2768	Yards, The (1999)	Crime|Mystery
+2701	2769	Bowfinger (1999)	Comedy
+2702	2770	Brokedown Palace (1999)	Drama
+2703	2771	Detroit Rock City (1999)	Comedy
+2704	2772	Alice and Martin (Alice et Martin) (1998)	Drama
+2705	2773	Better Than Chocolate (1999)	Comedy|Romance
+2706	2774	Head On (1998)	Drama
+2707	2775	Marcello Mastroianni: I Remember Yes, I Remember (1997)	Documentary
+2708	2776	Cobra (1925)	Drama
+2709	2777	Never Talk to Strangers (1995)	Thriller
+2710	2778	Heaven Can Wait (1978)	Comedy
+2711	2779	Raven, The (1963)	Comedy|Horror
+2712	2780	Tingler, The (1959)	Horror
+2713	2781	Pit and the Pendulum (1961)	Horror
+2714	2782	Tomb of Ligeia, The (1965)	Horror
+2715	2783	Masque of the Red Death, The (1964)	Horror
+2716	2784	Tales of Terror (1962)	Horror
+2717	2785	Haunted Honeymoon (1986)	Comedy
+2718	2786	Cat's Eye (1985)	Horror
+2719	2787	And Now for Something Completely Different (1971)	Comedy
+2720	2788	Damien: Omen II (1978)	Horror
+2721	2789	Final Conflict, The (a.k.a. Omen III: The Final Conflict) (1981)	Horror
+2722	2790	Airplane! (1980)	Comedy
+2723	2791	Airplane II: The Sequel (1982)	Comedy
+2724	2792	American Werewolf in Paris, An (1997)	Comedy|Horror
+2725	2793	European Vacation (1985)	Comedy
+2726	2794	Vacation (1983)	Comedy
+2727	2795	Funny Farm (1988)	Comedy
+2728	2796	Big (1988)	Comedy|Fantasy
+2729	2797	Problem Child (1990)	Comedy
+2730	2798	Problem Child 2 (1991)	Comedy
+2731	2799	Little Nemo: Adventures in Slumberland (1992)	Animation|Children's
+2732	2800	Oscar and Lucinda (a.k.a. Oscar & Lucinda) (1997)	Drama|Romance
+2733	2801	Tequila Sunrise (1988)	Action|Romance|Thriller
+2734	2802	Pelican Brief, The (1993)	Thriller
+2735	2803	Christmas Story, A (1983)	Comedy|Drama
+2736	2804	Mickey Blue Eyes (1999)	Comedy|Romance
+2737	2805	Teaching Mrs. Tingle (1999)	Comedy|Thriller
+2738	2806	Universal Soldier: The Return (1999)	Action|Sci-Fi
+2739	2807	Universal Soldier (1992)	Action|Sci-Fi
+2740	2808	Love Stinks (1999)	Comedy
+2741	2809	Perfect Blue (1997)	Animation|Mystery
+2742	2810	With Friends Like These... (1998)	Comedy
+2743	2811	In Too Deep (1999)	Action|Thriller
+2744	2812	Source, The (1999)	Documentary
+2745	2813	Bat, The (1959)	Horror
+2746	2814	Iron Eagle (1986)	Action|War
+2747	2815	Iron Eagle II (1988)	Action|War
+2748	2816	Aces: Iron Eagle III (1992)	Action|War
+2749	2817	Iron Eagle IV (1995)	Action|War
+2750	2818	Three Days of the Condor (1975)	Thriller
+2751	2819	Hamlet (1964)	Drama
+2752	2820	Male and Female (1919)	Adventure|Drama
+2753	2821	Medicine Man (1992)	Adventure|Romance
+2754	2822	Spiders, The (Die Spinnen, 1. Teil: Der Goldene See) (1919)	Action|Drama
+2755	2823	On the Ropes (1999)	Documentary
+2756	2824	Rosie (1998)	Drama
+2757	2825	13th Warrior, The (1999)	Action|Horror|Thriller
+2758	2826	Astronaut's Wife, The (1999)	Sci-Fi|Thriller
+2759	2827	Dudley Do-Right (1999)	Children's|Comedy
+2760	2828	Muse, The (1999)	Comedy|Drama
+2761	2829	Cabaret Balkan (Bure Baruta) (1998)	Drama
+2762	2830	Dog of Flanders, A (1999)	Drama
+2763	2831	Lost Son, The (1999)	Drama
+2764	2832	Lucie Aubrac (1997)	Romance|War
+2765	2833	Very Thought of You, The (1998)	Comedy|Romance
+2766	2834	Chill Factor (1999)	Action|Thriller
+2767	2835	Outside Providence (1999)	Comedy
+2768	2836	Bedrooms & Hallways (1998)	Comedy|Romance
+2769	2837	I Woke Up Early the Day I Died (1998)	Comedy
+2770	2838	West Beirut (West Beyrouth) (1998)	Drama
+2771	2839	Stigmata (1999)	Thriller
+2772	2840	Stir of Echoes (1999)	Thriller
+2773	2841	Best Laid Plans (1999)	Crime|Drama
+2774	2842	Black Cat, White Cat (Crna macka, beli macor) (1998)	Comedy|Romance
+2775	2843	Minus Man, The (1999)	Drama|Mystery
+2776	2844	White Boys (1999)	Drama
+2777	2845	Adventures of Milo and Otis, The (1986)	Children's
+2778	2846	Only Angels Have Wings (1939)	Drama
+2779	2847	Othello (1952)	Drama
+2780	2848	Queens Logic (1991)	Comedy|Drama
+2781	2849	Public Access (1993)	Drama|Thriller
+2782	2850	Saturn 3 (1979)	Adventure|Sci-Fi|Thriller
+2783	2851	Soldier's Story, A (1984)	Drama
+2784	2852	Communion (a.k.a. Alice, Sweet Alice/Holy Terror) (1977)	Horror
+2785	2853	Don't Look in the Basement! (1973)	Horror
+2786	2854	Nightmares (1983)	Horror
+2787	2855	I Saw What You Did (1965)	Thriller
+2788	2856	Yellow Submarine (1968)	Animation|Musical
+2789	2857	American Beauty (1999)	Comedy|Drama
+2790	2858	Stop Making Sense (1984)	Documentary
+2791	2859	Blue Streak (1999)	Comedy
+2792	2860	For Love of the Game (1999)	Comedy|Drama
+2793	2861	Caligula (1980)	Drama
+2794	2862	Hard Day's Night, A (1964)	Comedy|Musical
+2795	2863	Splendor (1999)	Comedy
+2796	2864	Sugar Town (1999)	Comedy
+2797	2865	Buddy Holly Story, The (1978)	Drama
+2798	2866	Fright Night (1985)	Comedy|Horror
+2799	2867	Fright Night Part II (1989)	Horror
+2800	2868	Separation, The (La Séparation) (1994)	Drama
+2801	2869	Barefoot in the Park (1967)	Comedy
+2802	2870	Deliverance (1972)	Adventure|Thriller
+2803	2871	Excalibur (1981)	Action|Drama|Fantasy|Romance
+2804	2872	Lulu on the Bridge (1998)	Drama|Mystery|Romance
+2805	2873	Pajama Game, The (1957)	Comedy
+2806	2874	Sommersby (1993)	Drama|Mystery|Romance
+2807	2875	Thumbelina (1994)	Animation|Children's
+2808	2876	Tommy (1975)	Drama|Musical
+2809	2877	Hell Night (1981)	Horror
+2810	2878	Operation Condor (Feiying gaiwak) (1990)	Action|Adventure|Comedy
+2811	2879	Operation Condor 2 (Longxiong hudi) (1990)	Action|Adventure|Comedy
+2812	2880	Double Jeopardy (1999)	Action|Thriller
+2813	2881	Jakob the Liar (1999)	Drama
+2814	2882	Mumford (1999)	Comedy
+2815	2883	Dog Park (1998)	Comedy|Romance
+2816	2884	Guinevere (1999)	Drama|Romance
+2817	2885	Adventures of Elmo in Grouchland, The (1999)	Children's|Comedy
+2818	2886	Simon Sez (1999)	Drama
+2819	2887	Drive Me Crazy (1999)	Comedy|Romance
+2820	2888	Mystery, Alaska (1999)	Comedy
+2821	2889	Three Kings (1999)	Drama|War
+2822	2890	Happy, Texas (1999)	Comedy
+2823	2891	New Rose Hotel (1998)	Action|Drama
+2824	2892	Plunkett & MaCleane (1999)	Action|Drama
+2825	2893	Romance (1999)	Drama|Romance
+2826	2894	Napoleon and Samantha (1972)	Adventure
+2827	2895	Alvarez Kelly (1966)	Western
+2828	2896	And the Ship Sails On (E la nave va) (1984)	Comedy|War
+2829	2897	Dark Half, The (1993)	Horror|Mystery
+2830	2898	Gulliver's Travels (1939)	Adventure|Animation|Children's
+2831	2899	Monkey Shines (1988)	Horror|Sci-Fi
+2832	2900	Phantasm (1979)	Horror|Sci-Fi
+2833	2901	Psycho II (1983)	Horror|Thriller
+2834	2902	Psycho III (1986)	Horror|Thriller
+2835	2903	Rain (1932)	Drama
+2836	2904	Sanjuro (1962)	Action|Adventure
+2837	2905	Random Hearts (1999)	Drama|Romance
+2838	2906	Superstar (1999)	Comedy
+2839	2907	Boys Don't Cry (1999)	Drama
+2840	2908	Five Wives, Three Secretaries and Me (1998)	Documentary
+2841	2909	Ennui, L' (1998)	Drama|Romance
+2842	2910	Grandfather, The (El Abuelo) (1998)	Drama
+2843	2911	Limey, The (1999)	Action|Crime|Drama
+2844	2912	Mating Habits of the Earthbound Human, The (1998)	Comedy
+2845	2913	Molly (1999)	Comedy|Drama
+2846	2914	Risky Business (1983)	Comedy
+2847	2915	Total Recall (1990)	Action|Adventure|Sci-Fi|Thriller
+2848	2916	Body Heat (1981)	Crime|Thriller
+2849	2917	Ferris Bueller's Day Off (1986)	Comedy
+2850	2918	Year of Living Dangerously (1982)	Drama|Romance
+2851	2919	Children of Paradise (Les enfants du paradis) (1945)	Drama|Romance
+2852	2920	High Plains Drifter (1972)	Western
+2853	2921	Hang 'em High (1967)	Western
+2854	2922	Citizen's Band (a.k.a. Handle with Care) (1977)	Comedy
+2855	2923	Drunken Master (Zui quan) (1979)	Action|Comedy
+2856	2924	Conformist, The (Il Conformista) (1970)	Drama
+2857	2925	Hairspray (1988)	Comedy|Drama
+2858	2926	Brief Encounter (1946)	Drama|Romance
+2859	2927	Razor's Edge, The (1984)	Drama
+2860	2928	Reds (1981)	Drama
+2861	2929	Return with Honor (1998)	Documentary
+2862	2930	Time of the Gypsies (Dom za vesanje) (1989)	Drama
+2863	2931	Days of Heaven (1978)	Drama
+2864	2932	Fire Within, The (Le Feu Follet) (1963)	Drama
+2865	2933	Love Bewitched, A (El Amor Brujo) (1986)	Musical
+2866	2934	Lady Eve, The (1941)	Comedy|Romance
+2867	2935	Sullivan's Travels (1942)	Comedy
+2868	2936	Palm Beach Story, The (1942)	Comedy
+2869	2937	Man Facing Southeast (Hombre Mirando al Sudeste) (1986)	Drama
+2870	2938	Niagara (1953)	Drama|Thriller
+2871	2939	Gilda (1946)	Film-Noir
+2872	2940	South Pacific (1958)	Musical|Romance|War
+2873	2941	Flashdance (1983)	Drama|Romance
+2874	2942	Indochine (1992)	Drama|Romance
+2875	2943	Dirty Dozen, The (1967)	Action|War
+2876	2944	Mike's Murder (1984)	Mystery
+2877	2945	Help! (1965)	Comedy|Musical
+2878	2946	Goldfinger (1964)	Action
+2879	2947	From Russia with Love (1963)	Action
+2880	2948	Dr. No (1962)	Action
+2881	2949	Blue Lagoon, The (1980)	Adventure|Drama|Romance
+2882	2950	Fistful of Dollars, A (1964)	Action|Western
+2883	2951	Hard 8 (a.k.a. Sydney, a.k.a. Hard Eight) (1996)	Crime|Thriller
+2884	2952	Home Alone 2: Lost in New York (1992)	Children's|Comedy
+2885	2953	Penitentiary (1979)	Drama
+2886	2954	Penitentiary II (1982)	Drama
+2887	2955	Someone to Watch Over Me (1987)	Action|Crime|Thriller
+2888	2956	Sparrows (1926)	Drama
+2889	2957	Naturally Native (1998)	Drama
+2890	2958	Fight Club (1999)	Drama
+2891	2959	Beefcake (1999)	Drama
+2892	2960	Story of Us, The (1999)	Comedy|Drama
+2893	2961	Fever Pitch (1997)	Comedy|Romance
+2894	2962	Joe the King (1999)	Crime|Drama
+2895	2963	Julien Donkey-Boy (1999)	Drama
+2896	2964	Omega Code, The (1999)	Action
+2897	2965	Straight Story, The (1999)	Drama
+2898	2966	Bad Seed, The (1956)	Drama|Thriller
+2899	2967	Time Bandits (1981)	Adventure|Fantasy|Sci-Fi
+2900	2968	Man and a Woman, A (Un Homme et une Femme) (1966)	Drama|Romance
+2901	2969	Fitzcarraldo (1982)	Adventure|Drama
+2902	2970	All That Jazz (1979)	Musical
+2903	2971	Red Sorghum (Hong Gao Liang) (1987)	Drama|War
+2904	2972	Crimes and Misdemeanors (1989)	Comedy
+2905	2973	Bats (1999)	Horror|Thriller
+2906	2974	Best Man, The (1999)	Drama
+2907	2975	Bringing Out the Dead (1999)	Drama|Horror
+2908	2976	Crazy in Alabama (1999)	Comedy|Drama
+2909	2977	Three to Tango (1999)	Comedy|Romance
+2910	2978	Body Shots (1999)	Drama
+2911	2979	Men Cry Bullets (1997)	Drama
+2912	2980	Brother, Can You Spare a Dime? (1975)	Documentary
+2913	2981	Guardian, The (1990)	Horror|Thriller
+2914	2982	Ipcress File, The (1965)	Thriller
+2915	2983	On Any Sunday (1971)	Documentary
+2916	2984	Robocop (1987)	Action|Crime|Sci-Fi
+2917	2985	Robocop 2 (1990)	Action|Crime|Sci-Fi
+2918	2986	Who Framed Roger Rabbit? (1988)	Adventure|Animation|Film-Noir
+2919	2987	Melvin and Howard (1980)	Drama
+2920	2988	For Your Eyes Only (1981)	Action
+2921	2989	Licence to Kill (1989)	Action
+2922	2990	Live and Let Die (1973)	Action
+2923	2991	Rawhead Rex (1986)	Horror|Thriller
+2924	2992	Thunderball (1965)	Action
+2925	2993	City, The (1998)	Drama
+2926	2994	House on Haunted Hill, The (1999)	Horror
+2927	2995	Music of the Heart (1999)	Drama
+2928	2996	Being John Malkovich (1999)	Comedy
+2929	2997	Dreaming of Joseph Lees (1998)	Romance
+2930	2998	Man of the Century (1999)	Comedy
+2931	2999	Princess Mononoke, The (Mononoke Hime) (1997)	Action|Adventure|Animation
+2932	3000	Suburbans, The (1999)	Drama
+2933	3001	My Best Fiend (Mein liebster Feind) (1999)	Documentary
+2934	3002	Train of Life (Train De Vie) (1998)	Comedy|Drama
+2935	3003	Bachelor, The (1999)	Comedy|Romance
+2936	3004	Bone Collector, The (1999)	Thriller
+2937	3005	Insider, The (1999)	Drama
+2938	3006	American Movie (1999)	Documentary
+2939	3007	Last Night (1998)	Thriller
+2940	3008	Portraits Chinois (1996)	Drama
+2941	3009	Rosetta (1999)	Drama
+2942	3010	They Shoot Horses, Don't They? (1969)	Drama
+2943	3011	Battling Butler (1926)	Comedy
+2944	3012	Bride of Re-Animator (1990)	Comedy|Horror
+2945	3013	Bustin' Loose (1981)	Comedy
+2946	3014	Coma (1978)	Thriller
+2947	3015	Creepshow (1982)	Horror
+2948	3016	Creepshow 2 (1987)	Horror
+2949	3017	Re-Animator (1985)	Horror
+2950	3018	Drugstore Cowboy (1989)	Crime|Drama
+2951	3019	Falling Down (1993)	Action|Drama
+2952	3020	Funhouse, The (1981)	Horror
+2953	3021	General, The (1927)	Comedy
+2954	3022	My Best Girl (1927)	Comedy|Romance
+2955	3023	Piranha (1978)	Horror|Sci-Fi
+2956	3024	Rough Night in Jericho (1967)	Western
+2957	3025	Slaughterhouse (1987)	Horror
+2958	3026	Slaughterhouse 2 (1988)	Horror
+2959	3027	Taming of the Shrew, The (1967)	Comedy
+2960	3028	Nighthawks (1981)	Action|Drama
+2961	3029	Yojimbo (1961)	Comedy|Drama|Western
+2962	3030	Repossessed (1990)	Comedy
+2963	3031	Omega Man, The (1971)	Sci-Fi
+2964	3032	Spaceballs (1987)	Comedy|Sci-Fi
+2965	3033	Robin Hood (1973)	Animation|Children's
+2966	3034	Mister Roberts (1955)	Comedy|Drama|War
+2967	3035	Quest for Fire (1981)	Adventure
+2968	3036	Little Big Man (1970)	Comedy|Drama|Western
+2969	3037	Face in the Crowd, A (1957)	Drama
+2970	3038	Trading Places (1983)	Comedy
+2971	3039	Meatballs (1979)	Comedy
+2972	3040	Meatballs Part II (1984)	Comedy
+2973	3041	Meatballs III (1987)	Comedy
+2974	3042	Meatballs 4 (1992)	Comedy
+2975	3043	Dead Again (1991)	Mystery|Romance|Thriller
+2976	3044	Peter's Friends (1992)	Comedy|Drama
+2977	3045	Incredibly True Adventure of Two Girls in Love, The (1995)	Comedy|Romance
+2978	3046	Experience Preferred... But Not Essential (1982)	Drama
+2979	3047	Under the Rainbow (1981)	Comedy
+2980	3048	How I Won the War (1967)	Comedy|War
+2981	3049	Light It Up (1999)	Drama
+2982	3050	Anywhere But Here (1999)	Drama
+2983	3051	Dogma (1999)	Comedy
+2984	3052	Messenger: The Story of Joan of Arc, The (1999)	Drama|War
+2985	3053	Pokémon: The First Movie (1998)	Animation|Children's
+2986	3054	Felicia's Journey (1999)	Thriller
+2987	3055	Oxygen (1999)	Thriller
+2988	3056	Where's Marlowe? (1999)	Comedy
+2989	3057	Ape, The (1940)	Horror|Sci-Fi
+2990	3058	British Intelligence (1940)	Drama
+2991	3059	Commitments, The (1991)	Comedy|Drama
+2992	3060	Holiday Inn (1942)	Comedy|Musical
+2993	3061	Longest Day, The (1962)	Action|Drama|War
+2994	3062	Poison Ivy (1992)	Thriller
+2995	3063	Poison Ivy: New Seduction (1997)	Thriller
+2996	3064	Ten Benny (1997)	Drama
+2997	3065	Tora! Tora! Tora! (1970)	War
+2998	3066	Women on the Verge of a Nervous Breakdown (1988)	Comedy|Drama
+2999	3067	Verdict, The (1982)	Drama
+3000	3068	Effect of Gamma Rays on Man-in-the-Moon Marigolds, The (1972)	Drama
+3001	3069	Adventures of Buckaroo Bonzai Across the 8th Dimension, The (1984)	Adventure|Comedy|Sci-Fi
+3002	3070	Stand and Deliver (1987)	Drama
+3003	3071	Moonstruck (1987)	Comedy
+3004	3072	Sandpiper, The (1965)	Drama|Romance
+3005	3073	Jeremiah Johnson (1972)	Western
+3006	3074	Repulsion (1965)	Thriller
+3007	3075	Irma la Douce (1963)	Comedy
+3008	3076	42 Up (1998)	Documentary
+3009	3077	Liberty Heights (1999)	Drama
+3010	3078	Mansfield Park (1999)	Drama
+3011	3079	Goodbye, 20th Century (Zbogum na dvadesetiot vek) (1998)	Drama|Sci-Fi
+3012	3080	Sleepy Hollow (1999)	Horror|Romance
+3013	3081	World Is Not Enough, The (1999)	Action|Thriller
+3014	3082	All About My Mother (Todo Sobre Mi Madre) (1999)	Comedy|Drama
+3015	3083	Home Page (1999)	Documentary
+3016	3084	Living Dead Girl, The (La Morte Vivante) (1982)	Horror
+3017	3085	March of the Wooden Soldiers (a.k.a. Laurel & Hardy in Toyland) (1934)	Comedy
+3018	3086	Scrooged (1988)	Comedy
+3019	3087	Harvey (1950)	Comedy
+3020	3088	Bicycle Thief, The (Ladri di biciclette) (1948)	Drama
+3021	3089	Matewan (1987)	Drama
+3022	3090	Kagemusha (1980)	Drama|War
+3023	3091	Chushingura (1962)	Drama
+3024	3092	McCabe & Mrs. Miller (1971)	Drama|Western
+3025	3093	Maurice (1987)	Drama|Romance
+3026	3094	Grapes of Wrath, The (1940)	Drama
+3027	3095	My Man Godfrey (1957)	Comedy
+3028	3096	Shop Around the Corner, The (1940)	Comedy|Romance
+3029	3097	Natural, The (1984)	Drama
+3030	3098	Shampoo (1975)	Comedy|Romance
+3031	3099	River Runs Through It, A (1992)	Drama
+3032	3100	Fatal Attraction (1987)	Thriller
+3033	3101	Jagged Edge (1985)	Thriller
+3034	3102	Stanley & Iris (1990)	Drama|Romance
+3035	3103	Midnight Run (1988)	Action|Adventure|Comedy|Crime
+3036	3104	Awakenings (1990)	Drama
+3037	3105	Come See the Paradise (1990)	Drama|Romance
+3038	3106	Backdraft (1991)	Action|Drama
+3039	3107	Fisher King, The (1991)	Comedy|Drama|Romance
+3040	3108	River, The (1984)	Drama
+3041	3109	Country (1984)	Drama
+3042	3110	Places in the Heart (1984)	Drama
+3043	3111	'Night Mother (1986)	Drama
+3044	3112	End of Days (1999)	Action|Thriller
+3045	3113	Toy Story 2 (1999)	Animation|Children's|Comedy
+3046	3114	Flawless (1999)	Drama
+3047	3115	Miss Julie (1999)	Drama
+3048	3116	Ride with the Devil (1999)	Drama|Romance|War
+3049	3117	Tumbleweeds (1999)	Drama
+3050	3118	Bay of Blood (Reazione a catena) (1971)	Horror
+3051	3119	Distinguished Gentleman, The (1992)	Comedy
+3052	3120	Hitch-Hiker, The (1953)	Film-Noir
+3053	3121	Santa Fe Trail (1940)	Drama|Romance|Western
+3054	3122	Spring Fever USA (a.k.a. Lauderdale) (1989)	Comedy
+3055	3123	Agnes Browne (1999)	Comedy|Drama
+3056	3124	End of the Affair, The (1999)	Drama
+3057	3125	End of the Affair, The (1955)	Drama
+3058	3126	Holy Smoke (1999)	Drama
+3059	3127	Map of the World, A (1999)	Drama
+3060	3128	Sweet and Lowdown (1999)	Comedy|Drama
+3061	3129	Bonfire of the Vanities (1990)	Comedy
+3062	3130	Broadway Damage (1997)	Comedy
+3063	3131	Daddy Long Legs (1919)	Comedy
+3064	3132	Go West (1925)	Comedy
+3065	3133	Grand Illusion (Grande illusion, La) (1937)	Drama|War
+3066	3134	Great Santini, The (1979)	Drama
+3067	3135	James Dean Story, The (1957)	Documentary
+3068	3136	Sea Wolves, The (1980)	Action|War
+3069	3137	Stealing Home (1988)	Drama
+3070	3138	Tarzan the Fearless (1933)	Action|Adventure
+3071	3139	Three Ages, The (1923)	Comedy
+3072	3140	Two Jakes, The (1990)	Drama
+3073	3141	U2: Rattle and Hum (1988)	Documentary|Musical
+3074	3142	Hell in the Pacific (1968)	Drama|War
+3075	3143	Glass Bottom Boat, The (1966)	Comedy|Romance
+3076	3144	Cradle Will Rock, The (1999)	Drama
+3077	3145	Deuce Bigalow: Male Gigolo (1999)	Comedy
+3078	3146	Green Mile, The (1999)	Drama|Thriller
+3079	3147	Cider House Rules, The (1999)	Drama
+3080	3148	Diamonds (1999)	Mystery
+3081	3149	War Zone, The (1999)	Drama
+3082	3150	Bat Whispers, The (1930)	Crime|Drama|Mystery
+3083	3151	Last Picture Show, The (1971)	Drama
+3084	3152	7th Voyage of Sinbad, The (1958)	Action|Adventure|Fantasy
+3085	3153	Blood on the Sun (1945)	Drama|War
+3086	3154	Anna and the King (1999)	Drama|Romance
+3087	3155	Bicentennial Man (1999)	Comedy|Drama|Sci-Fi
+3088	3156	Stuart Little (1999)	Children's|Comedy
+3089	3157	Emperor and the Assassin, The (Jing ke ci qin wang) (1999)	Drama
+3090	3158	Fantasia 2000 (1999)	Animation|Children's|Musical
+3091	3159	Magnolia (1999)	Drama
+3092	3160	Onegin (1999)	Drama
+3093	3161	Simpatico (1999)	Comedy|Drama
+3094	3162	Topsy-Turvy (1999)	Drama
+3095	3163	Alley Cats, The (1968)	Drama
+3096	3164	Boiling Point (1993)	Action|Drama
+3097	3165	Brenda Starr (1989)	Adventure
+3098	3166	Carnal Knowledge (1971)	Drama
+3099	3167	Easy Rider (1969)	Adventure|Drama
+3100	3168	Falcon and the Snowman, The (1984)	Drama
+3101	3169	Hi-Yo Silver (1940)	Western
+3102	3170	Room at the Top (1959)	Drama
+3103	3171	Ulysses (Ulisse) (1954)	Adventure
+3104	3172	Any Given Sunday (1999)	Drama
+3105	3173	Man on the Moon (1999)	Comedy|Drama
+3106	3174	Galaxy Quest (1999)	Adventure|Comedy|Sci-Fi
+3107	3175	Talented Mr. Ripley, The (1999)	Drama|Mystery|Thriller
+3108	3176	Next Friday (1999)	Comedy
+3109	3177	Hurricane, The (1999)	Drama
+3110	3178	Angela's Ashes (1999)	Drama
+3111	3179	Play it to the Bone (1999)	Comedy|Drama
+3112	3180	Titus (1999)	Drama
+3113	3181	Mr. Death: The Rise and Fall of Fred A. Leuchter Jr. (1999)	Documentary
+3114	3182	Third Miracle, The (1999)	Drama
+3115	3183	Montana (1998)	Action|Comedy|Crime|Drama
+3116	3184	Snow Falling on Cedars (1999)	Drama
+3117	3185	Girl, Interrupted (1999)	Drama
+3118	3186	Trans (1998)	Drama
+3119	3187	Life and Times of Hank Greenberg, The (1998)	Documentary
+3120	3188	My Dog Skip (1999)	Comedy
+3121	3189	Supernova (2000)	Adventure|Sci-Fi
+3122	3190	Quarry, The (1998)	Drama
+3123	3191	Terrorist, The (Malli) (1998)	Drama
+3124	3192	Creature (1999)	Documentary
+3125	3193	Way We Were, The (1973)	Drama
+3126	3194	Tess of the Storm Country (1922)	Drama
+3127	3195	Stalag 17 (1953)	Drama|War
+3128	3196	Presidio, The (1988)	Action
+3129	3197	Papillon (1973)	Drama
+3130	3198	Pal Joey (1957)	Comedy|Musical|Romance
+3131	3199	Last Detail, The (1973)	Comedy|Drama
+3132	3200	Five Easy Pieces (1970)	Drama
+3133	3201	Even Dwarfs Started Small (Auch Zwerge haben klein angefangen) (1971)	Drama
+3134	3202	Dead Calm (1989)	Thriller
+3135	3203	Boys from Brazil, The (1978)	Thriller
+3136	3204	Black Sunday (La Maschera Del Demonio) (1960)	Horror
+3137	3205	Against All Odds (1984)	Romance
+3138	3206	Snows of Kilimanjaro, The (1952)	Adventure
+3139	3207	Loaded Weapon 1 (1993)	Action|Comedy
+3140	3208	Loves of Carmen, The (1948)	Drama
+3141	3209	Fast Times at Ridgemont High (1982)	Comedy
+3142	3210	Cry in the Dark, A (1988)	Drama
+3143	3211	Born to Win (1971)	Drama
+3144	3212	Batman: Mask of the Phantasm (1993)	Animation|Children's
+3145	3213	American Flyers (1985)	Drama
+3146	3214	Voyage of the Damned (1976)	Drama
+3147	3215	Vampyros Lesbos (Las Vampiras) (1970)	Horror
+3148	3216	Star Is Born, A (1937)	Drama
+3149	3217	Poison (1991)	Drama
+3150	3218	Pacific Heights (1990)	Thriller
+3151	3219	Night Tide (1961)	Drama
+3152	3220	Draughtsman's Contract, The (1982)	Drama
+3153	3221	Carmen (1984)	Drama
+3154	3222	Zed & Two Noughts, A (1985)	Drama
+3155	3223	Woman in the Dunes (Suna no onna) (1964)	Drama
+3156	3224	Down to You (2000)	Comedy|Romance
+3157	3225	Hellhounds on My Trail (1999)	Documentary
+3158	3226	Not Love, Just Frenzy (Más que amor, frenesí) (1996)	Comedy|Drama|Thriller
+3159	3227	Wirey Spindell (1999)	Comedy
+3160	3228	Another Man's Poison (1952)	Crime|Drama
+3161	3229	Odessa File, The (1974)	Thriller
+3162	3230	Saphead, The (1920)	Comedy
+3163	3231	Seven Chances (1925)	Comedy
+3164	3232	Smashing Time (1967)	Comedy
+3165	3233	Train Ride to Hollywood (1978)	Comedy
+3166	3234	Where the Buffalo Roam (1980)	Comedy
+3167	3235	Zachariah (1971)	Western
+3168	3236	Kestrel's Eye (Falkens öga) (1998)	Documentary
+3169	3237	Eye of the Beholder (1999)	Thriller
+3170	3238	Isn't She Great? (2000)	Comedy
+3171	3239	Big Tease, The (1999)	Comedy
+3172	3240	Cup, The (Phörpa) (1999)	Comedy
+3173	3241	Santitos (1997)	Comedy
+3174	3242	Encino Man (1992)	Comedy
+3175	3243	Goodbye Girl, The (1977)	Comedy|Romance
+3176	3244	I Am Cuba (Soy Cuba/Ya Kuba) (1964)	Drama
+3177	3245	Malcolm X (1992)	Drama
+3178	3246	Sister Act (1992)	Comedy|Crime
+3179	3247	Sister Act 2: Back in the Habit (1993)	Comedy
+3180	3248	Hand That Rocks the Cradle, The (1992)	Thriller
+3181	3249	Alive (1993)	Drama
+3182	3250	Agnes of God (1985)	Drama|Mystery
+3183	3251	Scent of a Woman (1992)	Drama
+3184	3252	Wayne's World (1992)	Comedy
+3185	3253	Wayne's World 2 (1993)	Comedy
+3186	3254	League of Their Own, A (1992)	Comedy|Drama
+3187	3255	Patriot Games (1992)	Action|Thriller
+3188	3256	Bodyguard, The (1992)	Action|Drama|Romance|Thriller
+3189	3257	Death Becomes Her (1992)	Comedy
+3190	3258	Far and Away (1992)	Drama|Romance
+3191	3259	Howards End (1992)	Drama
+3192	3260	Singles (1992)	Comedy|Drama|Romance
+3193	3261	Twin Peaks: Fire Walk with Me (1992)	Drama|Mystery
+3194	3262	White Men Can't Jump (1992)	Comedy
+3195	3263	Buffy the Vampire Slayer (1992)	Comedy|Horror
+3196	3264	Hard-Boiled (Lashou shentan) (1992)	Action|Crime
+3197	3265	Man Bites Dog (C'est arrivé près de chez vous) (1992)	Action|Comedy|Crime|Drama
+3198	3266	Mariachi, El (1992)	Action|Thriller
+3199	3267	Stop! Or My Mom Will Shoot (1992)	Action|Comedy
+3200	3268	Forever Young (1992)	Adventure|Romance|Sci-Fi
+3201	3269	Cutting Edge, The (1992)	Drama
+3202	3270	Of Mice and Men (1992)	Drama
+3203	3271	Bad Lieutenant (1992)	Crime|Drama
+3204	3272	Scream 3 (2000)	Horror|Mystery|Thriller
+3205	3273	Single White Female (1992)	Action
+3206	3274	Boondock Saints, The (1999)	Action|Comedy
+3207	3275	Gun Shy (2000)	Comedy
+3208	3276	Beloved/Friend (Amigo/Amado) (1999)	Drama
+3209	3277	Gendernauts (1999)	Documentary
+3210	3278	Knockout (1999)	Action|Adventure
+3211	3279	Baby, The (1973)	Horror
+3212	3280	Brandon Teena Story, The (1998)	Documentary
+3213	3281	Different for Girls (1996)	Comedy
+3214	3282	Minnie and Moskowitz (1971)	Action
+3215	3283	They Might Be Giants (1971)	Comedy|Romance
+3216	3284	Beach, The (2000)	Adventure|Drama
+3217	3285	Snow Day (2000)	Comedy
+3218	3286	Tigger Movie, The (2000)	Animation|Children's
+3219	3287	Cotton Mary (1999)	Drama
+3220	3288	Not One Less (Yi ge dou bu neng shao) (1999)	Drama
+3221	3289	Soft Toilet Seats (1999)	Comedy
+3222	3290	Trois (2000)	Thriller
+3223	3291	Big Combo, The (1955)	Film-Noir
+3224	3292	Conceiving Ada (1997)	Drama|Sci-Fi
+3225	3293	Eaten Alive (1976)	Horror
+3226	3294	Raining Stones (1993)	Drama
+3227	3295	To Sir with Love (1967)	Drama
+3228	3296	With Byrd at the South Pole (1930)	Documentary
+3229	3297	Boiler Room (2000)	Drama
+3230	3298	Hanging Up (2000)	Comedy|Drama
+3231	3299	Pitch Black (2000)	Action|Sci-Fi
+3232	3300	Whole Nine Yards, The (2000)	Comedy|Crime
+3233	3301	Beautiful People (1999)	Comedy
+3234	3302	Black Tar Heroin: The Dark End of the Street (1999)	Documentary
+3235	3303	Blue Collar (1978)	Crime|Drama
+3236	3304	Bluebeard (1944)	Film-Noir|Horror
+3237	3305	Circus, The (1928)	Comedy
+3238	3306	City Lights (1931)	Comedy|Drama|Romance
+3239	3307	Flamingo Kid, The (1984)	Comedy|Drama
+3240	3308	Dog's Life, A (1920)	Comedy
+3241	3309	Kid, The (1921)	Action
+3242	3310	Man from Laramie, The (1955)	Western
+3243	3311	McCullochs, The (1975)	Drama
+3244	3312	Class Reunion (1982)	Comedy
+3245	3313	Big Trees, The (1952)	Action|Drama
+3246	3314	Happy Go Lovely (1951)	Musical
+3247	3315	Reindeer Games (2000)	Action|Thriller
+3248	3316	Wonder Boys (2000)	Comedy|Drama
+3249	3317	Deterrence (1998)	Thriller
+3250	3318	Judy Berlin (1999)	Drama
+3251	3319	Mifune (Mifunes sidste sang) (1999)	Comedy|Romance
+3252	3320	Waiting Game, The (2000)	Comedy
+3253	3321	3 Strikes (2000)	Comedy
+3254	3322	Chain of Fools (2000)	Comedy|Crime
+3255	3323	Drowning Mona (2000)	Comedy
+3256	3324	Next Best Thing, The (2000)	Comedy|Drama
+3257	3325	What Planet Are You From? (2000)	Comedy|Sci-Fi
+3258	3326	Beyond the Mat (2000)	Documentary
+3259	3327	Ghost Dog: The Way of the Samurai (1999)	Crime|Drama
+3260	3328	Year My Voice Broke, The (1987)	Drama
+3261	3329	Splendor in the Grass (1961)	Drama
+3262	3330	My Tutor (1983)	Drama
+3263	3331	Legend of Lobo, The (1962)	Adventure|Children's
+3264	3332	Killing of Sister George, The (1968)	Drama
+3265	3333	Key Largo (1948)	Crime|Drama|Film-Noir|Thriller
+3266	3334	Jail Bait (1954)	Crime|Drama
+3267	3335	It Happened Here (1961)	Drama
+3268	3336	I'll Never Forget What's 'is Name (1967)	Comedy|Drama
+3269	3337	For All Mankind (1989)	Documentary
+3270	3338	Cross of Iron (1977)	War
+3271	3339	Bride of the Monster (1956)	Horror|Sci-Fi
+3272	3340	Born Yesterday (1950)	Comedy
+3273	3341	Birdy (1984)	Drama|War
+3274	3342	And God Created Woman (1988)	Comedy|Drama|Romance
+3275	3343	Blood Feast (1963)	Horror
+3276	3344	Charlie, the Lonesome Cougar (1967)	Adventure|Children's
+3277	3345	Color Me Blood Red (1965)	Horror
+3278	3346	Never Cry Wolf (1983)	Drama
+3279	3347	Night Visitor, The (1970)	Crime|Thriller
+3280	3348	Perils of Pauline, The (1947)	Comedy
+3281	3349	Raisin in the Sun, A (1961)	Drama
+3282	3350	Two Thousand Maniacs! (1964)	Horror
+3283	3351	Brown's Requiem (1998)	Drama
+3284	3352	Closer You Get, The (2000)	Comedy|Romance
+3285	3353	Mission to Mars (2000)	Sci-Fi
+3286	3354	Ninth Gate, The (2000)	Thriller
+3287	3355	Condo Painting (2000)	Documentary
+3288	3356	East-West (Est-ouest) (1999)	Drama|Romance
+3289	3357	Defending Your Life (1991)	Comedy|Romance
+3290	3358	Breaking Away (1979)	Drama
+3291	3359	Hoosiers (1986)	Drama
+3292	3360	Bull Durham (1988)	Comedy
+3293	3361	Dog Day Afternoon (1975)	Comedy|Crime|Drama
+3294	3362	American Graffiti (1973)	Comedy|Drama
+3295	3363	Asphalt Jungle, The (1950)	Crime|Film-Noir
+3296	3364	Searchers, The (1956)	Western
+3297	3365	Where Eagles Dare (1969)	Action|Adventure|War
+3298	3366	Devil's Brigade, The (1968)	War
+3299	3367	Big Country, The (1958)	Romance|Western
+3300	3368	Any Number Can Win (Mélodie en sous-sol ) (1963)	Crime
+3301	3369	Betrayed (1988)	Drama|Thriller
+3302	3370	Bound for Glory (1976)	Drama
+3303	3371	Bridge at Remagen, The (1969)	Action|War
+3304	3372	Buck and the Preacher (1972)	Western
+3305	3373	Daughters of the Dust (1992)	Drama
+3306	3374	Destination Moon (1950)	Sci-Fi
+3307	3375	Fantastic Night, The (La Nuit Fantastique) (1949)	Romance
+3308	3376	Hangmen Also Die (1943)	Drama|War
+3309	3377	Ogre, The (Der Unhold) (1996)	Drama
+3310	3378	On the Beach (1959)	Drama
+3311	3379	Railroaded! (1947)	Film-Noir
+3312	3380	Slaves to the Underground (1997)	Comedy|Drama
+3313	3381	Song of Freedom (1936)	Drama
+3314	3382	Big Fella (1937)	Drama|Musical
+3315	3383	Taking of Pelham One Two Three, The (1974)	Action
+3316	3384	Volunteers (1985)	Comedy
+3317	3385	JFK (1991)	Drama|Mystery
+3318	3386	Who's Harry Crumb? (1989)	Comedy
+3319	3387	Harry and the Hendersons (1987)	Comedy
+3320	3388	Let's Get Harry (1986)	Action|Adventure
+3321	3389	Shanghai Surprise (1986)	Adventure
+3322	3390	Who's That Girl? (1987)	Comedy
+3323	3391	She-Devil (1989)	Comedy
+3324	3392	Date with an Angel (1987)	Comedy|Fantasy
+3325	3393	Blind Date (1987)	Comedy|Romance
+3326	3394	Nadine (1987)	Comedy
+3327	3395	Muppet Movie, The (1979)	Children's|Comedy
+3328	3396	Great Muppet Caper, The (1981)	Children's|Comedy
+3329	3397	Muppets Take Manhattan, The (1984)	Children's|Comedy
+3330	3398	Sesame Street Presents Follow That Bird (1985)	Children's|Comedy
+3331	3399	We're Back! A Dinosaur's Story (1993)	Animation|Children's
+3332	3400	Baby... Secret of the Lost Legend (1985)	Adventure|Sci-Fi
+3333	3401	Turtle Diary (1985)	Drama
+3334	3402	Raise the Titanic (1980)	Drama|Thriller
+3335	3403	Titanic (1953)	Action|Drama
+3336	3404	Night to Remember, A (1958)	Action|Drama
+3337	3405	Captain Horatio Hornblower (1951)	Action|Adventure|War
+3338	3406	Carriers Are Waiting, The (Les Convoyeurs Attendent) (1999)	Comedy|Drama
+3339	3407	Erin Brockovich (2000)	Drama
+3340	3408	Final Destination (2000)	Drama|Thriller
+3341	3409	Soft Fruit (1999)	Comedy|Drama
+3342	3410	Babymother (1998)	Drama
+3343	3411	Bear, The (1988)	Adventure
+3344	3412	Impact (1949)	Crime|Drama
+3345	3413	Love Is a Many-Splendored Thing (1955)	Romance
+3346	3414	Mirror, The (Zerkalo) (1975)	Drama
+3347	3415	Trial, The (Le Procès) (1963)	Drama
+3348	3416	Crimson Pirate, The (1952)	Adventure|Comedy|Sci-Fi
+3349	3417	Thelma & Louise (1991)	Action|Drama
+3350	3418	Something for Everyone (1970)	Comedy|Crime
+3351	3419	...And Justice for All (1979)	Drama|Thriller
+3352	3420	Animal House (1978)	Comedy
+3353	3421	She's Gotta Have It (1986)	Comedy|Romance
+3354	3422	School Daze (1988)	Drama
+3355	3423	Do the Right Thing (1989)	Comedy|Drama
+3356	3424	Mo' Better Blues (1990)	Drama
+3357	3425	Jungle Fever (1991)	Drama|Romance
+3358	3426	Coogan's Bluff (1968)	Crime
+3359	3427	Champ, The (1979)	Drama
+3360	3428	Creature Comforts (1990)	Animation|Comedy
+3361	3429	Death Wish (1974)	Action|Drama
+3362	3430	Death Wish II (1982)	Action|Drama
+3363	3431	Death Wish 3 (1985)	Action|Drama
+3364	3432	Death Wish 4: The Crackdown (1987)	Action|Drama
+3365	3433	Death Wish V: The Face of Death (1994)	Action|Drama
+3366	3434	Double Indemnity (1944)	Crime|Film-Noir
+3367	3435	Dying Young (1991)	Drama|Romance
+3368	3436	Cool as Ice (1991)	Drama
+3369	3437	Teenage Mutant Ninja Turtles (1990)	Action|Children's|Fantasy
+3370	3438	Teenage Mutant Ninja Turtles II: The Secret of the Ooze (1991)	Action|Children's|Fantasy
+3371	3439	Teenage Mutant Ninja Turtles III (1993)	Action|Children's|Fantasy
+3372	3440	Red Dawn (1984)	Action|War
+3373	3441	Band of the Hand (1986)	Action
+3374	3442	Born American (1986)	Action|Drama|Thriller
+3375	3443	Bloodsport (1988)	Action
+3376	3444	Eyes of Laura Mars (1978)	Mystery|Thriller
+3377	3445	Funny Bones (1995)	Comedy
+3378	3446	Good Earth, The (1937)	Drama
+3379	3447	Good Morning, Vietnam (1987)	Comedy|Drama|War
+3380	3448	Good Mother, The (1988)	Drama
+3381	3449	Grumpy Old Men (1993)	Comedy
+3382	3450	Guess Who's Coming to Dinner (1967)	Comedy|Drama
+3383	3451	Romeo Must Die (2000)	Action|Romance
+3384	3452	Here on Earth (2000)	Drama|Romance
+3385	3453	Whatever It Takes (2000)	Comedy|Romance
+3386	3454	Buddy Boy (1999)	Drama|Thriller
+3387	3455	Color of Paradise, The (Rang-e Khoda) (1999)	Drama
+3388	3456	Waking the Dead (1999)	Drama
+3389	3457	Blood and Sand (Sangre y Arena) (1989)	Drama|Romance
+3390	3458	Gothic (1986)	Drama|Horror
+3391	3459	Hillbillys in a Haunted House (1967)	Comedy
+3392	3460	Lord of the Flies (1963)	Adventure|Drama|Thriller
+3393	3461	Modern Times (1936)	Comedy
+3394	3462	Last Resort (1994)	Comedy
+3395	3463	Solar Crisis (1993)	Sci-Fi|Thriller
+3396	3464	That's Life! (1986)	Drama
+3397	3465	Heart and Souls (1993)	Comedy|Fantasy
+3398	3466	Hud (1963)	Drama|Western
+3399	3467	Hustler, The (1961)	Drama
+3400	3468	Inherit the Wind (1960)	Drama
+3401	3469	Dersu Uzala (1974)	Adventure|Drama
+3402	3470	Close Encounters of the Third Kind (1977)	Drama|Sci-Fi
+3403	3471	Horror Hotel (a.k.a. The City of the Dead) (1960)	Horror
+3404	3472	Jonah Who Will Be 25 in the Year 2000 (1976)	Comedy
+3405	3473	Retroactive (1997)	Sci-Fi|Thriller
+3406	3474	Place in the Sun, A (1951)	Drama|Romance
+3407	3475	Jacob's Ladder (1990)	Horror|Mystery|Thriller
+3408	3476	Empire Records (1995)	Comedy|Drama
+3409	3477	Bamba, La (1987)	Drama
+3410	3478	Ladyhawke (1985)	Adventure|Fantasy|Romance
+3411	3479	Lucas (1986)	Drama
+3412	3480	High Fidelity (2000)	Comedy
+3413	3481	Price of Glory (2000)	Drama
+3414	3482	Road to El Dorado, The (2000)	Animation|Children's
+3415	3483	Skulls, The (2000)	Thriller
+3416	3484	Autopsy (Macchie Solari) (1975)	Horror
+3417	3485	Devil Girl From Mars (1954)	Sci-Fi
+3418	3486	Dorado, El (1967)	Western
+3419	3487	Hideous Sun Demon, The (1959)	Horror|Sci-Fi
+3420	3488	Hook (1991)	Adventure|Fantasy
+3421	3489	Horror Express (1972)	Horror
+3422	3490	My Chauffeur (1986)	Comedy
+3423	3491	Son of the Sheik, The (1926)	Adventure
+3424	3492	Torso (Corpi Presentano Tracce di Violenza Carnale) (1973)	Horror
+3425	3493	True Grit (1969)	Adventure|Western
+3426	3494	Roadside Prophets (1992)	Comedy|Drama
+3427	3495	Madame Sousatzka (1988)	Drama
+3428	3496	Max Dugan Returns (1983)	Comedy
+3429	3497	Midnight Express (1978)	Drama
+3430	3498	Misery (1990)	Horror
+3431	3499	Mr. Saturday Night (1992)	Comedy|Drama
+3432	3500	Murphy's Romance (1985)	Comedy|Romance
+3433	3501	My Life (1993)	Drama
+3434	3502	Solaris (Solyaris) (1972)	Drama|Sci-Fi
+3435	3503	Network (1976)	Comedy|Drama
+3436	3504	No Way Out (1987)	Thriller
+3437	3505	North Dallas Forty (1979)	Comedy|Drama
+3438	3506	Odd Couple, The (1968)	Comedy
+3439	3507	Outlaw Josey Wales, The (1976)	Western
+3440	3508	Black and White (1999)	Drama
+3441	3509	Frequency (2000)	Drama|Thriller
+3442	3510	Ready to Rumble (2000)	Comedy
+3443	3511	Return to Me (2000)	Drama|Romance
+3444	3512	Rules of Engagement (2000)	Drama|Thriller
+3445	3513	Joe Gould's Secret (2000)	Drama
+3446	3514	Me Myself I (2000)	Comedy
+3447	3515	Bell, Book and Candle (1958)	Comedy|Romance
+3448	3516	Bells, The (1926)	Crime|Drama
+3449	3517	End of Violence, The (1997)	Drama|Thriller
+3450	3518	Force 10 from Navarone (1978)	Action|War
+3451	3519	How to Stuff a Wild Bikini (1965)	Comedy
+3452	3520	Mystery Train (1989)	Comedy|Crime|Drama
+3453	3521	Sacco and Vanzetti (Sacco e Vanzetti) (1971)	Drama
+3454	3522	Taffin (1988)	Action|Thriller
+3455	3523	Arthur (1981)	Comedy|Romance
+3456	3524	Bachelor Party (1984)	Comedy
+3457	3525	Parenthood (1989)	Comedy|Drama
+3458	3526	Predator (1987)	Action|Sci-Fi|Thriller
+3459	3527	Prince of Tides, The (1991)	Drama|Romance
+3460	3528	Postman Always Rings Twice, The (1981)	Crime|Thriller
+3461	3529	Smoking/No Smoking (1993)	Comedy
+3462	3530	All the Vermeers in New York (1990)	Comedy|Drama|Romance
+3463	3531	Freedom for Us (À nous la liberté ) (1931)	Comedy
+3464	3532	Actor's Revenge, An (Yukinojo Henge) (1963)	Drama
+3465	3533	28 Days (2000)	Comedy
+3466	3534	American Psycho (2000)	Comedy|Horror|Thriller
+3467	3535	Keeping the Faith (2000)	Comedy|Romance
+3468	3536	Where the Money Is (2000)	Comedy|Drama
+3469	3537	East is East (1999)	Comedy
+3470	3538	Filth and the Fury, The (2000)	Documentary
+3471	3539	Passion of Mind (1999)	Romance|Thriller
+3472	3540	Third World Cop (1999)	Action
+3473	3541	Coming Apart (1969)	Drama
+3474	3542	Diner (1982)	Comedy|Drama
+3475	3543	Shakes the Clown (1991)	Comedy
+3476	3544	Cabaret (1972)	Musical|War
+3477	3545	What Ever Happened to Baby Jane? (1962)	Drama|Thriller
+3478	3546	Prick Up Your Ears (1987)	Drama
+3479	3547	Auntie Mame (1958)	Comedy|Drama
+3480	3548	Guys and Dolls (1955)	Musical
+3481	3549	Hunger, The (1983)	Horror
+3482	3550	Marathon Man (1976)	Thriller
+3483	3551	Caddyshack (1980)	Comedy
+3484	3552	Gossip (2000)	Drama|Thriller
+3485	3553	Love and Basketball (2000)	Drama|Romance
+3486	3554	U-571 (2000)	Action|Thriller
+3487	3555	Virgin Suicides, The (1999)	Comedy|Drama
+3488	3556	Jennifer 8 (1992)	Thriller
+3489	3557	Law, The (Le Legge) (1958)	Drama
+3490	3558	Limelight (1952)	Drama
+3491	3559	Phantom Love (Ai No Borei) (1978)	Drama
+3492	3560	Stacy's Knights (1982)	Drama
+3493	3561	Committed (2000)	Comedy|Drama
+3494	3562	Crow: Salvation, The (2000)	Action|Horror
+3495	3563	Flintstones in Viva Rock Vegas, The (2000)	Children's|Comedy
+3496	3564	Where the Heart Is (2000)	Comedy|Drama
+3497	3565	Big Kahuna, The (2000)	Comedy|Drama
+3498	3566	Bossa Nova (1999)	Comedy
+3499	3567	Smiling Fish and Goat on Fire (1999)	Drama
+3500	3568	Idiots, The (Idioterne) (1998)	Comedy|Drama
+3501	3569	Last September, The (1999)	Drama
+3502	3570	Time Code (2000)	Drama
+3503	3571	Carnosaur (1993)	Horror|Sci-Fi
+3504	3572	Carnosaur 2 (1995)	Horror|Sci-Fi
+3505	3573	Carnosaur 3: Primal Species (1996)	Horror|Sci-Fi
+3506	3574	Defying Gravity (1997)	Drama
+3507	3575	Hidden, The (1987)	Action|Horror|Sci-Fi
+3508	3576	Two Moon Juction (1988)	Drama
+3509	3577	Gladiator (2000)	Action|Drama
+3510	3578	I Dreamed of Africa (2000)	Drama
+3511	3579	Up at the Villa (2000)	Drama
+3512	3580	Human Traffic (1999)	Drama
+3513	3581	Jails, Hospitals & Hip-Hop (2000)	Drama
+3514	3582	Black Tights (Les Collants Noirs) (1960)	Drama
+3515	3583	Breathless (1983)	Action|Drama|Romance|Thriller
+3516	3584	Great Locomotive Chase, The (1956)	Adventure|War
+3517	3585	Idolmaker, The (1980)	Drama
+3518	3586	Inferno (1980)	Horror
+3519	3587	King of Marvin Gardens, The (1972)	Crime|Drama
+3520	3588	Kill, Baby... Kill! (Operazione Paura) (1966)	Horror
+3521	3589	Lords of Flatbush, The (1974)	Comedy
+3522	3590	Mr. Mom (1983)	Comedy|Drama
+3523	3591	Time Masters (Les Maîtres du Temps) (1982)	Animation|Sci-Fi
+3524	3592	Battlefield Earth (2000)	Action|Sci-Fi
+3525	3593	Center Stage (2000)	Drama
+3526	3594	Held Up (2000)	Comedy
+3527	3595	Screwed (2000)	Comedy
+3528	3596	Whipped (2000)	Comedy
+3529	3597	Hamlet (2000)	Drama
+3530	3598	Anchors Aweigh (1945)	Comedy|Musical
+3531	3599	Blue Hawaii (1961)	Comedy|Musical
+3532	3600	Castaway Cowboy, The (1974)	Comedy|Western
+3533	3601	G. I. Blues (1960)	Musical
+3534	3602	Gay Deceivers, The (1969)	Comedy
+3535	3603	Gypsy (1962)	Musical
+3536	3604	King Creole (1958)	Drama|Musical
+3537	3605	On the Town (1949)	Musical
+3538	3606	One Little Indian (1973)	Comedy|Drama|Western
+3539	3607	Pee-wee's Big Adventure (1985)	Comedy
+3540	3608	Regret to Inform (1998)	Documentary
+3541	3609	Roustabout (1964)	Musical
+3542	3610	Saludos Amigos (1943)	Animation|Children's|Comedy
+3543	3611	Slipper and the Rose, The (1976)	Adventure|Musical|Romance
+3544	3612	Things Change (1988)	Comedy
+3545	3613	Honeymoon in Vegas (1992)	Comedy|Romance
+3546	3614	Dinosaur (2000)	Animation|Children's
+3547	3615	Loser (2000)	Comedy|Romance
+3548	3616	Road Trip (2000)	Comedy
+3549	3617	Small Time Crooks (2000)	Comedy
+3550	3618	Hollywood Knights, The (1980)	Comedy
+3551	3619	Myth of Fingerprints, The (1997)	Comedy|Drama
+3552	3620	Possession (1981)	Drama|Horror
+3553	3621	Twelve Chairs, The (1970)	Comedy
+3554	3622	Mission: Impossible 2 (2000)	Action|Thriller
+3555	3623	Shanghai Noon (2000)	Action
+3556	3624	Better Living Through Circuitry (1999)	Documentary
+3557	3625	8 1/2 Women (1999)	Comedy
+3558	3626	Carnival of Souls (1962)	Horror|Thriller
+3559	3627	Flying Tigers (1942)	Action|Drama|War
+3560	3628	Gold Rush, The (1925)	Comedy
+3561	3629	House of Exorcism, The (La Casa dell'esorcismo) (1974)	Horror
+3562	3630	It's in the Water (1998)	Comedy
+3563	3631	Monsieur Verdoux (1947)	Comedy
+3564	3632	On Her Majesty's Secret Service (1969)	Action
+3565	3633	Seven Days in May (1964)	Thriller
+3566	3634	Spy Who Loved Me, The (1977)	Action
+3567	3635	Those Who Love Me Can Take the Train (Ceux qui m'aiment prendront le train) (1998)	Drama
+3568	3636	Vagabond (Sans toit ni loi) (1985)	Drama
+3569	3637	Moonraker (1979)	Action|Romance|Sci-Fi
+3570	3638	Man with the Golden Gun, The (1974)	Action
+3571	3639	King in New York, A (1957)	Comedy|Drama
+3572	3640	Woman of Paris, A (1923)	Drama
+3573	3641	In Old California (1942)	Western
+3574	3642	Fighting Seabees, The (1944)	Action|Drama|War
+3575	3643	Dark Command (1940)	Western
+3576	3644	Cleo From 5 to 7 (Cléo de 5 à 7) (1962)	Drama
+3577	3645	Big Momma's House (2000)	Comedy
+3578	3646	Running Free (2000)	Drama
+3579	3647	Abominable Snowman, The (1957)	Horror|Sci-Fi
+3580	3648	American Gigolo (1980)	Drama
+3581	3649	Anguish (Angustia) (1986)	Horror
+3582	3650	Blood Spattered Bride, The (La Novia Ensangrentada) (1972)	Horror
+3583	3651	City of the Living Dead (Paura nella città dei morti viventi) (1980)	Horror
+3584	3652	Endless Summer, The (1966)	Documentary
+3585	3653	Guns of Navarone, The (1961)	Action|Drama|War
+3586	3654	Blow-Out (La Grande Bouffe) (1973)	Drama
+3587	3655	Lured (1947)	Crime
+3588	3656	Pandora and the Flying Dutchman (1951)	Drama
+3589	3657	Quatermass and the Pit (1967)	Sci-Fi
+3590	3658	Quatermass II (1957)	Sci-Fi|Thriller
+3591	3659	Puppet Master (1989)	Horror|Sci-Fi|Thriller
+3592	3660	Puppet Master II (1990)	Horror|Sci-Fi|Thriller
+3593	3661	Puppet Master III: Toulon's Revenge (1991)	Horror|Sci-Fi|Thriller
+3594	3662	Puppet Master 4 (1993)	Horror|Sci-Fi|Thriller
+3595	3663	Puppet Master 5: The Final Chapter (1994)	Horror|Sci-Fi|Thriller
+3596	3664	Curse of the Puppet Master (1998)	Horror|Sci-Fi|Thriller
+3597	3665	Retro Puppetmaster (1999)	Horror|Sci-Fi|Thriller
+3598	3666	Rent-A-Cop (1988)	Action|Comedy
+3599	3667	Romeo and Juliet (1968)	Drama|Romance
+3600	3668	Stay Tuned (1992)	Comedy
+3601	3669	Story of G.I. Joe, The (1945)	War
+3602	3670	Blazing Saddles (1974)	Comedy|Western
+3603	3671	Benji (1974)	Adventure|Children's
+3604	3672	Benji the Hunted (1987)	Adventure|Children's
+3605	3673	For the Love of Benji (1977)	Adventure|Children's
+3606	3674	White Christmas (1954)	Musical
+3607	3675	Eraserhead (1977)	Drama|Horror
+3608	3676	Baraka (1992)	Documentary
+3609	3677	Man with the Golden Arm, The (1955)	Drama
+3610	3678	Decline of Western Civilization, The (1981)	Documentary
+3611	3679	Decline of Western Civilization Part II: The Metal Years, The (1988)	Documentary
+3612	3680	For a Few Dollars More (1965)	Western
+3613	3681	Magnum Force (1973)	Western
+3614	3682	Blood Simple (1984)	Drama|Film-Noir
+3615	3683	Fabulous Baker Boys, The (1989)	Drama|Romance
+3616	3684	Prizzi's Honor (1985)	Comedy|Drama|Romance
+3617	3685	Flatliners (1990)	Thriller
+3618	3686	Light Years (1988)	Sci-Fi
+3619	3687	Porky's (1981)	Comedy
+3620	3688	Porky's II: The Next Day (1983)	Comedy
+3621	3689	Porky's Revenge (1985)	Comedy
+3622	3690	Private School (1983)	Comedy
+3623	3691	Class of Nuke 'Em High (1986)	Comedy|Horror
+3624	3692	Toxic Avenger, The (1985)	Comedy|Horror
+3625	3693	Toxic Avenger, Part II, The (1989)	Comedy|Horror
+3626	3694	Toxic Avenger Part III: The Last Temptation of Toxie, The (1989)	Comedy|Horror
+3627	3695	Night of the Creeps (1986)	Comedy|Horror|Sci-Fi
+3628	3696	Predator 2 (1990)	Action|Sci-Fi|Thriller
+3629	3697	Running Man, The (1987)	Action|Adventure|Sci-Fi
+3630	3698	Starman (1984)	Adventure|Drama|Romance|Sci-Fi
+3631	3699	Brother from Another Planet, The (1984)	Drama|Sci-Fi
+3632	3700	Alien Nation (1988)	Crime|Drama|Sci-Fi
+3633	3701	Mad Max (1979)	Action|Sci-Fi
+3634	3702	Mad Max 2 (a.k.a. The Road Warrior) (1981)	Action|Sci-Fi
+3635	3703	Mad Max Beyond Thunderdome (1985)	Action|Sci-Fi
+3636	3704	Bird on a Wire (1990)	Action|Adventure|Romance|Thriller
+3637	3705	Angel Heart (1987)	Film-Noir|Mystery|Thriller
+3638	3706	Nine 1/2 Weeks (1986)	Drama
+3639	3707	Firestarter (1984)	Horror|Thriller
+3640	3708	Sleepwalkers (1992)	Horror
+3641	3709	Action Jackson (1988)	Action|Comedy
+3642	3710	Sarafina! (1992)	Drama
+3643	3711	Soapdish (1991)	Comedy
+3644	3712	Long Walk Home, The (1990)	Drama
+3645	3713	Clara's Heart (1988)	Drama
+3646	3714	Burglar (1987)	Comedy
+3647	3715	Fatal Beauty (1987)	Action|Crime
+3648	3716	Gone in 60 Seconds (2000)	Action|Crime
+3649	3717	American Pimp (1999)	Documentary
+3650	3718	Love's Labour's Lost (2000)	Comedy|Romance
+3651	3719	Sunshine (1999)	Drama
+3652	3720	Trixie (1999)	Comedy
+3653	3721	Live Virgin (1999)	Comedy
+3654	3722	Hamlet (1990)	Drama
+3655	3723	Coming Home (1978)	Drama|War
+3656	3724	American Pop (1981)	Animation|Musical
+3657	3725	Assault on Precinct 13 (1976)	Action|Thriller
+3658	3726	Near Dark (1987)	Comedy|Horror
+3659	3727	One False Move (1991)	Thriller
+3660	3728	Shaft (1971)	Action|Crime
+3661	3729	Conversation, The (1974)	Drama|Mystery
+3662	3730	Cutter's Way (1981)	Drama|Thriller
+3663	3731	Fury, The (1978)	Horror
+3664	3732	Paper Chase, The (1973)	Drama
+3665	3733	Prince of the City (1981)	Drama
+3666	3734	Serpico (1973)	Crime|Drama
+3667	3735	Big Carnival, The (1951)	Drama
+3668	3736	Lonely Are the Brave (1962)	Drama|Western
+3669	3737	Sugarland Express, The (1974)	Drama
+3670	3738	Trouble in Paradise (1932)	Comedy|Romance
+3671	3739	Big Trouble in Little China (1986)	Action|Comedy
+3672	3740	Badlands (1973)	Crime|Drama
+3673	3741	Battleship Potemkin, The (Bronenosets Potyomkin) (1925)	Drama|War
+3674	3742	Boys and Girls (2000)	Comedy|Romance
+3675	3743	Shaft (2000)	Action|Crime
+3676	3744	Titan A.E. (2000)	Adventure|Animation|Sci-Fi
+3677	3745	Butterfly (La Lengua de las Mariposas) (2000)	Drama|War
+3678	3746	Jesus' Son (1999)	Drama
+3679	3747	Match, The (1999)	Comedy|Romance
+3680	3748	Time Regained (Le Temps Retrouvé) (1999)	Drama
+3681	3749	Boricua's Bond (2000)	Drama
+3682	3750	Chicken Run (2000)	Animation|Children's|Comedy
+3683	3751	Me, Myself and Irene (2000)	Comedy
+3684	3752	Patriot, The (2000)	Action|Drama|War
+3685	3753	Adventures of Rocky and Bullwinkle, The (2000)	Animation|Children's|Comedy
+3686	3754	Perfect Storm, The (2000)	Action|Adventure|Thriller
+3687	3755	Golden Bowl, The (2000)	Drama
+3688	3756	Asylum (1972)	Horror
+3689	3757	Communion (1989)	Drama|Sci-Fi|Thriller
+3690	3758	Fun and Fancy Free (1947)	Animation|Children's|Musical
+3691	3759	Kentucky Fried Movie, The (1977)	Comedy
+3692	3760	Blood In, Blood Out (a.k.a. Bound by Honor) (1993)	Crime|Drama
+3693	3761	Daughter of Dr. Jeckyll (1957)	Horror
+3694	3762	F/X (1986)	Action|Crime|Thriller
+3695	3763	F/X 2 (1992)	Action|Crime|Thriller
+3696	3764	Hot Spot, The (1990)	Drama|Romance
+3697	3765	Missing in Action (1984)	Action|War
+3698	3766	Missing in Action 2: The Beginning (1985)	Action|War
+3699	3767	Braddock: Missing in Action III (1988)	Action|War
+3700	3768	Thunderbolt and Lightfoot (1974)	Action
+3701	3769	Dreamscape (1984)	Adventure|Crime|Sci-Fi|Thriller
+3702	3770	Golden Voyage of Sinbad, The (1974)	Action|Adventure
+3703	3771	Hatchet For the Honeymoon (Rosso Segno Della Follia) (1969)	Horror
+3704	3772	House Party (1990)	Comedy
+3705	3773	House Party 2 (1991)	Comedy
+3706	3774	Make Mine Music (1946)	Animation|Children's|Musical
+3707	3775	Melody Time (1948)	Animation|Children's|Musical
+3708	3776	Nekromantik (1987)	Comedy|Horror
+3709	3777	On Our Merry Way (1948)	Comedy|Drama
+3710	3778	Project Moon Base (1953)	Sci-Fi
+3711	3779	Rocketship X-M (1950)	Sci-Fi
+3712	3780	Shaft in Africa (1973)	Action|Crime
+3713	3781	Shaft's Big Score! (1972)	Action|Crime
+3714	3782	Croupier (1998)	Crime|Drama
+3715	3783	Kid, The (2000)	Comedy
+3716	3784	Scary Movie (2000)	Comedy|Horror
+3717	3785	But I'm a Cheerleader (1999)	Comedy
+3718	3786	Shower (Xizhao) (1999)	Comedy
+3719	3787	Blowup (1966)	Drama|Mystery
+3720	3788	Pawnbroker, The (1965)	Drama
+3721	3789	Groove (2000)	Drama
+3722	3790	Footloose (1984)	Drama
+3723	3791	Duel in the Sun (1946)	Western
+3724	3792	X-Men (2000)	Action|Sci-Fi
+3725	3793	Chuck & Buck (2000)	Comedy|Drama
+3726	3794	Five Senses, The (1999)	Drama
+3727	3795	Wisdom of Crocodiles, The (a.k.a. Immortality) (2000)	Romance|Thriller
+3728	3796	In Crowd, The (2000)	Thriller
+3729	3797	What Lies Beneath (2000)	Thriller
+3730	3798	Pokémon the Movie 2000 (2000)	Animation|Children's
+3731	3799	Criminal Lovers (Les Amants Criminels) (1999)	Drama|Romance
+3732	3800	Anatomy of a Murder (1959)	Drama|Mystery
+3733	3801	Freejack (1992)	Action|Sci-Fi
+3734	3802	Greaser's Palace (1972)	Drama
+3735	3803	H.O.T.S. (1979)	Comedy
+3736	3804	Knightriders (1981)	Action|Adventure|Drama
+3737	3805	MacKenna's Gold (1969)	Western
+3738	3806	Sinbad and the Eye of the Tiger (1977)	Action|Adventure
+3739	3807	Two Women (La Ciociara) (1961)	Drama|War
+3740	3808	What About Bob? (1991)	Comedy
+3741	3809	White Sands (1992)	Drama|Thriller
+3742	3810	Breaker Morant (1980)	Drama|War
+3743	3811	Everything You Always Wanted to Know About Sex (1972)	Comedy
+3744	3812	Interiors (1978)	Drama
+3745	3813	Love and Death (1975)	Comedy
+3746	3815	Official Story, The (La Historia Oficial) (1985)	Drama
+3747	3816	Other Side of Sunday, The (Søndagsengler) (1996)	Comedy|Drama
+3748	3817	Pot O' Gold (1941)	Comedy|Musical
+3749	3818	Tampopo (1986)	Comedy
+3750	3819	Thomas and the Magic Railroad (2000)	Children's
+3751	3820	Nutty Professor II: The Klumps (2000)	Comedy
+3752	3821	Girl on the Bridge, The (La Fille sur le Pont) (1999)	Drama|Romance
+3753	3822	Wonderland (1999)	Drama
+3754	3823	Autumn in New York (2000)	Drama|Romance
+3755	3824	Coyote Ugly (2000)	Drama
+3756	3825	Hollow Man (2000)	Horror|Sci-Fi|Thriller
+3757	3826	Space Cowboys (2000)	Action|Sci-Fi
+3758	3827	Better Living (1998)	Comedy
+3759	3828	Mad About Mambo (2000)	Comedy|Romance
+3760	3829	Psycho Beach Party (2000)	Comedy|Horror|Thriller
+3761	3830	Saving Grace (2000)	Comedy
+3762	3831	Black Sabbath (Tre Volti Della Paura, I) (1963)	Horror
+3763	3832	Brain That Wouldn't Die, The (1962)	Horror|Sci-Fi
+3764	3833	Bronco Billy (1980)	Adventure|Drama|Romance
+3765	3834	Crush, The (1993)	Thriller
+3766	3835	Kelly's Heroes (1970)	Action|Comedy|War
+3767	3836	Phantasm II (1988)	Horror
+3768	3837	Phantasm III: Lord of the Dead (1994)	Horror
+3769	3838	Phantasm IV: Oblivion (1998)	Horror
+3770	3839	Pumpkinhead (1988)	Horror
+3771	3840	Air America (1990)	Action|Comedy
+3772	3841	Make Them Die Slowly (Cannibal Ferox) (1980)	Horror
+3773	3842	Sleepaway Camp (1983)	Horror
+3774	3843	Steel Magnolias (1989)	Drama
+3775	3844	And God Created Woman (Et Dieu&#8230;Créa la Femme) (1956)	Drama
+3776	3845	Easy Money (1983)	Comedy
+3777	3846	Ilsa, She Wolf of the SS (1974)	Horror
+3778	3847	Silent Fall (1994)	Drama|Thriller
+3779	3848	Spiral Staircase, The (1946)	Thriller
+3780	3849	Whatever Happened to Aunt Alice? (1969)	Crime|Thriller
+3781	3850	I'm the One That I Want (2000)	Comedy
+3782	3851	Tao of Steve, The (2000)	Comedy
+3783	3852	Tic Code, The (1998)	Drama
+3784	3853	Aimée & Jaguar (1999)	Drama|Romance
+3785	3854	Affair of Love, An (Une Liaison Pornographique) (1999)	Drama|Romance
+3786	3855	Autumn Heart (1999)	Drama
+3787	3856	Bless the Child (2000)	Thriller
+3788	3857	Cecil B. Demented (2000)	Comedy
+3789	3858	Eyes of Tammy Faye, The (2000)	Documentary
+3790	3859	Opportunists, The (1999)	Crime
+3791	3860	Replacements, The (2000)	Comedy
+3792	3861	About Adam (2000)	Comedy
+3793	3862	Cell, The (2000)	Sci-Fi|Thriller
+3794	3863	Godzilla 2000 (Gojira ni-sen mireniamu) (1999)	Action|Adventure|Sci-Fi
+3795	3864	Original Kings of Comedy, The (2000)	Comedy|Documentary
+3796	3865	Sunset Strip (2000)	Comedy
+3797	3866	All the Rage (a.k.a. It's the Rage) (1999)	Drama
+3798	3867	Naked Gun: From the Files of Police Squad!, The (1988)	Comedy
+3799	3868	Naked Gun 2 1/2: The Smell of Fear, The (1991)	Comedy
+3800	3869	Our Town (1940)	Drama
+3801	3870	Shane (1953)	Drama|Western
+3802	3871	Suddenly, Last Summer (1959)	Drama
+3803	3872	Cat Ballou (1965)	Comedy|Western
+3804	3873	Couch in New York, A (1996)	Comedy|Romance
+3805	3874	Devil Rides Out, The (1968)	Horror
+3806	3875	Jerry & Tom (1998)	Drama
+3807	3876	Supergirl (1984)	Action|Adventure|Fantasy
+3808	3877	X: The Unknown (1956)	Sci-Fi
+3809	3878	Art of War, The (2000)	Action
+3810	3879	Ballad of Ramblin' Jack, The (2000)	Documentary
+3811	3880	Bittersweet Motel (2000)	Documentary
+3812	3881	Bring It On (2000)	Comedy
+3813	3882	Catfish in Black Bean Sauce (2000)	Comedy|Drama
+3814	3883	Crew, The (2000)	Comedy
+3815	3884	Love & Sex (2000)	Comedy|Romance
+3816	3885	Steal This Movie! (2000)	Drama
+3817	3886	Went to Coney Island on a Mission From God... Be Back by Five (1998)	Drama
+3818	3887	Skipped Parts (2000)	Drama|Romance
+3819	3888	Highlander: Endgame (2000)	Action|Adventure|Fantasy
+3820	3889	Back Stage (2000)	Documentary
+3821	3890	Turn It Up (2000)	Crime|Drama
+3822	3891	Anatomy (Anatomie) (2000)	Horror
+3823	3892	Nurse Betty (2000)	Comedy|Thriller
+3824	3893	Solas (1999)	Drama
+3825	3894	Watcher, The (2000)	Crime|Thriller
+3826	3895	Way of the Gun, The (2000)	Crime|Thriller
+3827	3896	Almost Famous (2000)	Comedy|Drama
+3828	3897	Bait (2000)	Action|Comedy
+3829	3898	Circus (2000)	Comedy
+3830	3899	Crime and Punishment in Suburbia (2000)	Comedy|Drama
+3831	3900	Duets (2000)	Comedy|Drama
+3832	3901	Goya in Bordeaux (Goya en Bodeos) (1999)	Drama
+3833	3902	Urbania (2000)	Drama
+3834	3903	Uninvited Guest, An (2000)	Drama
+3835	3904	Specials, The (2000)	Comedy
+3836	3905	Under Suspicion (2000)	Crime
+3837	3906	Prince of Central Park, The (1999)	Drama
+3838	3907	Urban Legends: Final Cut (2000)	Horror
+3839	3908	Woman on Top (2000)	Comedy|Romance
+3840	3909	Dancer in the Dark (2000)	Drama|Musical
+3841	3910	Best in Show (2000)	Comedy
+3842	3911	Beautiful (2000)	Comedy|Drama
+3843	3912	Barenaked in America (1999)	Documentary
+3844	3913	Broken Hearts Club, The (2000)	Drama
+3845	3914	Girlfight (2000)	Drama
+3846	3915	Remember the Titans (2000)	Drama
+3847	3916	Hellraiser (1987)	Horror
+3848	3917	Hellbound: Hellraiser II (1988)	Horror
+3849	3918	Hellraiser III: Hell on Earth (1992)	Horror
+3850	3919	Faraway, So Close (In Weiter Ferne, So Nah!) (1993)	Drama|Fantasy
+3851	3920	Beach Party (1963)	Comedy
+3852	3921	Bikini Beach (1964)	Comedy
+3853	3922	Return of the Fly (1959)	Horror|Sci-Fi
+3854	3923	Pajama Party (1964)	Comedy
+3855	3924	Stranger Than Paradise (1984)	Comedy
+3856	3925	Voyage to the Bottom of the Sea (1961)	Adventure|Sci-Fi
+3857	3926	Fantastic Voyage (1966)	Adventure|Sci-Fi
+3858	3927	Abbott and Costello Meet Frankenstein (1948)	Comedy|Horror
+3859	3928	Bank Dick, The (1940)	Comedy
+3860	3929	Creature From the Black Lagoon, The (1954)	Horror
+3861	3930	Giant Gila Monster, The (1959)	Horror|Sci-Fi
+3862	3931	Invisible Man, The (1933)	Horror|Sci-Fi
+3863	3932	Killer Shrews, The (1959)	Horror|Sci-Fi
+3864	3933	Kronos (1957)	Sci-Fi
+3865	3934	Kronos (1973)	Horror
+3866	3935	Phantom of the Opera, The (1943)	Drama|Thriller
+3867	3936	Runaway (1984)	Sci-Fi|Thriller
+3868	3937	Slumber Party Massacre, The (1982)	Horror
+3869	3938	Slumber Party Massacre II, The (1987)	Horror
+3870	3939	Slumber Party Massacre III, The (1990)	Horror
+3871	3940	Sorority House Massacre (1986)	Horror
+3872	3941	Sorority House Massacre II (1990)	Horror
+3873	3942	Bamboozled (2000)	Comedy
+3874	3943	Bootmen (2000)	Comedy|Drama
+3875	3944	Digimon: The Movie (2000)	Adventure|Animation|Children's
+3876	3945	Get Carter (2000)	Action|Drama|Thriller
+3877	3946	Get Carter (1971)	Thriller
+3878	3947	Meet the Parents (2000)	Comedy
+3879	3948	Requiem for a Dream (2000)	Drama
+3880	3949	Tigerland (2000)	Drama
+3881	3950	Two Family House (2000)	Drama
+3882	3951	Contender, The (2000)	Drama|Thriller
