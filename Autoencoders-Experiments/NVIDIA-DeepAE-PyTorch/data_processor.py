@@ -1,6 +1,7 @@
 # Import packages
 import os
 import pandas as pd
+import numpy as np
 
 # Define constants to store path to data directory
 MOVIELENS_DIR = '../../ml-1m/'
@@ -77,3 +78,29 @@ print('Saved to', MOVIES_CSV_FILE)
 
 print(len(ratings['userid'].drop_duplicates()), 'of the', max_userid, 'users rate at least one movie.')
 print(len(ratings['movieid'].drop_duplicates()), 'of the', max_movieid, 'movies are rated.')
+
+
+def preprocess_data(rating_df, num_users, num_items, init_value=0, average=False):
+    """
+    Function to pre-process the ratings data
+    :param rating_df: ratings dataframe
+    :param num_users: number of users
+    :param num_items: number of items
+    :param init_value:
+    :param average:
+    :return: 2D numpy array (processed ratings)
+    """
+    if average:
+        matrix = np.full((num_users, num_items), 0.0)
+        for (_, userID, itemID, rating, timestamp) in rating_df.itertuples():
+            matrix[userID, itemID] = rating
+        average_value = np.true_divide(matrix.sum(1), np.maximum((matrix != 0).sum(1), 1))
+        indices = np.where(matrix == 0)
+        matrix[indices] = np.take(average_value, indices[0])
+
+    else:
+        matrix = np.full((num_users, num_items), init_value)
+        for (_, userID, itemID, rating, timestamp) in rating_df.itertuples():
+            matrix[userID, itemID] = rating
+
+    return matrix

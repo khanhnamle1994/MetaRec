@@ -1,3 +1,4 @@
+# Import packages
 import numpy as np
 import matplotlib.pyplot as plt
 from tensorflow.python.keras.models import model_from_json
