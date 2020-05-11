@@ -2,8 +2,9 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from data_processor import preprocess_data
+import tensorflow as tf
 from model import Deep_AE_model
-from tensorflow.python.keras.optimizers import Adam
+from tensorflow.keras.optimizers import Adam
 from utils import show_error, show_rmse, masked_rmse, masked_rmse_clip
 
 # Load the ratings data
@@ -20,7 +21,7 @@ train_df, test_df = train_test_split(df, stratify=df['user_emb_id'],
 train_df, validate_df = train_test_split(train_df, stratify=train_df['user_emb_id'],
                                          test_size=0.1, random_state=999613182)
 
-# Creating a sparse pivot table with users in rows and items in columns
+# Create sparse pivot tables with users in rows and items in columns
 users_items_matrix_train_zero = preprocess_data(train_df, num_users, num_movies, 0)
 users_items_matrix_train_one = preprocess_data(train_df, num_users, num_movies, 1)
 users_items_matrix_train_two = preprocess_data(train_df, num_users, num_movies, 2)
@@ -31,9 +32,20 @@ users_items_matrix_train_average = preprocess_data(train_df, num_users, num_movi
 users_items_matrix_validate = preprocess_data(validate_df, num_users, num_movies, 0)
 users_items_matrix_test = preprocess_data(test_df, num_users, num_movies, 0)
 
+# Convert data types from int64 to float32
+users_items_matrix_train_zero = tf.convert_to_tensor(users_items_matrix_train_zero, dtype=tf.float32)
+users_items_matrix_train_one = tf.convert_to_tensor(users_items_matrix_train_one, dtype=tf.float32)
+users_items_matrix_train_two = tf.convert_to_tensor(users_items_matrix_train_two, dtype=tf.float32)
+users_items_matrix_train_three = tf.convert_to_tensor(users_items_matrix_train_three, dtype=tf.float32)
+users_items_matrix_train_four = tf.convert_to_tensor(users_items_matrix_train_four, dtype=tf.float32)
+users_items_matrix_train_five = tf.convert_to_tensor(users_items_matrix_train_five, dtype=tf.float32)
+users_items_matrix_train_average = tf.convert_to_tensor(users_items_matrix_train_average, dtype=tf.float32)
+users_items_matrix_validate = tf.convert_to_tensor(users_items_matrix_validate, dtype=tf.float32)
+users_items_matrix_test = tf.convert_to_tensor(users_items_matrix_test, dtype=tf.float32)
+
 # Model hyper-parameters
 layers = [256, 512, 256]
-dropout = 0.8
+dropout = 0.5
 activation = 'selu'
 last_activation = 'selu'
 regularizer_encode = 0.001
