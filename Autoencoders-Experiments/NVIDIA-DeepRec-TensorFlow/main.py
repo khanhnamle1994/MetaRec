@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from data_processor import preprocess_data
 import tensorflow as tf
 from model import Deep_AE_model
-from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.optimizers import SGD
 from utils import show_error, show_rmse, masked_rmse, masked_rmse_clip
 
 # Load the ratings data
@@ -44,8 +44,8 @@ users_items_matrix_validate = tf.convert_to_tensor(users_items_matrix_validate, 
 users_items_matrix_test = tf.convert_to_tensor(users_items_matrix_test, dtype=tf.float32)
 
 # Model hyper-parameters
-layers = [256, 512, 256]
-dropout = 0.5
+layers = [512, 512, 1024, 512, 512]
+dropout = 0.8
 activation = 'selu'
 last_activation = 'selu'
 regularizer_encode = 0.001
@@ -56,19 +56,19 @@ Deep_AE = Deep_AE_model(users_items_matrix_train_zero,
                         layers, activation, last_activation, dropout,
                         regularizer_encode, regularizer_decode)
 # Compile model
-Deep_AE.compile(optimizer=Adam(lr=0.0001), loss=masked_rmse, metrics=[masked_rmse_clip])
+Deep_AE.compile(optimizer=SGD(lr=0.001, momentum=0.9), loss=masked_rmse, metrics=[masked_rmse_clip])
 # Get model summary
 Deep_AE.summary()
 # Train the model and evaluate on validation set
 hist_Deep_AE = Deep_AE.fit(
     x=users_items_matrix_train_zero, y=users_items_matrix_train_zero,
-    epochs=500, batch_size=256,
+    epochs=100, batch_size=128,
     validation_data=[users_items_matrix_train_zero, users_items_matrix_validate], verbose=2)
 
 # Show model loss
-show_error(hist_Deep_AE, 100)
+show_error(hist_Deep_AE, 10)
 # Show RMSE metric
-show_rmse(hist_Deep_AE, 100)
+show_rmse(hist_Deep_AE, 10)
 
 # Predict the model on test set
 predict_deep = Deep_AE.predict(users_items_matrix_train_zero)
