@@ -32,7 +32,7 @@ users_items_matrix_train_average = preprocess_data(train_df, num_users, num_movi
 users_items_matrix_validate = preprocess_data(validate_df, num_users, num_movies, 0)
 users_items_matrix_test = preprocess_data(test_df, num_users, num_movies, 0)
 
-# Convert data types from int64 to float32
+# Convert data types from int64 to float32 to use as tensor inputs for Keras model
 users_items_matrix_train_zero = tf.convert_to_tensor(users_items_matrix_train_zero, dtype=tf.float32)
 users_items_matrix_train_one = tf.convert_to_tensor(users_items_matrix_train_one, dtype=tf.float32)
 users_items_matrix_train_two = tf.convert_to_tensor(users_items_matrix_train_two, dtype=tf.float32)
@@ -59,7 +59,7 @@ Deep_AE = Deep_AE_model(users_items_matrix_train_zero,
 Deep_AE.compile(optimizer=Adam(lr=0.0001), loss=masked_rmse, metrics=[masked_rmse_clip])
 # Get model summary
 Deep_AE.summary()
-# Fit model and evaluate on validation set
+# Train the model and evaluate on validation set
 hist_Deep_AE = Deep_AE.fit(
     x=users_items_matrix_train_zero, y=users_items_matrix_train_zero,
     epochs=500, batch_size=256,
