@@ -1,0 +1,6 @@
+# users: 6040, # items: 3706, # ratings: 1000209
+Sparsity : 95.53%
+Min/Max/Avg. ratings per users (full data): 20 2314 165.60
+
+# train users: 6040, # train ratings: 797758
+# test users: 6040, # test ratings: 202451
