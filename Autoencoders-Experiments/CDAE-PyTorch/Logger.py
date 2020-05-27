@@ -1,3 +1,4 @@
+# Import packages
 import os
 import sys
 import time
@@ -5,7 +6,13 @@ import logging
 
 
 class Logger:
+    """
+    Class to define the logger
+    """
     def __init__(self, log_dir):
+        """
+        :param log_dir: directory to log results
+        """
         self.logger = logging.getLogger('RecSys')
         self.logger.setLevel(logging.INFO)
 
@@ -28,6 +35,10 @@ class Logger:
         self.logger.info(msg)
 
     def get_log_dir(self, log_dir):
+        """
+        :param log_dir: directory to log results
+        :return: path to logging directory
+        """
         if not os.path.exists(log_dir):
             os.mkdir(log_dir)
 
