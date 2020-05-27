@@ -1,11 +1,23 @@
+# Import packages
 import math
 import numpy as np
 from collections import OrderedDict
+
+# Import utility script
 from Tools import RunningAverage as AVG
 
 
 class Evaluator:
+    """
+    Class that defines the evaluator
+    """
     def __init__(self, eval_pos, eval_target, item_popularity, top_k):
+        """
+        :param eval_pos: position of the evaluated item
+        :param eval_target: the evaluation target
+        :param item_popularity: the popularity of the item
+        :param top_k: choice of top K
+        """
         self.top_k = top_k if isinstance(top_k, list) else [top_k]
         self.max_k = max(self.top_k)
         self.eval_pos = eval_pos
@@ -15,11 +27,20 @@ class Evaluator:
         self.item_self_information = self.compute_item_self_info(item_popularity)
 
     def evaluate(self, model, dataset, test_batch_size):
+        """
+        Function to perform evaluation
+        :param model: choice of model
+        :param dataset: given dataset
+        :param test_batch_size: choice of batch size in test set
+        :return: dictionary that stores the evaluation metrics
+        """
+        # Step into evaluation mode
         model.eval()
-
+        # Collect the evaluation users
         eval_users = np.array(list(self.eval_target.keys()))
-
+        # Get the prediction matrix
         pred_matrix = model.predict(eval_users, self.eval_pos, test_batch_size)
+        # Get the top-k predictions
         topk = self.predict_topk(pred_matrix, max(self.top_k))
 
         # Precision, Recall, NDCG @ k
@@ -41,6 +62,12 @@ class Evaluator:
         return score_dict
 
     def predict_topk(self, scores, k):
+        """
+        Function to get the top-k predictions
+        :param scores: prediction matrix
+        :param k: choice of k
+        :return: top-k predictions
+        """
         # top_k item index (not sorted)
         relevant_items_partition = (-scores).argpartition(k, 1)[:, 0:k]
 
@@ -56,14 +83,19 @@ class Evaluator:
         return topk
 
     def prec_recall_ndcg(self, topk, target):
+        """
+        Function to get the precision, recall, and NDCG @ k
+        :param topk: top-k predictions
+        :param target: ground truth label
+        :return: precision, recall, and NDCG @ k
+        """
+        # Initialize the precision, recall, and NDCG values as averages of top-k predictions
         prec = {k: AVG() for k in self.top_k}
         recall = {k: AVG() for k in self.top_k}
         ndcg = {k: AVG() for k in self.top_k}
-        scores = {
-            'Prec': prec,
-            'Recall': recall,
-            'NDCG': ndcg
-        }
+
+        # Dictionary to store precision, recall, and NDCG scores
+        scores = {'Prec': prec, 'Recall': recall, 'NDCG': ndcg}
 
         for idx, u in enumerate(target):
             pred_u = topk[idx]
@@ -82,10 +114,12 @@ class Evaluator:
                 for idx, item in hits_k:
                     dcg_k += 1 / math.log(idx + 1, 2)
 
+                # Calculate precision, recall, and NDCG @ k
                 prec_k = num_hits / k
                 recall_k = num_hits / min(num_target_items, k)
                 ndcg_k = dcg_k / idcg_k
 
+                # Update the metrics accordingly
                 scores['Prec'][k].update(prec_k)
                 scores['Recall'][k].update(recall_k)
                 scores['NDCG'][k].update(ndcg_k)
@@ -93,6 +127,11 @@ class Evaluator:
         return scores
 
     def novelty(self, topk):
+        """
+        Function to get the novelty @ k
+        :param topk: top-k predictions
+        :return: novelty @ k
+        """
         topk_info = np.take(self.item_self_information, topk)
         top_k_array = np.array(self.top_k)
         topk_info_sum = np.cumsum(topk_info, 1)[:, top_k_array - 1]
@@ -104,6 +143,11 @@ class Evaluator:
         return novelty_dict
 
     def gini_diversity(self, topk):
+        """
+        Function to calculate Gini diversity index
+        :param topk: top-k predictions
+        :return: Gini diversity index
+        """
         num_items = self.eval_pos.shape[1]
         item_recommend_counter = np.zeros(num_items, dtype=np.int)
 
