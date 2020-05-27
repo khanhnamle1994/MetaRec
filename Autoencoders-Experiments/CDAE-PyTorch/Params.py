@@ -1,13 +1,13 @@
 import json
 
 """
-Codes from:
-https://github.com/cs230-stanford/cs230-code-examples/blob/master/pytorch/nlp/utils.py
+Code from: https://github.com/cs230-stanford/cs230-code-examples/blob/master/pytorch/nlp/utils.py
 """
 
 
-class Params():
-    """Class that loads hyperparameters from a json file.
+class Params:
+    """
+    Class that loads hyper-parameters from a json file.
     Example:
     ```
     params = Params(json_path)
@@ -34,7 +34,6 @@ class Params():
 
     def __str__(self):
         # return string representation of 'Parameters' class
-        # print(Parameters) or str(Parameters)
         ret = '======== [Config] ========\n'
         for k in self.__dict__:
             ret += '%s: %s\n' % (str(k), str(self.__dict__[k]))
