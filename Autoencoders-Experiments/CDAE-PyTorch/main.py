@@ -11,11 +11,11 @@ from Trainer import Trainer
 from ModelBuilder import build_model
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--model', type=str, default='DAE')
+parser.add_argument('--model', type=str, default='CDAE')
 parser.add_argument('--data_dir', type=str, default='../../')
 parser.add_argument('--save_dir', type=str, default='./saves')
 parser.add_argument('--config_dir', type=str, default='./config')
-parser.add_argument('--seed', type=int, default=428)
+parser.add_argument('--seed', type=int, default=1994)
 
 config = parser.parse_args()
 model_config = Params(os.path.join(config.config_dir, config.model.lower() + '.json'))
