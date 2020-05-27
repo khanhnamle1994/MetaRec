@@ -1,9 +1,20 @@
+# Import packages
 import time
 import torch
 
 
 class Trainer:
+    """
+    Class to define the trainer
+    """
     def __init__(self, dataset, model, evaluator, logger, conf):
+        """
+        :param dataset: given data
+        :param model: choice of model
+        :param evaluator: evaluator class
+        :param logger: logger class
+        :param conf: model configuration
+        """
         self.dataset = dataset
         self.model = model
         self.evaluator = evaluator
@@ -24,6 +35,9 @@ class Trainer:
         self.best_params = None
 
     def train(self):
+        """
+        Function to perform training
+        """
         self.logger.info(self.conf)
         if len(list(self.model.parameters())) > 0:
             optimizer = torch.optim.Adam(self.model.parameters(), self.lr)
@@ -63,6 +77,9 @@ class Trainer:
         self.logger.info('[Best score at epoch %d] %s' % (self.best_epoch, best_score_str))
 
     def evaluate(self):
+        """
+        Function to perform evaluation
+        """
         # pred_matrix = self.model.predict(self.dataset)
         score = self.evaluator.evaluate(self.model, self.dataset, self.test_batch_size)
         return score

@@ -14,7 +14,7 @@ class Evaluator:
     def __init__(self, eval_pos, eval_target, item_popularity, top_k):
         """
         :param eval_pos: position of the evaluated item
-        :param eval_target: the evaluation target
+        :param eval_target: target of the evaluation item
         :param item_popularity: the popularity of the item
         :param top_k: choice of top K
         """
