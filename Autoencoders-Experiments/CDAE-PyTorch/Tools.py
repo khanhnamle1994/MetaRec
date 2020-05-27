@@ -1,7 +1,14 @@
+# Import package
 import torch.nn.functional as F
 
 
 def apply_activation(act_name, x):
+    """
+    Apply activation function
+    :param act_name: name of the activation function
+    :param x: input
+    :return: output after activation
+    """
     if act_name == 'sigmoid':
         return F.sigmoid(x)
     elif act_name == 'tanh':
@@ -15,6 +22,9 @@ def apply_activation(act_name, x):
 
 
 class RunningAverage:
+    """
+    Class to get the average in a sequence
+    """
     def __init__(self):
         self.sum = 0
         self.total = 0
