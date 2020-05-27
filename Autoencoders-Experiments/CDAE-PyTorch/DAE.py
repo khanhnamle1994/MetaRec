@@ -8,12 +8,23 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.distributions.binomial import Binomial
+
+# Import utility scripts
 from BaseModel import BaseModel
 from Tools import apply_activation
 
 
 class DAE(BaseModel):
+    """
+    Denoising Autoencoder model class
+    """
     def __init__(self, model_conf, num_users, num_items, device):
+        """
+        :param model_conf: model configuration
+        :param num_users: number of users
+        :param num_items: number of items
+        :param device: choice of device
+        """
         super(DAE, self).__init__()
         self.hidden_dim = model_conf.hidden_dim
         self.act = model_conf.act
@@ -29,7 +40,11 @@ class DAE(BaseModel):
         self.to(self.device)
 
     def forward(self, rating_matrix):
-        # normalize
+        """
+        Forward pass
+        :param rating_matrix: rating matrix
+        """
+        # normalize the rating matrix
         user_degree = torch.norm(rating_matrix, 2, 1).view(-1, 1)  # user, 1
         item_degree = torch.norm(rating_matrix, 2, 0).view(1, -1)  # 1, item
         normalize = torch.sqrt(user_degree @ item_degree)
@@ -38,18 +53,25 @@ class DAE(BaseModel):
 
         normalized_rating_matrix = rating_matrix / normalize
 
-        # corruption
+        # corrupt the rating matrix
         normalized_rating_matrix = F.dropout(normalized_rating_matrix, self.corruption_ratio, training=self.training)
 
-        # AE
+        # build the denoising autoencoder
         enc = self.encoder(normalized_rating_matrix)
         enc = apply_activation(self.act, enc)
-
         dec = self.decoder(enc)
 
         return torch.sigmoid(dec)
 
     def train_one_epoch(self, dataset, optimizer, batch_size, verbose):
+        """
+        Train model for one epoch
+        :param dataset: given data
+        :param optimizer: choice of optimizer
+        :param batch_size: batch size
+        :param verbose: verbose
+        :return: model loss
+        """
         self.train()
 
         # user, item, rating pairs
@@ -86,6 +108,13 @@ class DAE(BaseModel):
         return loss
 
     def predict(self, eval_users, eval_pos, test_batch_size):
+        """
+        Predict the model on test set
+        :param eval_users: evaluation (test) user
+        :param eval_pos: position of the evaluated (test) item
+        :param test_batch_size: batch size for test set
+        :return: predictions
+        """
         with torch.no_grad():
             input_matrix = torch.FloatTensor(eval_pos.toarray()).to(self.device)
             preds = np.zeros_like(input_matrix)
