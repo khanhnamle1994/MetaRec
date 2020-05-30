@@ -1,0 +1,22 @@
+{
+    "path": "./config/esae.json",
+    "data_name": "ml-1m",
+    "train_ratio": 0.8,
+    "reg": 1000.0,
+    "num_epochs": 500,
+    "batch_size": 1024,
+    "test_batch_size": 1024,
+    "learning_rate": 0.01,
+    "early_stop": true,
+    "patience": 50,
+    "top_k": [
+        100
+    ],
+    "exp_conf": {
+        "model": "ESAE",
+        "data_dir": "../../",
+        "save_dir": "./saves",
+        "config_dir": "./config",
+        "seed": 1994
+    }
+}
