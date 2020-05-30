@@ -2,7 +2,7 @@
 Yao Wu et al., Collaborative denoising auto-encoders for top-n recommender systems. WSDM 2016.
 https://alicezheng.org/papers/wsdm16-cdae.pdf
 """
-# Import packages and utility scripts
+# Import packages
 import numpy as np
 import torch
 import torch.nn as nn
