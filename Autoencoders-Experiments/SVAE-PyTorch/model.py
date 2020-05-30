@@ -1,3 +1,4 @@
+# Import packages
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -6,6 +7,9 @@ import numpy as np
 
 
 class Encoder(nn.Module):
+    """
+    Function to define SVAE encoder module
+    """
     def __init__(self, hyper_params):
         super(Encoder, self).__init__()
         self.linear1 = nn.Linear(
@@ -21,6 +25,9 @@ class Encoder(nn.Module):
 
 
 class Decoder(nn.Module):
+    """
+    Function to define SVAE decoder module
+    """
     def __init__(self, hyper_params):
         super(Decoder, self).__init__()
         self.linear1 = nn.Linear(hyper_params['latent_size'], hyper_params['hidden_size'])
@@ -37,6 +44,9 @@ class Decoder(nn.Module):
 
 
 class Model(nn.Module):
+    """
+    Function to build the SVAE model
+    """
     def __init__(self, hyper_params):
         super(Model, self).__init__()
         self.hyper_params = hyper_params
@@ -76,6 +86,10 @@ class Model(nn.Module):
         return mu + sigma * Variable(std_z, requires_grad=False)  # Reparameterization trick
 
     def forward(self, x):
+        """
+        Function to do a forward pass
+        :param x: the input
+        """
         in_shape = x.shape  # [bsz x seq_len] = [1 x seq_len]
         x = x.view(-1)  # [seq_len]
 
@@ -95,6 +109,9 @@ class Model(nn.Module):
 
 
 class VAELoss(torch.nn.Module):
+    """
+    Function to calculate the VAE loss
+    """
     def __init__(self, hyper_params):
         super(VAELoss, self).__init__()
         self.hyper_params = hyper_params

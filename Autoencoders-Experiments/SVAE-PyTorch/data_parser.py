@@ -1,7 +1,10 @@
+# Import packages
 import torch
 from torch.autograd import Variable
 import numpy as np
 from tqdm import tqdm
+
+# Import utility script
 from utils import file_write
 
 

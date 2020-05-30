@@ -1,10 +1,12 @@
 # Import packages
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from data_processor import preprocess_data
 import tensorflow as tf
-from model import Deep_AE_model
 from tensorflow.keras.optimizers import SGD
+
+# Import utility scripts
+from data_processor import preprocess_data
+from model import Deep_AE_model
 from utils import show_error, show_rmse, masked_rmse, masked_rmse_clip
 
 # Load the ratings data

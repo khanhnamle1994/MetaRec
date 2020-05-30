@@ -1,9 +1,11 @@
+# Import packages
 import os
 import torch
 import datetime as dt
 import time
 import matplotlib.pyplot as plt
 
+# Import utility scripts
 from data_parser import load_data
 from utils import file_write
 from model import Model, VAELoss

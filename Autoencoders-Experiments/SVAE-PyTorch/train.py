@@ -1,4 +1,7 @@
+# Import package
 import time
+
+# Import utility script
 from utils import file_write
 
 
