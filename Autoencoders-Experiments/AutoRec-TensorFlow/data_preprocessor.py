@@ -1,7 +1,18 @@
+# Import package
 import numpy as np
 
 
 def read_rating(path, num_users, num_items, num_total_ratings, a, b, train_ratio):
+    """
+    Function to read in the ratings data
+    :param path: path to ratings data
+    :param num_users: number of users
+    :param num_items: number of items
+    :param num_total_ratings: number of total ratings
+    :param a: positive rating (1)
+    :param b: negative rating (0)
+    :param train_ratio: ratio that splits train and test sets
+    """
     fp = open(path + "ratings.dat")
 
     user_train_set = set()
@@ -35,7 +46,7 @@ def read_rating(path, num_users, num_items, num_total_ratings, a, b, train_ratio
         mask_R[user_idx, item_idx] = 1
         C[user_idx, item_idx] = a
 
-    ''' Train '''
+    # Training set
     for itr in train_idx:
         line = lines[itr]
         user, item, rating, _ = line.split("::")
@@ -47,7 +58,7 @@ def read_rating(path, num_users, num_items, num_total_ratings, a, b, train_ratio
         user_train_set.add(user_idx)
         item_train_set.add(item_idx)
 
-    ''' Test '''
+    # Test set
     for itr in test_idx:
         line = lines[itr]
         user, item, rating, _ = line.split("::")

@@ -1,7 +1,11 @@
-from data_preprocessor import *
-from AutoRec import AutoRec
+# Import packages
 import tensorflow as tf
 import argparse
+import numpy as np
+
+# Import utility scripts
+from data_preprocessor import read_rating
+from AutoRec import AutoRec
 
 '''
 Parser Arguments:
@@ -31,7 +35,9 @@ parser.add_argument('--decay_epoch_step', type=int, default=50, help="decay the 
 parser.add_argument('--random_seed', type=int, default=1000)
 parser.add_argument('--display_step', type=int, default=1)
 
+# Get argument parser
 args = parser.parse_args()
+# Set random seed
 tf.random.set_seed(args.random_seed)
 np.random.seed(args.random_seed)
 

@@ -1,3 +1,4 @@
+# Import packages
 import tensorflow as tf
 import time
 import numpy as np
@@ -6,6 +7,9 @@ import math
 
 
 class AutoRec:
+    """
+    Function to define the AutoRec model class
+    """
     def __init__(self, sess, args,
                  num_users, num_items,
                  R, mask_R, C, train_R, train_mask_R, test_R, test_mask_R, num_train_ratings, num_test_ratings,
@@ -58,17 +62,31 @@ class AutoRec:
         self.grad_clip = args.grad_clip
 
     def run(self):
+        """
+        Function to run AutoRec
+        """
+        # Build AutoRec
         self.prepare_model()
         init = tf.compat.v1.global_variables_initializer()
         self.sess.run(init)
+
+        # Train and evaluate AutoRec for all epochs
         for epoch_itr in range(self.train_epoch):
             self.train_model(epoch_itr)
             self.test_model(epoch_itr)
+
+        # Log results
         self.make_records()
 
     def prepare_model(self):
-        self.input_R = tf.compat.v1.placeholder(dtype=tf.float32, shape=[None, self.num_items], name="input_R")
-        self.input_mask_R = tf.compat.v1.placeholder(dtype=tf.float32, shape=[None, self.num_items],
+        """
+        Function to build AutoRec
+        """
+        self.input_R = tf.compat.v1.placeholder(dtype=tf.float32,
+                                                shape=[None, self.num_items],
+                                                name="input_R")
+        self.input_mask_R = tf.compat.v1.placeholder(dtype=tf.float32,
+                                                     shape=[None, self.num_items],
                                                      name="input_mask_R")
 
         V = tf.compat.v1.get_variable(name="V", initializer=tf.compat.v1.truncated_normal(
@@ -107,6 +125,10 @@ class AutoRec:
             self.optimizer = optimizer.minimize(self.cost, global_step=self.global_step)
 
     def train_model(self, itr):
+        """
+        Function to train AutoRec
+        :param itr: Current iteration
+        """
         start_time = time.time()
         random_perm_doc_idx = np.random.permutation(self.num_users)
 
@@ -130,6 +152,10 @@ class AutoRec:
                   "Elapsed time : %d sec" % (time.time() - start_time))
 
     def test_model(self, itr):
+        """
+        Function to evaluate AutoRec
+        :param itr: Current iteration
+        """
         start_time = time.time()
         Cost, Decoder = self.sess.run(
             [self.cost, self.Decoder],
@@ -161,6 +187,9 @@ class AutoRec:
             print("=" * 100)
 
     def make_records(self):
+        """
+        Function to log results
+        """
         if not os.path.exists(self.result_path):
             os.makedirs(self.result_path)
 
@@ -194,4 +223,8 @@ class AutoRec:
             h.write(str(self.args))
 
     def l2_norm(self, tensor):
+        """
+        Function to apply L2 normalization
+        :param tensor: TensorFlow tensor
+        """
         return tf.sqrt(tf.reduce_sum(tf.square(tensor)))
