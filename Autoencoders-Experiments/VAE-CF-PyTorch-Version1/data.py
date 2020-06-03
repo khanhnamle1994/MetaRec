@@ -1,21 +1,30 @@
+# Import packages
 import os
 import pandas as pd
 from scipy import sparse
 import numpy as np
 
 
-class DataLoader():
+class DataLoader:
     """
-    Load Movielens-20m dataset
+    Load Movielens-1M dataset
     """
 
-    def __init__(self, path):
-        self.pro_dir = os.path.join(path, 'pro_sg')
+    def __init__(self):
+        """
+        Function to initialize the class
+        """
+        # Ensure that we have the pre-processed data files
+        self.pro_dir = os.path.join('processed_data')
         assert os.path.exists(self.pro_dir), "Preprocessed files does not exist. Run data.py"
-
+        # Get number of movies
         self.n_items = self.load_n_items()
 
     def load_data(self, datatype='train'):
+        """
+        Function to load processed data
+        :param datatype: train, validation, or test sets
+        """
         if datatype == 'train':
             return self._load_train_data()
         elif datatype == 'validation':
@@ -26,6 +35,10 @@ class DataLoader():
             raise ValueError("datatype should be in [train, validation, test]")
 
     def load_n_items(self):
+        """
+        Function to load the movies
+        :return: The number of unique movieIDs
+        """
         unique_sid = list()
         with open(os.path.join(self.pro_dir, 'unique_sid.txt'), 'r') as f:
             for line in f:
@@ -34,6 +47,9 @@ class DataLoader():
         return n_items
 
     def _load_train_data(self):
+        """
+        Function to load processed train data
+        """
         path = os.path.join(self.pro_dir, 'train.csv')
 
         tp = pd.read_csv(path)
@@ -46,6 +62,9 @@ class DataLoader():
         return data
 
     def _load_tr_te_data(self, datatype='test'):
+        """
+        Function to load processed validation and test data
+        """
         tr_path = os.path.join(self.pro_dir, '{}_tr.csv'.format(datatype))
         te_path = os.path.join(self.pro_dir, '{}_te.csv'.format(datatype))
 
@@ -67,16 +86,27 @@ class DataLoader():
         return data_tr, data_te
 
 
-# Item counting procedure
 def get_count(tp, id):
+    """
+    Function to count triplets
+    :param tp: The user, item, rating triplet
+    :param id: The indices of the triplets
+    :return: The number of triplets
+    """
     playcount_groupby_id = tp[[id]].groupby(id, as_index=False)
     count = playcount_groupby_id.size()
     return count
 
 
-# Triplet filtering procedure
 def filter_triplets(tp, min_uc=5, min_sc=0):
-    # only keep the triplets for items which were cliked on by at least min_sc users
+    """
+    Function to filter out triplets
+    :param tp: The user, item, rating triplet
+    :param min_uc: The minimum threshold for user count
+    :param min_sc: The minimum threshold for item count
+    :return: The filtered triplets, along with the count for users and items
+    """
+    # Only keep the triplets for items which were clicked on by at least min_sc users
     if min_sc > 0:
         itemcount = get_count(tp, 'movieId')
         tp = tp[tp['movieId'].isin(itemcount.index[itemcount >= min_sc])]
@@ -91,13 +121,18 @@ def filter_triplets(tp, min_uc=5, min_sc=0):
     return tp, usercount, itemcount
 
 
-# Train/test splitting procedure
 def split_train_test_proportion(data, test_prop=0.2):
-    # group the data by userId
+    """
+    Function to split the data into train and test sets
+    :param data: Full data
+    :param test_prop: Defaulted 20% test set
+    :return: The train and test sets
+    """
+    # Group the data by userId
     data_grouped_by_user = data.groupby('userId')
-    # generate empty list to store train and test data
+    # Generate empty list to store train and test data
     tr_list, te_list = list(), list()
-    # generate random seed
+    # Generate random seed
     np.random.seed(98765)
 
     for _, group in data_grouped_by_user:
@@ -112,15 +147,22 @@ def split_train_test_proportion(data, test_prop=0.2):
         else:
             tr_list.append(group)
 
-    # concatenate train lists into train dataframe
+    # Concatenate train lists into train data frame
     data_tr = pd.concat(tr_list)
-    # concatenate test lists into test dataframe
+    # Concatenate test lists into test data frame
     data_te = pd.concat(te_list)
 
     return data_tr, data_te
 
 
 def numerize(tp, profile2id, show2id):
+    """
+    Function to numerize the triplets
+    :param tp: The user, item, rating triplet
+    :param profile2id: Dictionary of unique user IDs
+    :param show2id: Dictionary of unique movie IDs
+    :return: Data frame with processed userID and movieID
+    """
     uid = tp['userId'].apply(lambda x: profile2id[x])
     sid = tp['movieId'].apply(lambda x: show2id[x])
     return pd.DataFrame(data={'uid': uid, 'sid': sid}, columns=['uid', 'sid'])
@@ -128,37 +170,52 @@ def numerize(tp, profile2id, show2id):
 
 if __name__ == '__main__':
 
-    print("Load and Preprocess Movielens-20m dataset")
+    print("Load and Preprocess Movielens-1M dataset")
 
-    # location where the MovieLens-20M dataset sits
-    DATA_DIR = '/Users/khanhnamle/Desktop/CSCI799-Graduate-Independent-Study/ml-20m'
+    # location where the MovieLens-1M data sits
+    DATA_DIR = '../../ml-1m'
 
-    # read the ratings dataset into a dataframe
-    ratings = pd.read_csv(os.path.join(DATA_DIR, 'ratings.csv'), header=0)
+    # Read the ratings data into a data frame
+    cols = ['userId', 'movieId', 'rating', 'timestamp']
+    dtypes = {'userId': 'int', 'movieId': 'int', 'timestamp': 'int', 'rating': 'int'}
+    ratings = pd.read_csv(os.path.join(DATA_DIR, 'ratings.dat'), sep='::', names=cols, parse_dates=['timestamp'])
 
-    # binarize the data (only keep the ratings >= 4)
+    max_seq_len = 1000
+
+    # Binarize the data (only keep the ratings >= 4)
     ratings = ratings[ratings['rating'] > 3.5]
 
-    # only keep items that are clicked on by at least 5 users
-    ratings, user_activity, item_popularity = filter_triplets(ratings)
+    # Remove users with greater than $max_seq_len number of watched movies
+    ratings = ratings.groupby(["userId"]).filter(lambda x: len(x) <= max_seq_len)
 
-    # get unique id for the user
+    # Sort data values with the timestamp
+    ratings = ratings.groupby(["userId"]).apply(
+        lambda x: x.sort_values(["timestamp"], ascending=True)).reset_index(drop=True)
+
+    # Only keep items that are clicked on by at least 5 users
+    ratings, user_activity, item_popularity = filter_triplets(ratings)
+    # Calculate the sparsity percentage
+    sparsity = 1. * ratings.shape[0] / (user_activity.shape[0] * item_popularity.shape[0])
+    print("After filtering, there are %d watching events from %d users and %d movies (sparsity: %.3f%%)" %
+          (ratings.shape[0], user_activity.shape[0], item_popularity.shape[0], sparsity * 100))
+
+    # Get unique id for the user
     unique_uid = user_activity.index
-    # set random seed
+    # Set random seed
     np.random.seed(12345)
-    # shuffle user indices
+    # Shuffle user indices
     idx_perm = np.random.permutation(unique_uid.size)
     unique_uid = unique_uid[idx_perm]
 
-    # Select 10K users as heldout users, 10K users as validation users, and the rest of the users for training
+    # Select 750 users as test users, 750 users as validation users, and the rest of the users for training
     n_users = unique_uid.size
-    n_heldout_users = 10000
+    n_heldout_users = 750
 
-    # training set
+    # Training set
     tr_users = unique_uid[:(n_users - n_heldout_users * 2)]
-    # validation set
+    # Validation set
     vd_users = unique_uid[(n_users - n_heldout_users * 2): (n_users - n_heldout_users)]
-    # test set
+    # Test set
     te_users = unique_uid[(n_users - n_heldout_users):]
 
     train_plays = ratings.loc[ratings['userId'].isin(tr_users)]
@@ -167,7 +224,8 @@ if __name__ == '__main__':
     show2id = dict((sid, i) for (i, sid) in enumerate(unique_sid))
     profile2id = dict((pid, i) for (i, pid) in enumerate(unique_uid))
 
-    pro_dir = os.path.join(DATA_DIR, 'pro_sg')
+    # Path where the processed data will be saved
+    pro_dir = os.path.join('processed_data')
 
     if not os.path.exists(pro_dir):
         os.makedirs(pro_dir)
@@ -176,14 +234,16 @@ if __name__ == '__main__':
         for sid in unique_sid:
             f.write('%s\n' % sid)
 
+    # Get validation data
     vad_plays = ratings.loc[ratings['userId'].isin(vd_users)]
     vad_plays = vad_plays.loc[vad_plays['movieId'].isin(unique_sid)]
-
+    # Split validation data further into validation-train set and validation-test set
     vad_plays_tr, vad_plays_te = split_train_test_proportion(vad_plays)
 
+    # Get test data
     test_plays = ratings.loc[ratings['userId'].isin(te_users)]
     test_plays = test_plays.loc[test_plays['movieId'].isin(unique_sid)]
-
+    # Split test data further into test-train set and test-test set
     test_plays_tr, test_plays_te = split_train_test_proportion(test_plays)
 
     # Numerize train data and save to csv format
