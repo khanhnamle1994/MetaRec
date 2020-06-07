@@ -37,7 +37,7 @@ class MultVAE(BaseModel):
         self.anneal_cap = model_conf.anneal_cap
 
         self.dropout = model_conf.dropout
-        self.reg = model_conf.reg
+        # self.reg = model_conf.reg
 
         self.eps = 1e-6
         self.anneal = 0.
