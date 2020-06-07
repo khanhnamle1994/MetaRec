@@ -3,7 +3,7 @@
 This is a PyTorch implementation of the ESAE model in the paper "[Embarrassingly Shallow Autoencoders for Sparse Data](https://arxiv.org/abs/1905.03375)" by Harald Steck published in the proceedings of ’The Web Conference’ (WWW 2019).
 As observed below, the self-similarity of each item is constrained to 0 between the input and output layers. The Python code of the learning algorithm is given in Algorithm 1 in the paper.
 
-<img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Autoencoders-Experiments/ESAE-PyTorch/ESAE.png" width="800">
+<img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Autoencoders-Experiments/ESAE-PyTorch/ESAE.jpg" width="750">
 
 ## Requirements
 ```

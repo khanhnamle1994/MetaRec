@@ -77,7 +77,7 @@ criterion = VAELoss(hyper_params)
 if hyper_params['optimizer'] == 'adagrad':
     # AdaGrad
     optimizer = torch.optim.Adagrad(
-        model.parameters(), weight_decay=hyper_params['weight_decay'], lr = hyper_params['learning_rate']
+        model.parameters(), weight_decay=hyper_params['weight_decay'], lr=hyper_params['learning_rate']
     )
 elif hyper_params['optimizer'] == 'adadelta':
     # AdaDelta

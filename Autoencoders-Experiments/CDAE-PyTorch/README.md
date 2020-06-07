@@ -31,7 +31,7 @@ SciPy
 To reproduce the results, you simply run `python main.py`.
 
 ## Results
-The model hyper-parameters are stored in [the config folder](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/CDAE-PyTorch/config).
+The model configuration is stored in [the config folder](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/CDAE-PyTorch/config).
 According to the paper, the CDAE architecture includes 50 hidden layers. The corruption ratio for the data to the input layer is set to be 0.5.
 TanH was used to optimize the loss function coupled with a batch size of 1024 and learning rate of 0.01. The data is split to 80% training set and 20% test set.
 

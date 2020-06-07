@@ -1,26 +1,30 @@
+# Import packages
 import argparse
 import time
 import torch
-import torch.nn as nn
 import torch.optim as optim
 import numpy as np
-
 from tensorboardX import SummaryWriter
-from scipy import sparse
-import models
-import data
-import metric
+
+# Import utility scripts
+from models import MultiDAE, MultiVAE, loss_function
+from data import DataLoader
+from metric import NDCG_binary_at_k_batch, Recall_at_k_batch
+
+###############################################################################
+# Training Configuration
+###############################################################################
 
 parser = argparse.ArgumentParser(description='PyTorch Variational Autoencoders for Collaborative Filtering')
-parser.add_argument('--data', type=str, default='ml-20m',
-                    help='Movielens-20m dataset location')
-parser.add_argument('--lr', type=float, default=1e-4,
+parser.add_argument('--data', type=str, default='ml-1m',
+                    help='Movielens-1M dataset location')
+parser.add_argument('--lr', type=float, default=0.01,
                     help='initial learning rate')
 parser.add_argument('--wd', type=float, default=0.00,
                     help='weight decay coefficient')
-parser.add_argument('--batch_size', type=int, default=500,
+parser.add_argument('--batch_size', type=int, default=1024,
                     help='batch size')
-parser.add_argument('--epochs', type=int, default=200,
+parser.add_argument('--epochs', type=int, default=100,
                     help='upper epoch limit')
 parser.add_argument('--total_anneal_steps', type=int, default=200000,
                     help='the total number of gradient updates for annealing')
@@ -32,11 +36,11 @@ parser.add_argument('--cuda', action='store_true',
                     help='use CUDA')
 parser.add_argument('--log-interval', type=int, default=100, metavar='N',
                     help='report interval')
-parser.add_argument('--save', type=str, default='model.pt',
+parser.add_argument('--save', type=str, default='model.pth',
                     help='path to save the final model')
 args = parser.parse_args()
 
-# Set the random seed manually for reproductibility.
+# Set the random seed manually for reproducibility
 torch.manual_seed(args.seed)
 if torch.cuda.is_available():
     if not args.cuda:
@@ -48,9 +52,11 @@ device = torch.device("cuda" if args.cuda else "cpu")
 # Load data
 ###############################################################################
 
-loader = data.DataLoader(args.data)
-
+# Instantiate DataLoader class
+loader = DataLoader(args.data)
+# Get the number of items
 n_items = loader.load_n_items()
+# Load train, validation, and test sets
 train_data = loader.load_data('train')
 vad_data_tr, vad_data_te = loader.load_data('validation')
 test_data_tr, test_data_te = loader.load_data('test')
@@ -63,18 +69,21 @@ idxlist = list(range(N))
 ###############################################################################
 
 p_dims = [200, 600, n_items]
-model = models.MultiVAE(p_dims).to(device)
-
+# Instantiate model class
+# model = MultiDAE(p_dims).to(device)
+model = MultiVAE(p_dims).to(device)
+# Choice of optimizer defaulted to Adam with 0.001 learning rate and given weight decay
 optimizer = optim.Adam(model.parameters(), lr=1e-3, weight_decay=args.wd)
-criterion = models.loss_function
+# Define loss function
+criterion = loss_function
 
 ###############################################################################
 # Training code
 ###############################################################################
 
 # TensorboardX Writer
-
 writer = SummaryWriter()
+
 
 def sparse2torch_sparse(data):
     """
@@ -87,15 +96,20 @@ def sparse2torch_sparse(data):
     coo_data = data.tocoo()
     indices = torch.LongTensor([coo_data.row, coo_data.col])
     row_norms_inv = 1 / np.sqrt(data.sum(1))
-    row2val = {i : row_norms_inv[i].item() for i in range(samples)}
+    row2val = {i: row_norms_inv[i].item() for i in range(samples)}
     values = np.array([row2val[r] for r in coo_data.row])
     t = torch.sparse.FloatTensor(indices, torch.from_numpy(values).float(), [samples, features])
     return t
 
+
 def naive_sparse2tensor(data):
     return torch.FloatTensor(data.toarray())
 
+
 def train():
+    """
+    Function to train the model
+    """
     # Turn on training mode
     model.train()
     train_loss = 0.0
@@ -127,25 +141,33 @@ def train():
         if batch_idx % args.log_interval == 0 and batch_idx > 0:
             elapsed = time.time() - start_time
             print('| epoch {:3d} | {:4d}/{:4d} batches | ms/batch {:4.2f} | '
-                    'loss {:4.2f}'.format(
-                        epoch, batch_idx, len(range(0, N, args.batch_size)),
-                        elapsed * 1000 / args.log_interval,
-                        train_loss / args.log_interval))
+                  'loss {:4.2f}'.format(
+                epoch, batch_idx, len(range(0, N, args.batch_size)),
+                elapsed * 1000 / args.log_interval,
+                train_loss / args.log_interval))
 
-            # Log loss to tensorboard
+            # Log loss to Tensorboard
             n_iter = (epoch - 1) * len(range(0, N, args.batch_size)) + batch_idx
             writer.add_scalars('data/loss', {'train': train_loss / args.log_interval}, n_iter)
 
             start_time = time.time()
             train_loss = 0.0
 
+
 def evaluate(data_tr, data_te):
+    """
+    Function to evaluate the model
+    :param data_tr: train set of the given data
+    :param data_te: test set of the given data
+    """
     # Turn on evaluation mode
     model.eval()
     total_loss = 0.0
     global update_count
+
     e_idxlist = list(range(data_tr.shape[0]))
     e_N = data_tr.shape[0]
+
     n100_list = []
     r20_list = []
     r50_list = []
@@ -172,9 +194,9 @@ def evaluate(data_tr, data_te):
             recon_batch = recon_batch.cpu().numpy()
             recon_batch[data.nonzero()] = -np.inf
 
-            n100 = metric.NDCG_binary_at_k_batch(recon_batch, heldout_data, 100)
-            r20 = metric.Recall_at_k_batch(recon_batch, heldout_data, 20)
-            r50 = metric.Recall_at_k_batch(recon_batch, heldout_data, 50)
+            n100 = NDCG_binary_at_k_batch(recon_batch, heldout_data, 100)
+            r20 = Recall_at_k_batch(recon_batch, heldout_data, 20)
+            r50 = Recall_at_k_batch(recon_batch, heldout_data, 50)
 
             n100_list.append(n100)
             r20_list.append(r20)
@@ -187,6 +209,7 @@ def evaluate(data_tr, data_te):
 
     return total_loss, np.mean(n100_list), np.mean(r20_list), np.mean(r50_list)
 
+
 best_n100 = -np.inf
 update_count = 0
 
@@ -198,9 +221,9 @@ try:
         val_loss, n100, r20, r50 = evaluate(vad_data_tr, vad_data_te)
         print('-' * 89)
         print('| end of epoch {:3d} | time: {:4.2f}s | valid loss {:4.2f} | '
-                'n100 {:5.3f} | r20 {:5.3f} | r50 {:5.3f}'.format(
-                    epoch, time.time() - epoch_start_time, val_loss,
-                    n100, r20, r50))
+              'n100 {:5.3f} | r20 {:5.3f} | r50 {:5.3f}'.format(
+            epoch, time.time() - epoch_start_time, val_loss,
+            n100, r20, r50))
         print('-' * 89)
 
         n_iter = epoch * len(range(0, N, args.batch_size))
@@ -227,5 +250,5 @@ with open(args.save, 'rb') as f:
 test_loss, n100, r20, r50 = evaluate(test_data_tr, test_data_te)
 print('=' * 89)
 print('| End of training | test loss {:4.2f} | n100 {:4.2f} | r20 {:4.2f} | '
-        'r50 {:4.2f}'.format(test_loss, n100, r20, r50))
+      'r50 {:4.2f}'.format(test_loss, n100, r20, r50))
 print('=' * 89)
