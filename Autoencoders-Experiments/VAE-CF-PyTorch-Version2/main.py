@@ -1,26 +1,66 @@
+# Import packages
+import os
+import numpy as np
+import argparse
 import torch
 
-from options import args
-from models import model_factory
-from dataloaders import dataloader_factory
-from trainers import trainer_factory
-from utils import *
+# Import utility scripts
+from Params import Params
+from Dataset import Dataset
+from Logger import Logger
+from Evaluator import Evaluator
+from Trainer import Trainer
+from ModelBuilder import build_model
 
+# Arguments
+parser = argparse.ArgumentParser()
+parser.add_argument('--model', type=str, default='MultVAE')
+parser.add_argument('--data_dir', type=str, default='../../')
+parser.add_argument('--save_dir', type=str, default='./saves')
+parser.add_argument('--config_dir', type=str, default='./config')
+parser.add_argument('--seed', type=int, default=1994)
 
-def train():
-    export_root = setup_train(args)
-    train_loader, val_loader, test_loader = dataloader_factory(args)
-    model = model_factory(args)
-    trainer = trainer_factory(args, model, train_loader, val_loader, test_loader, export_root)
-    trainer.train()
+config = parser.parse_args()
+# Get model configuration
+model_config = Params(os.path.join(config.config_dir, config.model.lower() + '.json'))
+model_config.update_dict('exp_conf', config.__dict__)
+# Set random seeds
+np.random.seed(config.seed)
+torch.random.manual_seed(config.seed)
+# Device defaulted to CPU
+device = torch.device('cpu')
 
-    test_model = (input('Test model with test dataset? y/[n]: ') == 'y')
-    if test_model:
-        trainer.test()
+# Initialize Dataset class
+dataset = Dataset(
+    data_dir=config.data_dir,
+    data_name=model_config.data_name,
+    train_ratio=model_config.train_ratio,
+    device=device
+)
 
+log_dir = os.path.join('saves', config.model)
+# Initialize Logger class
+logger = Logger(log_dir)
+model_config.save(os.path.join(logger.log_dir, 'config.json'))
+# Get the position and target of the evaluated item
+eval_pos, eval_target = dataset.eval_data()
+# Get the popularity item
+item_popularity = dataset.item_popularity
+# Initialize Evaluator class
+evaluator = Evaluator(eval_pos, eval_target, item_popularity, model_config.top_k)
+# Build the model
+model = build_model(config.model, model_config, dataset.num_users, dataset.num_items, device)
+# Get the model info and data info
+logger.info(model_config)
+logger.info(dataset)
 
-if __name__ == '__main__':
-    if args.mode == 'train':
-        train()
-    else:
-        raise ValueError('Invalid mode')
+# Initialize Trainer class
+trainer = Trainer(
+    dataset=dataset,
+    model=model,
+    evaluator=evaluator,
+    logger=logger,
+    conf=model_config
+)
+# Train the model and get results
+trainer.train()
