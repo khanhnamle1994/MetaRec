@@ -32,7 +32,7 @@ class ContentRec:
         indices = pd.Series(input_data.index, index=input_data['title'])
 
         # Get the index of the movie given as parameter
-        idx = indices[movie_title]
+        idx = indices[movie_title["title"]]
         # Get similarity scores for the movie given as parameter
         sim_scores = list(enumerate(cosine_sim[idx]))
         sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)

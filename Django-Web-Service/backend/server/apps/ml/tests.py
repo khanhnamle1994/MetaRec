@@ -7,7 +7,9 @@ from apps.ml.registry import MLRegistry
 
 class MLTests(TestCase):
     def test_content_rec_algorithm(self):
-        movie_title = 'Good Will Hunting (1997)'
+        movie_title = {
+            "title": "Good Will Hunting (1997)"
+        }
 
         # Initialize model class
         my_alg = ContentRec()
@@ -22,7 +24,7 @@ class MLTests(TestCase):
         algorithm_object = ContentRec()
         algorithm_name = "content-based recommendation"
         algorithm_status = "production"
-        algorithm_version = "0.0.1"
+        algorithm_version = "0.0.2"
         algorithm_owner = "James"
         algorithm_description = "Content-Based Recommendation based on Movie Genres"
         algorithm_code = inspect.getsource(ContentRec)
