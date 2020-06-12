@@ -1,6 +1,6 @@
 from django.test import TestCase
 from apps.ml.movie_rec.content_rec import ContentRec
-
+from apps.ml.movie_rec.title_rec import TitleRec
 import inspect
 from apps.ml.registry import MLRegistry
 
@@ -13,6 +13,17 @@ class MLTests(TestCase):
 
         # Initialize model class
         my_alg = ContentRec()
+        response = my_alg.get_recommendation(movie_title)
+        self.assertEqual('OK', response['status'])
+        self.assertTrue('titles' in response)
+
+    def test_title_rec_algorithm(self):
+        movie_title = {
+            "title": "Good Will Hunting (1997)"
+        }
+
+        # Initialize model class
+        my_alg = TitleRec()
         response = my_alg.get_recommendation(movie_title)
         self.assertEqual('OK', response['status'])
         self.assertTrue('titles' in response)
