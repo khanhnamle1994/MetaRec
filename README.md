@@ -20,7 +20,7 @@ Here are other datasets that I plan to experiment with:
 - [ ] [Trivago RecSys 2019 Challenge](http://www.recsyschallenge.com/2019/)
 - [ ] [Twitter RecSys 2020 Challenge](http://recsys-twitter.com/)
 
-# Models
+# Research Models
 
 ## [Matrix Factorization](https://github.com/khanhnamle1994/transfer-rec/tree/master/Matrix-Factorization-Experiments)
 
@@ -46,17 +46,33 @@ Here are the 5 different Multilayer Perceptron models for Collaborative Filterin
 
 ## [Autoencoders](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments)
 
-Here are the different Autoencoders models for Collaborative Filtering:
+Here are the 6 different Autoencoders models for Collaborative Filtering:
 
-* [AutoRec](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/AutoRec-TensorFlow)
-* [Variational Autoencoders](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/VAE-CF-PyTorch-Version2)
-* [Sequential Variational Autoencoders](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/SVAE-PyTorch)
+* [AutoRec](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/AutoRec-TensorFlow) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Autoencoders-Experiments/AutoRec-Autoencoders-Meet-Collaborative-Filtering.pdf))
+* [DeepRec](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/NVIDIA-DeepRec-TensorFlow) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Autoencoders-Experiments/Training-Deep-Autoencoders-For-Collaborative-Filtering.pdf))
+* [Collaborative Denoising Autoencoders](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/CDAE-PyTorch) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Autoencoders-Experiments/Collaborative-Denoising-Autoencoders-for-TopN-Recommendation-System.pdf))
+* [Multinomial Variational Autoencoders](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/VAE-PyTorch) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Autoencoders-Experiments/Variational-Autoencoders-for-Collaborative-Filtering.pdf))
+* [Sequential Variational Autoencoders](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/SVAE-PyTorch) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Autoencoders-Experiments/Sequential%20Variational%20Autoencoders%20for%20Collaborative%20Filtering.pdf))
+* [Embarrassingly Shallow Autoencoders](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/ESAE-PyTorch) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Autoencoders-Experiments/Embarrassingly-Shallow-Autoencoders-for-Sparse-Data.pdf))
 
 ## [Boltzmann Machines](https://github.com/khanhnamle1994/transfer-rec/tree/master/Boltzmann-Machines-Experiments)
 
 Here are the different Boltzmann Machines models for Collaborative Filtering:
 
 * [Restricted Boltzmann Machines](https://github.com/khanhnamle1994/transfer-rec/tree/master/Boltzmann-Machines-Experiments/RBM-CF-PyTorch)
+
+# Production App
+
+## [Django Web Service](https://github.com/khanhnamle1994/transfer-rec/tree/master/Django-Web-Service)
+
+Here I built a recommendation web service with Python 3.6 and Django 2.2.4. It has these properties:
+- Can handle many API endpoints,
+- Each API endpoint can have several research algorithms with different versions,
+- Research code and artifacts (files with model parameters) are stored in the code repository (git),
+- Supports fast deployments and continuous integration (tests for both: server and research code),
+- Supports monitoring and algorithm diagnostic (support A/B tests),
+- Is scalable (deployed with containers),
+- Has a user interface.
 
 # Blog Posts
 
