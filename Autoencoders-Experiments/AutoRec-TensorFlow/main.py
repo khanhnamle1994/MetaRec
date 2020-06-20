@@ -1,3 +1,5 @@
+from comet_ml import Experiment
+
 # Import packages
 import tensorflow as tf
 import argparse
@@ -24,15 +26,15 @@ parser = argparse.ArgumentParser(description='I-AutoRec ')
 parser.add_argument('--hidden_neuron', type=int, default=500)
 parser.add_argument('--lambda_value', type=float, default=1)
 
-parser.add_argument('--train_epoch', type=int, default=100)
-parser.add_argument('--batch_size', type=int, default=128)
+parser.add_argument('--train_epoch', type=int, default=500)
+parser.add_argument('--batch_size', type=int, default=512)
 
 parser.add_argument('--optimizer_method', choices=['Adam', 'RMSProp'], default='Adam')
 parser.add_argument('--grad_clip', type=bool, default=False)
 parser.add_argument('--base_lr', type=float, default=1e-3)
 parser.add_argument('--decay_epoch_step', type=int, default=50, help="decay the learning rate for each n epochs")
 
-parser.add_argument('--random_seed', type=int, default=1000)
+parser.add_argument('--random_seed', type=int, default=1994)
 parser.add_argument('--display_step', type=int, default=1)
 
 # Get argument parser
@@ -40,6 +42,17 @@ args = parser.parse_args()
 # Set random seed
 tf.random.set_seed(args.random_seed)
 np.random.seed(args.random_seed)
+
+# Get hyper-parameters
+hyper_params = {
+    "hidden_neuron": 500,
+    "lambda_value": 1,
+    "epochs": 500,
+    "batch_size": 512,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "random_seed": 1994
+}
 
 # Info on the MovieLens1M data
 data_name = 'ml-1m'
@@ -64,6 +77,10 @@ user_train_set, item_train_set, user_test_set, item_test_set \
 config = tf.compat.v1.ConfigProto()
 # config.gpu_options.allow_growth = True
 
+# CometML Experiment to log results
+experiment = Experiment(api_key="GaicgDHvizDRCbpq2wVV8NHnX", project_name="autoencoders-movielens1M")
+experiment.log_parameters(hyper_params)
+
 # Run a TensorFlow session
 with tf.compat.v1.Session(config=config) as sess:
     # Define the AutoRec class from `AutoRec.py`
@@ -73,4 +90,4 @@ with tf.compat.v1.Session(config=config) as sess:
                       user_train_set, item_train_set, user_test_set, item_test_set,
                       result_path)
     # Run the AutoRec model
-    AutoRec.run()
+    AutoRec.run(experiment)

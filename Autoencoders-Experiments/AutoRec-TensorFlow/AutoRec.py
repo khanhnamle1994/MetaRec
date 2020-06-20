@@ -61,9 +61,10 @@ class AutoRec:
         self.result_path = result_path
         self.grad_clip = args.grad_clip
 
-    def run(self):
+    def run(self, experiment):
         """
         Function to run AutoRec
+        :param experiment: CometML Experiment function
         """
         # Build AutoRec
         self.prepare_model()
@@ -72,8 +73,9 @@ class AutoRec:
 
         # Train and evaluate AutoRec for all epochs
         for epoch_itr in range(self.train_epoch):
-            self.train_model(epoch_itr)
-            self.test_model(epoch_itr)
+            experiment.set_step(epoch_itr)
+            self.train_model(epoch_itr,experiment)
+            self.test_model(epoch_itr, experiment)
 
         # Log results
         self.make_records()
@@ -124,10 +126,11 @@ class AutoRec:
         else:
             self.optimizer = optimizer.minimize(self.cost, global_step=self.global_step)
 
-    def train_model(self, itr):
+    def train_model(self, itr, experiment):
         """
         Function to train AutoRec
         :param itr: Current iteration
+        :param experiment: CometML experiment
         """
         start_time = time.time()
         random_perm_doc_idx = np.random.permutation(self.num_users)
@@ -148,13 +151,17 @@ class AutoRec:
         self.train_cost_list.append(batch_cost)
 
         if (itr + 1) % self.display_step == 0:
+
             print("Training //", "Epoch %d //" % (itr), " Total cost = {:.2f}".format(batch_cost),
                   "Elapsed time : %d sec" % (time.time() - start_time))
 
-    def test_model(self, itr):
+        experiment.log_metric("loss", batch_cost, step=itr)
+
+    def test_model(self, itr, experiment):
         """
         Function to evaluate AutoRec
         :param itr: Current iteration
+        :param experiment: CometML experiment
         """
         start_time = time.time()
         Cost, Decoder = self.sess.run(
@@ -185,6 +192,8 @@ class AutoRec:
                   " RMSE = {:.5f}".format(RMSE),
                   "Elapsed time : %d sec" % (time.time() - start_time))
             print("=" * 100)
+
+        experiment.log_metric("RMSE", RMSE, step=itr)
 
     def make_records(self):
         """

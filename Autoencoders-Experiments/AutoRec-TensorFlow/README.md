@@ -19,15 +19,16 @@ Pandas
 * [main.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Autoencoders-Experiments/AutoRec-TensorFlow/main.py): This is the main training script. You can simply run `python main.py` to execute it.
 
 ## Results
-The full results are stored in [this folder](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/AutoRec-TensorFlow/results). I tuned the hyperparameters according to the paper:
+The full results are stored in [this folder](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/AutoRec-TensorFlow/results).
+I tuned the hyper-parameters according to the paper:
+- Number of Hidden Units = 500 (within the Autoencoder's Hidden Layer)
 - Activation Function = Sigmoid
 - Learning Rate = 0.001
-- Batch Size = 128
-- Decay the Learning Rate for each 50 epochs
-- Number of Hidden Neurons = 500 (within the Autoencoder)
+- Batch Size = 512
+- Decay the Learning Rate for every 50 epochs
 - L2 Regularizer (Lambda) Value = 1
 - Optimizer Method = Adam
-- Random Seed = 1000
-- Number of Training Epochs = 100
+- Random Seed = 1994
 
-After training the model for 100 epochs, I got the **test loss RMSE = 0.9102**.
+After training the model for 500 epochs, I got the **test loss RMSE = 0.910**.
+I also logged the experiment run on CometML, which can be accessed [here](https://www.comet.ml/khanhnamle1994/autoencoders-movielens1m/6c606d10c5f24628a88865c0270361ec).
