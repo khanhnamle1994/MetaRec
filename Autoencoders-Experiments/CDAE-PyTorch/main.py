@@ -1,3 +1,6 @@
+# CometML for experiment logging
+from comet_ml import Experiment
+
 # Import packages
 import os
 import numpy as np
@@ -11,6 +14,9 @@ from Logger import Logger
 from Evaluator import Evaluator
 from Trainer import Trainer
 from ModelBuilder import build_model
+
+# Create an experiment with API key
+experiment = Experiment(api_key="GaicgDHvizDRCbpq2wVV8NHnX", project_name="autoencoders-movielens1M")
 
 # Arguments
 parser = argparse.ArgumentParser()
@@ -63,4 +69,18 @@ trainer = Trainer(
     conf=model_config
 )
 # Train the model and get results
-trainer.train()
+trainer.train(experiment)
+
+# Dictionary to store model hyper-parameters
+hyper_params = {
+    "hidden_dim": 50,
+    "corruption_ratio": 0.5,
+    "epochs": 500,
+    "batch_size": 512,
+    "optimizer": "Adam",
+    "activation": "TanH",
+    "learning_rate": 0.01
+}
+
+# Log model hyper-parameters
+experiment.log_parameters(hyper_params)

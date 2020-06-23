@@ -96,8 +96,6 @@ class CDAE(BaseModel):
 
             # cross_entropy
             batch_loss = F.binary_cross_entropy(pred_matrix, batch_matrix, reduction='sum')
-            # batch_loss = batch_matrix * (pred_matrix + 1e-10).log() + (1 - batch_matrix) * (1 - pred_matrix + 1e-10).log()
-            # batch_loss = -torch.sum(batch_loss)
             batch_loss.backward()
             optimizer.step()
 
