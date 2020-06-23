@@ -26,12 +26,14 @@ class Evaluator:
         self.num_users, self.num_items = self.eval_pos.shape
         self.item_self_information = self.compute_item_self_info(item_popularity)
 
-    def evaluate(self, model, dataset, test_batch_size):
+    def evaluate(self, model, dataset, test_batch_size, experiment, epoch):
         """
         Function to perform evaluation
         :param model: choice of model
         :param dataset: given dataset
         :param test_batch_size: choice of batch size in test set
+        :param experiment: CometML experiment to log metric
+        :param epoch: current training epoch
         :return: dictionary that stores the evaluation metrics
         """
         # Step into evaluation mode
@@ -44,7 +46,7 @@ class Evaluator:
         topk = self.predict_topk(pred_matrix, max(self.top_k))
 
         # Precision, Recall, NDCG @ k
-        scores = self.prec_recall_ndcg(topk, self.eval_target)
+        scores = self.prec_recall_ndcg(topk, self.eval_target, experiment, epoch)
         score_dict = OrderedDict()
         for metric in scores:
             score_by_ks = scores[metric]
@@ -52,12 +54,12 @@ class Evaluator:
                 score_dict['%s@%d' % (metric, k)] = score_by_ks[k].mean
 
         # Novelty @ k
-        novelty_dict = self.novelty(topk)
+        novelty_dict = self.novelty(topk, experiment, epoch)
         for k, v in novelty_dict.items():
             score_dict[k] = v
 
         # Gini diversity
-        score_dict['Gini-D'] = self.gini_diversity(topk)
+        score_dict['Gini-D'] = self.gini_diversity(topk, experiment, epoch)
 
         return score_dict
 
@@ -82,11 +84,13 @@ class Evaluator:
 
         return topk
 
-    def prec_recall_ndcg(self, topk, target):
+    def prec_recall_ndcg(self, topk, target, experiment, epoch):
         """
         Function to get the precision, recall, and NDCG @ k
         :param topk: top-k predictions
         :param target: ground truth label
+        :param experiment: CometML experiment to log metric
+        :param epoch: current training epoch
         :return: precision, recall, and NDCG @ k
         """
         # Initialize the precision, recall, and NDCG values as averages of top-k predictions
@@ -124,12 +128,19 @@ class Evaluator:
                 scores['Recall'][k].update(recall_k)
                 scores['NDCG'][k].update(ndcg_k)
 
+        # Log precision, recall, and NDCG metrics
+        experiment.log_metric("precision", prec_k, step=epoch)
+        experiment.log_metric("recall", recall_k, step=epoch)
+        experiment.log_metric("NDCG", ndcg_k, step=epoch)
+
         return scores
 
-    def novelty(self, topk):
+    def novelty(self, topk, experiment, epoch):
         """
         Function to get the novelty @ k
         :param topk: top-k predictions
+        :param experiment: CometML experiment to log metric
+        :param epoch: current training epoch
         :return: novelty @ k
         """
         topk_info = np.take(self.item_self_information, topk)
@@ -138,14 +149,19 @@ class Evaluator:
         novelty_all_users = topk_info_sum / np.atleast_2d(top_k_array)
         novelty = np.mean(novelty_all_users, axis=0)
 
+        # Log novelty metric
+        experiment.log_metric("novelty", novelty, step=epoch)
+
         novelty_dict = {'Nov@%d' % self.top_k[i]: novelty[i] for i in range(len(self.top_k))}
 
         return novelty_dict
 
-    def gini_diversity(self, topk):
+    def gini_diversity(self, topk, experiment, epoch):
         """
         Function to calculate Gini diversity index
         :param topk: top-k predictions
+        :param experiment: CometML experiment to log metric
+        :param epoch: current training epoch
         :return: Gini diversity index
         """
         num_items = self.eval_pos.shape[1]
@@ -165,6 +181,10 @@ class Evaluator:
         gini_diversity = 2 * np.sum(
             (num_eff_items + 1 - index) / (num_eff_items + 1) * item_recommend_counter_sorted / np.sum(
                 item_recommend_counter_sorted))
+
+        # Log Gini Diversity metric
+        experiment.log_metric("gini_diversity", gini_diversity, step=epoch)
+
         return gini_diversity
 
     def compute_item_self_info(self, item_popularity):

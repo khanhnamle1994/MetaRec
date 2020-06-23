@@ -5,8 +5,8 @@
   "reg": 1000.0,
 
   "num_epochs": 500,
-  "batch_size": 1024,
-  "test_batch_size": 1024,
+  "batch_size": 512,
+  "test_batch_size": 512,
   "learning_rate": 0.01,
   "early_stop": true,
   "patience": 50,

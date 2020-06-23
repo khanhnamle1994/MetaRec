@@ -34,9 +34,10 @@ class Trainer:
         self.best_score = None
         self.best_params = None
 
-    def train(self):
+    def train(self, experiment):
         """
         Function to perform training
+        :param experiment: CometML experiment to log metric
         """
         self.logger.info(self.conf)
         if len(list(self.model.parameters())) > 0:
@@ -50,8 +51,11 @@ class Trainer:
             loss = self.model.train_one_epoch(self.dataset, optimizer, self.batch_size, False)
             train_elapsed = time.time() - epoch_start
 
+            # log loss to CometML where step is each epoch
+            experiment.log_metric("loss", loss, step=epoch)
+
             # evaluate
-            score = self.evaluate()
+            score = self.evaluate(experiment, epoch)
             epoch_elapsed = time.time() - epoch_start
 
             score_str = ' '.join(['%s=%.4f' % (m, score[m]) for m in score])
@@ -76,10 +80,12 @@ class Trainer:
         best_score_str = ' '.join(['%s = %.4f' % (k, self.best_score[k]) for k in self.best_score])
         self.logger.info('[Best score at epoch %d] %s' % (self.best_epoch, best_score_str))
 
-    def evaluate(self):
+    def evaluate(self, experiment, epoch):
         """
         Function to perform evaluation
+        :param experiment: CometML experiment to log metric
+        :param epoch: current training epoch
         """
         # pred_matrix = self.model.predict(self.dataset)
-        score = self.evaluator.evaluate(self.model, self.dataset, self.test_batch_size)
+        score = self.evaluator.evaluate(self.model, self.dataset, self.test_batch_size, experiment, epoch)
         return score
