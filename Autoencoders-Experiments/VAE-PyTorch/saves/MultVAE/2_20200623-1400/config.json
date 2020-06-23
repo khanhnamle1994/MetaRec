@@ -1,0 +1,27 @@
+{
+    "path": "./config/multvae.json",
+    "data_name": "ml-1m",
+    "train_ratio": 0.8,
+    "enc_dims": [
+        200
+    ],
+    "dropout": 0.5,
+    "anneal_cap": 0.2,
+    "total_anneal_steps": 200000,
+    "num_epochs": 500,
+    "batch_size": 512,
+    "test_batch_size": 512,
+    "learning_rate": 0.01,
+    "early_stop": true,
+    "patience": 50,
+    "top_k": [
+        100
+    ],
+    "exp_conf": {
+        "model": "MultVAE",
+        "data_dir": "../../",
+        "save_dir": "./saves",
+        "config_dir": "./config",
+        "seed": 1994
+    }
+}
