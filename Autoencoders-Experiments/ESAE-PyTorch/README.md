@@ -32,14 +32,13 @@ To reproduce the results, you simply run `python main.py`.
 ## Results
 The model configuration is stored in [the config folder](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/ESAE-PyTorch/config).
 ESAE is a linear model without a hidden layer. The binary input vector indicates which items a user has interacted with, and the model's objective (in its output layer) is to predict the best items to recommend to the user.
-The author derive the closed-form solution of its convex training objective.
-The model is trained with Adam optimizer, a batch size of 512 and learning rate of 0.01. The data is split to 80% training set and 20% test set.
+The author derive the closed-form solution of its convex training objective. The model is trained with Adam optimizer, a batch size of 512 and learning rate of 0.01. The data is split to 80% training set and 20% test set.
 
-The [results](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/ESAE-PyTorch/saves) on the held-out test set after 500 epochs of training are:
+The [results](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/ESAE-PyTorch/saves) on the held-out test set after 50 epochs of training are:
 - Precision@100 = 0.0757
 - Recall@100 = 0.4181
 - NDCG@100 = 0.2561
 - Novelty@100 = 2.4604
 - Gini Index = 0.2379
 
-I also logged the experiment run on CometML, which can be accessed [here](https://www.comet.ml/khanhnamle1994/autoencoders-movielens1m/237651ecb58545069ef176194b2d3935).
+I also logged the experiment run on CometML, which can be accessed [here](https://www.comet.ml/khanhnamle1994/autoencoders-movielens1m/679d365e58e1459f9de9a44f472c0dd2).

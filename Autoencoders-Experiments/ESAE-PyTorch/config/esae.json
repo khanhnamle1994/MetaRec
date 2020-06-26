@@ -4,7 +4,7 @@
 
   "reg": 1000.0,
 
-  "num_epochs": 500,
+  "num_epochs": 50,
   "batch_size": 512,
   "test_batch_size": 512,
   "learning_rate": 0.01,

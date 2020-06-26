@@ -74,7 +74,7 @@ trainer.train(experiment)
 # Dictionary to store model hyper-parameters
 hyper_params = {
     "regularizer": 1000,
-    "epochs": 500,
+    "epochs": 50,
     "batch_size": 512,
     "optimizer": "Adam",
     "learning_rate": 0.01

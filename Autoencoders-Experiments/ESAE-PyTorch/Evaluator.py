@@ -129,9 +129,9 @@ class Evaluator:
                 scores['NDCG'][k].update(ndcg_k)
 
         # Log precision, recall, and NDCG metrics
-        experiment.log_metric("precision", prec_k, step=epoch)
-        experiment.log_metric("recall", recall_k, step=epoch)
-        experiment.log_metric("NDCG", ndcg_k, step=epoch)
+        experiment.log_metric("Prec@100", prec_k, step=epoch)
+        experiment.log_metric("Rec@100", recall_k, step=epoch)
+        experiment.log_metric("NDCG@100", ndcg_k, step=epoch)
 
         return scores
 
@@ -150,7 +150,7 @@ class Evaluator:
         novelty = np.mean(novelty_all_users, axis=0)
 
         # Log novelty metric
-        experiment.log_metric("novelty", novelty, step=epoch)
+        experiment.log_metric("Novelty@100", novelty, step=epoch)
 
         novelty_dict = {'Nov@%d' % self.top_k[i]: novelty[i] for i in range(len(self.top_k))}
 
@@ -158,7 +158,7 @@ class Evaluator:
 
     def gini_diversity(self, topk, experiment, epoch):
         """
-        Function to calculate Gini diversity index
+        Function to calculate Gini diversity index @ k
         :param topk: top-k predictions
         :param experiment: CometML experiment to log metric
         :param epoch: current training epoch
@@ -183,7 +183,7 @@ class Evaluator:
                 item_recommend_counter_sorted))
 
         # Log Gini Diversity metric
-        experiment.log_metric("gini_diversity", gini_diversity, step=epoch)
+        experiment.log_metric("GiniDiversity@100", gini_diversity, step=epoch)
 
         return gini_diversity
 
