@@ -36,6 +36,8 @@ After training the model for 50 epochs, I got [these results](https://github.com
 - Rec@10 = 18.9233 and Rec@100 = 58.4987
 - Prec@10 = 20.2 and Prec@100 = 8.18
 
+I also logged the experiment run on CometML, which can be accessed [here](https://www.comet.ml/khanhnamle1994/autoencoders-movielens1m/e9a6c227376149d4a9a61f54516a353e)
+
 <img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Autoencoders-Experiments/SVAE-PyTorch/saved_plots/learning_curve_svae_ml1m.png" width="800">
 
 <img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Autoencoders-Experiments/SVAE-PyTorch/saved_plots/seq_len_vs_ndcg_SVAE_ML1M.png" width="800">

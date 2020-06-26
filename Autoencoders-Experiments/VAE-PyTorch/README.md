@@ -35,11 +35,11 @@ The dimension of the encoder module is 200. The dropout rate is set to be 0.5.
 The batch size is set to be 512. The learning rate is set to be 0.01.
 Adam was used as the optimizer. The data is split to 80% training set and 20% test set.
 
-After training the model for 500 epochs, I got [the best results](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/VAE-PyTorch/saves) on the held-out test set at epoch 5 (thanks to early stopping):
+After training the model for 55 epochs, I got [the best results](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/VAE-PyTorch/saves) on the held-out test set at epoch 5 (thanks to early stopping):
 - Precision@100 = 0.0886
 - Recall@100 = 0.4115
 - NDCG@100 = 0.2508
 - Novelty@100 = 2.4775
 - Gini Index = 0.2131
 
-I also logged the experiment run on CometML, which can be accessed [here](https://www.comet.ml/khanhnamle1994/autoencoders-movielens1m/ef7a21a9da5b4fd095ad6a3842decaf8)
+I also logged the experiment run on CometML, which can be accessed [here](https://www.comet.ml/khanhnamle1994/autoencoders-movielens1m/ef7a21a9da5b4fd095ad6a3842decaf8).

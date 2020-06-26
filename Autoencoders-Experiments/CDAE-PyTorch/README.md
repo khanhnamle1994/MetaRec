@@ -35,9 +35,11 @@ The model configuration is stored in [the config folder](https://github.com/khan
 According to the paper, the CDAE architecture includes 50 hidden layers. The corruption ratio for the data to the input layer is set to be 0.5.
 Adam was used to optimize the loss function coupled with TanH activation, a batch size of 512 and learning rate of 0.01. The data is split to 80% training set and 20% test set.
 
-After training the model for 500 epochs, I got [the best results](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/CDAE-PyTorch/saves) on the held-out test set at epoch 91 (thanks to early stopping):
+After training the model for 141 epochs, I got [the best results](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/CDAE-PyTorch/saves) on the held-out test set at epoch 91 (thanks to early stopping):
 - Precision@100 = 0.0894
 - Recall@100 = 0.4137
 - NDCG@100 = 0.2528
 - Novelty@100 = 2.5398
 - Gini Index = 0.2198
+
+I also logged the experiment run on CometML, which can be accessed [here](https://www.comet.ml/khanhnamle1994/autoencoders-movielens1m/46a7c89313fb4fe68c218cb3d42b084b).

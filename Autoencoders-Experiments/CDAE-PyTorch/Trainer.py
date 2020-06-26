@@ -83,6 +83,8 @@ class Trainer:
     def evaluate(self, experiment, epoch):
         """
         Function to perform evaluation
+        :param experiment: CometML experiment to log metric
+        :param epoch: current training epoch
         """
         # pred_matrix = self.model.predict(self.dataset)
         score = self.evaluator.evaluate(self.model, self.dataset, self.test_batch_size, experiment, epoch)

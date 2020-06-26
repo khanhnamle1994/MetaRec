@@ -1,3 +1,4 @@
+# CometML for experiment logging
 from comet_ml import Experiment
 
 # Import packages
@@ -77,7 +78,7 @@ user_train_set, item_train_set, user_test_set, item_test_set \
 config = tf.compat.v1.ConfigProto()
 # config.gpu_options.allow_growth = True
 
-# CometML Experiment to log results
+# Create an experiment with API key
 experiment = Experiment(api_key="GaicgDHvizDRCbpq2wVV8NHnX", project_name="autoencoders-movielens1M")
 experiment.log_parameters(hyper_params)
 
