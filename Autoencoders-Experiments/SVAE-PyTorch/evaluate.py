@@ -3,7 +3,7 @@ import torch
 import numpy as np
 
 
-def evaluate(model, criterion, reader, hyper_params, is_train_set):
+def evaluate(model, criterion, reader, hyper_params, is_train_set, experiment):
     """
     Function to evaluate the model
     :param model: The model choice
@@ -11,6 +11,7 @@ def evaluate(model, criterion, reader, hyper_params, is_train_set):
     :param reader: The Data Reader class
     :param hyper_params: The hyper-parameter dictionary
     :param is_train_set: Boolean value to check training setting
+    :param experiment: CometML experiment to log metric
     :return: NDCG, Precision, and Recall metrics
     """
     # Step into evaluation mode
@@ -50,7 +51,6 @@ def evaluate(model, criterion, reader, hyper_params, is_train_set):
             actual_movies_watched = test_movies[batch_num]
             actual_movies_ratings = test_movies_r[batch_num]
 
-            # Calculate NDCG
             _, argsorted = torch.sort(-1.0 * predicted_scores)
             for k in Ks:
                 best, now_at, dcg, hits = 0.0, 0.0, 0.0, 0.0
@@ -67,6 +67,7 @@ def evaluate(model, criterion, reader, hyper_params, is_train_set):
                     hits += 1.0
                     dcg += 1.0 / float(np.log2(float(rec_list.index(movie) + 2)))
 
+                # Calculate NDCG, Recall, and Precision @ K metrics
                 metrics['NDCG@' + str(k)] += float(dcg) / float(best)
                 metrics['Rec@' + str(k)] += float(hits) / float(len(actual_movies_watched))
                 metrics['Prec@' + str(k)] += float(hits) / float(k)
@@ -83,9 +84,14 @@ def evaluate(model, criterion, reader, hyper_params, is_train_set):
     metrics['loss'] = float(metrics['loss']) / float(batch)
     metrics['loss'] = round(metrics['loss'], 4)
 
+    # Log metrics for different K values
     for k in Ks:
         metrics['NDCG@' + str(k)] = round((100.0 * metrics['NDCG@' + str(k)]) / float(total_users), 4)
         metrics['Rec@' + str(k)] = round((100.0 * metrics['Rec@' + str(k)]) / float(total_users), 4)
         metrics['Prec@' + str(k)] = round((100.0 * metrics['Prec@' + str(k)]) / float(total_users), 4)
+
+        experiment.log_metric('NDCG@' + str(k), metrics['NDCG@' + str(k)])
+        experiment.log_metric('Rec@' + str(k), metrics['Rec@' + str(k)])
+        experiment.log_metric('Prec@' + str(k), metrics['Prec@' + str(k)])
 
     return metrics, len_to_ndcg_at_100_map

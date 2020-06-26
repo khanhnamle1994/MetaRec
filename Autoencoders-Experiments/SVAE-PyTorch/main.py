@@ -1,3 +1,6 @@
+# CometML for experiment logging
+from comet_ml import Experiment
+
 # Import packages
 import os
 import torch
@@ -13,16 +16,19 @@ from train import train
 from evaluate import evaluate
 from utils import plot_len_vs_ndcg
 
+# Create an experiment with API key
+experiment = Experiment(api_key="GaicgDHvizDRCbpq2wVV8NHnX", project_name="autoencoders-movielens1M")
+
 # Dictionary to store model hyper-parameters
 hyper_params = {
     'project_name': 'svae_ml1m',  # Project name
     'model_file_name': '',  # Model file name
-    'log_file': '',  # Log file
+    'log_file': '',  # Log file name
     'history_split_test': [0.8, 0.2],  # Part of test history to train on : Part of test history to test
     'learning_rate': 0.01,  # Choice of learning rate (required only if optimizer is AdaGrad)
     'optimizer': 'adam',  # Choice of optimizer defaulted to Adam
     'weight_decay': float(5e-3),  # Choice of weight decay defaulted to 0.005
-    'epochs': 30,  # Number of epochs
+    'epochs': 50,  # Number of epochs
     'batch_size': 1,  # Needs to be 1, because we don't pack multiple sequences in the same batch
     'item_embed_size': 256,  # Item embedding layer of size 256
     'rnn_size': 200,  # Recurrent layer realized as a GRU with 200 cells
@@ -31,10 +37,13 @@ hyper_params = {
     'loss_type': 'next_k',  # [predict_next, same, prefix, postfix, exp_decay, next_k]
     'next_k': 4,  # Size for the number of items forward in time to predict on
     'number_users_to_keep': 1000000000,  # Number of held-out users for evaluation purpose
-    'batch_log_interval': 1000,
+    'batch_log_interval': 1000,  # Log metrics after this number of batches
     'train_cp_users': 200,
-    'exploding_clip': 0.25,
+    'exploding_clip': 0.25,  # Exploding gradient clipping
 }
+
+# Log model hyper-parameters
+experiment.log_parameters(hyper_params)
 
 # Store the optimizer, weight decay, loss type, item embedding size, RNN size, and latent dimension size
 file_name = '_optimizer_' + str(hyper_params['optimizer'])
@@ -106,10 +115,10 @@ try:
         epoch_start_time = time.time()
 
         # Perform training
-        train(model, criterion, train_reader, optimizer, epoch, hyper_params)
+        train(model, criterion, train_reader, optimizer, epoch, hyper_params, experiment)
 
         # Calculate the metrics on the train set
-        metrics, _ = evaluate(model, criterion, train_reader, hyper_params, True)
+        metrics, _ = evaluate(model, criterion, train_reader, hyper_params, True, experiment)
 
         string = ""
         for m in metrics:
@@ -117,7 +126,7 @@ try:
         string += ' (TRAIN)'
 
         # Calculate the metrics on the validation set
-        metrics, _ = evaluate(model, criterion, val_reader, hyper_params, False)
+        metrics, _ = evaluate(model, criterion, val_reader, hyper_params, False, experiment)
 
         string2 = ""
         for m in metrics:
@@ -144,7 +153,7 @@ try:
 except KeyboardInterrupt:
     print('Exiting from training early')
 
-# Plot Traning graph
+# Plot the training graph
 f = open(model.hyper_params['log_file'])
 lines = f.readlines()
 lines.reverse()
@@ -207,13 +216,18 @@ if not os.path.isdir("saved_plots/"):
 fig.savefig("saved_plots/learning_curve_" + hyper_params["project_name"] + ".png")
 plt.show()
 
+# Log figure
+experiment.log_figure(figure=plt)
+
 # Checking metrics for the test set on best saved model
 with open(hyper_params['model_file_name'], 'rb') as f:
     model = torch.load(f)
-metrics, len_to_ndcg_at_100_map = evaluate(model, criterion, test_reader, hyper_params, False)
+
+# Calculate the metrics on the test set
+metrics, len_to_ndcg_at_100_map = evaluate(model, criterion, test_reader, hyper_params, False, experiment)
 
 # Plot sequence length vs NDCG@100 graph
-plot_len_vs_ndcg(len_to_ndcg_at_100_map)
+plot_len_vs_ndcg(len_to_ndcg_at_100_map, experiment)
 
 string = ""
 for m in metrics:

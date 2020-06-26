@@ -5,7 +5,7 @@ import time
 from utils import file_write
 
 
-def train(model, criterion, reader, optimizer, epoch, hyper_params):
+def train(model, criterion, reader, optimizer, epoch, hyper_params, experiment):
     """
     Function to train the model
     :param model: The model choice
@@ -14,6 +14,7 @@ def train(model, criterion, reader, optimizer, epoch, hyper_params):
     :param optimizer: The optimizer choice
     :param epoch: The given epoch
     :param hyper_params: The hyper-parameter dictionary
+    :param experiment: CometML experiment to log metric
     """
     # Step into training mode
     model.train()
@@ -70,3 +71,6 @@ def train(model, criterion, reader, optimizer, epoch, hyper_params):
 
             total_loss = 0
             start_time = time.time()
+
+    # Log loss to CometML where step is each epoch
+    experiment.log_metric("loss", total_loss, step=epoch)

@@ -52,8 +52,12 @@ def pretty_print(h):
     print('}\n')
 
 
-def plot_len_vs_ndcg(len_to_ndcg_at_100_map):
-    """Function to plot the number of items in fold-out set vs NDCG@100"""
+def plot_len_vs_ndcg(len_to_ndcg_at_100_map, experiment):
+    """
+    Function to plot the number of items in fold-out set vs NDCG@100
+    :param len_to_ndcg_at_100_map: mapping of sequential length to NDCG@100 metric
+    :param experiment: CometML experiment to log metric
+    """
     lens = list(len_to_ndcg_at_100_map.keys())
     lens.sort()
     X, Y = [], []
@@ -92,3 +96,6 @@ def plot_len_vs_ndcg(len_to_ndcg_at_100_map):
     plt.legend(loc='best', ncol=2)
 
     plt.show()
+
+    # Log figure
+    experiment.log_figure(figure=plt)

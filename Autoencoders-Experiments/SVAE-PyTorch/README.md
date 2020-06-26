@@ -29,13 +29,12 @@ To reproduce the results, first you run `python3 data_preprocessor.py` and then 
 ## Results
 The processed data is stored in [this folder](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/SVAE-PyTorch/processed_data).
 According to the paper, the SVAE architecture includes an embedding layer of size 256, a recurrent layer realized as a GRU with 200 cells, and two encoding layers (of size 150 and 64) and finally two decoding layers (again, of size 64 and 150).
-The number K of latent factors for the VAE is set to be 64. Adam was used to optimize the loss function coupled with a weight decay of 0.01.
+The number K of latent factors for the VAE is set to be 64. Adam was used to optimize the loss function coupled with a weight decay of 0.01 and batch size of 1 (because we don't pack multiple sequences in the same batch).
 
-After training the model for 30 epochs, I got [these results](https://github.com/khanhnamle1994/transfer-rec/blob/master/Autoencoders-Experiments/SVAE-PyTorch/saved_logs/svae_ml1m_log_optimizer_adam_weight_decay_0.005_loss_type_next_k_item_embed_size_256_rnn_size_200_latent_size_64.txt) on the held-out set:
-- Loss = 427.8843
-- NDCG@10 = 18.7115 and NDCG@100 = 30.585
-- Rec@10 = 13.7008 and Rec@100 = 50.2229
-- Prec@10 = 15.2933 and Prec@100 = 6.968
+After training the model for 50 epochs, I got [these results](https://github.com/khanhnamle1994/transfer-rec/blob/master/Autoencoders-Experiments/SVAE-PyTorch/saved_logs/svae_ml1m_log_optimizer_adam_weight_decay_0.005_loss_type_next_k_item_embed_size_256_rnn_size_200_latent_size_64.txt) on the held-out set:
+- NDCG@10 = 25.7944 and NDCG@100 = 38.0714
+- Rec@10 = 18.9233 and Rec@100 = 58.4987
+- Prec@10 = 20.2 and Prec@100 = 8.18
 
 <img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Autoencoders-Experiments/SVAE-PyTorch/saved_plots/learning_curve_svae_ml1m.png" width="800">
 
