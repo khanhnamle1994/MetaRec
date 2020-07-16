@@ -52,7 +52,7 @@ Here are the 6 different Autoencoders models for Collaborative Filtering:
 * [DeepRec](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/NVIDIA-DeepRec-TensorFlow) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Autoencoders-Experiments/Training-Deep-Autoencoders-For-Collaborative-Filtering.pdf))
 * [Collaborative Denoising Autoencoders](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/CDAE-PyTorch) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Autoencoders-Experiments/Collaborative-Denoising-Autoencoders-for-TopN-Recommendation-System.pdf))
 * [Multinomial Variational Autoencoders](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/VAE-PyTorch) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Autoencoders-Experiments/Variational-Autoencoders-for-Collaborative-Filtering.pdf))
-* [Sequential Variational Autoencoders](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/SVAE-PyTorch) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Autoencoders-Experiments/Sequential%20Variational%20Autoencoders%20for%20Collaborative%20Filtering.pdf))
+* [Sequential Variational Autoencoders](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/SVAE-PyTorch) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Autoencoders-Experiments/Sequential-Variational-Autoencoders-for-Collaborative-Filtering.pdf))
 * [Embarrassingly Shallow Autoencoders](https://github.com/khanhnamle1994/transfer-rec/tree/master/Autoencoders-Experiments/ESAE-PyTorch) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Autoencoders-Experiments/Embarrassingly-Shallow-Autoencoders-for-Sparse-Data.pdf))
 
 ## [Boltzmann Machines](https://github.com/khanhnamle1994/transfer-rec/tree/master/Boltzmann-Machines-Experiments)
@@ -82,3 +82,4 @@ I have written a series of blog posts documenting my experiments on [my website]
 - [Part 3: The 6 Research Directions of Deep Recommendation Systems That Will Change The Game](https://jameskle.com/writes/rec-sys-part-3)
 - [Part 4: The 7 Variants of Matrix Factorization for Collaborative Filtering](https://jameskle.com/writes/rec-sys-part-4)
 - [Part 5: The 5 Variants of Multi-Layer Perceptron for Collaborative Filtering](https://jameskle.com/writes/rec-sys-part-5)
+- [Part 6: The 6 Variants of Autoencoders for Collaborative Filtering](https://jameskle.com/writes/rec-sys-part-6)

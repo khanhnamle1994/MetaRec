@@ -167,13 +167,13 @@ class StopABTestView(views.APIView):
             # Algorithm 1 output
             all_responses_1 = MLRequest.objects.filter(parent_mlalgorithm=ab_test.parent_mlalgorithm_1,
                                                        created_at__gt=ab_test.created_at,
-                                                       created_at__lt=date_now).count()
+                                                       created_at__lt=date_now)
             print(all_responses_1)
 
             # Algorithm 2 output
             all_responses_2 = MLRequest.objects.filter(parent_mlalgorithm=ab_test.parent_mlalgorithm_2,
                                                        created_at__gt=ab_test.created_at,
-                                                       created_at__lt=date_now).count()
+                                                       created_at__lt=date_now)
             print(all_responses_2)
 
             # get the algorithm IDs
