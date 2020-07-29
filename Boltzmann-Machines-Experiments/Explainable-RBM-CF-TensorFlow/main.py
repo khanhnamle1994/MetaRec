@@ -139,4 +139,35 @@ for i in range(epochs):
         prv_vb = cur_vb
         prv_hb = cur_hb
     errors.append(sess.run(err_sum, feed_dict={v0: trX, W: cur_w, vb: cur_vb, hb: cur_hb}))
-    print("Current MSE error: ", errors[-1])
+    print("Current RMSE error: ", errors[-1])
+
+# We can now predict movies that an arbitrarily selected user might like by feeding in the user's watched movie
+# preferences into the RBM and then reconstructing the input.
+
+# Selecting the input user
+inputUser = [trX[850]]
+
+# Feed in the user and reconstructing the input
+hh0 = tf.nn.sigmoid(tf.matmul(v0, W) + hb)
+vv1 = tf.nn.sigmoid(tf.matmul(hh0, tf.transpose(W)) + vb)
+feed = sess.run(hh0, feed_dict={v0: inputUser, W: prv_w, hb: prv_hb})
+rec = sess.run(vv1, feed_dict={hh0: feed, W: prv_w, vb: prv_vb})
+
+# We can then list the 25 most recommended movies for our mock user by sorting it by their scores given by our model.
+scored_movies_df_850 = movies_df
+scored_movies_df_850["Recommendation Score"] = rec[0]
+print("\n")
+print(scored_movies_df_850.sort_values(["Recommendation Score"], ascending=False).head(25))
+
+# Now we recommend some movies that the user has not yet watched
+print("\n")
+print(merged_df.iloc[850])
+
+# Now we can find all the movies that our mock user has watched before
+movies_df_850 = merged_df[merged_df['UserID'] == 2562]
+
+# We merge all the movies that our mock users has watched with the predicted scores based on his historical data
+merged_df_850 = scored_movies_df_850.merge(movies_df_850, on='MovieID', how='outer')
+merged_df_850 = merged_df_850.drop('List Index_y', axis=1).drop('UserID', axis=1)
+print("\n")
+print(merged_df_850.sort_values(["Recommendation Score"], ascending=False).head(25))
