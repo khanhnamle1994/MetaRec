@@ -101,9 +101,9 @@ def rbm(movies_df):
     update_vb = vb + alpha * tf.reduce_mean(v0 - v1, 0)
     update_hb = hb + alpha * tf.reduce_mean(h0 - h1, 0)
 
-    # Set error function (RMSE)
+    # Set error function (MAE)
     err = v0 - v1
-    err_sum = tf.sqrt(tf.reduce_mean(err * err))
+    err_sum = tf.reduce_mean(tf.abs(err))
 
     # Initialize variables
     cur_w = np.zeros([visibleUnits, hiddenUnits], np.float32)  # Current weight
@@ -123,7 +123,7 @@ v0, W, vb, hb, update_w, prv_w, prv_vb, prv_hb, update_vb, update_hb, cur_w, cur
 sess = tf.Session()
 sess.run(tf.global_variables_initializer())
 
-# Train RBM with 200 epochs and 10 batches of size 512
+# Train RBM with 200 epochs and batches of size 512
 epochs = 200
 batch_size = 512
 errors = []
@@ -139,7 +139,13 @@ for i in range(epochs):
         prv_vb = cur_vb
         prv_hb = cur_hb
     errors.append(sess.run(err_sum, feed_dict={v0: trX, W: cur_w, vb: cur_vb, hb: cur_hb}))
-    print("Current RMSE error: ", errors[-1])
+    print("Current MAE error: ", errors[-1])
+
+# Plot errors with respect to number of epochs
+plt.plot(errors)
+plt.ylabel('Mean Absolute Error')
+plt.xlabel('Number of Epochs')
+plt.savefig('pics/result.png')
 
 # We can now predict movies that an arbitrarily selected user might like by feeding in the user's watched movie
 # preferences into the RBM and then reconstructing the input.

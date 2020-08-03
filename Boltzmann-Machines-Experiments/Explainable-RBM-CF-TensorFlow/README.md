@@ -20,11 +20,11 @@ You can download the MovieLens-1M dataset from [this folder](https://github.com/
 * [main.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Boltzmann-Machines-Experiments/Explainable-RBM-CF-TensorFlow/main.py): This is the main training script. You can simply run `python main.py` to execute it.
 
 ## Results
-I obtained a RMSE reconstruction error value of 0.216 after training the model for 200 epochs.
+I obtained a reconstruction MAE (Mean Absolute Error) value of 0.053 after training the model for 200 epochs.
 
-<img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Boltzmann-Machines-Experiments/Explainable-RBM-CF-TensorFlow/pics/result.png" width="600">
+<img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Boltzmann-Machines-Experiments/Explainable-RBM-CF-TensorFlow/pics/result.png" width="500">
 
 ## Sample Recommendation List
 This is a sample recommendation list for a mock user with explainable scores attached each movie.
 
-<img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Boltzmann-Machines-Experiments/Explainable-RBM-CF-TensorFlow/pics/Recommendations-Example.png" width="600">
+<img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Boltzmann-Machines-Experiments/Explainable-RBM-CF-TensorFlow/pics/Recommendations-Example.png" width="1000">
