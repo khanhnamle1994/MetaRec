@@ -1,2 +1,5 @@
 # CSV data
 *.csv
+
+# Numpy array
+*.npy

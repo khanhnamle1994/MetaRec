@@ -1,7 +1,6 @@
 # Import packages
 import pandas as pd
 import numpy as np
-from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 import re
 

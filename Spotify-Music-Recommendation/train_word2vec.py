@@ -32,8 +32,8 @@ k = 10  # predicted items
 sg = 0  # 0 for cbow, 1 for skipgram
 
 window_options = [5]  # window size L
-it_options = [50]  # epochs n
-sample_options = [0.1]  # sub-sampling t
+it_options = [30]  # epochs n
+sample_options = [0.01]  # sub-sampling t
 negative_sampling_dist = [0.75]  # negative sampling distribution parameter a
 
 size_embedding_options = [50]  # embedding size
@@ -47,6 +47,7 @@ hit_ratios = []
 NDCG = []
 best_model = None
 
+# Grid search with all the hyper-parameters
 for (n_window, n_it, n_sample, n_neg_sample_dist, n_size, n_neg, n_alpha, n_min_count) in \
         grid_search(window_options, it_options, sample_options, negative_sampling_dist,
                     size_embedding_options, neg_options, alpha, min_count_options):
@@ -75,6 +76,8 @@ for (n_window, n_it, n_sample, n_neg_sample_dist, n_size, n_neg, n_alpha, n_min_
         best_model = model
     hit_ratios.append(hits / tries)
     NDCG.append(ndgc / tries)
+
+    # Display metrics to console
     print('Accuracy (hit_ratio) values for parameters:', hits / tries)
     print('NDCG values for parameters:', ndgc / tries)
 
@@ -83,10 +86,12 @@ acc_and_hyper = list(map(list, zip(hit_ratios, NDCG, hyperparameters)))
 acc_and_hyper = list(map(lambda x: [x[0], x[1]] + x[2], acc_and_hyper))
 acc_and_hyper.sort(key=lambda x: x[0])
 acc_and_hyper = pd.DataFrame(acc_and_hyper)
-acc_and_hyper.columns = ['hit-ratio', 'ndcq', 'window-size', 'epochs', 'sub-sample', 'negative-sampling-dist',
+acc_and_hyper.columns = ['hit-ratio', 'ndcg', 'window-size', 'epochs', 'sub-sample', 'negative-sampling-dist',
                          'embedding-size', 'negative-samples-size', 'learning-rate', 'mininum-count']
 
 # Spotify Playlists CBOW
 print(acc_and_hyper.head())
+print(acc_and_hyper.tail())
+
 # Save playlist CBOW into CSV format
 acc_and_hyper.to_csv('hyperparameters_spotify_playlist_cbow.csv', index=False)
