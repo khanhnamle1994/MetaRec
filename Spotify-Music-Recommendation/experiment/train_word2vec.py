@@ -65,7 +65,7 @@ for (n_window, n_it, n_sample, n_neg_sample_dist, n_size, n_neg, n_alpha, n_min_
     model.train(train, total_examples=len(train), epochs=model.iter)
 
     # Save word2vec model
-    model.save("word2vec.model")
+    model.save("models/word2vec.model")
 
     # Evaluate the model
     hits, ndgc, tries, fails = test_HR_and_NDGC_one_task_per_playlist(test, k, model)
@@ -94,4 +94,4 @@ print(acc_and_hyper.head())
 print(acc_and_hyper.tail())
 
 # Save playlist CBOW into CSV format
-acc_and_hyper.to_csv('hyperparameters_spotify_playlist_cbow.csv', index=False)
+acc_and_hyper.to_csv('playlists/hyperparameters_spotify_playlist_cbow.csv', index=False)

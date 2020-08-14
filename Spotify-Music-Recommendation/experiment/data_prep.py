@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import re
 
 # Data Pre-processing and Feature Engineering
-songs = pd.read_csv('spotify_dataset.csv', header=None, skiprows=[0], usecols=[0, 1, 2, 3]).dropna()
+songs = pd.read_csv('playlists/spotify_dataset.csv', header=None, skiprows=[0], usecols=[0, 1, 2, 3]).dropna()
 songs.columns = ['user_id', 'artist_name', 'track_name', 'playlist_name']
 print("Shape of dataframe:", songs.shape)
 
@@ -51,7 +51,7 @@ plt.plot(np.arange(1, 2342854), sorted_frequencies[0:2342853])
 plt.ylabel('frequency')
 plt.xlabel('rank')
 plt.xscale('log')
-plt.savefig('Rank-vs-Frequency-of-Tracks')
+plt.savefig('pics/Rank-vs-Frequency-of-Tracks.png')
 
 # Remove playlist with less than 10 tracks and combine into lists
 playlists = songs.groupby(['user_playlist']).filter(lambda x: len(x) >= 10)

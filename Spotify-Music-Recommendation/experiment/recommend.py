@@ -5,7 +5,7 @@ from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 
 # Load word2vec model
-model = Word2Vec.load("word2vec.model")
+model = Word2Vec.load("models/word2vec.model")
 
 # Display top 20 most similar tracks to 'Eminem - Without Me'
 w1 = "Eminem - Without Me"
@@ -55,4 +55,5 @@ for i in range(len(X_tsne)):
     plt.scatter(X_tsne[i, 0], X_tsne[i, 1])
     plt.annotate(label_format(labels[i], 0), xy=(X_tsne[i, 0], X_tsne[i, 1]), xytext=(8, 5),
                  textcoords='offset points', ha='right', va='bottom')
-plt.savefig('playlist2vec.png')
+
+plt.savefig('pics/playlist2vec.png')
