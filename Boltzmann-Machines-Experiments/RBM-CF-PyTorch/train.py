@@ -8,6 +8,13 @@ import torch
 # Import RBM model script
 from rbm import RBM
 
+# Initialize Weights and Biases
+import wandb
+wandb.init(entity="khanhnamle1994", project="boltzmann_machines_collaborative_filtering")
+
+# Config is a variable that holds and saves hyper-parameters
+config = wandb.config  # Initialize config
+
 # Path directory
 path = '../../ml-1m'
 
@@ -25,17 +32,17 @@ trainingset = np.array(trainingset, dtype='int')
 testset = np.array(testset, dtype='int')
 
 # Collect the total number of movies and users in order to then make a matrix of the data
-nb_users = int(max(max(trainingset[:, 0]), max(testset[:, 0])))
-nb_movies = int(max(max(trainingset[:, 1]), max(testset[:, 1])))
+config.nb_users = int(max(max(trainingset[:, 0]), max(testset[:, 0])))
+config.nb_movies = int(max(max(trainingset[:, 1]), max(testset[:, 1])))
 
 
 # Function to convert the data into an array with users in lines and movies in columns
 def convert(data):
     new_data = []  # initialise list
-    for id_users in range(1, nb_users + 1):
+    for id_users in range(1, config.nb_users + 1):
         id_movies = data[:, 1][data[:, 0] == id_users]
         id_ratings = data[:, 2][data[:, 0] == id_users]
-        ratings = np.zeros(nb_movies)
+        ratings = np.zeros(config.nb_movies)
         ratings[id_movies - 1] = id_ratings
         new_data.append(list(ratings))
     return new_data
@@ -61,31 +68,31 @@ test_set[test_set == 2] = 0
 test_set[test_set >= 3] = 1
 
 # Number of movies is the number of visible units
-n_vis = len(training_set[0])
+config.n_vis = len(training_set[0])
 # This tunable parameter is the number of features that we want to detect (number of hidden units)
-n_hid = 100
+config.n_hid = 100
 
-# Create the class object RBM()
-rbm = RBM(n_vis, n_hid)
+# Create the model object RBM()
+rbm = RBM(config.n_vis, config.n_hid)
 
-batch_size_ = 512  # set batch size to be 512 (tunable)
+config.batch_size_ = 512  # set batch size to be 512 (tunable)
 reconerr = []  # keep track of reconstruction error
-nb_epoch = 200  # run for 200 epochs
+config.nb_epoch = 50  # run for 50 epochs
 
 # Train the RBM
 # First for loop - go through every single epoch
-for epoch in range(1, nb_epoch + 1):
-    train_recon_error = 0  # reconstruction error initialized to 0 at the beginning of training
+for epoch in range(1, config.nb_epoch + 1):
+    train_recon_error = 0  # RMSE reconstruction error initialized to 0 at the beginning of training
     s = 0.  # a counter (float type)
 
     # Second for loop - go through every single user
     # Lower bound is 0, upper bound is (nb_users - batch_size_), batch_size_ is the step of each batch (512)
     # The 1st batch is for user with ID = 0 to user with ID = 511
-    for id_user in range(0, nb_users - batch_size_, batch_size_):
+    for id_user in range(0, config.nb_users - config.batch_size_, config.batch_size_):
 
         # At the beginning, v0 = vk. Then we update vk
-        vk = training_set[id_user:id_user + batch_size_]
-        v0 = training_set[id_user:id_user + batch_size_]
+        vk = training_set[id_user:id_user + config.batch_size_]
+        v0 = training_set[id_user:id_user + config.batch_size_]
         ph0, _ = rbm.sample_h(v0)
 
         # Third for loop - perform contrastive divergence
@@ -102,26 +109,27 @@ for epoch in range(1, nb_epoch + 1):
         rbm.train(v0, vk, ph0, phk)
 
         # Compare vk updated after the training to v0 (the target)
-        train_recon_error += torch.mean(torch.abs(v0[v0 >= 0] - vk[v0 >= 0]))
+        train_recon_error += torch.sqrt(torch.mean((v0[v0 >= 0] - vk[v0 >= 0])**2))
         s += 1.
 
-    # Update reconstruction error
+    # Update RMSE reconstruction error
     reconerr.append(train_recon_error / s)
 
-    print('Epoch: ' + str(epoch) + '- Reconstruction Error: ' + str(train_recon_error.data.numpy() / s))
+    print('Epoch: ' + str(epoch) + '- RMSE Reconstruction Error: ' + str(train_recon_error.data.numpy() / s))
+    wandb.log({"Train RMSE": train_recon_error.data.numpy() / s})
 
-# Plot the reconstruction error with respect to increasing number of epochs
+# Plot the RMSE reconstruction error with respect to increasing number of epochs
 plt.plot(reconerr)
-plt.ylabel('Training Data Reconstruction Error')
+plt.ylabel('Training Data RMSE Reconstruction Error')
 plt.xlabel('Epoch')
-plt.show()
+plt.savefig('pics/result.png')
 
 # Evaluate the RBM on test set
-test_recon_error = 0  # reconstruction error initialized to 0 at the beginning of training
+test_recon_error = 0  # RMSE reconstruction error initialized to 0 at the beginning of training
 s = 0.  # a counter (float type)
 
 # for loop - go through every single user
-for id_user in range(nb_users):
+for id_user in range(config.nb_users):
     v = training_set[id_user:id_user + 1]  # training set inputs are used to activate neurons of my RBM
     vt = test_set[id_user:id_user + 1]  # target
 
@@ -129,8 +137,9 @@ for id_user in range(nb_users):
         _, h = rbm.sample_h(v)
         _, v = rbm.sample_v(h)
 
-        # Update test reconstruction error
-        test_recon_error += torch.mean(torch.abs(vt[vt >= 0] - v[vt >= 0]))
+        # Update test RMSE reconstruction error
+        test_recon_error += torch.sqrt(torch.mean((vt[vt >= 0] - v[vt >= 0])**2))
         s += 1.
 
-print('Reconstruction error:  ' + str(test_recon_error.data.numpy() / s))
+print('RMSE Reconstruction error:  ' + str(test_recon_error.data.numpy() / s))
+wandb.log({"Test RMSE": test_recon_error.data.numpy() / s})
