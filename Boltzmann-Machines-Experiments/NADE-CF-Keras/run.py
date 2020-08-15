@@ -1,9 +1,9 @@
+# Import packages
 import glob
 import os
 import random
 import numpy as np
-from data_gen import DataSet
-from nade import NADE
+import time
 
 from keras.layers import Dense, Input, LSTM, Embedding, Dropout, Activation, Lambda, add
 from keras import backend as K
@@ -12,13 +12,12 @@ from keras.callbacks import Callback
 import keras.regularizers
 from keras.optimizers import Adam
 
+# Import utility scripts
+from data_gen import DataSet
+from nade import NADE
+
 
 def prediction_layer(x):
-    """
-    Prediction layer
-    :param x: given input
-    :return: predicted output
-    """
     # x.shape = (?,6040,5)
     x_cumsum = K.cumsum(x, axis=2)
     # x_cumsum.shape = (?,6040,5)
@@ -28,10 +27,6 @@ def prediction_layer(x):
 
 
 def prediction_output_shape(input_shape):
-    """
-    Return the shape of the output
-    :param input_shape: shape of the input
-    """
     return input_shape
 
 
@@ -144,9 +139,9 @@ def _train(args):
         print("This repository only support tensorflow backend.")
         raise NotImplementedError()
 
-    batch_size = 64
-    num_users = 6040
-    num_items = 3706
+    batch_size_ = 512
+    nb_users = 6040
+    nb_movies = 3706
     data_sample = 1.0
     input_dim0 = 6040
     input_dim1 = 5
@@ -169,9 +164,9 @@ def _train(args):
     train_file_list = train_file_list[:max(int(len(train_file_list) * data_sample), 1)]
 
     print('Instantiate DataSet classes...')
-    train_set = DataSet(train_file_list, num_users=num_users, num_items=num_items, batch_size=batch_size, mode=0)
-    val_set = DataSet(val_file_list, num_users=num_users, num_items=num_items, batch_size=batch_size, mode=1)
-    test_set = DataSet(test_file_list, num_users=num_users, num_items=num_items, batch_size=batch_size, mode=2)
+    train_set = DataSet(train_file_list, num_users=nb_users, num_items=nb_movies, batch_size=batch_size_, mode=0)
+    val_set = DataSet(val_file_list, num_users=nb_users, num_items=nb_movies, batch_size=batch_size_, mode=1)
+    test_set = DataSet(test_file_list, num_users=nb_users, num_items=nb_movies, batch_size=batch_size_, mode=2)
 
     rating_freq = np.zeros((6040, 5))
     init_b = np.zeros((6040, 5))
@@ -231,10 +226,10 @@ def _train(args):
     print('Training...')
     cf_nade_model.fit_generator(
         train_set.generate(),
-        steps_per_epoch=(train_set.get_corpus_size() // batch_size),
+        steps_per_epoch=(train_set.get_corpus_size() // batch_size_),
         epochs=args.n_epochs,
         validation_data=val_set.generate(),
-        validation_steps=(val_set.get_corpus_size() // batch_size),
+        validation_steps=(val_set.get_corpus_size() // batch_size_),
         shuffle=True,
         callbacks=[train_set, val_set, train_evaluation_callback, valid_evaluation_callback],
         verbose=1)
@@ -275,8 +270,8 @@ def main():
     import argparse
 
     parser = argparse.ArgumentParser(description='CFNADE-keras')
-    parser.add_argument('--hidden_dim', type=int, default=500, help='number of hidden units')
-    parser.add_argument('--n_epochs', type=int, default=30, help='number of epochs')
+    parser.add_argument('--hidden_dim', type=int, default=100, help='number of hidden units')
+    parser.add_argument('--n_epochs', type=int, default=50, help='number of epochs')
     parser.add_argument('--learning_rate', type=float, default=1e-3, help='learning rate for optimizer')
     parser.add_argument('--normalize_1st_layer', type=bool, default=False, help='normalize 1st layer')
 
@@ -292,4 +287,6 @@ def main():
 
 
 if __name__ == '__main__':
+    start_time = time.time()
     main()
+    print("--- %s seconds ---" % (time.time() - start_time))

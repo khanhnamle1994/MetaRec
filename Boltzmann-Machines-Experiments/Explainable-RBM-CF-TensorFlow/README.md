@@ -22,6 +22,7 @@ You can download the MovieLens-1M dataset from [this folder](https://github.com/
 
 ## Results
 I obtained a reconstruction RMSE (Root Mean Squared Error) value of 0.3116 after training the model for 50 epochs. Training time takes 1m43s.
+The full run is logged into Weights and Biases [here](https://app.wandb.ai/khanhnamle1994/boltzmann_machines_collaborative_filtering/runs/wf3pescx).
 
 <img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Boltzmann-Machines-Experiments/Explainable-RBM-CF-TensorFlow/pics/result.png" width="600">
 
