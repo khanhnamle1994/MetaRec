@@ -4,6 +4,13 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# Initialize Weights and Biases
+import wandb
+wandb.init(entity="khanhnamle1994", project="boltzmann_machines_collaborative_filtering")
+
+# Config is a variable that holds and saves hyper-parameters
+config = wandb.config  # Initialize config
+
 # Disable the default activate eager execution in TF v1.0
 tf.disable_eager_execution()
 
@@ -64,22 +71,23 @@ def preprocess_data(userGroup, movies_df):
 trX = preprocess_data(userGroup, movies_df)
 
 
-def rbm(movies_df):
+def rbm(movies_df, config):
     """
     Implement RBM architecture in TensorFlow
     :param movies_df: data frame that stores movies information
+    :param config: variable to store hyper-parameters
     :return: variables to be used during TensorFlow training
     """
-    hiddenUnits = 100  # Number of hidden layers
-    visibleUnits = len(movies_df)  # Number of visible layers
+    config.n_hid = 100  # Number of hidden layers
+    config.n_vis = len(movies_df)  # Number of visible layers
 
     # Create respective placeholder variables for storing visible and hidden layer biases and weights
-    vb = tf.placeholder("float", [visibleUnits])  # Number of unique movies
-    hb = tf.placeholder("float", [hiddenUnits])  # Number of features
-    W = tf.placeholder("float", [visibleUnits, hiddenUnits])  # Weights that connect the hidden and visible layers
+    vb = tf.placeholder("float", [config.n_vis])  # Number of unique movies
+    hb = tf.placeholder("float", [config.n_hid])  # Number of features
+    W = tf.placeholder("float", [config.n_vis, config.n_hid])  # Weights that connect the hidden and visible layers
 
     # Pre-process the input data
-    v0 = tf.placeholder("float", [None, visibleUnits])
+    v0 = tf.placeholder("float", [None, config.n_vis])
     _h0 = tf.nn.sigmoid(tf.matmul(v0, W) + hb)
     h0 = tf.nn.relu(tf.sign(_h0 - tf.random_uniform(tf.shape(_h0))))
 
@@ -101,36 +109,36 @@ def rbm(movies_df):
     update_vb = vb + alpha * tf.reduce_mean(v0 - v1, 0)
     update_hb = hb + alpha * tf.reduce_mean(h0 - h1, 0)
 
-    # Set error function (MAE)
+    # Set error function (RMSE)
     err = v0 - v1
-    err_sum = tf.reduce_mean(tf.abs(err))
+    err_sum = tf.sqrt(tf.reduce_mean(err**2))
 
     # Initialize variables
-    cur_w = np.zeros([visibleUnits, hiddenUnits], np.float32)  # Current weight
-    cur_vb = np.zeros([visibleUnits], np.float32)  # Current visible unit biases
-    cur_hb = np.zeros([hiddenUnits], np.float32)  # Current hidden unit biases
-    prv_w = np.zeros([visibleUnits, hiddenUnits], np.float32)  # Previous weight
-    prv_vb = np.zeros([visibleUnits], np.float32)  # Previous visible unit biases
-    prv_hb = np.zeros([hiddenUnits], np.float32)  # Previous hidden unit biases
+    cur_w = np.zeros([config.n_vis, config.n_hid], np.float32)  # Current weight
+    cur_vb = np.zeros([config.n_vis], np.float32)  # Current visible unit biases
+    cur_hb = np.zeros([config.n_hid], np.float32)  # Current hidden unit biases
+    prv_w = np.zeros([config.n_vis, config.n_hid], np.float32)  # Previous weight
+    prv_vb = np.zeros([config.n_vis], np.float32)  # Previous visible unit biases
+    prv_hb = np.zeros([config.n_hid], np.float32)  # Previous hidden unit biases
 
     return v0, W, vb, hb, update_w, prv_w, prv_vb, prv_hb, update_vb, update_hb, cur_w, cur_vb, cur_hb, err_sum
 
 
 # Return variables from the RBM implementation
-v0, W, vb, hb, update_w, prv_w, prv_vb, prv_hb, update_vb, update_hb, cur_w, cur_vb, cur_hb, err_sum = rbm(movies_df)
+v0, W, vb, hb, update_w, prv_w, prv_vb, prv_hb, update_vb, update_hb, cur_w, cur_vb, cur_hb, err_sum = rbm(movies_df, config)
 
 # Initialize TensorFlow session
 sess = tf.Session()
 sess.run(tf.global_variables_initializer())
 
-# Train RBM with 200 epochs and batches of size 512
-epochs = 200
-batch_size = 512
+# Train RBM with 50 epochs and batches of size 512
+config.nb_epoch = 50
+config.batch_size_ = 512
 errors = []
 
-for i in range(epochs):
+for i in range(config.nb_epoch):
     print("Current epoch: ", i)
-    for start, end in zip(range(0, len(trX), batch_size), range(batch_size, len(trX), batch_size)):
+    for start, end in zip(range(0, len(trX), config.batch_size_), range(config.batch_size_, len(trX), config.batch_size_)):
         batch = trX[start:end]
         cur_w = sess.run(update_w, feed_dict={v0: batch, W: prv_w, vb: prv_vb, hb: prv_hb})
         cur_vb = sess.run(update_vb, feed_dict={v0: batch, W: prv_w, vb: prv_vb, hb: prv_hb})
@@ -139,16 +147,17 @@ for i in range(epochs):
         prv_vb = cur_vb
         prv_hb = cur_hb
     errors.append(sess.run(err_sum, feed_dict={v0: trX, W: cur_w, vb: cur_vb, hb: cur_hb}))
-    print("Current MAE error: ", errors[-1])
+    print("Current RMSE error: ", errors[-1])
+    wandb.log({"Train RMSE": errors[-1]})
 
 # Plot errors with respect to number of epochs
 plt.plot(errors)
-plt.ylabel('Mean Absolute Error')
+plt.ylabel('Root Mean Squared Error')
 plt.xlabel('Number of Epochs')
 plt.savefig('pics/result.png')
 
-# We can now predict movies that an arbitrarily selected user might like by feeding in the user's watched movie
-# preferences into the RBM and then reconstructing the input.
+# We can now predict movies that an arbitrarily selected user might like by feeding in the user's watched
+# movie preferences into the RBM and then reconstructing the input
 
 # Selecting the input user
 inputUser = [trX[850]]
@@ -159,7 +168,7 @@ vv1 = tf.nn.sigmoid(tf.matmul(hh0, tf.transpose(W)) + vb)
 feed = sess.run(hh0, feed_dict={v0: inputUser, W: prv_w, hb: prv_hb})
 rec = sess.run(vv1, feed_dict={hh0: feed, W: prv_w, vb: prv_vb})
 
-# We can then list the 25 most recommended movies for our mock user by sorting it by their scores given by our model.
+# We can then list the 25 most recommended movies for our mock user by sorting it by their scores given by our model
 scored_movies_df_850 = movies_df
 scored_movies_df_850["Recommendation Score"] = rec[0]
 print("\n")
