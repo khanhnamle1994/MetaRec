@@ -1,6 +1,6 @@
 # A Neural Autoregressive Approach to Collaborative Filtering
 
-This is my TensorFlow implementation of the paper [A Neural Autoregressive Approach to Collaborative Filtering](https://arxiv.org/abs/1605.09477) by Yin Zheng, Bangsheng Tang, Wenkui Ding, and Hanning Zhou (2016).
+This is my Keras implementation of the paper [A Neural Autoregressive Approach to Collaborative Filtering](https://arxiv.org/abs/1605.09477) by Yin Zheng, Bangsheng Tang, Wenkui Ding, and Hanning Zhou (2016).
 This approach is inspired by the [Restricted Boltzmann Machine based CF model](https://github.com/khanhnamle1994/transfer-rec/blob/master/Boltzmann-Machines-Experiments/RBM-CF-PyTorch) and the [Neural Autoregressive Distribution Estimator](https://arxiv.org/abs/1605.02226).
 
 <img src="https://github.com/khanhnamle1994/transfer-rec/blob/master/Boltzmann-Machines-Experiments/NADE-CF-Keras/pics/NADE.png" width="700">
