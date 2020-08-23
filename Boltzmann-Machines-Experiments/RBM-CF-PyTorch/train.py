@@ -141,5 +141,6 @@ for id_user in range(config.nb_users):
         test_recon_error += torch.sqrt(torch.mean((vt[vt >= 0] - v[vt >= 0])**2))
         s += 1.
 
+# Display and log the RMSE metrics
 print('RMSE Reconstruction error:  ' + str(test_recon_error.data.numpy() / s))
 wandb.log({"Test RMSE": test_recon_error.data.numpy() / s})

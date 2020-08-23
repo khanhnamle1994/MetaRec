@@ -5,6 +5,7 @@ import random
 import numpy as np
 import time
 
+# Import Keras utilities
 from keras.layers import Dense, Input, LSTM, Embedding, Dropout, Activation, Lambda, add
 from keras import backend as K
 from keras.models import Model
@@ -76,6 +77,12 @@ def rating_cost_lambda_func(args):
 
 class EvaluationCallback(Callback):
     def __init__(self, data_set, new_items, training_set):
+        """
+        Initialize Evaluation Callback
+        :param data_set: current dataset
+        :param new_items: new items
+        :param training_set: training dataset
+        """
         self.data_set = data_set
         self.rmses = []
         self.rate_score = np.array([1, 2, 3, 4, 5], np.float32)
@@ -139,6 +146,7 @@ def _train(args):
         print("This repository only support tensorflow backend.")
         raise NotImplementedError()
 
+    # Hyper-parameters
     batch_size_ = 512
     nb_users = 6040
     nb_movies = 3706
@@ -267,6 +275,10 @@ def _train(args):
 
 
 def main():
+    """
+    Main Execution Engine
+    :return: Result after calling train()
+    """
     import argparse
 
     parser = argparse.ArgumentParser(description='CFNADE-keras')

@@ -27,10 +27,10 @@ def read_data(sc, data_file, delimiter='::'):
 
 
 if __name__ == "__main__":
-
+    # Initialize Spark sessions
     sc = SparkContext()
     spark = SparkSession(sc)
-
+    # Read in the data
     ui_mat_rdd = read_data(sc, data_path, delimiter='::').sample(False, 1.0, seed=0).persist()
 
     print('Creating usr and doc indexes...')
@@ -58,6 +58,7 @@ if __name__ == "__main__":
     num_movies = ui_mat_rdd.map(_func).distinct().count()
     print('users:', num_users, 'products:', num_movies)
 
+    # Create Spark dataframe
     df = spark.createDataFrame(ui_mat_rdd, ['userId', 'movieId', 'value'])
 
     ui_mat_rdd.unpersist()

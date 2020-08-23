@@ -34,6 +34,10 @@ class DataSet(keras.callbacks.Callback):
         return self.size
 
     def generate(self, max_iters=-1):
+        """
+        Generate data instances
+        :param max_iters: Number of iterations
+        """
         iter_cnt = 0
         while True:
             for dfile in self.flist:

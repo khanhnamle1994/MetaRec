@@ -6,10 +6,20 @@ from keras import initializers
 from keras import regularizers
 
 
-# NADE architecture
 class NADE(Layer):
     def __init__(self, hidden_dim, activation, W_regularizer=None, V_regularizer=None,
                  b_regularizer=None, c_regularizer=None, bias=False, args=None, **kwargs):
+        """
+        Initialize NADE architecture
+        :param hidden_dim: number of hidden dimensions
+        :param activation: choice of activation function
+        :param W_regularizer: regularizer for W units
+        :param V_regularizer: regularizer for V units
+        :param b_regularizer: regularizer for bias units
+        :param c_regularizer: regularizer for constant units
+        :param bias: bias on/off
+        :param args: arguments
+        """
 
         self.init = initializers.get('uniform')
 
@@ -51,6 +61,11 @@ class NADE(Layer):
         super(NADE, self).build(input_shape)
 
     def call(self, original_x):
+        """
+        Call the NADE model instance
+        :param original_x: original input data
+        :return: output at the end of NADE
+        """
         args = self.args
 
         x = K.cumsum(original_x[:, :, ::-1], axis=2)[:, :, ::-1]
