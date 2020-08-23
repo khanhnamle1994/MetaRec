@@ -10,15 +10,10 @@ Correspondingly, various techniques for recommendation generation have been prop
 The goal of this research is to impose a degree of order upon this diversity by presenting a coherent and unified repository of the most common recommendation methods to solve the collaborative filtering problem:
 from classic matrix factorization to cutting-edge deep neural networks.
 
-# Datasets
+# Dataset
 
 For my experiments thus far, I worked with the [MovieLens1M Dataset](https://github.com/khanhnamle1994/transfer-rec/tree/master/ml-1m), a famous dataset within the recommendation systems research community.
 The data contains 1,000,209 anonymous ratings of approximately 3,900 movies made by 6,040 MovieLens users who joined MovieLens in 2000.
-
-Here are other datasets that I plan to experiment with:
-- [ ] [Spotify RecSys 2018 Challenge](http://www.recsyschallenge.com/2018/)
-- [ ] [Trivago RecSys 2019 Challenge](http://www.recsyschallenge.com/2019/)
-- [ ] [Twitter RecSys 2020 Challenge](http://recsys-twitter.com/)
 
 # Research Models
 
@@ -57,9 +52,11 @@ Here are the 6 different Autoencoders models for Collaborative Filtering:
 
 ## [Boltzmann Machines](https://github.com/khanhnamle1994/transfer-rec/tree/master/Boltzmann-Machines-Experiments)
 
-Here are the different Boltzmann Machines models for Collaborative Filtering:
+Here are the 3 different Boltzmann Machines models for Collaborative Filtering:
 
 * [Restricted Boltzmann Machines](https://github.com/khanhnamle1994/transfer-rec/tree/master/Boltzmann-Machines-Experiments/RBM-CF-PyTorch)
+* [Explainable Restricted Boltzmann Machines](https://github.com/khanhnamle1994/transfer-rec/tree/master/Boltzmann-Machines-Experiments/Explainable-RBM-CF-TensorFlow)
+* [Neural Autoregressive Distribution Estimator](https://github.com/khanhnamle1994/transfer-rec/tree/master/Boltzmann-Machines-Experiments/NADE-CF-Keras)
 
 # Production App
 
@@ -83,3 +80,4 @@ I have written a series of blog posts documenting my experiments on [my website]
 - [Part 4: The 7 Variants of Matrix Factorization for Collaborative Filtering](https://jameskle.com/writes/rec-sys-part-4)
 - [Part 5: The 5 Variants of Multi-Layer Perceptron for Collaborative Filtering](https://jameskle.com/writes/rec-sys-part-5)
 - [Part 6: The 6 Variants of Autoencoders for Collaborative Filtering](https://jameskle.com/writes/rec-sys-part-6)
+- [Part 7: The 3 Variants of Boltzmann Machines for Collaborative Filtering](https://jameskle.com/writes/rec-sys-part-7)
