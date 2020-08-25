@@ -54,9 +54,9 @@ Here are the 6 different Autoencoders models for Collaborative Filtering:
 
 Here are the 3 different Boltzmann Machines models for Collaborative Filtering:
 
-* [Restricted Boltzmann Machines](https://github.com/khanhnamle1994/transfer-rec/tree/master/Boltzmann-Machines-Experiments/RBM-CF-PyTorch)
-* [Explainable Restricted Boltzmann Machines](https://github.com/khanhnamle1994/transfer-rec/tree/master/Boltzmann-Machines-Experiments/Explainable-RBM-CF-TensorFlow)
-* [Neural Autoregressive Distribution Estimator](https://github.com/khanhnamle1994/transfer-rec/tree/master/Boltzmann-Machines-Experiments/NADE-CF-Keras)
+* [Restricted Boltzmann Machines](https://github.com/khanhnamle1994/transfer-rec/tree/master/Boltzmann-Machines-Experiments/RBM-CF-PyTorch) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Boltzmann-Machines-Experiments/Restricted-Boltzmann-Machines-For-Collaborative-Filtering.pdf))
+* [Explainable Restricted Boltzmann Machines](https://github.com/khanhnamle1994/transfer-rec/tree/master/Boltzmann-Machines-Experiments/Explainable-RBM-CF-TensorFlow) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Boltzmann-Machines-Experiments/Explainable-Restricted-Boltzmann-Machines-For-Collaborative-Filtering.pdf))
+* [Neural Autoregressive Distribution Estimator](https://github.com/khanhnamle1994/transfer-rec/tree/master/Boltzmann-Machines-Experiments/NADE-CF-Keras) ([paper](https://github.com/khanhnamle1994/transfer-rec/blob/master/Boltzmann-Machines-Experiments/Neural-Autoregressive-Distribution-Estimator-For-Collaborative-Filtering.pdf))
 
 # Production App
 
