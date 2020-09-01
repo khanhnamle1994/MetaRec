@@ -1,7 +1,6 @@
 # Import packages
 import torch
 from copy import deepcopy
-
 from torch.autograd import Variable
 from torch.nn import functional as F
 from collections import OrderedDict
@@ -12,6 +11,10 @@ from embeddings import item, user
 
 class user_preference_estimator(torch.nn.Module):
     def __init__(self, config):
+        """
+        Initialize the user preference estimator class
+        :param config: experiment configuration
+        """
         super(user_preference_estimator, self).__init__()
         self.embedding_dim = config['embedding_dim']
         self.fc1_in_dim = config['embedding_dim'] * 8
@@ -25,13 +28,22 @@ class user_preference_estimator(torch.nn.Module):
         self.linear_out = torch.nn.Linear(self.fc2_out_dim, 1)
 
     def forward(self, x, training=True):
-        genre_idx = Variable(x[:, 0:25], requires_grad=False)
-        gender_idx = Variable(x[:, 26], requires_grad=False)
-        age_idx = Variable(x[:, 27], requires_grad=False)
-        occupation_idx = Variable(x[:, 28], requires_grad=False)
-        area_idx = Variable(x[:, 29], requires_grad=False)
+        """
+        Perform a forward pass
+        :param x: input
+        :param training: training mode
+        :return: output
+        """
+        rate_idx = Variable(x[:, 0], requires_grad=False)
+        genre_idx = Variable(x[:, 1:26], requires_grad=False)
+        director_idx = Variable(x[:, 26:2212], requires_grad=False)
+        actor_idx = Variable(x[:, 2212:10242], requires_grad=False)
+        gender_idx = Variable(x[:, 10242], requires_grad=False)
+        age_idx = Variable(x[:, 10243], requires_grad=False)
+        occupation_idx = Variable(x[:, 10244], requires_grad=False)
+        area_idx = Variable(x[:, 10245], requires_grad=False)
 
-        item_emb = self.item_emb(genre_idx)
+        item_emb = self.item_emb(rate_idx, genre_idx, director_idx, actor_idx)
         user_emb = self.user_emb(gender_idx, age_idx, occupation_idx, area_idx)
         x = torch.cat((item_emb, user_emb), 1)
         x = self.fc1(x)
@@ -43,6 +55,10 @@ class user_preference_estimator(torch.nn.Module):
 
 class MeLU(torch.nn.Module):
     def __init__(self, config):
+        """
+        Initialize the MeLU class
+        :param config: experiment configuration
+        """
         super(MeLU, self).__init__()
         self.model = user_preference_estimator(config)
         self.local_lr = config['local_lr']
@@ -53,12 +69,18 @@ class MeLU(torch.nn.Module):
                                                 'linear_out.weight', 'linear_out.bias']
 
     def store_parameters(self):
+        """
+        Store the model parameters
+        """
         self.keep_weight = deepcopy(self.model.state_dict())
         self.weight_name = list(self.keep_weight.keys())
         self.weight_len = len(self.keep_weight)
         self.fast_weights = OrderedDict()
 
     def forward(self, support_set_x, support_set_y, query_set_x, num_local_update):
+        """
+        Perform a forward pass
+        """
         for idx in range(num_local_update):
             if idx > 0:
                 self.model.load_state_dict(self.fast_weights)
@@ -67,18 +89,23 @@ class MeLU(torch.nn.Module):
             loss = F.mse_loss(support_set_y_pred, support_set_y.view(-1, 1))
             self.model.zero_grad()
             grad = torch.autograd.grad(loss, self.model.parameters(), create_graph=True)
-            # local update
+
+            # Perform a local update
             for i in range(self.weight_len):
                 if self.weight_name[i] in self.local_update_target_weight_name:
                     self.fast_weights[self.weight_name[i]] = weight_for_local_update[i] - self.local_lr * grad[i]
                 else:
                     self.fast_weights[self.weight_name[i]] = weight_for_local_update[i]
+
         self.model.load_state_dict(self.fast_weights)
         query_set_y_pred = self.model(query_set_x)
         self.model.load_state_dict(self.keep_weight)
         return query_set_y_pred
 
     def global_update(self, support_set_xs, support_set_ys, query_set_xs, query_set_ys, num_local_update):
+        """
+        Perform a global update
+        """
         batch_sz = len(support_set_xs)
         losses_q = []
 
@@ -94,6 +121,9 @@ class MeLU(torch.nn.Module):
         return
 
     def get_weight_avg_norm(self, support_set_x, support_set_y, num_local_update):
+        """
+        Get the average Frobenius norm of the users' gradient for personalization
+        """
         tmp = 0.
         for idx in range(num_local_update):
             if idx > 0:
@@ -105,6 +135,7 @@ class MeLU(torch.nn.Module):
             loss /= torch.norm(loss).tolist()
             self.model.zero_grad()
             grad = torch.autograd.grad(loss, self.model.parameters(), create_graph=True)
+
             for i in range(self.weight_len):
                 # For averaging Frobenius norm
                 tmp += torch.norm(grad[i])

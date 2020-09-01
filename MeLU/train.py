@@ -3,7 +3,7 @@ import torch
 import random
 
 # Import utility script
-from options import config, states
+from config import config, states
 
 
 def training(melu, total_dataset, batch_size, num_epoch, model_save=True, model_filename=None):
