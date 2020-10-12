@@ -92,7 +92,7 @@ def generate(master_path):
     :param master_path: path to data directory
     """
     # Path to MovieLens 1M
-    dataset_path = "../ml-1m"
+    dataset_path = "../../ml-1m"
 
     # Load rate, genre, actor, director, gender, age, occupation, and zipcode lists
     rate_list = load_list("{}/m_rate.txt".format(dataset_path))
@@ -104,41 +104,47 @@ def generate(master_path):
     occupation_list = load_list("{}/m_occupation.txt".format(dataset_path))
     zipcode_list = load_list("{}/m_zipcode.txt".format(dataset_path))
 
+    # Make new directories if they do not already exist
     if not os.path.exists("{}/warm_state/".format(master_path)):
         for state in states:
             os.mkdir("{}/{}/".format(master_path, state))
     if not os.path.exists("{}/log/".format(master_path)):
         os.mkdir("{}/log/".format(master_path))
 
-    # Initialize dataset class
+    # Initialize the MovieLens1M dataset class
     dataset = movielens_1m()
 
-    # Use a hashmap to store movie items
-    if not os.path.exists("{}/m_movie_dict.pkl".format(master_path)):
-        movie_dict = {}
+    # Use a hashmap called 'item_dict' to store item information
+    if not os.path.exists("{}/m_item_dict.pkl".format(master_path)):
+        item_dict = {}
+        # Iterate over indices and rows of item data
         for idx, row in dataset.item_data.iterrows():
+            # Save rate levels, genres, directors, and actors into item_dict
             m_info = item_converting(row, rate_list, genre_list, director_list, actor_list)
-            movie_dict[row['movie_id']] = m_info
-        pickle.dump(movie_dict, open("{}/m_movie_dict.pkl".format(master_path), "wb"))
+            item_dict[row['movie_id']] = m_info
+        pickle.dump(item_dict, open("{}/m_item_dict.pkl".format(master_path), "wb"))
     else:
-        movie_dict = pickle.load(open("{}/m_movie_dict.pkl".format(master_path), "rb"))
+        item_dict = pickle.load(open("{}/m_item_dict.pkl".format(master_path), "rb"))
 
-    # Use a hashmap to store user profiles
+    # Use a hashmap called 'user_dict' to store user information
     if not os.path.exists("{}/m_user_dict.pkl".format(master_path)):
         user_dict = {}
+        # Iterate over indices and rows of user data
         for idx, row in dataset.user_data.iterrows():
+            # Save genders, ages, occupations, and zipcodes into user_dict
             u_info = user_converting(row, gender_list, age_list, occupation_list, zipcode_list)
             user_dict[row['user_id']] = u_info
         pickle.dump(user_dict, open("{}/m_user_dict.pkl".format(master_path), "wb"))
     else:
         user_dict = pickle.load(open("{}/m_user_dict.pkl".format(master_path), "rb"))
 
-    # Loop through different experiment scenarios
+    # Loop through different experiment scenarios (there are 4)
     for state in states:
         idx = 0
         if not os.path.exists("{}/{}/{}".format(master_path, "log", state)):
             os.mkdir("{}/{}/{}".format(master_path, "log", state))
 
+        # Open the corresponding existing and new users (in JSON files) for the current experiment scenario
         with open("{}/{}.json".format(dataset_path, state), encoding="utf-8") as f:
             dataset = json.loads(f.read())
         with open("{}/{}_y.json".format(dataset_path, state), encoding="utf-8") as f:
@@ -153,6 +159,7 @@ def generate(master_path):
             if seen_movie_len < 13 or seen_movie_len > 100:
                 continue
 
+            # Shuffle the indices randomly
             random.shuffle(indices)
             # Existing users
             tmp_x = np.array(dataset[str(u_id)])
@@ -164,7 +171,7 @@ def generate(master_path):
             for m_id in tmp_x[indices[-10:]]:
                 m_id = int(m_id)
                 u_id = int(user_id)
-                tmp_x_converted = torch.cat((movie_dict[m_id], user_dict[u_id]), 1)
+                tmp_x_converted = torch.cat((item_dict[m_id], user_dict[u_id]), 1)
                 try:
                     query_x_app = torch.cat((query_x_app, tmp_x_converted), 0)
                 except:
@@ -174,7 +181,7 @@ def generate(master_path):
             support_x_app = None
             for m_id in tmp_x[indices[:-10]]:
                 m_id = int(m_id)
-                tmp_x_converted = torch.cat((movie_dict[m_id], user_dict[u_id]), 1)
+                tmp_x_converted = torch.cat((item_dict[m_id], user_dict[u_id]), 1)
                 try:
                     support_x_app = torch.cat((support_x_app, tmp_x_converted), 0)
                 except:
