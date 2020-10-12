@@ -1,4 +1,4 @@
-# Import PyTorch libraries
+# Import PyTorch package
 import torch
 
 
@@ -58,10 +58,13 @@ class item(torch.nn.Module):
         :param vars: Other variables
         :return: one-dimensional embedding
         """
+        # Perform embedding processes based on the input
         rate_emb = self.embedding_rate(rate_idx)
         genre_emb = self.embedding_genre(genre_idx.float()) / torch.sum(genre_idx.float(), 1).view(-1, 1)
         director_emb = self.embedding_director(director_idx.float()) / torch.sum(director_idx.float(), 1).view(-1, 1)
         actors_emb = self.embedding_actor(actors_idx.float()) / torch.sum(actors_idx.float(), 1).view(-1, 1)
+
+        # Concatenate the embedded vectors
         return torch.cat((rate_emb, genre_emb, director_emb, actors_emb), 1)
 
 
@@ -110,15 +113,18 @@ class user(torch.nn.Module):
 
     def forward(self, gender_idx, age_idx, occupation_idx, area_idx):
         """
-        Perform forward pass on user profiles
+        Perform forward pass on user information
         :param gender_idx: Index of the gender
         :param age_idx: Index of the age
         :param occupation_idx: Index of the occupation
         :param area_idx: Index of the zipcode area
         :return: one-dimensional embedding
         """
+        # Perform embedding processes based on the input
         gender_emb = self.embedding_gender(gender_idx)
         age_emb = self.embedding_age(age_idx)
         occupation_emb = self.embedding_occupation(occupation_idx)
         area_emb = self.embedding_area(area_idx)
+
+        # Concatenate the embedded vectors
         return torch.cat((gender_emb, age_emb, occupation_emb, area_emb), 1)
