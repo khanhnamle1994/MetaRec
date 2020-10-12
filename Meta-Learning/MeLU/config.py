@@ -1,4 +1,4 @@
-# Experiment configuration
+# MeLU configuration
 config = {
     # item parameters
     'num_rate': 6,  # number of rate categories
@@ -17,8 +17,8 @@ config = {
 
     # model setting
     'inner': 1,
-    'lr': 5e-5,  # step size Beta
-    'local_lr': 5e-6,  # step size Alpha
+    'lr': 5e-5,  # step size Beta (global learning rate)
+    'local_lr': 5e-6,  # step size Alpha (local learning rate)
     'batch_size': 32,  # batch size
     'num_epoch': 20,  # number of epochs
 
@@ -28,7 +28,7 @@ config = {
 
 '''
 Experiment Scenarios:
-1 - warm_state: non-cold-start scenario
+1 - warm_state: recommendations of existing items for existing users
 2 - user_cold_state: recommendations of existing items for new users
 3 - item_cold_state: recommendations of new items for existing users
 4 - user_and_item_cold_state: recommendations of new items for new users
