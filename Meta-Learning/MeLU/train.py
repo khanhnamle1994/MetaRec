@@ -9,22 +9,28 @@ from config import config, states
 def training(melu, total_dataset, batch_size, num_epoch, model_save=True, model_filename=None):
     """
     Train MeLU
-    :param melu: MeLU mode
-    :param total_dataset: given dataset
+    :param melu: MeLU model
+    :param total_dataset: given training dataset
     :param batch_size: batch size
     :param num_epoch: number of epochs
     :param model_save: boolean whether to save model
     :param model_filename: name of model
     :return: saved MeLU model
     """
+    # Size of the training data
     training_set_size = len(total_dataset)
+    # Step into training mode
     melu.train()
+
+    # Loop through number of epochs
     for _ in range(num_epoch):
         # Shuffle the data
         random.shuffle(total_dataset)
         # Number of batches
         num_batch = int(training_set_size / batch_size)
         a, b, c, d = zip(*total_dataset)
+
+        # Loop through number of batches
         for i in range(num_batch):
             try:
                 # Generate support and query sets
@@ -34,6 +40,7 @@ def training(melu, total_dataset, batch_size, num_epoch, model_save=True, model_
                 query_ys = list(d[batch_size * i:batch_size * (i + 1)])
             except IndexError:
                 continue
+
             # Perform global update
             melu.global_update(supp_xs, supp_ys, query_xs, query_ys, config['inner'])
 
