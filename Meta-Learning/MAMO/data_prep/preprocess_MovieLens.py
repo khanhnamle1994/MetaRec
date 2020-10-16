@@ -171,6 +171,7 @@ def store_dict():
     user_dict = {}
     for u_id in tqdm(user_all_ids):
         row = user_info.loc[user_info['user_id'] == u_id]
+        # User features include age, gender, and occupation
         feature_vector = user_converting(user_row=row, age_list=list_movielens['list_age'],
                                          gender_list=list_movielens['list_gender'],
                                          occupation_list=list_movielens['list_occupation'])
@@ -185,6 +186,7 @@ def store_dict():
         user_dict[u_id] = u_info
         count += 1
 
+    # Dump all user features into a Pickle file
     pickle.dump(user_dict, open('{}/user_dict.p'.format(storing_path), 'wb'))
 
     # Item
@@ -197,6 +199,7 @@ def store_dict():
     for i_id in tqdm(item_all_ids):
         row = item_info.loc[item_info['item_id'] == i_id]
         if len(row) > 0:
+            # Item features include rate, genres, directors, and year
             feature_vector = item_converting(item_row=row, rate_list=list_movielens['list_rate'],
                                              genre_list=list_movielens['list_genre'],
                                              director_list=list_movielens['list_director'],
@@ -213,4 +216,5 @@ def store_dict():
         item_dict[i_id] = i_info
         count += 1
 
+    # Dump all item features into a Pickle file
     pickle.dump(item_dict, open('{}/item_dict.p'.format(storing_path), 'wb'))
