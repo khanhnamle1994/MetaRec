@@ -29,7 +29,7 @@ def load_movielens():
     :return: user, item, and ratings information
     """
     # Path to store the processed data
-    path = "../../ml-1m"
+    path = "../../../ml-1m"
 
     # Path to user, item, and ratings data
     user_info_path = "{}/users.dat".format(path)

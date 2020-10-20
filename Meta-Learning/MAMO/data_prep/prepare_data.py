@@ -60,7 +60,7 @@ def generate_data():
         print("Data already generated!")
 
     if processing_code == 1:
-        sorted_ratings = pickle.load(open('{}/sorted_ratings.p'.format(storing_path), 'rb'))
+        sorted_ratings = pickle.load(open('{}/ratings_sorted.p'.format(storing_path), 'rb'))
         user_state_ids = pickle.load(open('{}/user_state_ids.p'.format(storing_path), 'rb'))
         item_state_ids = pickle.load(open('{}/item_state_ids.p'.format(storing_path), 'rb'))
         user_dict = pickle.load(open('{}/user_dict.p'.format(storing_path), 'rb'))
@@ -101,6 +101,7 @@ def generate_data():
 
 
 if __name__ == '__main__':
+    # Execute the functions above
     store_id()
     store_dict()
     generate_data()

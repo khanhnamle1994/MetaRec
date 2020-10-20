@@ -17,12 +17,12 @@ def load_list(file_name):
 
 # MovieLens Information
 list_movielens = {
-    'list_age': load_list('../../ml-1m/m_age.txt'),
-    'list_gender': load_list('../../ml-1m/m_gender.txt'),
-    'list_occupation': load_list('../../ml-1m/m_zipcode.txt'),
-    'list_genre': load_list('../../ml-1m/m_genre.txt'),
-    'list_rate': load_list('../../ml-1m/m_rate.txt'),
-    'list_director': load_list('../../ml-1m/m_director.txt')
+    'list_age': [1, 18, 25, 35, 45, 50, 56],
+    'list_gender': load_list('../../../ml-1m/m_gender.txt'),
+    'list_occupation': list(range(0, 21)),
+    'list_genre': load_list('../../../ml-1m/m_genre.txt'),
+    'list_rate': ['PG-13', 'UNRATED', 'NC-17', 'PG', 'G', 'R'],
+    'list_director': load_list('../../../ml-1m/m_director.txt')
 }
 
 
@@ -35,6 +35,15 @@ def user_converting(user_row, age_list, gender_list, occupation_list):
     :param occupation_list: list of occupations
     :return: gender, age, and occupation information of the user in a list
     """
+    # print("Gender List: ", gender_list)
+    # print("User value at row 0, column 1: ", user_row.iat[0, 1])
+    #
+    # print("Age List: ", age_list)
+    # print("User value at row 0, column 2: ", user_row.iat[0, 2])
+    #
+    # print("Occupation List: ", occupation_list)
+    # print("User value at row 0, column 3: ", user_row.iat[0, 3])
+
     # gender_dim = 2
     gender_idx = gender_list.index(user_row.iat[0, 1])
     # age_dim = 7
@@ -54,18 +63,24 @@ def item_converting(item_row, rate_list, genre_list, director_list, year_list):
     :param year_list: list of years
     :return: rate levels, genres, directors, and year information of the item in a list
     """
+    # print("Rate List: ", rate_list)
+    # print("Item value at row 0, column 1: ", item_row.iat[0, 3])
+
     # rate_dim = 6
-    rate_idx = rate_list.index(item_row.iat[0, 1])
+    rate_idx = rate_list.index(item_row.iat[0, 3])
+
     # genre_dim = 25
     genre_idx = [0] * 25
     for genre in str(item_row.iat[0, 4]).split(", "):
         idx = genre_list.index(genre)
         genre_idx[idx] = 1
+
     # director_dim = 2186
     director_idx = [0] * 2186
     for director in str(item_row.iat[0, 5]).split(", "):
         idx = director_list.index(re.sub(r'\([^()]*\)', '', director))
         director_idx[idx] = 1
+
     # year_dim = 1
     year_idx = year_list.index(item_row.iat[0, 2])
 
