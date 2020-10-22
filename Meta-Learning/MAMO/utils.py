@@ -8,7 +8,6 @@ from math import log2
 from torch.utils.data import Dataset
 from copy import deepcopy
 
-
 # Configuration Settings
 config = {'n_rate': 6, 'n_year': 81, 'n_genre': 25, 'n_director': 2186,
           'n_gender': 2, 'n_age': 7, 'n_occupation': 21, 'sample_size': 20}
@@ -78,12 +77,12 @@ def load_user_info(user_id, support_size=16, query_size=4, device=torch.device('
     u_y = u_y - 1
 
     # Generate support set and query set
-    sup_x1, que_x1 = to_torch(u_x1[:support_size]).to(device),\
+    sup_x1, que_x1 = to_torch(u_x1[:support_size]).to(device), \
                      to_torch(u_x1[support_size:support_size + query_size]).to(device)
     sup_x2, que_x2 = to_torch(u_x2[:support_size]).to(device), \
                      to_torch(u_x2[support_size:support_size + query_size]).to(device)
     sup_y, que_y = to_torch(u_y[:support_size]).to(device), \
-                     to_torch(u_y[support_size:support_size + query_size]).to(device)
+                   to_torch(u_y[support_size:support_size + query_size]).to(device)
     sup_y0, que_y0 = to_torch(u_y0[:support_size]).to(device), \
                      to_torch(u_y0[support_size:support_size + query_size]).to(device)
 
@@ -94,6 +93,7 @@ class UserDataLoader(Dataset):
     """
     Create a class to load user data
     """
+
     def __init__(self, x1, x2, y, y0, transform=None):
         self.x1 = x1
         self.x2 = x2
@@ -209,12 +209,18 @@ def activation_func(name):
     :param name: name of activation function
     """
     name = name.lower()
-    if name == "sigmoid": return torch.nn.Sigmoid()
-    elif name == "tanh": return torch.nn.Tanh()
-    elif name == "relu": return torch.nn.ReLU()
-    elif name == "softmax": return torch.nn.Softmax()
-    elif name == "leaky_relu": return torch.nn.LeakyReLU(0.1)
-    else: return torch.nn.Sequential()
+    if name == "sigmoid":
+        return torch.nn.Sigmoid()
+    elif name == "tanh":
+        return torch.nn.Tanh()
+    elif name == "relu":
+        return torch.nn.ReLU()
+    elif name == "softmax":
+        return torch.nn.Softmax()
+    elif name == "leaky_relu":
+        return torch.nn.LeakyReLU(0.1)
+    else:
+        return torch.nn.Sequential()
 
 
 def mae(ground_truth, test_result):
