@@ -134,6 +134,11 @@ def get_params(param_list):
 
 
 def get_zeros_like_params(param_list):
+    """
+    Collect zeros like parameters
+    :param param_list: parameter list
+    :return: zeros like parameters
+    """
     zeros_like_params = []
     count = 0
     for param in param_list:
@@ -149,7 +154,6 @@ def init_params(param_list, init_values):
     Initialize model parameters
     :param param_list: parameter list
     :param init_values: initialization values list
-    :return:
     """
     count = 0
     init_count = 0
@@ -161,6 +165,11 @@ def init_params(param_list, init_values):
 
 
 def init_u_mem_params(param_list, init_values, bias_term, tao):
+    """
+    Initialize user memory parameters
+    :param param_list: parameter list
+    :param init_values: initialization values list
+    """
     count = 0
     init_count = 0
     for param in param_list:
@@ -171,6 +180,11 @@ def init_u_mem_params(param_list, init_values, bias_term, tao):
 
 
 def init_ui_mem_params(param_list, init_values):
+    """
+    Initialize user-item memory parameters
+    :param param_list: parameter list
+    :param init_values: initialization values list
+    """
     count = 0
     for param in param_list:
         if count % 2 == 0:
@@ -196,10 +210,23 @@ def get_grad(param_list):
 
 
 def grads_sum(raw_grads_list, new_grads_list):
+    """
+    Sum up the gradients
+    :param raw_grads_list: List of raw gradients
+    :param new_grads_list: List of new gradients
+    :return: The new list of sum gradients
+    """
     return [raw_grads_list[i] + new_grads_list[i] for i in range(len(raw_grads_list))]
 
 
 def update_parameters(params, grads, lr):
+    """
+    Update the parameters
+    :param params: List of parameters
+    :param grads: List of gradients
+    :param lr: Learning rate
+    :return: The list of new parameters
+    """
     return [params[i] - lr * grads[i] for i in range(len(params))]
 
 
