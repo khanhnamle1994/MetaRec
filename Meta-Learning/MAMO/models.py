@@ -4,7 +4,7 @@ import pickle
 
 # Import utility scripts
 from utils import get_params, get_zeros_like_params, init_params, get_grad, init_u_mem_params,\
-    init_ui_mem_params, load_user_info, update_parameters, UserDataLoader, to_torch
+    init_ui_mem_params, load_user_info, update_parameters, UserDataLoader, to_torch, mae, ndcg
 from torch.utils.data import DataLoader
 
 
@@ -28,46 +28,61 @@ class BaseModel(torch.nn.Module):
         :param x2: Item input data
         :return: Rating score
         """
+        # Initial user profile (pu) and item profile (pi)
         pu, pi = self.input_user_loading(x1), self.input_item_loading(x2)
+        # Learn the user embedding (eu) and item embedding (ei)
         eu, ei = self.user_embedding(pu), self.item_embedding(pi)
+        # Given the user and item embeddings, get the prediction of the preference score
         rec_value = self.rec_model(eu, ei)
         return rec_value
 
     def get_weights(self):
         """
-        Collect the weights from user embedding, item embedding, and recommendation modules
+        Collect the parameters from user embedding, item embedding, and recommendation modules
         """
+        # User embedding parameters
         u_emb_params = get_params(self.user_embedding.parameters())
+        # Item embedding parameters
         i_emb_params = get_params(self.item_embedding.parameters())
+        # Recommendation model parameters
         rec_params = get_params(self.rec_model.parameters())
         return u_emb_params, i_emb_params, rec_params
 
     def get_zero_weights(self):
         """
-        Collect zero-like weights from user embedding, item embedding, and recommendation modules
+        Collect zero-like parameters from user embedding, item embedding, and recommendation modules
         """
+        # User embedding zero-like parameters
         zeros_like_u_emb_params = get_zeros_like_params(self.user_embedding.parameters())
+        # Item embedding zero-like parameters
         zeros_like_i_emb_params = get_zeros_like_params(self.item_embedding.parameters())
+        # Recommendation model zero-like parameters
         zeros_like_rec_params = get_zeros_like_params(self.rec_model.parameters())
         return zeros_like_u_emb_params, zeros_like_i_emb_params, zeros_like_rec_params
 
     def init_weights(self, u_emb_para, i_emb_para, rec_para):
         """
-        Initialize model weights
+        Initialize parameters
         :param u_emb_para: User embedding parameters
         :param i_emb_para: Item embedding parameters
         :param rec_para: Recommendation parameters
         """
+        # Initialize user embedding parameters
         init_params(self.user_embedding.parameters(), u_emb_para)
+        # Initialize item embedding parameters
         init_params(self.item_embedding.parameters(), i_emb_para)
+        # Initialize recommendation model parameters
         init_params(self.rec_model.parameters(), rec_para)
 
     def get_grad(self):
         """
         Collect the user-specific, item-specific, and rating-specific gradients
         """
+        # Collect user-specific gradients from the user embedding parameters
         u_grad = get_grad(self.user_embedding.parameters())
+        # Collect item-specific gradients from the item embedding parameters
         i_grad = get_grad(self.item_embedding.parameters())
+        # Collect rating-specific gradients from the recommendation model parameters
         r_grad = get_grad(self.rec_model.parameters())
         return u_grad, i_grad, r_grad
 
@@ -86,10 +101,10 @@ class BaseModel(torch.nn.Module):
 
 
 class LocalUpdate:
-    def __init__(self, your_model, u_idx, dataset, sup_size, que_size, bt_size, n_loop, update_lr, top_k, device):
+    def __init__(self, your_model, u_idx, sup_size, que_size, bt_size, n_loop, update_lr, top_k, device):
         # Load user information
         self.s_x1, self.s_x2, self.s_y, self.s_y0, self.q_x1, self.q_x2, self.q_y, self.q_y0 = load_user_info(
-            u_idx, dataset, sup_size, que_size, device
+            u_idx, sup_size, que_size, device
         )
 
         # Load user data
@@ -147,7 +162,7 @@ class LocalUpdate:
         loss.backward()
         # Perform gradient clipping
         torch.nn.utils.clip_grad_norm_(self.model.parameters(), 5.)
-
+        # Collect the gradients
         u_grad, i_grad, r_grad = self.model.get_grad()
         return u_grad, i_grad, r_grad
 
@@ -174,6 +189,14 @@ class LocalUpdate:
 
         # Calculate the predicted ratings on the query set
         q_pred_y = self.model(self.q_x1, self.q_x2)
+        # Calculate the MAE
+        mean_absolute_error = mae(self.q_y, q_pred_y)
+        # Calculate the NDCG
+        NDCG = ndcg(self.q_y, q_pred_y)
+
+        print("MAE: ", mean_absolute_error)
+        print("NDCG: ", NDCG)
+        return mean_absolute_error, NDCG
 
 
 def maml_train(raw_phi_u, raw_phi_i, raw_phi_r, u_grad_list, i_grad_list, r_grad_list, global_lr):
@@ -193,21 +216,26 @@ def maml_train(raw_phi_u, raw_phi_i, raw_phi_r, u_grad_list, i_grad_list, r_grad
     return phi_u, phi_i, phi_r
 
 
-def user_mem_init(u_id, dataset, device, feature_mem, loading_model, alpha):
+def user_mem_init(u_id, device, feature_mem, loading_model, alpha):
     """
-    Initialize user memory values
+    Initialize user memory cube with personalized bias term and attention values
     :param u_id: User ID
-    :param dataset: Given dataset
-    :param device: Current device
+    :param device: Device choice
     :param feature_mem: Feature-specific memory component
     :param loading_model: Loaded model
     :param alpha: Hyper-parameter
     :return: Personalized bias term and attention values
     """
+    # Path to raw processed data (in Pickle files)
     path = 'data_prep/processed_data/raw/'
+    # Load the Pickle files
     u_x1_data = pickle.load(open('{}sample_{}_x1.p'.format(path, str(u_id)), 'rb'))
+    # Convert the user data into PyTorch tensor
     u_x1 = to_torch([u_x1_data]).to(device)
+    # Get user profile matrix
     pu = loading_model(u_x1)
+    # Retrieve the personalized bias term and the attention values
     personalized_bias_term, att_values = feature_mem.read_head(pu, alpha)
+    # Delete variables to save storage
     del u_x1_data, u_x1, pu
     return personalized_bias_term, att_values

@@ -5,5 +5,5 @@ config_settings = {
     'n_layer': 2, 'alpha': 0.5, 'beta': 0.05, 'gamma': 0.1,
     'rho': 0.01, 'lambda': 0.05, 'tao': 0.01, 'n_k': 3,
     'batch_size': 5, 'n_epoch': 3, 'n_inner_loop': 3,
-    'activation_function': 'leaky_relu'
+    'activation_function': 'leaky_relu', 'cuda_option': 'cpu'
 }

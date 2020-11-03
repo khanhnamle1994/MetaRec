@@ -63,7 +63,7 @@ def load_movielens():
 def store_index(max_count=20):
     """
     Store indices of processed data
-    :param max_count: maximum number of counts
+    :param max_count: maximum number of counts (to force the model to learn from few samples)
     """
     storing_path = 'processed_data'
 
@@ -115,7 +115,7 @@ def store_index(max_count=20):
                           'user_warm_ids': user_warm_list,
                           'user_cold_ids': user_cold_list}
 
-        '''Collect item statistics'''
+        # Collect item statistics
         sorted_items = new_df.sort_values(by=['item_id', 'time'], ascending=[True, True]).reset_index(drop=True)
         item_warm_list, item_cold_list, item_counts = [], [], []
 

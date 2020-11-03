@@ -28,10 +28,10 @@ def train_test_user_list(rand=True, random_state=32, train_test_split_ratio=0.8,
     """
     Split the data into train and test sets
     :param rand: Boolean value to turn on randomization mode
-    :param random_state:
+    :param random_state: random state value
     :param train_test_split_ratio: Percentage of train set
     :param store: Boolean value to turn on storage mode
-    :return: Train and test data
+    :return: Train and test user data
     """
     path = 'data_prep/processed_data/raw/'
     path_store = 'data_prep/'
@@ -46,6 +46,7 @@ def train_test_user_list(rand=True, random_state=32, train_test_split_ratio=0.8,
         random.seed(random_state)
         random.shuffle(user_id_list)
 
+    # Subset the training users and test users
     train_user_set, test_user_set = user_id_list[:training_size], user_id_list[training_size:]
 
     # Store the train and test user data
@@ -101,7 +102,7 @@ class UserDataLoader(Dataset):
         self.y0 = y0
         self.transform = transform
 
-    def __len(self):
+    def __len__(self):
         return len(self.y)
 
     def __getitem__(self, idx):
@@ -169,12 +170,14 @@ def init_u_mem_params(param_list, init_values, bias_term, tao):
     Initialize user memory parameters
     :param param_list: parameter list
     :param init_values: initialization values list
+    :param bias_term: bias term
+    :param tao: hyper-parameter for initializing personalized user weights
     """
     count = 0
     init_count = 0
     for param in param_list:
         if count % 2 == 0:
-            param.data.copy_(init_values)
+            param.data.copy_(init_values[init_count] - tao * bias_term[init_count])
             init_count += 1
         count = 1
 
