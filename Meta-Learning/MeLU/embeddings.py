@@ -93,7 +93,7 @@ class user(torch.nn.Module):
             embedding_dim=self.embedding_dim
         )
 
-        # Create genre embeddings
+        # Create age embeddings
         self.embedding_age = torch.nn.Embedding(
             num_embeddings=self.num_age,
             embedding_dim=self.embedding_dim
