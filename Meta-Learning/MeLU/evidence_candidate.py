@@ -59,7 +59,7 @@ def selection(melu, master_path, topk):
                                              grad_norms[item_id]['popularity_value']
 
     movie_info = {}
-    with open("../../ml-1m/movies.dat", encoding="utf-8") as f:
+    with open("../../ml-1m/original/movies.dat", encoding="utf-8") as f:
         for line in f.readlines():
             tmp = line.strip().split("::")
             movie_info[tmp[0]] = "{} ({})".format(tmp[1], tmp[2])

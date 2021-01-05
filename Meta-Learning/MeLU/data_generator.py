@@ -56,6 +56,7 @@ def user_converting(row, gender_list, age_list, occupation_list, zipcode_list):
     :param age_list: list of ages
     :param occupation_list: list of occupations
     :param zipcode_list: list of zipcodes
+    :return: PyTorch tensors storing user data
     """
     # Convert gender_list to PyTorch Tensor
     gender_idx = torch.tensor([[gender_list.index(str(row['gender']))]]).long()
