@@ -66,7 +66,7 @@ class UserEmbedding(torch.nn.Module):
         return torch.cat((gender_emb, age_emb, occupation_emb, area_emb), 1)  # (1, 4*32)
 
 
-class ItemEmbeddingML(torch.nn.Module):
+class ItemEmbedding(torch.nn.Module):
     """
     Initialize item embedding class
     """
@@ -75,7 +75,7 @@ class ItemEmbeddingML(torch.nn.Module):
         Initialize the item class
         :param config: experiment configuration
         """
-        super(ItemEmbeddingML, self).__init__()
+        super(ItemEmbedding, self).__init__()
         self.num_rate = config['num_rate']  # Number of rate levels
         self.num_genre = config['num_genre']  # Number of genres
         self.embedding_dim = config['embedding_dim']  # Number of embedding dimensions

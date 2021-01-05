@@ -1,7 +1,7 @@
 # MetaHIN configuration
 config = {
     'dataset': 'movielens',  # specify MovieLens1M dataset
-    'mp': ['um', 'umum', 'umam', 'umdm'],  #
+    'mp': ['um', 'umum', 'umam', 'umdm'],  # a set of meta-paths
     'file_num': 12,  # each task contains 12 files for movielens
 
     # item parameters
@@ -24,15 +24,15 @@ config = {
 
     'first_fc_hidden_dim': 64,  # number of dimensions in the first fully-connected hidden layer
     'second_fc_hidden_dim': 64,  # number of dimensions in the second fully-connected hidden layer
-    'mp_update': 1,
-    'local_update': 1,
+    'mp_update': 1,  # meta-path update
+    'local_update': 1,  # local update
     'lr': 5e-4,  # step size Beta (global learning rate)
-    'mp_lr': 5e-3,
+    'mp_lr': 5e-3,  # meta-path learning rate
     'local_lr': 5e-3,  # step size Alpha (local learning rate)
     'batch_size': 32,  # number of tasks for each batch
     'num_epoch': 100,  # number of epochs
-    'neigh_agg': 'mean',
-    'mp_agg': 'mean'
+    'neigh_agg': 'mean',  # neighborhood aggregation
+    'mp_agg': 'mean'  # meta-path aggregation
 }
 
 '''
