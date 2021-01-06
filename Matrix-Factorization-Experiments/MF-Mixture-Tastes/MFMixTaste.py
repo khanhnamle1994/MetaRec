@@ -12,7 +12,7 @@ class MF(nn.Module):
         :param n_user: User column
         :param n_item: Item column
         :param k: Dimensions constant
-        :param c:
+        :param c: Dimension of taste/attention vectors
         :param c_vector: Regularization constant
         :param c_bias: Regularization constant for the biases
         :param writer: Log results via TensorBoard

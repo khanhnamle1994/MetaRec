@@ -37,7 +37,7 @@ n_item = int(fh['n_item'])
 # Define the Hyper-parameters
 lr = 1e-2  # Learning Rate
 k = 10  # Number of dimensions per user and item
-c = 4
+c = 4  # Number of dimension of taste/attention vectors
 c_bias = 1e-6  # Bias constant
 c_vector = 1e-6  # Regularization constant
 
