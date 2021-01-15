@@ -1,16 +1,17 @@
 # Matrix Factorization for Collaborative Filtering
 
-This is a series of Matrix Factorization models for Collaborative Filtering implemented in PyTorch. The code is heavily inspired by [Chris Moody's tutorial on Deep Recommendations in PyTorch](https://docs.google.com/presentation/d/1gv7osHoSX8CHf0uzKSqOlxmmAvPPdmstL0nrZHWiHQM/edit#slide=id.p).
+This is a series of Matrix Factorization models for Collaborative Filtering implemented in PyTorch.
+The code is heavily inspired by [Chris Moody's tutorial on Deep Recommendations in PyTorch](https://docs.google.com/presentation/d/1gv7osHoSX8CHf0uzKSqOlxmmAvPPdmstL0nrZHWiHQM/edit#slide=id.p).
 
 Here are the 7 different models:
 
-* [Vanilla Matrix Factorization](https://github.com/khanhnamle1994/transfer-rec/tree/master/Matrix-Factorization-Experiments/Vanilla-MF)
-* [Matrix Factorization with Biases](https://github.com/khanhnamle1994/transfer-rec/tree/master/Matrix-Factorization-Experiments/MF-Biases)
-* [Matrix Factorization with Side Features](https://github.com/khanhnamle1994/transfer-rec/tree/master/Matrix-Factorization-Experiments/MF-Side-Features)
-* [Matrix Factorization with Temporal Features](https://github.com/khanhnamle1994/transfer-rec/tree/master/Matrix-Factorization-Experiments/MF-Temporal-Features)
-* [Factorization Machines](https://github.com/khanhnamle1994/transfer-rec/tree/master/Matrix-Factorization-Experiments/Factorization-Machines)
-* [Matrix Factorization with Mixture of Tastes](https://github.com/khanhnamle1994/transfer-rec/tree/master/Matrix-Factorization-Experiments/MF-Mixture-Tastes)
-* [Variational Matrix Factorization](https://github.com/khanhnamle1994/transfer-rec/tree/master/Matrix-Factorization-Experiments/Variational-MF)
+* [Vanilla Matrix Factorization](https://github.com/khanhnamle1994/MetaRec/tree/master/Matrix-Factorization-Experiments/Vanilla-MF)
+* [Matrix Factorization with Biases](https://github.com/khanhnamle1994/MetaRec/tree/master/Matrix-Factorization-Experiments/MF-Biases)
+* [Matrix Factorization with Side Features](https://github.com/khanhnamle1994/MetaRec/tree/master/Matrix-Factorization-Experiments/MF-Side-Features)
+* [Matrix Factorization with Temporal Features](https://github.com/khanhnamle1994/MetaRec/tree/master/Matrix-Factorization-Experiments/MF-Temporal-Features)
+* [Factorization Machines](https://github.com/khanhnamle1994/MetaRec/tree/master/Matrix-Factorization-Experiments/Factorization-Machines)
+* [Matrix Factorization with Mixture of Tastes](https://github.com/khanhnamle1994/MetaRec/tree/master/Matrix-Factorization-Experiments/MF-Mixture-Tastes)
+* [Variational Matrix Factorization](https://github.com/khanhnamle1994/MetaRec/tree/master/Matrix-Factorization-Experiments/Variational-MF)
 
 An accompanied Medium blog post has been written up and can be viewed here: [The 7 Variants of Matrix Factorization For Collaborative Filtering](https://towardsdatascience.com/recsys-series-part-4-the-7-variants-of-matrix-factorization-for-collaborative-filtering-368754e4fab5)
 
@@ -27,8 +28,8 @@ TensorboardX
 ```
 
 ## Download and Process Data
-* You can download the MovieLens-1M dataset from [this folder](https://github.com/khanhnamle1994/transfer-rec/tree/master/ml-1m).
-* [data.py](https://github.com/khanhnamle1994/transfer-rec/blob/master/Matrix-Factorization-Experiments/data.py) is the script that pre-processes the data.
+* You can download the MovieLens-1M dataset from [this folder](https://github.com/khanhnamle1994/MetaRec/tree/master/ml-1m).
+* [data.py](https://github.com/khanhnamle1994/MetaRec/blob/master/Matrix-Factorization-Experiments/data.py) is the script that pre-processes the data.
 
 ## Training Models
 
